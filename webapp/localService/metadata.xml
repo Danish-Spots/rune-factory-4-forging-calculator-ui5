@@ -1,8 +1,11 @@
-<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.openxmlformats.org/office/spreadsheetml/2006/relationships" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sap="http://www.sap.com/odata" xmlns:atom="http://www.w3.org/2005/Atom">
-  <edmx:DataServices>
-    <Schema xmlns="http://schemas.microsoft.com/ado/2007/06/edm" Namespace="MaterialsModel">
+<?xml version="1.0" encoding="utf-8"?>
+<Edmx:Edmx xmlns:Edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+           Version="2.0">
+  
+  <Edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+    <Schema Namespace="rf.calculator" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
       
-      <!-- Entity Types -->
+      <!-- Material EntityType -->
       <EntityType Name="Material">
         <Key>
           <PropertyRef Name="Id"/>
@@ -13,8 +16,19 @@
         <Property Name="Category" Type="Edm.String" Nullable="false"/>
         <Property Name="Difficulty" Type="Edm.Int32" Nullable="false"/>
         <Property Name="StatInfo" Type="Edm.String" Nullable="true"/>
+        <!-- <NavigationProperty Name="Drops" Relationship="rf.calculator.Material_Drops" FromRole="Material" ToRole="Drop"/> -->
       </EntityType>
-
+      
+      <!-- Drop EntityType (Virtual Entity) -->
+      <EntityType Name="Drop">
+        <NavigationProperty Name="Locations" Relationship="rf.calculator.Drop_Locations" FromRole="Drop" ToRole="Location"/>
+        <NavigationProperty Name="Monsters" Relationship="rf.calculator.Drop_Monsters" FromRole="Drop" ToRole="Monster"/>
+        <NavigationProperty Name="Other" Relationship="rf.calculator.Drop_Other" FromRole="Drop" ToRole="Other"/>
+        <NavigationProperty Name="Fishing" Relationship="rf.calculator.Drop_Fishing" FromRole="Drop" ToRole="Fishing"/>
+        <NavigationProperty Name="Chopping" Relationship="rf.calculator.Drop_Chopping" FromRole="Drop" ToRole="Chopping"/>
+      </EntityType>
+      
+      <!-- Location EntityType -->
       <EntityType Name="Location">
         <Key>
           <PropertyRef Name="Id"/>
@@ -23,15 +37,27 @@
         <Property Name="Name" Type="Edm.String" Nullable="false"/>
       </EntityType>
 
+      <!-- Monster EntityType -->
       <EntityType Name="Monster">
         <Key>
           <PropertyRef Name="Id"/>
         </Key>
         <Property Name="Id" Type="Edm.Int32" Nullable="false"/>
         <Property Name="Name" Type="Edm.String" Nullable="false"/>
-        <Property Name="Condition" Type="Edm.String" Nullable="true"/>
+        <NavigationProperty Name="Locations" Relationship="rf.calculator.Monster_Locations" FromRole="Monster" ToRole="Location"/>
       </EntityType>
 
+      <!-- Other EntityType -->
+      <EntityType Name="Other">
+        <Key>
+          <PropertyRef Name="Id"/>
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="Name" Type="Edm.String" Nullable="false"/>
+        <NavigationProperty Name="Locations" Relationship="rf.calculator.Other_Locations" FromRole="Other" ToRole="Location"/>
+      </EntityType>
+
+      <!-- Fishing EntityType -->
       <EntityType Name="Fishing">
         <Key>
           <PropertyRef Name="Id"/>
@@ -41,6 +67,7 @@
         <Property Name="Area" Type="Edm.String" Nullable="false"/>
       </EntityType>
 
+      <!-- Chopping EntityType -->
       <EntityType Name="Chopping">
         <Key>
           <PropertyRef Name="Id"/>
@@ -49,63 +76,45 @@
         <Property Name="Name" Type="Edm.String" Nullable="false"/>
       </EntityType>
 
-      <EntityType Name="Other">
-        <Key>
-          <PropertyRef Name="Id"/>
-        </Key>
-        <Property Name="Id" Type="Edm.Int32" Nullable="false"/>
-        <Property Name="Name" Type="Edm.String" Nullable="false"/>
-        <Property Name="Locations" Type="Edm.String" Nullable="false"/>
-      </EntityType>
-
-      <!-- Navigation Properties -->
-      <EntityType Name="Drop">
-        <Key>
-          <PropertyRef Name="Id"/>
-        </Key>
-        <Property Name="Id" Type="Edm.Int32" Nullable="false"/>
-        <NavigationProperty Name="Locations" Relationship="MaterialsModel.Drops_Locations" ToRole="Location" FromRole="Drop"/>
-        <NavigationProperty Name="Monsters" Relationship="MaterialsModel.Drops_Monsters" ToRole="Monster" FromRole="Drop"/>
-        <NavigationProperty Name="Fishing" Relationship="MaterialsModel.Drops_Fishing" ToRole="Fishing" FromRole="Drop"/>
-        <NavigationProperty Name="Chopping" Relationship="MaterialsModel.Drops_Chopping" ToRole="Chopping" FromRole="Drop"/>
-        <NavigationProperty Name="Other" Relationship="MaterialsModel.Drops_Other" ToRole="Other" FromRole="Drop"/>
-      </EntityType>
-
-      <!-- Association Sets (Many-to-Many Relationships) -->
-      <Association Name="Drops_Locations">
-        <End Role="Drop" Type="MaterialsModel.Drop" Multiplicity="1"/>
-        <End Role="Location" Type="MaterialsModel.Location" Multiplicity="*" />
+      <!-- Associations -->
+      <Association Name="Material_Drops">
+        <End Role="Material" Type="rf.calculator.Material" Multiplicity="1"/>
+        <End Role="Drop" Type="rf.calculator.Drop" Multiplicity="*"/>
       </Association>
 
-      <Association Name="Drops_Monsters">
-        <End Role="Drop" Type="MaterialsModel.Drop" Multiplicity="1"/>
-        <End Role="Monster" Type="MaterialsModel.Monster" Multiplicity="*" />
+      <Association Name="Drop_Locations">
+        <End Role="Drop" Type="rf.calculator.Drop" Multiplicity="1"/>
+        <End Role="Location" Type="rf.calculator.Location" Multiplicity="*"/>
       </Association>
 
-      <Association Name="Drops_Fishing">
-        <End Role="Drop" Type="MaterialsModel.Drop" Multiplicity="1"/>
-        <End Role="Fishing" Type="MaterialsModel.Fishing" Multiplicity="*" />
+      <Association Name="Drop_Monsters">
+        <End Role="Drop" Type="rf.calculator.Drop" Multiplicity="1"/>
+        <End Role="Monster" Type="rf.calculator.Monster" Multiplicity="*"/>
       </Association>
 
-      <Association Name="Drops_Chopping">
-        <End Role="Drop" Type="MaterialsModel.Drop" Multiplicity="1"/>
-        <End Role="Chopping" Type="MaterialsModel.Chopping" Multiplicity="*" />
+      <Association Name="Drop_Other">
+        <End Role="Drop" Type="rf.calculator.Drop" Multiplicity="1"/>
+        <End Role="Other" Type="rf.calculator.Other" Multiplicity="*"/>
       </Association>
 
-      <Association Name="Drops_Other">
-        <End Role="Drop" Type="MaterialsModel.Drop" Multiplicity="1"/>
-        <End Role="Other" Type="MaterialsModel.Other" Multiplicity="*" />
+      <Association Name="Drop_Fishing">
+        <End Role="Drop" Type="rf.calculator.Drop" Multiplicity="1"/>
+        <End Role="Fishing" Type="rf.calculator.Fishing" Multiplicity="*"/>
+      </Association>
+
+      <Association Name="Drop_Chopping">
+        <End Role="Drop" Type="rf.calculator.Drop" Multiplicity="1"/>
+        <End Role="Chopping" Type="rf.calculator.Chopping" Multiplicity="*"/>
       </Association>
 
       <!-- Entity Sets -->
-      <EntitySet Name="Materials" EntityType="MaterialsModel.Material"/>
-      <EntitySet Name="Locations" EntityType="MaterialsModel.Location"/>
-      <EntitySet Name="Monsters" EntityType="MaterialsModel.Monster"/>
-      <EntitySet Name="Fishing" EntityType="MaterialsModel.Fishing"/>
-      <EntitySet Name="Chopping" EntityType="MaterialsModel.Chopping"/>
-      <EntitySet Name="Other" EntityType="MaterialsModel.Other"/>
-      <EntitySet Name="Drops" EntityType="MaterialsModel.Drop"/>
-
+      <EntitySet Name="Materials" EntityType="rf.calculator.Material"/>
+      <EntitySet Name="Locations" EntityType="rf.calculator.Location"/>
+      <EntitySet Name="Monsters" EntityType="rf.calculator.Monster"/>
+      <EntitySet Name="Others" EntityType="rf.calculator.Other"/>
+      <EntitySet Name="Fishings" EntityType="rf.calculator.Fishing"/>
+      <EntitySet Name="Choppings" EntityType="rf.calculator.Chopping"/>
+      <!-- <EntitySet Name="Drops" EntityType="rf.calculator.Drop"/> -->
     </Schema>
-  </edmx:DataServices>
-</edmx:Edmx>
+  </Edmx:DataServices>
+</Edmx:Edmx>

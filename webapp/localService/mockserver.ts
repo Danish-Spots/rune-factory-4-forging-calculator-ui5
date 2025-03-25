@@ -4,7 +4,7 @@ export default {
   init: function () {
     // create
     const mockServer = new MockServer({
-      rootUri: sap.ui.require.toUrl("rf/calculator/data.svc/"),
+      rootUri: "/localService/",
     });
 
     const urlParams = new URLSearchParams(window.location.search);

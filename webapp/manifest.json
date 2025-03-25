@@ -14,8 +14,8 @@
       "fallbackLocale": ""
     },
     "dataSources": {
-      "mainService": {
-        "uri": "/data",
+      "dataRemote": {
+        "uri": "/localService/",
         "type": "OData",
         "settings": {
           "odataVersion": "2.0"
@@ -53,8 +53,8 @@
           "fallbackLocale": ""
         }
       },
-      "material": {
-        "dataSource": "remote"
+      "data": {
+        "dataSource": "dataRemote"
       }
     }
   }
