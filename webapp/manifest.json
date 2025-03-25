@@ -15,10 +15,10 @@
     },
     "dataSources": {
       "dataRemote": {
-        "uri": "/localService/",
+        "uri": "http://localhost:4004/odata/v4/data/",
         "type": "OData",
         "settings": {
-          "odataVersion": "2.0"
+          "odataVersion": "4.0"
         }
       }
     }
@@ -42,7 +42,8 @@
     "rootView": {
       "viewName": "rf.calculator.view.App",
       "type": "XML",
-      "id": "app"
+      "id": "app",
+      "async": true
     },
     "models": {
       "i18n": {

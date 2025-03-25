@@ -24,7 +24,5 @@ export default class Component extends UIComponent {
     };
     const dataModel = new JSONModel(data);
     this.setModel(dataModel);
-    const oModel = this.getModel("data");
-    console.log(oModel?.getProperty("/Materials"));
   }
 }

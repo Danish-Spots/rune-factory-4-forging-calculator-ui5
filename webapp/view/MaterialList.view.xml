@@ -9,11 +9,7 @@
         class="sapUiResponsiveMargin"
         width="auto"
         items="{
-            path: 'data>/Materials',
-            sorter: {
-                path: 'Category',
-                group: true
-            }
+            path: 'data>/Materials'
         }" >
       <headerToolbar>
         <Toolbar>
@@ -28,7 +24,7 @@
          <ObjectListItem
             title="{data>Name} - {data>Category}"
             number="{data>Rarity}">
-            <firstStatus>
+            <!-- <firstStatus>
                 <ObjectStatus core:require="{
                         Formatter: 'rf/calculator/model/formatter'
                     }"
@@ -37,7 +33,7 @@
                         formatter: 'Formatter.statInfos.bind($controller)'
                     }"
                 ></ObjectStatus>
-            </firstStatus>
+            </firstStatus> -->
         </ObjectListItem>
       </items>
    </List>
