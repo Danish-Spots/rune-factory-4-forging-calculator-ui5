@@ -1,0 +1,44 @@
+<mvc:View
+   controllerName="rf.calculator.controller.MaterialList"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc"
+   xmlns:core="sap.ui.core">
+   <List
+        id="materialList"
+        headerText="{i18n>materialListTitle}"
+        class="sapUiResponsiveMargin"
+        width="auto"
+        items="{
+            path: 'material>/Materials',
+            sorter: {
+                path: 'Category',
+                group: true
+            }
+        }" >
+      <headerToolbar>
+        <Toolbar>
+            <Title text="{i18n>materialListTitle}"></Title>
+            <ToolbarSpacer></ToolbarSpacer>
+            <SearchField 
+                width="50%"
+                search=".onFilterMaterials"></SearchField>
+        </Toolbar>
+      </headerToolbar>
+      <items>
+         <ObjectListItem
+            title="{material>Name} - {material>Category}"
+            number="{material>Rarity}">
+            <firstStatus>
+                <ObjectStatus core:require="{
+                        Formatter: 'rf/calculator/model/formatter'
+                    }"
+                    text="{ 
+                        path: 'material>StatInfo',
+                        formatter: 'Formatter.statInfos.bind($controller)'
+                    }"
+                ></ObjectStatus>
+            </firstStatus>
+        </ObjectListItem>
+      </items>
+   </List>
+</mvc:View>

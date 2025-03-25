@@ -1,0 +1,4565 @@
+{
+  "Materials": [
+    {
+      "Name": "Fodder",
+      "Rarity": 0,
+      "Category": "Collectible",
+      "Drop": {},
+      "Difficulty": 0,
+      "StatInfo": {
+        "matk": 1
+      }
+    },
+    {
+      "Name": "Scrap Metal",
+      "Rarity": 0,
+      "Category": "Collectible",
+      "Drop": {},
+      "Difficulty": 1,
+      "StatInfo": {
+        "def": -2
+      }
+    },
+    {
+      "Name": "Iron",
+      "Rarity": 1,
+      "Category": "Minerals",
+      "Drop": {},
+      "Difficulty": 2,
+      "StatInfo": {
+        "def": 1
+      }
+    },
+    {
+      "Name": "Scrap Metal+",
+      "Rarity": 2,
+      "Category": "Minerals",
+      "Drop": {},
+      "Difficulty": 0,
+      "StatInfo": {
+        "def": 2
+      }
+    },
+    {
+      "Name": "Bronze",
+      "Rarity": 4,
+      "Category": "Minerals",
+      "Drop": {},
+      "Difficulty": 15,
+      "StatInfo": {
+        "def": 4
+      }
+    },
+    {
+      "Name": "Silver",
+      "Rarity": 7,
+      "Category": "Minerals",
+      "Drop": {},
+      "Difficulty": 32,
+      "StatInfo": {
+        "def": 7
+      }
+    },
+    {
+      "Name": "Gold",
+      "Rarity": 9,
+      "Category": "Minerals",
+      "Drop": {
+        "Locations": ["Idra Cave", "Maya Road"],
+        "Monsters": [
+          {
+            "Name": "Fortoise",
+            "Locations": ["Floating Empire"]
+          }
+        ]
+      },
+      "Difficulty": 40,
+      "StatInfo": {
+        "def": 10
+      }
+    },
+    {
+      "Name": "Platinum",
+      "Rarity": 12,
+      "Category": "Minerals",
+      "Drop": {
+        "other": [
+          {
+            "Name": "Wooden boxes",
+            "Locations": ["Floating Empire"]
+          }
+        ]
+      },
+      "Difficulty": 50,
+      "StatInfo": {
+        "def": 25
+      }
+    },
+    {
+      "Name": "Orichalcum",
+      "Rarity": 13,
+      "Category": "Minerals",
+      "Drop": {
+        "Locations": ["Leon Karnak"]
+      },
+      "Difficulty": 80,
+      "StatInfo": {
+        "def": 95
+      }
+    },
+    {
+      "Name": "Dragonic Stone",
+      "Rarity": 15,
+      "Category": "Minerals",
+      "Drop": {
+        "Locations": ["Rune Prana Floor 7"]
+      },
+      "Difficulty": 80,
+      "StatInfo": {
+        "def": 95
+      }
+    },
+    {
+      "Name": "Amethyst",
+      "Rarity": 0,
+      "Category": "Jewels",
+      "Drop": {
+        "Locations": ["Yokmir Forest"],
+        "Monsters": [
+          {
+            "Name": "Slime",
+            "Locations": ["Obsidian Mansion"]
+          }
+        ]
+      },
+      "Difficulty": 4,
+      "StatInfo": {
+        "mdef": 1
+      }
+    },
+    {
+      "Name": "Aquamarine",
+      "Rarity": 2,
+      "Category": "Jewels",
+      "Drop": {
+        "Locations": ["Water Ruins", "Maya Road"],
+        "Monsters": [
+          {
+            "Name": "Slime",
+            "Locations": ["Obsidian Mansion"]
+          }
+        ]
+      },
+      "Difficulty": 11,
+      "StatInfo": {
+        "mdef": 3
+      }
+    },
+    {
+      "Name": "Emerald",
+      "Rarity": 5,
+      "Category": "Jewels",
+      "Drop": {
+        "Locations": ["Yokmir Cave", "Maya Road"],
+        "Monsters": [
+          {
+            "Name": "Dark Slime",
+            "Locations": ["Floating Empire"]
+          }
+        ]
+      },
+      "Difficulty": 26,
+      "StatInfo": {
+        "mdef": 5
+      }
+    },
+    {
+      "Name": "Ruby",
+      "Rarity": 7,
+      "Category": "Jewels",
+      "Drop": {
+        "Locations": ["Delirium Lava Ruins", "Maya Road"],
+        "Monsters": [
+          {
+            "Name": "Little Golem",
+            "Locations": ["Idra Cave"]
+          }
+        ]
+      },
+      "Difficulty": 36,
+      "StatInfo": {
+        "mdef": 8
+      }
+    },
+    {
+      "Name": "Sapphire",
+      "Rarity": 8,
+      "Category": "Jewels",
+      "Drop": {
+        "Locations": ["Sercerezo Hill"],
+        "Monsters": [
+          {
+            "Name": "Dark Slime",
+            "Locations": ["Floating Empire"]
+          }
+        ]
+      },
+      "Difficulty": 42,
+      "StatInfo": {
+        "mdef": 12
+      }
+    },
+    {
+      "Name": "Diamond",
+      "Rarity": 11,
+      "Category": "Jewels",
+      "Drop": {
+        "Locations": ["Sechs Territory", "Rune Prana"],
+        "Monsters": [
+          {
+            "Name": "Crystal Mammoth",
+            "Locations": ["Rune Prana Floor 3"]
+          },
+          {
+            "Name": "G Golem",
+            "Locations": ["Rune Prana Floor 7"]
+          }
+        ]
+      },
+      "Difficulty": 50,
+      "StatInfo": {
+        "mdef": 24
+      }
+    },
+    {
+      "Name": "Green Core",
+      "Rarity": 13,
+      "Category": "Jewels",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Emerald",
+            "Locations": ["Rune Prana Floor 7"]
+          },
+          {
+            "Name": "Green",
+            "Locations": ["World of Fields"]
+          }
+        ]
+      },
+      "Difficulty": 81,
+      "StatInfo": {
+        "mdef": 77
+      }
+    },
+    {
+      "Name": "Red Core",
+      "Rarity": 13,
+      "Category": "Jewels",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Red",
+            "Locations": ["Autumn Road"]
+          },
+          {
+            "Name": "Rouge",
+            "Locations": ["Rune Prana Floor 7"]
+          }
+        ]
+      },
+      "Difficulty": 81,
+      "StatInfo": {
+        "mdef": 77
+      }
+    },
+    {
+      "Name": "Yellow Core",
+      "Rarity": 13,
+      "Category": "Jewels",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Olive",
+            "Locations": ["Rune Prana Floor 7"]
+          },
+          {
+            "Name": "Yellow",
+            "Locations": ["Sercerezo Hill"]
+          }
+        ]
+      },
+      "Difficulty": 81,
+      "StatInfo": {
+        "mdef": 77
+      }
+    },
+    {
+      "Name": "Blue Core",
+      "Rarity": 13,
+      "Category": "Jewels",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Blue",
+            "Locations": ["Sechs Territory"]
+          },
+          {
+            "Name": "Marin",
+            "Locations": ["Rune Prana Floor 7"]
+          }
+        ]
+      },
+      "Difficulty": 81,
+      "StatInfo": {
+        "mdef": 77
+      }
+    },
+    {
+      "Name": "Crystal Skull",
+      "Rarity": 15,
+      "Category": "Jewels",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Sarcophagus",
+            "Locations": ["Forest of Beginnings", "Leon Karnak"],
+            "condition": "Can only be obtained once per day, unless cheats are used"
+          }
+        ]
+      },
+      "Difficulty": 95,
+      "StatInfo": {
+        "matk": 60,
+        "mdef": 195
+      }
+    },
+    {
+      "Name": "Magic Crystal",
+      "Rarity": 4,
+      "Category": "Crystals",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Airror",
+            "Locations": ["Maya Road"]
+          },
+          {
+            "Name": "Flare Mage",
+            "Locations": ["Rune Prana"]
+          },
+          {
+            "Name": "Gaias",
+            "Locations": ["Idra Cave"]
+          },
+          {
+            "Name": "Ignis",
+            "Locations": ["Delirium Lava Ruins"]
+          },
+          {
+            "Name": "Little Emperor",
+            "Locations": ["Leon Karnak"]
+          },
+          {
+            "Name": "Little Mage",
+            "Locations": ["Forest of Beginnings", "Idra Cave"]
+          },
+          {
+            "Name": "Ice Wizard",
+            "Locations": ["Rune Prana"]
+          },
+          {
+            "Name": "Little Wizard",
+            "Locations": ["Sechs Territory"]
+          },
+          {
+            "Name": "Sarcophagus",
+            "Locations": ["Leon Karnak"]
+          },
+          {
+            "Name": "Spirit",
+            "Locations": ["Obsidian Mansion"]
+          },
+          {
+            "Name": "Tundra",
+            "Locations": ["Sechs Territory"]
+          }
+        ]
+      },
+      "Difficulty": 27,
+      "StatInfo": {
+        "matk": 5,
+        "mdef": 1
+      }
+    },
+    {
+      "Name": "Dark Crystal",
+      "Rarity": 3,
+      "Category": "Crystals",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Dark Slime",
+            "Locations": ["Floating Empire"]
+          },
+          {
+            "Name": "Spirit",
+            "Locations": ["Obsidian Mansion"]
+          }
+        ]
+      },
+      "Difficulty": 25,
+      "StatInfo": {
+        "str": 3,
+        "vit": 3
+      }
+    },
+    {
+      "Name": "Fire Crystal",
+      "Rarity": 7,
+      "Category": "Crystals",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Ignis",
+            "Locations": ["Delirium Lava Ruins"]
+          },
+          {
+            "Name": "Red",
+            "Locations": ["Autumn Road"]
+          },
+          {
+            "Name": "Rouge",
+            "Locations": ["Rune Prana Floor 7"]
+          }
+        ]
+      },
+      "Difficulty": 25,
+      "StatInfo": {
+        "atk": 5
+      }
+    },
+    {
+      "Name": "Earth Crystal",
+      "Rarity": 8,
+      "Category": "Crystals",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Gaias",
+            "Locations": ["Idra Cave"]
+          },
+          {
+            "Name": "Olive",
+            "Locations": ["Rune Prana"]
+          },
+          {
+            "Name": "Yellow",
+            "Locations": ["Sercerezo Hill"]
+          }
+        ]
+      },
+      "Difficulty": 25,
+      "StatInfo": {
+        "def": 5
+      }
+    },
+    {
+      "Name": "Love Crystal",
+      "Rarity": 9,
+      "Category": "Crystals",
+      "Drop": {},
+      "Difficulty": 50,
+      "StatInfo": {
+        "drainAtk": 0.03
+      }
+    },
+    {
+      "Name": "Wind Crystal",
+      "Rarity": 10,
+      "Category": "Crystals",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Airror",
+            "Locations": ["Maya Road"]
+          },
+          {
+            "Name": "Emerald",
+            "Locations": ["Rune Prana Floor 7"]
+          },
+          {
+            "Name": "Green",
+            "Locations": ["Maya Road", "World of Fields"]
+          }
+        ]
+      },
+      "Difficulty": 25,
+      "StatInfo": {
+        "mdef": 5
+      }
+    },
+    {
+      "Name": "Water Crystal",
+      "Rarity": 11,
+      "Category": "Crystals",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Blue",
+            "Locations": ["Sechs Territory"]
+          },
+          {
+            "Name": "Marin",
+            "Locations": ["Rune Prana Floor 7"]
+          },
+          {
+            "Name": "Tundra",
+            "Locations": ["Sechs Territory"]
+          }
+        ]
+      },
+      "Difficulty": 25,
+      "StatInfo": {
+        "matk": 5
+      }
+    },
+    {
+      "Name": "Light Crystal",
+      "Rarity": 12,
+      "Category": "Crystals",
+      "Drop": {},
+      "Difficulty": 25,
+      "StatInfo": {
+        "vit": 3,
+        "int": 3
+      }
+    },
+    {
+      "Name": "Small Crystal",
+      "Rarity": 13,
+      "Category": "Crystals",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Dead Tree",
+            "Locations": ["Yokmir Forest", "Rune Prana Floor 7"]
+          },
+          {
+            "Name": "Flare Mage",
+            "Locations": ["Rune Prana"]
+          },
+          {
+            "Name": "Ice Wizard",
+            "Locations": ["Rune Prana Floor 5"]
+          },
+          {
+            "Name": "Little Wizard",
+            "Locations": ["Sechs Territory"]
+          },
+          {
+            "Name": "Olive",
+            "Locations": ["Rune Prana"]
+          },
+          {
+            "Name": "Ragnarok",
+            "Locations": ["Rune Prana Floor 7"]
+          }
+        ]
+      },
+      "Difficulty": 80,
+      "StatInfo": {
+        "atk": 80
+      }
+    },
+    {
+      "Name": "Big Crystal",
+      "Rarity": 13,
+      "Category": "Crystals",
+      "Drop": {},
+      "Difficulty": 83,
+      "StatInfo": {
+        "atk": 40,
+
+        "matk": 40
+      }
+    },
+    {
+      "Name": "Rune Crystal",
+      "Rarity": 14,
+      "Category": "Crystals",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Olive",
+            "Locations": ["Rune Prana"]
+          },
+          {
+            "Name": "Rouge",
+            "Locations": ["Rune Prana"]
+          },
+          {
+            "Name": "Ragnarok",
+            "Locations": ["Rune Prana Floor 7"]
+          }
+        ]
+      },
+      "Difficulty": 89,
+      "StatInfo": {
+        "matk": 100
+      }
+    },
+    {
+      "Name": "Electro Crystal",
+      "Rarity": 15,
+      "Category": "Crystals",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Bane Dragon",
+            "Locations": ["Rune Prana Floor 1"]
+          }
+        ]
+      },
+      "Difficulty": 93,
+      "StatInfo": {
+        "atk": 60,
+
+        "matk": 150,
+        "mdef": -5,
+
+        "parAtk": 0.35
+      }
+    },
+    {
+      "Name": "Stick",
+      "Rarity": 0,
+      "Category": "Sticks and Stems",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Chipsqueek",
+            "Locations": ["Selphia Plain"]
+          },
+          {
+            "Name": "Orc",
+            "Locations": ["Summer Area", "Yokmir Forest"]
+          },
+          {
+            "Name": "Orc Archer",
+            "Locations": ["Summer Area", "Yokmir Forest"]
+          },
+          {
+            "Name": "High Orc",
+            "Locations": ["Yokmir Cave"]
+          },
+          {
+            "Name": "Orc Hunter",
+            "Locations": ["Yokmir Cave"]
+          },
+          {
+            "Name": "Weagle",
+            "Locations": ["Water Ruins"]
+          },
+          {
+            "Name": "Ghost",
+            "Locations": ["Obsidian Mansion"]
+          },
+          {
+            "Name": "Ghost Ray",
+            "Locations": ["Obsidian Mansion"]
+          },
+          {
+            "Name": "Blackbird",
+            "Locations": ["Maya Road", "Rune Prana"]
+          }
+        ]
+      },
+      "Difficulty": 2,
+      "StatInfo": {
+        "atk": 2
+      }
+    },
+    {
+      "Name": "Insect Horn",
+      "Rarity": 1,
+      "Category": "Sticks and Stems",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Beetle",
+            "Locations": ["Selphia Plain", "Yokmir Forest"]
+          }
+        ]
+      },
+      "Difficulty": 7,
+      "StatInfo": {
+        "atk": 3
+      }
+    },
+    {
+      "Name": "Plant Stem",
+      "Rarity": 3,
+      "Category": "Sticks and Stems",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Flower Blossom",
+            "Locations": ["Sercerezo Hill"]
+          },
+          {
+            "Name": "Flower Crystal",
+            "Locations": ["Sechs Territory"]
+          },
+          {
+            "Name": "Flower Lily",
+            "Locations": ["Autumn Road"]
+          },
+          {
+            "Name": "Flower Lion",
+            "Locations": ["Delirium Lava Ruins"]
+          },
+          {
+            "Name": "Leaf Ball",
+            "Locations": ["Yokmir Cave"]
+          },
+          {
+            "Name": "Planchoa",
+            "Locations": ["Maya Road"]
+          }
+        ]
+      },
+      "Difficulty": 28,
+      "StatInfo": {
+        "atk": 3,
+
+        "matk": 3
+      }
+    },
+    {
+      "Name": "Bull's Horn",
+      "Rarity": 7,
+      "Category": "Sticks and Stems",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Buffaloo",
+            "Locations": ["Delirium Lava Ruins"]
+          }
+        ]
+      },
+      "Difficulty": 36,
+      "StatInfo": {
+        "atk": 7,
+        "def": 1
+      }
+    },
+    {
+      "Name": "Moving Branch",
+      "Rarity": 9,
+      "Category": "Sticks and Stems",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Dead Tree",
+            "Locations": ["Yokmir Forest", "Rune Prana Floor 7"]
+          }
+        ]
+      },
+      "Difficulty": 95,
+      "StatInfo": {
+        "atk": -10,
+
+        "matk": 200
+      }
+    },
+    {
+      "Name": "Rigid Horn",
+      "Rarity": 10,
+      "Category": "Sticks and Stems",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Heracles",
+            "Locations": ["Maya Road"]
+          }
+        ]
+      },
+      "Difficulty": 52,
+      "StatInfo": {
+        "atk": 15,
+
+        "crit": 0.01
+      }
+    },
+    {
+      "Name": "Thick Stick",
+      "Rarity": 12,
+      "Category": "Sticks and Stems",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Ghost Ray",
+            "Locations": ["Obsidian Mansion"]
+          },
+          {
+            "Name": "Gigantes",
+            "Locations": ["Floating Empire"]
+          }
+        ]
+      },
+      "Difficulty": 65,
+      "StatInfo": {
+        "atk": 34
+      }
+    },
+    {
+      "Name": "Devil Horn",
+      "Rarity": 13,
+      "Category": "Sticks and Stems",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Arch-Demon",
+            "Locations": ["Leon Karnak"]
+          },
+          {
+            "Name": "Little Mage",
+            "Locations": ["Forest of Beginnings", "Idra Cave"]
+          },
+          {
+            "Name": "Minotaur",
+            "Locations": ["Idra Cave"]
+          },
+          {
+            "Name": "Typhoon",
+            "Locations": ["Sercerezo Hill"],
+            "condition": "Can only be obtained during typhoons"
+          }
+        ]
+      },
+      "Difficulty": 86,
+      "StatInfo": {
+        "atk": 55,
+
+        "matk": 50
+      }
+    },
+    {
+      "Name": "Glue",
+      "Rarity": 5,
+      "Category": "Liquids",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Goblin",
+            "Locations": ["Water Ruins"]
+          },
+          {
+            "Name": "High Orc",
+            "Locations": ["Yokmir Cave"]
+          },
+          {
+            "Name": "Rider Orc",
+            "Locations": ["Yokmir Cave"]
+          },
+          {
+            "Name": "Hobgoblin",
+            "Locations": ["Idra Cave"]
+          },
+          {
+            "Name": "Ogre Viking",
+            "Locations": ["Sechs Territory"]
+          },
+          {
+            "Name": "Orc Viking",
+            "Locations": ["Sechs Territory"]
+          },
+          {
+            "Name": "High Ogre Viking",
+            "Locations": ["Rune Prana Floor 3"]
+          }
+        ]
+      },
+      "Difficulty": 26,
+      "StatInfo": {
+        "atk": 1,
+        "def": 2,
+
+        "mdef": 2
+      }
+    },
+    {
+      "Name": "Devil Blood",
+      "Rarity": 9,
+      "Category": "Liquids",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Arch-Demon",
+            "Locations": ["Leon Karnak"]
+          },
+          {
+            "Name": "Baal",
+            "Locations": ["Rune Prana Floor 5"]
+          },
+          {
+            "Name": "Blood Panther",
+            "Locations": ["Floating Empire"]
+          },
+          {
+            "Name": "Chimera",
+            "Locations": ["Water Ruins"]
+          },
+          {
+            "Name": "Daemon",
+            "Locations": ["Idra Cave"]
+          },
+          {
+            "Name": "Typhoon",
+            "Locations": ["Sercerezo Hill"],
+            "condition": "Can only be obtained during typhoons"
+          }
+        ]
+      },
+      "Difficulty": 39,
+      "StatInfo": {
+        "matk": 9,
+
+        "drainRes": 0.15
+      }
+    },
+    {
+      "Name": "Paralysis Poison",
+      "Rarity": 10,
+      "Category": "Liquids",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Hornet Queen",
+            "Locations": ["Maya Road"]
+          }
+        ]
+      },
+      "Difficulty": 30,
+      "StatInfo": {
+        "psnAtk": 0.2
+      }
+    },
+    {
+      "Name": "Poison King",
+      "Rarity": 14,
+      "Category": "Liquids",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "King Bee",
+            "Locations": ["Rune Prana Floor 2"]
+          }
+        ]
+      },
+      "Difficulty": 86,
+      "StatInfo": {
+        "atk": 5,
+
+        "matk": 88,
+
+        "psnAtk": 0.8
+      }
+    },
+    {
+      "Name": "Bird's Feather",
+      "Rarity": 2,
+      "Category": "Feathers",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Cluckadoodle",
+            "Locations": ["Selphia Plain", "Cluck-Cluck Nest"]
+          },
+          {
+            "Name": "Duck",
+            "Locations": ["Selphia Plain"]
+          },
+          {
+            "Name": "Mamadoodle",
+            "Locations": ["Cluck-Cluck Nest"]
+          },
+          {
+            "Name": "Weagle",
+            "Locations": ["Selphia Plain", "Water Ruins"]
+          }
+        ]
+      },
+      "Difficulty": 10,
+      "StatInfo": {
+        "int": 2
+      }
+    },
+    {
+      "Name": "Yellow Feather",
+      "Rarity": 5,
+      "Category": "Feathers",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Big Duck",
+            "Locations": ["Rune Prana Floor 2"]
+          }
+        ]
+      },
+      "Difficulty": 90,
+      "StatInfo": {
+        "int": 130
+      }
+    },
+    {
+      "Name": "Black Bird's Feather",
+      "Rarity": 10,
+      "Category": "Feathers",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Blackbird",
+            "Locations": ["Maya Road"]
+          }
+        ]
+      },
+      "Difficulty": 50,
+      "StatInfo": {
+        "int": 14
+      }
+    },
+    {
+      "Name": "Thunderbird Feather",
+      "Rarity": 12,
+      "Category": "Feathers",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Thunderbird",
+            "Locations": ["Floating Empire"]
+          }
+        ]
+      },
+      "Difficulty": 58,
+      "StatInfo": {
+        "int": 28
+      }
+    },
+    {
+      "Name": "Dragon Fin",
+      "Rarity": 15,
+      "Category": "Feathers",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Aquaticus",
+            "Locations": ["Sharance Maze"]
+          }
+        ]
+      },
+      "Difficulty": 96,
+      "StatInfo": {
+        "vit": -10,
+        "int": 300
+      }
+    },
+    {
+      "Name": "Turtle Shell",
+      "Rarity": 2,
+      "Category": "Shells and Bones",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Tortas",
+            "Locations": ["Water Ruins"]
+          }
+        ]
+      },
+      "Difficulty": 15,
+      "StatInfo": {
+        "def": 4,
+
+        "mdef": 1,
+
+        "crit": -0.03
+      }
+    },
+    {
+      "Name": "Fish Fossil",
+      "Rarity": 3,
+      "Category": "Shells and Bones",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Ancient Bone",
+            "Locations": ["Revival Cave"]
+          },
+          {
+            "Name": "Octopirate",
+            "Locations": ["Rune Prana Floor 2"]
+          },
+          {
+            "Name": "Sealy",
+            "Locations": ["Sechs Territory"]
+          },
+          {
+            "Name": "Sky Fish",
+            "Locations": ["Water Ruins"]
+          }
+        ]
+      },
+      "Difficulty": 20,
+      "StatInfo": {
+        "matk": 4,
+        "mdef": 1
+      }
+    },
+    {
+      "Name": "Dragon Bones",
+      "Rarity": 8,
+      "Category": "Shells and Bones",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Ancient Bone",
+            "Locations": ["Revival Cave"]
+          }
+        ]
+      },
+      "Difficulty": 50,
+      "StatInfo": {
+        "def": 10,
+
+        "mdef": 10,
+
+        "vit": 10
+      }
+    },
+    {
+      "Name": "Skull",
+      "Rarity": 9,
+      "Category": "Shells and Bones",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Ghost",
+            "Locations": ["Obsidian Mansion"]
+          },
+          {
+            "Name": "Ancient Bone",
+            "Locations": ["Revival Cave"]
+          },
+          {
+            "Name": "Captain Goblin",
+            "Locations": ["Leon Karnak"]
+          },
+          {
+            "Name": "Goblin Don",
+            "Locations": ["Leon Karnak"]
+          },
+          {
+            "Name": "Necro",
+            "Locations": ["Idra Cave"]
+          }
+        ]
+      },
+      "Difficulty": 39,
+      "StatInfo": {
+        "def": 4,
+        "matk": 8,
+        "mdef": 5,
+
+        "sickAtk": 0.04
+      }
+    },
+    {
+      "Name": "Blk. Tortoise Shell",
+      "Rarity": 12,
+      "Category": "Shells and Bones",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Fortoise",
+            "Locations": ["Floating Empire"]
+          }
+        ]
+      },
+      "Difficulty": 62,
+      "StatInfo": {
+        "def": 26,
+
+        "mdef": 7
+      }
+    },
+    {
+      "Name": "Ammonite",
+      "Rarity": 15,
+      "Category": "Shells and Bones",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Octopirate",
+            "Locations": ["Rune Prana Floor 2"]
+          }
+        ]
+      },
+      "Difficulty": 92,
+      "StatInfo": {
+        "def": 135,
+
+        "mdef": 82,
+        "str": -5
+      }
+    },
+    {
+      "Name": "Round Stone",
+      "Rarity": 4,
+      "Category": "Stones",
+      "Drop": {
+        "fishing": [
+          {
+            "location": ["Yokmir Forest"],
+            "area": "Waterfall"
+          }
+        ]
+      },
+      "Difficulty": 25,
+      "StatInfo": {
+        "atk": 5,
+
+        "crit": 0.05
+      }
+    },
+    {
+      "Name": "Tiny Golem Stone",
+      "Rarity": 9,
+      "Category": "Stones",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Little Golem",
+            "Locations": ["Idra Cave"]
+          }
+        ]
+      },
+      "Difficulty": 38,
+      "StatInfo": {
+        "def": 8,
+
+        "crit": 0.02
+      }
+    },
+    {
+      "Name": "Golem Stone",
+      "Rarity": 12,
+      "Category": "Stones",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Golem",
+            "Locations": ["Floating Empire"]
+          },
+          {
+            "Name": "Sechs Golem",
+            "Locations": ["Floating Empire"]
+          }
+        ]
+      },
+      "Difficulty": 53,
+      "StatInfo": {
+        "def": 15,
+
+        "crit": 0.03
+      }
+    },
+    {
+      "Name": "Golem Tablet",
+      "Rarity": 13,
+      "Category": "Stones",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Sechs Golem",
+            "Locations": ["Floating Empire"]
+          }
+        ]
+      },
+      "Difficulty": 80,
+      "StatInfo": {
+        "def": 30,
+
+        "crit": 0.05
+      }
+    },
+    {
+      "Name": "Golem Spirit Stone",
+      "Rarity": 14,
+      "Category": "Stones",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Guardian",
+            "Locations": ["Rune Prana Floor 6"]
+          }
+        ]
+      },
+      "Difficulty": 85,
+      "StatInfo": {
+        "def": 105,
+
+        "crit": 0.06
+      }
+    },
+    {
+      "Name": "Tablet of Truth",
+      "Rarity": 15,
+      "Category": "Stones",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "G Golem",
+            "Locations": ["Rune Prana Floor 7"]
+          }
+        ]
+      },
+      "Difficulty": 95,
+      "StatInfo": {
+        "atk": 50,
+        "def": 160,
+        "matk": 20,
+        "mdef": -15,
+
+        "crit": 0.1
+      }
+    },
+    {
+      "Name": "Yarn",
+      "Rarity": 1,
+      "Category": "Strings",
+      "Drop": {},
+      "Difficulty": 4,
+      "StatInfo": {
+        "def": 1,
+        "matk": 1
+      }
+    },
+    {
+      "Name": "Old Bandage",
+      "Rarity": 2,
+      "Category": "Strings",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Gangster Goblin",
+            "Locations": ["Delirium Lava Ruins"]
+          },
+          {
+            "Name": "Goblin",
+            "Locations": ["Water Ruins"]
+          },
+          {
+            "Name": "Goblin Archer",
+            "Locations": ["Water Ruins"]
+          },
+          {
+            "Name": "Goblin Pirate",
+            "Locations": ["Delirium Lava Ruins"]
+          }
+        ]
+      },
+      "Difficulty": 11,
+      "StatInfo": {
+        "matk": 2,
+        "mdef": 1
+      }
+    },
+    {
+      "Name": "Ambrosia's Thorns",
+      "Rarity": 2,
+      "Category": "Strings",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Ambrosia",
+            "Locations": ["Yokmir Forest", "Sharance Maze"]
+          }
+        ]
+      },
+      "Difficulty": 30,
+      "StatInfo": {
+        "atk": 7,
+
+        "matk": 7,
+
+        "slpAtk": 0.1
+      }
+    },
+    {
+      "Name": "Spider's Thread",
+      "Rarity": 4,
+      "Category": "Strings",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Hell Spider",
+            "Locations": ["Floating Empire"]
+          },
+          {
+            "Name": "Spider",
+            "Locations": ["Obsidian Mansion"]
+          }
+        ]
+      },
+      "Difficulty": 18,
+      "StatInfo": {
+        "atk": 2,
+
+        "matk": 2,
+
+        "parAtk": 0.05
+      }
+    },
+    {
+      "Name": "Puppetry Strings",
+      "Rarity": 6,
+      "Category": "Strings",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Marionetta",
+            "Locations": ["Obsidian Mansion"]
+          }
+        ]
+      },
+      "Difficulty": 40,
+      "StatInfo": {
+        "atk": 5,
+
+        "matk": 8,
+
+        "parAtk": 0.05,
+        "sealAtk": 0.15
+      }
+    },
+    {
+      "Name": "Vine",
+      "Rarity": 6,
+      "Category": "Strings",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Flower Lion",
+            "Locations": ["Delirium Lava Ruins"]
+          }
+        ]
+      },
+      "Difficulty": 30,
+      "StatInfo": {
+        "matk": 7,
+
+        "sealAtk": 0.04
+      }
+    },
+    {
+      "Name": "Scorpion Tail",
+      "Rarity": 7,
+      "Category": "Strings",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Death Stalker",
+            "Locations": ["Sechs Territory"]
+          },
+          {
+            "Name": "Heaven's Scissors",
+            "Locations": ["Rune Prana Floor 5"]
+          },
+          {
+            "Name": "Scorpion",
+            "Locations": ["Delirium Lava Ruins"]
+          }
+        ]
+      },
+      "Difficulty": 30,
+      "StatInfo": {
+        "atk": 5,
+
+        "psnAtk": 0.08
+      }
+    },
+    {
+      "Name": "Strong Vine",
+      "Rarity": 10,
+      "Category": "Strings",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Flower Blossom",
+            "Locations": ["Sercerezo Hill"]
+          },
+          {
+            "Name": "Flower Crystal",
+            "Locations": ["Sechs Territory"]
+          },
+          {
+            "Name": "Flower Lily",
+            "Locations": ["Autumn Road"]
+          },
+          {
+            "Name": "Planchoa",
+            "Locations": ["Maya Road"]
+          }
+        ]
+      },
+      "Difficulty": 44,
+      "StatInfo": {
+        "matk": 12,
+
+        "sealAtk": 0.1
+      }
+    },
+    {
+      "Name": "Pretty Thread",
+      "Rarity": 12,
+      "Category": "Strings",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Hell Spider",
+            "Locations": ["Floating Empire"]
+          }
+        ]
+      },
+      "Difficulty": 52,
+      "StatInfo": {
+        "atk": 2,
+
+        "matk": 16,
+
+        "parAtk": 0.25
+      }
+    },
+    {
+      "Name": "Chimera Tail",
+      "Rarity": 15,
+      "Category": "Strings",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Chimera 2",
+            "Locations": ["Rune Prana Floor 7"]
+          }
+        ]
+      },
+      "Difficulty": 95,
+      "StatInfo": {
+        "atk": 200,
+
+        "matk": -10,
+
+        "psnAtk": 0.5,
+        "parAtk": 0.5
+      }
+    },
+    {
+      "Name": "Arrowhead",
+      "Rarity": 0,
+      "Category": "Shards",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Goblin Archer",
+            "Locations": ["Water Ruins"]
+          },
+          {
+            "Name": "Orc Archer",
+            "Locations": ["Summer Area", "Yokmir Forest"]
+          },
+          {
+            "Name": "Orc Hunter",
+            "Locations": ["Yokmir Cave"]
+          }
+        ]
+      },
+      "Difficulty": 3,
+      "StatInfo": {
+        "str": 1
+      }
+    },
+    {
+      "Name": "Blade Shard",
+      "Rarity": 2,
+      "Category": "Shards",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Goblin",
+            "Locations": ["Water Ruins"]
+          },
+          {
+            "Name": "Rider Orc",
+            "Locations": ["Yokmir Cave"]
+          },
+          {
+            "Name": "Hobgoblin",
+            "Locations": ["Idra Cave"]
+          }
+        ]
+      },
+      "Difficulty": 9,
+      "StatInfo": {
+        "atk": 2
+      }
+    },
+    {
+      "Name": "Broken Hilt",
+      "Rarity": 5,
+      "Category": "Shards",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Gobble Box",
+            "Locations": ["Randomly Spawned"]
+          },
+          {
+            "Name": "Monster Box",
+            "Locations": ["Randomly Spawned"]
+          }
+        ]
+      },
+      "Difficulty": 21,
+      "StatInfo": {
+        "def": 2,
+
+        "psnRes": 0.05,
+        "sealRes": 0.05,
+        "parRes": 0.05,
+        "slpRes": 0.05,
+        "ftgRes": 0.05,
+        "sickRes": 0.05
+      }
+    },
+    {
+      "Name": "Broken Box",
+      "Rarity": 8,
+      "Category": "Shards",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Gobble Box",
+            "Locations": ["Randomly Spawned"]
+          }
+        ]
+      },
+      "Difficulty": 44,
+      "StatInfo": {
+        "def": 4,
+
+        "psnRes": 0.1,
+        "sealRes": 0.1,
+        "parRes": 0.1,
+        "slpRes": 0.1,
+        "ftgRes": 0.1,
+        "sickRes": 0.05
+      }
+    },
+    {
+      "Name": "Hammer Piece",
+      "Rarity": 9,
+      "Category": "Shards",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Gigantes",
+            "Locations": ["Floating Empire"]
+          },
+          {
+            "Name": "Hammer Troll",
+            "Locations": ["Maya Road"]
+          },
+          {
+            "Name": "Minotaur",
+            "Locations": ["Idra Cave"]
+          },
+          {
+            "Name": "Minotaur King",
+            "Locations": ["Leon Karnak"]
+          }
+        ]
+      },
+      "Difficulty": 37,
+      "StatInfo": {
+        "def": 4,
+
+        "str": 6,
+
+        "diz": 1
+      }
+    },
+    {
+      "Name": "Shoulder Piece",
+      "Rarity": 11,
+      "Category": "Shards",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Ogre Viking",
+            "Locations": ["Sechs Territory"]
+          },
+          {
+            "Name": "Orc Viking",
+            "Locations": ["Sechs Territory"]
+          }
+        ]
+      },
+      "Difficulty": 45,
+      "StatInfo": {
+        "def": 11,
+
+        "knockAtk": 0.08
+      }
+    },
+    {
+      "Name": "Rusty Screw",
+      "Rarity": 11,
+      "Category": "Shards",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Sechs Tank",
+            "Locations": ["Floating Empire"]
+          }
+        ]
+      },
+      "Difficulty": 57,
+      "StatInfo": {
+        "matk": 25,
+        "mdef": -2
+      }
+    },
+    {
+      "Name": "Shiney Screw",
+      "Rarity": 12,
+      "Category": "Shards",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Sechs Tank",
+            "Locations": ["Floating Empire"]
+          }
+        ]
+      },
+      "Difficulty": 80,
+      "StatInfo": {
+        "def": 30,
+        "matk": 40,
+        "mdef": 10
+      }
+    },
+    {
+      "Name": "Glistening Blade",
+      "Rarity": 12,
+      "Category": "Shards",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Faust",
+            "Locations": ["Floating Empire"]
+          }
+        ]
+      },
+      "Difficulty": 66,
+      "StatInfo": {
+        "atk": 38
+      }
+    },
+    {
+      "Name": "Great Hammer Shard",
+      "Rarity": 12,
+      "Category": "Shards",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Baal",
+            "Locations": ["Rune Prana Floor 5"]
+          }
+        ]
+      },
+      "Difficulty": 60,
+      "StatInfo": {
+        "str": 30,
+
+        "diz": 2
+      }
+    },
+    {
+      "Name": "Left Rock Shard",
+      "Rarity": 14,
+      "Category": "Shards",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Sano",
+            "Locations": ["Forest of Beginnings", "Leon Karnak"]
+          }
+        ]
+      },
+      "Difficulty": 88,
+      "StatInfo": {
+        "def": 120,
+
+        "mdef": 35,
+
+        "psnRes": 0.06,
+        "sealRes": 0.06,
+        "parRes": 0.06,
+        "slpRes": 0.06,
+        "ftgRes": 0.06,
+        "sickRes": 0.06,
+        "faintRes": 0.01,
+        "drainRes": 0.01
+      }
+    },
+    {
+      "Name": "Right Rock Shard",
+      "Rarity": 14,
+      "Category": "Shards",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Uno",
+            "Locations": ["Forest of Beginnings", "Leon Karnak"]
+          }
+        ]
+      },
+      "Difficulty": 88,
+      "StatInfo": {
+        "def": 35,
+
+        "mdef": 120,
+
+        "dizRes": 0.05,
+        "critRes": 0.03,
+        "knockRes": 0.15
+      }
+    },
+    {
+      "Name": "MTGU Plate",
+      "Rarity": 14,
+      "Category": "Shards",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Armoured Tank+",
+            "Locations": ["Floating Empire"]
+          }
+        ]
+      },
+      "Difficulty": 80,
+      "StatInfo": {
+        "def": 8,
+
+        "ftgRes": 0.08,
+        "sickRes": 0.08
+      }
+    },
+    {
+      "Name": "Pirate's Armour",
+      "Rarity": 14,
+      "Category": "Shards",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "High Ogre Viking",
+            "Locations": ["Rune Prana Floor 3"]
+          }
+        ]
+      },
+      "Difficulty": 84,
+      "StatInfo": {
+        "def": 83,
+
+        "knock": 0.15
+      }
+    },
+    {
+      "Name": "Broken Ice Wall",
+      "Rarity": 15,
+      "Category": "Shards",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Death Wall",
+            "Locations": ["Rune Prana Floor 6"]
+          }
+        ]
+      },
+      "Difficulty": 96,
+      "StatInfo": {
+        "atk": 105,
+        "def": 4,
+        "matk": 95,
+
+        "stun": 0.25,
+        "slpRes": 0.1
+      }
+    },
+    {
+      "Name": "Fur (S)",
+      "Rarity": 0,
+      "Category": "Furs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "King Wooly",
+            "Locations": ["Yokmir Cave", "Autumn Road"]
+          },
+          {
+            "Name": "Marionetta",
+            "Locations": ["Obsidian Mansion"]
+          },
+          {
+            "Name": "Shmooly",
+            "Locations": ["Spring Area"]
+          },
+          {
+            "Name": "Wooly",
+            "Locations": ["Selphia Plain", "Summer Area"]
+          }
+        ]
+      },
+      "Difficulty": 1,
+      "StatInfo": {
+        "vit": 1,
+
+        "dizRes": 0.01
+      }
+    },
+    {
+      "Name": "Fur",
+      "Rarity": 1,
+      "Category": "Furs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Blood Panther",
+            "Locations": ["Floating Empire"]
+          },
+          {
+            "Name": "Chipsqueek",
+            "Locations": ["Selphia Plain"]
+          },
+          {
+            "Name": "Hinoe",
+            "Locations": ["Rune Prana Floor 4"]
+          },
+          {
+            "Name": "Kinoto",
+            "Locations": ["Rune Prana Floor 4"]
+          },
+          {
+            "Name": "Leoplicant",
+            "Locations": ["Rune Prana Floor 4"]
+          },
+          {
+            "Name": "Malm Tiger",
+            "Locations": ["Leon Karnak"]
+          },
+          {
+            "Name": "Palm Cat",
+            "Locations": ["Autumn Road", "Delirium Lava Ruins"]
+          },
+          {
+            "Name": "Thunderbolt",
+            "Locations": ["Water Ruins"]
+          }
+        ]
+      },
+      "Difficulty": 8,
+      "StatInfo": {
+        "def": 2,
+
+        "mdef": 1,
+
+        "dizRes": 0.02
+      }
+    },
+    {
+      "Name": "Yellow Down",
+      "Rarity": 3,
+      "Category": "Furs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Big Duck",
+            "Locations": ["Rune Prana Floor 2"]
+          },
+          {
+            "Name": "Duck",
+            "Locations": ["Selphia Plain"]
+          }
+        ]
+      },
+      "Difficulty": 17,
+      "StatInfo": {
+        "def": 2,
+
+        "mdef": 2,
+
+        "dizRes": 0.05
+      }
+    },
+    {
+      "Name": "Quality Fur",
+      "Rarity": 4,
+      "Category": "Furs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Chipsqueek",
+            "Locations": ["Selphia Plain"]
+          },
+          {
+            "Name": "Hinoe",
+            "Locations": ["Rune Prana Floor 4"]
+          },
+          {
+            "Name": "Hunter Wolf",
+            "Locations": ["Sechs Territory"]
+          },
+          {
+            "Name": "Kinoto",
+            "Locations": ["Rune Prana Floor 4"]
+          },
+          {
+            "Name": "Leoplicant",
+            "Locations": ["Rune Prana Floor 4"]
+          },
+          {
+            "Name": "Malm Tiger",
+            "Locations": ["Leon Karnak"]
+          },
+          {
+            "Name": "Shadow Panther",
+            "Locations": ["Obsidian Mansion"]
+          },
+          {
+            "Name": "Silver Wolf",
+            "Locations": ["Yokmir Cave", "Sechs Territory"]
+          }
+        ]
+      },
+      "Difficulty": 23,
+      "StatInfo": {
+        "def": 3,
+
+        "mdef": 2,
+
+        "dizRes": 0.1
+      }
+    },
+    {
+      "Name": "Lightning Mane",
+      "Rarity": 5,
+      "Category": "Furs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Thunderbolt",
+            "Locations": ["Water Ruins"]
+          }
+        ]
+      },
+      "Difficulty": 35,
+      "StatInfo": {
+        "def": 7,
+
+        "mdef": 6,
+
+        "vit": 4,
+
+        "dizRes": 0.2
+      }
+    },
+    {
+      "Name": "Quality Puffy Fur",
+      "Rarity": 6,
+      "Category": "Furs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Furpy",
+            "Locations": ["Autumn Road"]
+          }
+        ]
+      },
+      "Difficulty": 36,
+      "StatInfo": {
+        "def": 5,
+
+        "mdef": 3,
+
+        "dizRes": 0.08
+      }
+    },
+    {
+      "Name": "Fur (M)",
+      "Rarity": 1,
+      "Category": "Furs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Marionetta",
+            "Locations": ["Obsidian Mansion"]
+          },
+          {
+            "Name": "Shmooly",
+            "Locations": ["Spring Area"]
+          }
+        ]
+      },
+      "Difficulty": 35,
+      "StatInfo": {
+        "def": 5,
+
+        "mdef": 3,
+
+        "dizRes": 0.1
+      }
+    },
+    {
+      "Name": "Wooly Furball",
+      "Rarity": 9,
+      "Category": "Furs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "King Wooly",
+            "Locations": ["Yokmir Cave", "Autumn Road"]
+          },
+          {
+            "Name": "Shmooly",
+            "Locations": ["Spring Area"]
+          }
+        ]
+      },
+      "Difficulty": 41,
+      "StatInfo": {
+        "def": 8,
+
+        "mdef": 4,
+
+        "dizRes": 0.16,
+        "slpAtk": 0.01
+      }
+    },
+    {
+      "Name": "Fur (L)",
+      "Rarity": 10,
+      "Category": "Furs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Shmooly",
+            "Locations": ["Spring Area"]
+          }
+        ]
+      },
+      "Difficulty": 52,
+      "StatInfo": {
+        "def": 10,
+
+        "mdef": 5,
+
+        "dizRes": 0.25,
+        "slpAtk": 0.03
+      }
+    },
+    {
+      "Name": "Penguin Down",
+      "Rarity": 11,
+      "Category": "Furs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Emperor Penguin",
+            "Locations": ["Sechs Territory", "Fall and Winter Area"]
+          }
+        ]
+      },
+      "Difficulty": 66,
+      "StatInfo": {
+        "def": 30,
+
+        "mdef": 8,
+
+        "dizRes": 0.18
+      }
+    },
+    {
+      "Name": "Red Lion Fur",
+      "Rarity": 15,
+      "Category": "Furs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Hinoe",
+            "Locations": ["Rune Prana Floor 4"]
+          }
+        ]
+      },
+      "Difficulty": 92,
+      "StatInfo": {
+        "atk": 10,
+        "def": 105,
+
+        "mdef": 35,
+
+        "dizRes": 0.2
+      }
+    },
+    {
+      "Name": "Blue Lion Fur",
+      "Rarity": 15,
+      "Category": "Furs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Kinoto",
+            "Locations": ["Rune Prana Floor 4"]
+          }
+        ]
+      },
+      "Difficulty": 92,
+      "StatInfo": {
+        "def": 35,
+        "matk": 10,
+        "mdef": 105,
+
+        "dizRes": 0.2
+      }
+    },
+    {
+      "Name": "Chest Hair",
+      "Rarity": 15,
+      "Category": "Furs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Greater Demon",
+            "Locations": ["Rune Prana Floor 7"]
+          }
+        ]
+      },
+      "Difficulty": 91,
+      "StatInfo": {
+        "atk": 25,
+        "def": 110,
+
+        "mdef": 60,
+
+        "int": -5,
+        "dizRes": 0.25
+      }
+    },
+    {
+      "Name": "Spore",
+      "Rarity": 1,
+      "Category": "Powders and Spores",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Big Muck",
+            "Locations": ["Selphia Plain"]
+          },
+          {
+            "Name": "Tricky Muck",
+            "Locations": ["Autumn Road", "Delirium Lava Ruins"]
+          },
+          {
+            "Name": "Death Fungus",
+            "Locations": ["Selphia Plain"],
+            "condition": "Fridays"
+          }
+        ]
+      },
+      "Difficulty": 8,
+      "StatInfo": {
+        "matk": 2
+      }
+    },
+    {
+      "Name": "Fairy Dust",
+      "Rarity": 3,
+      "Category": "Powders and Spores",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Dark Fairy",
+            "Locations": ["Floating Empire"]
+          },
+          {
+            "Name": "Fairy",
+            "Locations": ["Selphia Plain"]
+          }
+        ]
+      },
+      "Difficulty": 19,
+      "StatInfo": {
+        "matk": 5
+      }
+    },
+    {
+      "Name": "Gunpowder",
+      "Rarity": 5,
+      "Category": "Powders and Spores",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Orc Archer",
+            "Locations": ["Yokmir Forest"]
+          },
+          {
+            "Name": "Goblin Sniper",
+            "Locations": ["Idra Cave"]
+          },
+          {
+            "Name": "Orc Hunter",
+            "Locations": ["Yokmir Cave"]
+          }
+        ]
+      },
+      "Difficulty": 27,
+      "StatInfo": {
+        "atk": 1,
+
+        "matk": 5
+      }
+    },
+    {
+      "Name": "Poison Powder",
+      "Rarity": 6,
+      "Category": "Powders and Spores",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Tricky Muck",
+            "Locations": ["Autumn Road", "Delirium Lava Ruins"]
+          },
+          {
+            "Name": "Death Fungus",
+            "Locations": ["Selphia Plain"],
+            "condition": "Fridays"
+          }
+        ]
+      },
+      "Difficulty": 20,
+      "StatInfo": {
+        "matk": 2,
+        "mdef": 2,
+
+        "psnAtk": 0.05
+      }
+    },
+    {
+      "Name": "Holy Spore",
+      "Rarity": 7,
+      "Category": "Powders and Spores",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Death Fungus",
+            "Locations": ["Selphia Plain"],
+            "condition": "Fridays"
+          }
+        ]
+      },
+      "Difficulty": 33,
+      "StatInfo": {
+        "matk": 10,
+
+        "psnAtk": 0.33,
+        "sealAtk": 0.33,
+        "drainRes": 0.5
+      }
+    },
+    {
+      "Name": "Root",
+      "Rarity": 8,
+      "Category": "Powders and Spores",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Flower Blossom",
+            "Locations": ["Sercerezo Hill"]
+          },
+          {
+            "Name": "Flower Crystal",
+            "Locations": ["Sechs Territory"]
+          },
+          {
+            "Name": "Flower Lily",
+            "Locations": ["Autumn Road"]
+          },
+          {
+            "Name": "Planchoa",
+            "Locations": ["Maya Road"]
+          },
+          {
+            "Name": "Rafflesia",
+            "Locations": ["Delirium Lava Ruins"]
+          }
+        ]
+      },
+      "Difficulty": 35,
+      "StatInfo": {
+        "matk": 8
+      }
+    },
+    {
+      "Name": "Magic Powder",
+      "Rarity": 9,
+      "Category": "Powders and Spores",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Little Mage",
+            "Locations": ["Forest of Beginnings", "Idra Cave"]
+          }
+        ]
+      },
+      "Difficulty": 40,
+      "StatInfo": {
+        "matk": 10
+      }
+    },
+    {
+      "Name": "Mysterious Powder",
+      "Rarity": 10,
+      "Category": "Powders and Spores",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "???",
+            "Locations": ["Maya Road"]
+          }
+        ]
+      },
+      "Difficulty": 55,
+      "StatInfo": {
+        "matk": 15,
+
+        "ftgAtk": 0.1,
+        "sickAtk": 0.05
+      }
+    },
+    {
+      "Name": "Earth Dragon Ash",
+      "Rarity": 11,
+      "Category": "Powders and Spores",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Terraclone",
+            "Locations": ["Idra Cave"]
+          }
+        ]
+      },
+      "Difficulty": 80,
+      "StatInfo": {
+        "def": 33,
+
+        "mdef": 33,
+
+        "vit": 5
+      }
+    },
+    {
+      "Name": "Magic",
+      "Rarity": 11,
+      "Category": "Powders and Spores",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Elemental Emperor",
+            "Locations": ["Rune Prana Floor 6"]
+          },
+          {
+            "Name": "Flare Mage",
+            "Locations": ["Rune Prana"]
+          },
+          {
+            "Name": "Little Wizard",
+            "Locations": ["Sechs Territory"]
+          },
+          {
+            "Name": "Ice Wizard",
+            "Locations": ["Rune Prana"]
+          }
+        ]
+      },
+      "Difficulty": 53,
+      "StatInfo": {
+        "matk": 20
+      }
+    },
+    {
+      "Name": "Fire Dragon Ash",
+      "Rarity": 12,
+      "Category": "Powders and Spores",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Fiergaenger",
+            "Locations": ["Maya Road"]
+          }
+        ]
+      },
+      "Difficulty": 80,
+      "StatInfo": {
+        "atk": 80,
+
+        "str": 10
+      }
+    },
+    {
+      "Name": "Fairy Elixir",
+      "Rarity": 12,
+      "Category": "Powders and Spores",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Dark Fairy",
+            "Locations": ["Floating Empire"]
+          }
+        ]
+      },
+      "Difficulty": 67,
+      "StatInfo": {
+        "matk": 40
+      }
+    },
+    {
+      "Name": "Water Dragon Ash",
+      "Rarity": 13,
+      "Category": "Powders and Spores",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Aquameleon",
+            "Locations": ["Sechs Territory"]
+          }
+        ]
+      },
+      "Difficulty": 80,
+      "StatInfo": {
+        "matk": 80,
+
+        "int": 10
+      }
+    },
+    {
+      "Name": "Turnip's Miracle",
+      "Rarity": 14,
+      "Category": "Powders and Spores",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Turnip Ghost",
+            "Locations": ["Rune Prana Floor 3"]
+          }
+        ]
+      },
+      "Difficulty": 85,
+      "StatInfo": {
+        "mdef": 99
+      }
+    },
+    {
+      "Name": "Melody Bottle",
+      "Rarity": 15,
+      "Category": "Powders and Spores",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Siren",
+            "Locations": ["Rune Prana Floor 5"]
+          }
+        ]
+      },
+      "Difficulty": 94,
+      "StatInfo": {
+        "atk": 30,
+        "def": -10,
+        "matk": 170,
+        "mdef": 30,
+
+        "psnAtk": 0.1,
+        "sealAtk": 0.1,
+        "parAtk": 0.1,
+        "slpAtk": 0.1,
+        "ftgAtk": 0.1,
+        "sickAtk": 0.1,
+        "faintAtk": 0.01
+      }
+    },
+    {
+      "Name": "Cheap Cloth",
+      "Rarity": 0,
+      "Category": "Cloths and Skins",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "High Orc",
+            "Locations": ["Yokmir Cave"]
+          },
+          {
+            "Name": "Orc",
+            "Locations": ["Summer Area", "Yokmir Forest"]
+          },
+          {
+            "Name": "Rider Orc",
+            "Locations": ["Yokmir Cave"]
+          }
+        ]
+      },
+      "Difficulty": 2,
+      "StatInfo": {
+        "def": 1,
+
+        "critRes": 0.01
+      }
+    },
+    {
+      "Name": "Insect Carapace",
+      "Rarity": 1,
+      "Category": "Cloths and Skins",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Ant",
+            "Locations": [
+              "Summer Area",
+              "Fall and Winter Area",
+              "Yokmir Forest",
+              "Yokmir Cave",
+              "Revival Cave"
+            ]
+          },
+          {
+            "Name": "Beetle",
+            "Locations": ["Yokmir Forest", "Selphia Plain"]
+          },
+          {
+            "Name": "Killer Ant",
+            "Locations": ["Yokmir Cave"]
+          },
+          {
+            "Name": "Hornet",
+            "Locations": ["Yokmir Cave"]
+          },
+          {
+            "Name": "Scorpion",
+            "Locations": ["Delirium Lava Ruins"]
+          },
+          {
+            "Name": "Ant Queen",
+            "Locations": ["Rune Prana Floor 4"]
+          }
+        ]
+      },
+      "Difficulty": 7,
+      "StatInfo": {
+        "def": 1,
+
+        "psnRes": 0.15
+      }
+    },
+    {
+      "Name": "Ghost Hood",
+      "Rarity": 4,
+      "Category": "Cloths and Skins",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Faust",
+            "Locations": ["Floating Empire"]
+          },
+          {
+            "Name": "Ghost",
+            "Locations": ["Obsidian Mansion"]
+          },
+          {
+            "Name": "Ghost Ray",
+            "Locations": ["Obsidian Mansion"]
+          },
+          {
+            "Name": "Necro",
+            "Locations": ["Idra Cave"]
+          },
+          {
+            "Name": "Onion Ghost",
+            "Locations": ["Sercerezo Hill"]
+          },
+          {
+            "Name": "Tomato Ghost",
+            "Locations": ["Delirium Lava Ruins"]
+          }
+        ]
+      },
+      "Difficulty": 24,
+      "StatInfo": {
+        "def": 3,
+
+        "sealRes": 0.3
+      }
+    },
+    {
+      "Name": "Pretty Carapace",
+      "Rarity": 6,
+      "Category": "Cloths and Skins",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Ant",
+            "Locations": [
+              "Summer Area",
+              "Fall and Winter Area",
+              "Yokmir Forest",
+              "Yokmir Cave",
+              "Revival Cave"
+            ]
+          },
+          {
+            "Name": "Ant Queen",
+            "Locations": ["Rune Prana Floor 4"]
+          },
+          {
+            "Name": "Beetle",
+            "Locations": ["Yokmir Forest", "Selphia Plain"]
+          },
+          {
+            "Name": "Death Stalker",
+            "Locations": ["Sechs Territory"]
+          },
+          {
+            "Name": "Heaven's Scissors",
+            "Locations": ["Rune Prana Floor 5"]
+          },
+          {
+            "Name": "Heracles",
+            "Locations": ["Maya Road"]
+          },
+          {
+            "Name": "Hornet",
+            "Locations": ["Yokmir Cave"]
+          },
+          {
+            "Name": "Hornet Queen",
+            "Locations": ["Maya Road"]
+          },
+          {
+            "Name": "Killer Ant",
+            "Locations": ["Yokmir Cave"]
+          }
+        ]
+      },
+      "Difficulty": 35,
+      "StatInfo": {
+        "def": 3,
+
+        "sealRes": 0.05,
+        "parRes": 0.25
+      }
+    },
+    {
+      "Name": "Quality Cloth",
+      "Rarity": 7,
+      "Category": "Cloths and Skins",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Gangster Goblin",
+            "Locations": ["Delirium Lava Ruins"]
+          },
+          {
+            "Name": "Goblin Pirate",
+            "Locations": ["Delirium Lava Ruins"]
+          }
+        ]
+      },
+      "Difficulty": 32,
+      "StatInfo": {
+        "def": 5,
+
+        "critRes": 0.05
+      }
+    },
+    {
+      "Name": "Quality Worn Cloth",
+      "Rarity": 8,
+      "Category": "Cloths and Skins",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Onionger",
+            "Locations": ["Rune Prana Floor 1"]
+          }
+        ]
+      },
+      "Difficulty": 83,
+      "StatInfo": {
+        "def": 52,
+
+        "mdef": 35,
+
+        "dizRes": 0.1,
+        "critRes": 0.1,
+        "sealRes": 0.3
+      }
+    },
+    {
+      "Name": "Silk Cloth",
+      "Rarity": 9,
+      "Category": "Cloths and Skins",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Captain Goblin",
+            "Locations": ["Leon Karnak"]
+          },
+          {
+            "Name": "Hobgoblin",
+            "Locations": ["Idra Cave"]
+          }
+        ]
+      },
+      "Difficulty": 38,
+      "StatInfo": {
+        "def": 9,
+
+        "critRes": 0.04
+      }
+    },
+    {
+      "Name": "Giant's Glove",
+      "Rarity": 10,
+      "Category": "Cloths and Skins",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Hammer Troll",
+            "Locations": ["Maya Road"]
+          },
+          {
+            "Name": "Master Giant",
+            "Locations": ["Floating Empire"]
+          },
+          {
+            "Name": "Master Troll",
+            "Locations": ["Rune Prana Floor 4"]
+          }
+        ]
+      },
+      "Difficulty": 43,
+      "StatInfo": {
+        "atk": 3,
+        "def": 8,
+
+        "critRes": 0.06
+      }
+    },
+    {
+      "Name": "Blue Giant's Glove",
+      "Rarity": 11,
+      "Category": "Cloths and Skins",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Titan",
+            "Locations": ["Sechs Territory"]
+          }
+        ]
+      },
+      "Difficulty": 54,
+      "StatInfo": {
+        "atk": 6,
+        "def": 12,
+
+        "critRes": 0.08
+      }
+    },
+    {
+      "Name": "Ancient Orc Cloth",
+      "Rarity": 14,
+      "Category": "Cloths and Skins",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Death Orc",
+            "Locations": ["Rune Prana Floor 7"]
+          }
+        ]
+      },
+      "Difficulty": 90,
+      "StatInfo": {
+        "def": 96,
+
+        "mdef": 48,
+
+        "dizRes": 0.15,
+        "critRes": 0.15,
+        "sealRes": 0.3
+      }
+    },
+    {
+      "Name": "Insect Jaw",
+      "Rarity": 0,
+      "Category": "Claws and Fangs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Ant",
+            "Locations": [
+              "Summer Area",
+              "Fall and Winter Area",
+              "Yokmir Forest",
+              "Yokmir Cave",
+              "Revival Cave"
+            ]
+          },
+          {
+            "Name": "Hornet",
+            "Locations": ["Yokmir Cave"]
+          },
+          {
+            "Name": "Hornet Queen",
+            "Locations": ["Maya Road"]
+          },
+          {
+            "Name": "Killer Ant",
+            "Locations": ["Yokmir Cave"]
+          }
+        ]
+      },
+      "Difficulty": 4,
+      "StatInfo": {
+        "atk": 2
+      }
+    },
+    {
+      "Name": "Panther Claw",
+      "Rarity": 4,
+      "Category": "Claws and Fangs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Shadow Panther",
+            "Locations": ["Obsidian Mansion"]
+          }
+        ]
+      },
+      "Difficulty": 20,
+      "StatInfo": {
+        "atk": 4
+      }
+    },
+    {
+      "Name": "Wolf Fang",
+      "Rarity": 5,
+      "Category": "Claws and Fangs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Silver Wolf",
+            "Locations": ["Yokmir Cave", "Sechs Territory"]
+          }
+        ]
+      },
+      "Difficulty": 30,
+      "StatInfo": {
+        "atk": 6
+      }
+    },
+    {
+      "Name": "Palm Claw",
+      "Rarity": 6,
+      "Category": "Claws and Fangs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Leoplicant",
+            "Locations": ["Rune Prana Floor 4"]
+          },
+          {
+            "Name": "Palm Cat",
+            "Locations": ["Autumn Road"]
+          }
+        ]
+      },
+      "Difficulty": 32,
+      "StatInfo": {
+        "atk": 8
+      }
+    },
+    {
+      "Name": "Giant's Nail",
+      "Rarity": 7,
+      "Category": "Claws and Fangs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Hammer Troll",
+            "Locations": ["Maya Road"]
+          },
+          {
+            "Name": "Titan",
+            "Locations": ["Sechs Territory"]
+          },
+          {
+            "Name": "Troll",
+            "Locations": ["Delirium Lava Ruins"]
+          }
+        ]
+      },
+      "Difficulty": 40,
+      "StatInfo": {
+        "atk": 10
+      }
+    },
+    {
+      "Name": "Chimera's Claw",
+      "Rarity": 7,
+      "Category": "Claws and Fangs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Chimera",
+            "Locations": ["Water Ruins"],
+            "condition": "Can only be obtained once per day, unless cheats are used"
+          }
+        ]
+      },
+      "Difficulty": 45,
+      "StatInfo": {
+        "atk": 15,
+
+        "matk": 2,
+
+        "psnAtk": 0.05,
+        "parAtk": 0.05
+      }
+    },
+    {
+      "Name": "Ivory Tusk",
+      "Rarity": 8,
+      "Category": "Claws and Fangs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Elefun",
+            "Locations": ["Spring Area", "Idra Cave"]
+          },
+          {
+            "Name": "Mammoo",
+            "Locations": ["Sechs Territory"]
+          }
+        ]
+      },
+      "Difficulty": 50,
+      "StatInfo": {
+        "atk": 15,
+        "def": -5,
+        "matk": 1
+      }
+    },
+    {
+      "Name": "Big Gaint's Nail",
+      "Rarity": 9,
+      "Category": "Claws and Fangs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Master Troll",
+            "Locations": ["Rune Prana Floor 4"]
+          }
+        ]
+      },
+      "Difficulty": 90,
+      "StatInfo": {
+        "atk": 150
+      }
+    },
+    {
+      "Name": "Unbroken Ivory Tusk",
+      "Rarity": 10,
+      "Category": "Claws and Fangs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Mammoo",
+            "Locations": ["Sechs Territory"]
+          }
+        ]
+      },
+      "Difficulty": 55,
+      "StatInfo": {
+        "atk": 19,
+
+        "matk": 2
+      }
+    },
+    {
+      "Name": "Scorpion Pincer",
+      "Rarity": 11,
+      "Category": "Claws and Fangs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Death Stalker",
+            "Locations": ["Sechs Territory"]
+          }
+        ]
+      },
+      "Difficulty": 60,
+      "StatInfo": {
+        "atk": 30,
+        "def": -5
+      }
+    },
+    {
+      "Name": "Cheap Propeller",
+      "Rarity": 11,
+      "Category": "Claws and Fangs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Hover Soldier",
+            "Locations": ["Floating Empire"]
+          },
+          {
+            "Name": "Hover Warrior",
+            "Locations": ["Floating Empire"]
+          }
+        ]
+      },
+      "Difficulty": 62,
+      "StatInfo": {
+        "atk": 29,
+        "def": -2
+      }
+    },
+    {
+      "Name": "Gold Wolf Fang",
+      "Rarity": 11,
+      "Category": "Claws and Fangs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Hunter Wolf",
+            "Locations": ["Sechs Territory"]
+          }
+        ]
+      },
+      "Difficulty": 61,
+      "StatInfo": {
+        "atk": 26
+      }
+    },
+    {
+      "Name": "Quality Propeller",
+      "Rarity": 12,
+      "Category": "Claws and Fangs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Hover Warrior",
+            "Locations": ["Floating Empire"]
+          }
+        ]
+      },
+      "Difficulty": 69,
+      "StatInfo": {
+        "atk": 40,
+        "def": -5
+      }
+    },
+    {
+      "Name": "Magic Claw",
+      "Rarity": 12,
+      "Category": "Claws and Fangs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Blood Panther",
+            "Locations": ["Floating Empire"]
+          }
+        ]
+      },
+      "Difficulty": 74,
+      "StatInfo": {
+        "atk": 42,
+
+        "matk": 15
+      }
+    },
+    {
+      "Name": "Dragon Fang",
+      "Rarity": 13,
+      "Category": "Claws and Fangs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Black Dragon",
+            "Locations": ["Rune Prana Floor 7"]
+          },
+          {
+            "Name": "Blue Dragon",
+            "Locations": ["Rune Prana Floor 6"]
+          },
+          {
+            "Name": "Fiersome",
+            "Locations": ["Sharance Maze"]
+          },
+          {
+            "Name": "Green Dragon",
+            "Locations": ["Rune Prana Floor 1"]
+          },
+          {
+            "Name": "Grimoire",
+            "Locations": ["Leon Karnak"]
+          },
+          {
+            "Name": "Little Dragon",
+            "Locations": ["Floating Empire"]
+          },
+          {
+            "Name": "Pink Dragon",
+            "Locations": ["Rune Prana Floor 6"]
+          },
+          {
+            "Name": "Red Dragon",
+            "Locations": ["Rune Prana Floor 4"]
+          },
+          {
+            "Name": "Terrable",
+            "Locations": ["Sharance Maze"]
+          },
+          {
+            "Name": "Ventuswill",
+            "Locations": ["Sharance Maze"]
+          },
+          {
+            "Name": "Yellow Dragon",
+            "Locations": ["Rune Prana Floor 6"]
+          }
+        ]
+      },
+      "Difficulty": 80,
+      "StatInfo": {
+        "atk": 60
+      }
+    },
+    {
+      "Name": "Malm Claw",
+      "Rarity": 14,
+      "Category": "Claws and Fangs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Leoplicant",
+            "Locations": ["Rune Prana Floor 4"]
+          },
+          {
+            "Name": "Malm Tiger",
+            "Locations": ["Leon Karnak"]
+          }
+        ]
+      },
+      "Difficulty": 88,
+      "StatInfo": {
+        "atk": 121
+      }
+    },
+    {
+      "Name": "Queen's Jaw",
+      "Rarity": 14,
+      "Category": "Claws and Fangs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Ant Queen",
+            "Locations": ["Rune Prana Floor 4"]
+          }
+        ]
+      },
+      "Difficulty": 89,
+      "StatInfo": {
+        "atk": 100,
+        "def": 10,
+        "matk": 40,
+        "mdef": 10
+      }
+    },
+    {
+      "Name": "Dangerous Scissors",
+      "Rarity": 14,
+      "Category": "Claws and Fangs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Heaven's Scissors",
+            "Locations": ["Rune Prana Floor 5"]
+          }
+        ]
+      },
+      "Difficulty": 90,
+      "StatInfo": {
+        "atk": 195,
+        "def": -50
+      }
+    },
+    {
+      "Name": "Wind Dragon Tooth",
+      "Rarity": 15,
+      "Category": "Claws and Fangs",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Ventuswill",
+            "Locations": ["Sharance Maze"]
+          }
+        ]
+      },
+      "Difficulty": 98,
+      "StatInfo": {
+        "atk": 180,
+
+        "matk": 180
+      }
+    },
+    {
+      "Name": "Wet Scale",
+      "Rarity": 11,
+      "Category": "Scales",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Sealy",
+            "Locations": ["Sechs Territory"]
+          }
+        ]
+      },
+      "Difficulty": 58,
+      "StatInfo": {
+        "vit": 22
+      }
+    },
+    {
+      "Name": "Dragon Scale",
+      "Rarity": 14,
+      "Category": "Scales",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Green Dragon",
+            "Locations": ["Rune Prana Floor 1", "Rune Prana Floor 7"]
+          },
+          {
+            "Name": "Ventuswill",
+            "Locations": ["Sharance Maze"]
+          }
+        ]
+      },
+      "Difficulty": 88,
+      "StatInfo": {
+        "str": 10,
+        "vit": 140
+      }
+    },
+    {
+      "Name": "Crimson Scale",
+      "Rarity": 14,
+      "Category": "Scales",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Red Dragon",
+            "Locations": ["Rune Prana Floor 4", "Rune Prana Floor 7"]
+          }
+        ]
+      },
+      "Difficulty": 88,
+      "StatInfo": {
+        "str": 140,
+        "vit": 10
+      }
+    },
+    {
+      "Name": "Blue Scale",
+      "Rarity": 14,
+      "Category": "Scales",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Blue Dragon",
+            "Locations": ["Rune Prana Floor 6", "Rune Prana Floor 7"]
+          }
+        ]
+      },
+      "Difficulty": 88,
+      "StatInfo": {
+        "vit": 10,
+        "int": 140
+      }
+    },
+    {
+      "Name": "Glitter Scale",
+      "Rarity": 14,
+      "Category": "Scales",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Yellow Dragon",
+            "Locations": ["Rune Prana Floor 6", "Rune Prana Floor 7"]
+          }
+        ]
+      },
+      "Difficulty": 96,
+      "StatInfo": {
+        "str": 70,
+        "vit": 10,
+        "int": 70
+      }
+    },
+    {
+      "Name": "Love Scale",
+      "Rarity": 14,
+      "Category": "Scales",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Pink Dragon",
+            "Locations": ["Rune Prana Floor 6", "Rune Prana Floor 7"]
+          }
+        ]
+      },
+      "Difficulty": 88,
+      "StatInfo": {
+        "str": 50,
+        "vit": 50,
+        "int": 50
+      }
+    },
+    {
+      "Name": "Black Scale",
+      "Rarity": 14,
+      "Category": "Scales",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Black Dragon",
+            "Locations": ["Rune Prana Floor 7"]
+          }
+        ]
+      },
+      "Difficulty": 88,
+      "StatInfo": {
+        "str": 10,
+        "vit": 70,
+        "int": 70
+      }
+    },
+    {
+      "Name": "Grimoire Scale",
+      "Rarity": 15,
+      "Category": "Scales",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Grimoire",
+            "Locations": ["Leon Karnak"]
+          }
+        ]
+      },
+      "Difficulty": 95,
+      "StatInfo": {
+        "str": 50,
+        "vit": 160,
+        "int": 50
+      }
+    },
+    {
+      "Name": "Firewyrm Scale",
+      "Rarity": 15,
+      "Category": "Scales",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Fiersome",
+            "Locations": ["Sharance Maze"]
+          }
+        ]
+      },
+      "Difficulty": 96,
+      "StatInfo": {
+        "str": 300,
+
+        "int": -10
+      }
+    },
+    {
+      "Name": "Earthwyrm Scale",
+      "Rarity": 15,
+      "Category": "Scales",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Terrable",
+            "Locations": ["Sharance Maze"]
+          }
+        ]
+      },
+      "Difficulty": 96,
+      "StatInfo": {
+        "str": -10,
+        "vit": 300,
+        "int": -10
+      }
+    },
+    {
+      "Name": "Legendary Scale",
+      "Rarity": 15,
+      "Category": "Scales",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Aquaticus",
+            "Locations": ["Sharance Maze"]
+          }
+        ]
+      },
+      "Difficulty": 90,
+      "StatInfo": {
+        "drainAtk": 0.1
+      }
+    },
+    {
+      "Name": "Double Steel",
+      "Rarity": 5,
+      "Category": "Collectible",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Mineral Squeek",
+            "Locations": ["Leon Karnak"]
+          }
+        ]
+      },
+      "Difficulty": 50,
+      "StatInfo": {
+        "upgradeEffct": 2
+      }
+    },
+    {
+      "Name": "10-Fold Steel",
+      "Rarity": 10,
+      "Category": "Collectible",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Mineral Squeek",
+            "Locations": ["Leon Karnak"]
+          }
+        ]
+      },
+      "Difficulty": 95,
+      "StatInfo": {
+        "upgradeEffct": 8
+      }
+    },
+    {
+      "Name": "Glitta Augite",
+      "Rarity": 8,
+      "Category": "Collectible",
+      "Drop": {
+        "chopping": [
+          {
+            "Name": "Shining Trees"
+          }
+        ]
+      },
+      "Difficulty": 50,
+      "StatInfo": {
+        "effect": "Increase attack range"
+      }
+    },
+    {
+      "Name": "Invisible Stone",
+      "Rarity": 5,
+      "Category": "Collectible",
+      "Drop": {
+        "condition": "Small chance from any ore"
+      },
+      "Difficulty": 33,
+      "StatInfo": {
+        "effect": "Makes item invisible"
+      }
+    },
+    {
+      "Name": "Light Ore",
+      "Rarity": 13,
+      "Category": "Collectible",
+      "Drop": {
+        "condition": "Small chance from any ore (high mining level required)"
+      },
+      "Difficulty": 50,
+      "StatInfo": {
+        "effect": "Change weapon Category"
+      }
+    },
+    {
+      "Name": "Rune Sphere Shard",
+      "Rarity": 15,
+      "Category": "Collectible",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Ethelwill",
+            "Locations": ["Floating Empire"]
+          },
+          {
+            "Name": "Ragnarok",
+            "Locations": ["Rune Prana Floor 7"]
+          }
+        ]
+      },
+      "Difficulty": 99,
+      "StatInfo": {
+        "str": 120,
+        "vit": 120,
+        "int": 120
+      }
+    },
+    {
+      "Name": "Shade Stone",
+      "Rarity": 6,
+      "Category": "Collectible",
+      "Drop": {
+        "Locations": ["Leon Karnak", "Obsidian Mansion"],
+
+        "condition": "Area between Leon Karnak and Obsidian Mansion where it goes dark"
+      },
+      "Difficulty": 40,
+      "StatInfo": {
+        "effect": "Decrease enemy tolerance on hit"
+      }
+    },
+    {
+      "Name": "Raccoon Leaf",
+      "Rarity": 10,
+      "Category": "Collectible",
+      "Drop": {
+        "Locations": [""],
+        "Monsters": [
+          {
+            "Name": "Magnuto",
+            "Locations": ["Demon's Den"]
+          }
+        ]
+      },
+      "Difficulty": 65,
+      "StatInfo": {
+        "int": 40,
+        "effect": "Increase attack range"
+      }
+    },
+    {
+      "Name": "Icy Nose",
+      "Rarity": 15,
+      "Category": "Collectible",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Crystal Mammoth",
+            "Locations": ["Rune Prana Floor 3"]
+          }
+        ]
+      },
+      "Difficulty": 92,
+      "StatInfo": {
+        "atk": 128,
+
+        "matk": 90,
+
+        "int": -5,
+        "diz": 1,
+        "crit": 0.02,
+        "stun": 0.05
+      }
+    },
+    {
+      "Name": "Big Bird's Comb",
+      "Rarity": 10,
+      "Category": "Collectible",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Mamadoodle",
+            "Locations": ["Cluck-Cluck Nest"]
+          }
+        ]
+      },
+      "Difficulty": 65,
+      "StatInfo": {
+        "atk": 22,
+
+        "faintRes": 0.5
+      }
+    },
+    {
+      "Name": "Rafflesia Petal",
+      "Rarity": 9,
+      "Category": "Collectible",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Rafflesia",
+            "Locations": ["Delirium Lava Ruins"]
+          }
+        ]
+      },
+      "Difficulty": 55,
+      "StatInfo": {
+        "atk": 7,
+
+        "matk": 17,
+
+        "ftgAtk": 0.2,
+        "sickAtk": 0.15
+      }
+    },
+    {
+      "Name": "Cursed Doll",
+      "Rarity": 6,
+      "Category": "Collectible",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Marionetta",
+            "Locations": ["Obsidian Mansion"],
+            "condition": "Can only be obtained once per day, unless cheats are used"
+          }
+        ]
+      },
+      "Difficulty": 40,
+      "StatInfo": {
+        "def": 4,
+
+        "mdef": 7,
+
+        "sealRes": 0.15,
+        "parRes": 0.15,
+        "drainRes": 0.15
+      }
+    },
+    {
+      "Name": "Warrior's Proof",
+      "Rarity": 13,
+      "Category": "Collectible",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Captain Goblin",
+            "Locations": ["Leon Karnak"]
+          }
+        ]
+      },
+      "Difficulty": 77,
+      "StatInfo": {
+        "str": 58,
+
+        "int": 5,
+        "faintRes": 0.15
+      }
+    },
+    {
+      "Name": "Proof of Rank",
+      "Rarity": 13,
+      "Category": "Collectible",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Goblin Don",
+            "Locations": ["Leon Karnak"]
+          }
+        ]
+      },
+      "Difficulty": 77,
+      "StatInfo": {
+        "str": 15,
+
+        "int": 48,
+        "faintRes": 0.15
+      }
+    },
+    {
+      "Name": "Throne of the Empire",
+      "Rarity": 14,
+      "Category": "Collectible",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Ragnarok",
+            "Locations": ["Rune Prana Floor 7"],
+            "condition": "Can only be obtained once per day, unless cheats are used"
+          }
+        ]
+      },
+      "Difficulty": 97,
+      "StatInfo": {
+        "int": -5,
+        "knock": 0.3
+      }
+    },
+    {
+      "Name": "White Stone",
+      "Rarity": 13,
+      "Category": "Collectible",
+      "Drop": {
+        "Locations": ["Sechs Territory"],
+        "condition": "Can only be obtained when in a party with spouse and child"
+      },
+      "Difficulty": 30
+    },
+    {
+      "Name": "Boot",
+      "Rarity": 0,
+      "Category": "Trash",
+      "Drop": {},
+      "Difficulty": 0
+    },
+    {
+      "Name": "Can",
+      "Rarity": 0,
+      "Category": "Trash",
+      "Drop": {},
+      "Difficulty": 0
+    },
+    {
+      "Name": "Rare Can",
+      "Rarity": 5,
+      "Category": "Trash",
+      "Drop": {},
+      "Difficulty": 0
+    },
+    {
+      "Name": "Branch",
+      "Rarity": 0,
+      "Category": "Other",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Blackbird",
+            "Locations": ["Maya Road", "Rune Prana"]
+          },
+          {
+            "Name": "Chipsqueek",
+            "Locations": ["Selphia Plain"]
+          },
+          {
+            "Name": "Furpy",
+            "Locations": ["Autumn Road"]
+          },
+          {
+            "Name": "Thunderbird",
+            "Locations": ["Floating Empire"]
+          },
+          {
+            "Name": "Weagle",
+            "Locations": ["Water Ruins"]
+          }
+        ]
+      },
+      "Difficulty": 0
+    },
+    {
+      "Name": "Rock",
+      "Rarity": 0,
+      "Category": "Other",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Sano",
+            "Locations": ["Forest of Beginnings", "Leon Karnak"]
+          },
+          {
+            "Name": "Uno",
+            "Locations": ["Forest of Beginnings", "Leon Karnak"]
+          }
+        ]
+      },
+      "Difficulty": 0
+    },
+    {
+      "Name": "Material Stone",
+      "Rarity": 0,
+      "Category": "Other",
+      "Drop": {},
+      "Difficulty": 0
+    },
+    {
+      "Name": "Lumber",
+      "Rarity": 0,
+      "Category": "Other",
+      "Drop": {},
+      "Difficulty": 0
+    },
+    {
+      "Name": "Cabbage",
+      "Rarity": 6,
+      "Category": "Vegetable",
+      "Drop": {},
+      "Difficulty": 37,
+      "StatInfo": {
+        "int": 6
+      }
+    },
+    {
+      "Name": "Pink Turnip",
+      "Rarity": 3,
+      "Category": "Vegetable",
+      "Drop": {},
+      "Difficulty": 21,
+      "StatInfo": {
+        "str": 4
+      }
+    },
+    {
+      "Name": "Pink Melon",
+      "Rarity": 7,
+      "Category": "Vegetable",
+      "Drop": {},
+      "Difficulty": 45,
+      "StatInfo": {
+        "int": 7
+      }
+    },
+    {
+      "Name": "Onion",
+      "Rarity": 6,
+      "Category": "Vegetable",
+      "Drop": {},
+      "Difficulty": 37,
+      "StatInfo": {
+        "vit": 10
+      }
+    },
+    {
+      "Name": "Pumpkin",
+      "Rarity": 3,
+      "Category": "Vegetable",
+      "Drop": {},
+      "Difficulty": 19,
+      "StatInfo": {
+        "str": 3
+      }
+    },
+    {
+      "Name": "Cucumber",
+      "Rarity": 3,
+      "Category": "Vegetable",
+      "Drop": {},
+      "Difficulty": 17,
+      "StatInfo": {
+        "str": 2
+      }
+    },
+    {
+      "Name": "Corn",
+      "Rarity": 4,
+      "Category": "Vegetable",
+      "Drop": {},
+      "Difficulty": 27,
+      "StatInfo": {
+        "vit": 6
+      }
+    },
+    {
+      "Name": "Tomato",
+      "Rarity": 7,
+      "Category": "Vegetable",
+      "Drop": {},
+      "Difficulty": 43,
+      "StatInfo": {
+        "str": 9
+      }
+    },
+    {
+      "Name": "Eggplant",
+      "Rarity": 5,
+      "Category": "Vegetable",
+      "Drop": {},
+      "Difficulty": 33,
+      "StatInfo": {
+        "str": 7
+      }
+    },
+    {
+      "Name": "Yam",
+      "Rarity": 3,
+      "Category": "Vegetable",
+      "Drop": {},
+      "Difficulty": 18,
+      "StatInfo": {
+        "vit": 5
+      }
+    },
+    {
+      "Name": "Potato",
+      "Rarity": 1,
+      "Category": "Vegetable",
+      "Drop": {},
+      "Difficulty": 7,
+      "StatInfo": {
+        "vit": 2
+      }
+    },
+    {
+      "Name": "Carrot",
+      "Rarity": 4,
+      "Category": "Vegetable",
+      "Drop": {},
+      "Difficulty": 7,
+      "StatInfo": {
+        "vit": 2
+      }
+    },
+    {
+      "Name": "Green Pepper",
+      "Rarity": 5,
+      "Category": "Vegetable",
+      "Drop": {},
+      "Difficulty": 31,
+      "StatInfo": {
+        "str": 6
+      }
+    },
+    {
+      "Name": "Spinach",
+      "Rarity": 1,
+      "Category": "Vegetable",
+      "Drop": {},
+      "Difficulty": 9,
+      "StatInfo": {
+        "matk": 2
+      }
+    },
+    {
+      "Name": "Turnip",
+      "Rarity": 0,
+      "Category": "Vegetable",
+      "Drop": {},
+      "Difficulty": 1,
+      "StatInfo": {
+        "str": 1
+      }
+    },
+    {
+      "Name": "Radish",
+      "Rarity": 2,
+      "Category": "Vegetable",
+      "Drop": {},
+      "Difficulty": 12,
+      "StatInfo": {
+        "vit": 3
+      }
+    },
+    {
+      "Name": "Leek",
+      "Rarity": 5,
+      "Category": "Vegetable",
+      "Drop": {},
+      "Difficulty": 35,
+      "StatInfo": {
+        "matk": 6
+      }
+    },
+    {
+      "Name": "Bok Choy",
+      "Rarity": 6,
+      "Category": "Vegetable",
+      "Drop": {},
+      "Difficulty": 36,
+      "StatInfo": {
+        "matk": 8
+      }
+    },
+    {
+      "Name": "Hot-Hot Fruit",
+      "Rarity": 5,
+      "Category": "Vegetable",
+      "Drop": {},
+      "Difficulty": 35,
+      "StatInfo": {
+        "mdef": 7,
+
+        "fireRes": 0.05
+      }
+    },
+    {
+      "Name": "Golden Cabbage",
+      "Rarity": 9,
+      "Category": "Vegetable",
+      "Drop": {},
+      "Difficulty": 59,
+      "StatInfo": {
+        "int": 20,
+        "faintAtk": 0.01
+      }
+    },
+    {
+      "Name": "Golden Pumpkin",
+      "Rarity": 9,
+      "Category": "Vegetable",
+      "Drop": {},
+      "Difficulty": 56,
+      "StatInfo": {
+        "str": 25,
+
+        "faintAtk": 0.01
+      }
+    },
+    {
+      "Name": "Golden Potato",
+      "Rarity": 9,
+      "Category": "Vegetable",
+      "Drop": {},
+      "Difficulty": 55,
+      "StatInfo": {
+        "vit": 30,
+
+        "faintAtk": 0.01
+      }
+    },
+    {
+      "Name": "Bamboo Sprout",
+      "Rarity": 0,
+      "Category": "Vegetable",
+      "Drop": {},
+      "Difficulty": 1,
+      "StatInfo": {
+        "atk": 1
+      }
+    },
+    {
+      "Name": "Mushroom",
+      "Rarity": 0,
+      "Category": "Mushroom",
+      "Drop": {},
+      "Difficulty": 0
+    },
+    {
+      "Name": "Grapes",
+      "Rarity": 5,
+      "Category": "Fruit",
+      "Drop": {},
+      "Difficulty": 30,
+      "StatInfo": {
+        "str": 4,
+        "vit": 4
+      }
+    },
+    {
+      "Name": "Apple",
+      "Rarity": 5,
+      "Category": "Fruit",
+      "Drop": {},
+      "Difficulty": 32,
+      "StatInfo": {
+        "str": 4,
+
+        "int": 4
+      }
+    },
+    {
+      "Name": "Orange",
+      "Rarity": 5,
+      "Category": "Fruit",
+      "Drop": {},
+      "Difficulty": 30,
+      "StatInfo": {
+        "vit": 4,
+        "int": 4
+      }
+    },
+    {
+      "Name": "Strawberry",
+      "Rarity": 4,
+      "Category": "Fruit",
+      "Drop": {},
+      "Difficulty": 24,
+      "StatInfo": {
+        "str": 3,
+        "vit": 3
+      }
+    },
+    {
+      "Name": "Pineapple",
+      "Rarity": 8,
+      "Category": "Fruit",
+      "Drop": {},
+      "Difficulty": 50,
+      "StatInfo": {
+        "str": 15
+      }
+    },
+    {
+      "Name": "Toyherb",
+      "Rarity": 0,
+      "Category": "Plant",
+      "Drop": {
+        "Monsters": [
+          {
+            "Name": "Ambrosia",
+            "Locations": ["Yokmir Forest", "Sharance Maze"]
+          }
+        ]
+      },
+      "Difficulty": 1,
+      "StatInfo": {
+        "vit": 1,
+
+        "ftgRes": 0.05
+      }
+    },
+    {
+      "Name": "Toyherb",
+      "Rarity": 0,
+      "Category": "Plant",
+      "Drop": {},
+      "Difficulty": 1,
+      "StatInfo": {
+        "vit": 1,
+
+        "ftgRes": 0.05
+      }
+    },
+    {
+      "Name": "MoonDrop Flower",
+      "Rarity": 1,
+      "Category": "Plant",
+      "Drop": {},
+      "Difficulty": 10,
+      "StatInfo": {
+        "int": 1
+      }
+    },
+    {
+      "Name": "Elli Leaves",
+      "Rarity": 10,
+      "Category": "Plant",
+      "Drop": {},
+      "Difficulty": 60
+    },
+    {
+      "Name": "Pink Cat",
+      "Rarity": 2,
+      "Category": "Plant",
+      "Drop": {},
+      "Difficulty": 15,
+      "StatInfo": {
+        "int": 2
+      }
+    },
+    {
+      "Name": "Charm Blue",
+      "Rarity": 3,
+      "Category": "Plant",
+      "Drop": {},
+      "Difficulty": 20,
+      "StatInfo": {
+        "psnAtk": 0.05
+      }
+    },
+    {
+      "Name": "Cherry Grass",
+      "Rarity": 3,
+      "Category": "Plant",
+      "Drop": {},
+      "Difficulty": 22,
+      "StatInfo": {
+        "vit": 1,
+
+        "slpAtk": 0.01
+      }
+    },
+    {
+      "Name": "Lamp Grass",
+      "Rarity": 4,
+      "Category": "Plant",
+      "Drop": {},
+      "Difficulty": 28,
+      "StatInfo": {
+        "int": 3
+      }
+    },
+    {
+      "Name": "Blue Crystal",
+      "Rarity": 8,
+      "Category": "Plant",
+      "Drop": {},
+      "Difficulty": 53,
+      "StatInfo": {
+        "matk": 10,
+        "mdef": 10,
+
+        "vit": 1,
+
+        "waterRes": 0.05
+      }
+    },
+    {
+      "Name": "Emery Flower",
+      "Rarity": 10,
+      "Category": "Plant",
+      "Drop": {},
+      "Difficulty": 66,
+      "StatInfo": {
+        "int": 30
+      }
+    },
+    {
+      "Name": "Great Emery Flower",
+      "Rarity": 15,
+      "Category": "Plant",
+      "Drop": {},
+      "Difficulty": 95,
+      "StatInfo": {
+        "int": 80
+      }
+    },
+    {
+      "Name": "Ironleaf",
+      "Rarity": 4,
+      "Category": "Plant",
+      "Drop": {},
+      "Difficulty": 29,
+      "StatInfo": {
+        "atk": 4
+      }
+    },
+    {
+      "Name": "4-Leaf Clover",
+      "Rarity": 4,
+      "Category": "Plant",
+      "Drop": {},
+      "Difficulty": 29
+    },
+    {
+      "Name": "Fireflower",
+      "Rarity": 6,
+      "Category": "Plant",
+      "Drop": {},
+      "Difficulty": 41
+    },
+    {
+      "Name": "Green Crystal",
+      "Rarity": 8,
+      "Category": "Plant",
+      "Drop": {},
+      "Difficulty": 53,
+      "StatInfo": {
+        "mdef": 20,
+
+        "windRes": 0.05
+      }
+    },
+    {
+      "Name": "Noel Grass",
+      "Rarity": 6,
+      "Category": "Plant",
+      "Drop": {},
+      "Difficulty": 41,
+      "StatInfo": {
+        "int": 7
+      }
+    },
+    {
+      "Name": "Autumn Grass",
+      "Rarity": 5,
+      "Category": "Plant",
+      "Drop": {},
+      "Difficulty": 35,
+      "StatInfo": {
+        "slpRes": 0.06
+      }
+    },
+    {
+      "Name": "Pom-Pom Grass",
+      "Rarity": 4,
+      "Category": "Plant",
+      "Drop": {},
+      "Difficulty": 28,
+      "StatInfo": {
+        "psnAtk": 0.03,
+        "psnRes": 0.05
+      }
+    },
+    {
+      "Name": "Red Crystal",
+      "Rarity": 8,
+      "Category": "Plant",
+      "Drop": {},
+      "Difficulty": 53,
+      "StatInfo": {
+        "matk": 20,
+
+        "fireRes": 0.05
+      }
+    },
+    {
+      "Name": "White Crystal",
+      "Rarity": 8,
+      "Category": "Plant",
+      "Drop": {},
+      "Difficulty": 53,
+      "StatInfo": {
+        "int": 20,
+        "earthRes": 0.05
+      }
+    },
+    {
+      "Name": "Medicinal Herb",
+      "Rarity": 0,
+      "Category": "Plant",
+      "Drop": {},
+      "Difficulty": 2,
+      "StatInfo": {
+        "ftgRes": 0.01
+      }
+    },
+    {
+      "Name": "Antidotal Herb",
+      "Rarity": 0,
+      "Category": "Plant",
+      "Drop": {},
+      "Difficulty": 8,
+      "StatInfo": {
+        "psnRes": 0.03
+      }
+    },
+    {
+      "Name": "Black Grass",
+      "Rarity": 3,
+      "Category": "Plant",
+      "Drop": {
+        "Locations": ["Obsidian Mansion", "Revival Cave", "Maya Road"]
+      },
+      "Difficulty": 23
+    },
+    {
+      "Name": "Orange Grass",
+      "Rarity": 7,
+      "Category": "Plant",
+      "Drop": {
+        "Locations": ["Sercerezo Hill", "Revival Cave", "Maya Road"]
+      },
+      "Difficulty": 48
+    },
+    {
+      "Name": "Red Grass",
+      "Rarity": 6,
+      "Category": "Plant",
+      "Drop": {
+        "Locations": ["Delirium Lava Ruins", "Revival Cave", "Maya Road"]
+      },
+      "Difficulty": 40
+    },
+    {
+      "Name": "Yellow Grass",
+      "Rarity": 5,
+      "Category": "Plant",
+      "Drop": {
+        "Locations": ["Autumn Road", "Revival Cave", "Maya Road"]
+      },
+      "Difficulty": 39
+    },
+    {
+      "Name": "Blue Grass",
+      "Rarity": 0,
+      "Category": "Plant",
+      "Drop": {
+        "Locations": [
+          "Selphia Plain",
+          "Yokmir Forest",
+          "Revival Cave",
+          "Maya Road"
+        ]
+      },
+      "Difficulty": 1
+    },
+    {
+      "Name": "Green Grass",
+      "Rarity": 0,
+      "Category": "Plant",
+      "Drop": {
+        "Locations": [
+          "Selphia Farm",
+          "Selphia Plain",
+          "Revival Cave",
+          "Maya Road"
+        ]
+      },
+      "Difficulty": 1
+    },
+    {
+      "Name": "Purple Grass",
+      "Rarity": 1,
+      "Category": "Plant",
+      "Drop": {
+        "Locations": ["Selphia Plain", "Revival Cave", "Maya Road"]
+      },
+      "Difficulty": 5
+    },
+    {
+      "Name": "Indigo Grass",
+      "Rarity": 4,
+      "Category": "Plant",
+      "Drop": {
+        "Locations": ["Yokmir Cave", "Revival Cave", "Maya Road"]
+      },
+      "Difficulty": 29
+    },
+    {
+      "Name": "White Grass",
+      "Rarity": 8,
+      "Category": "Plant",
+      "Drop": {
+        "Locations": ["Sechs Territory", "Revival Cave", "Maya Road"]
+      },
+      "Difficulty": 65
+    },
+    {
+      "Name": "Weeds",
+      "Rarity": 0,
+      "Category": "Plant",
+      "Drop": {
+        "Locations": [""]
+      },
+      "Difficulty": 1
+    },
+    {
+      "Name": "Withered Weeds",
+      "Rarity": 0,
+      "Category": "Plant",
+      "Drop": {},
+      "Difficulty": 1,
+      "StatInfo": {
+        "vit": -1
+      }
+    }
+  ]
+}

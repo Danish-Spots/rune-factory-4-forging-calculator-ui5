@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+  <edmx:DataServices>
+    <Schema Namespace="MockService" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+      
+      <!-- Main Entity: Item -->
+      <EntityType Name="Item">
+        <Key>
+          <PropertyRef Name="Id"/>
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="Name" Type="Edm.String" Nullable="false"/>
+        <Property Name="Rarity" Type="Edm.Int32"/>
+        <Property Name="Category" Type="Edm.String"/>
+        <Property Name="Difficulty" Type="Edm.Int32"/>
+        <NavigationProperty Name="StatInfo" Type="Collection(MockService.StatEntry)"/>
+        <NavigationProperty Name="Drop" Type="MockService.Drop"/>
+      </EntityType>
+
+      <!-- Entity: StatEntry (Better Stat Storage) -->
+      <EntityType Name="StatEntry">
+        <Key>
+          <PropertyRef Name="Id"/>
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="StatName" Type="Edm.String"/>
+        <Property Name="Value" Type="Edm.Int32"/>
+      </EntityType>
+
+      <!-- Entity: Drop -->
+      <EntityType Name="Drop">
+        <Key>
+          <PropertyRef Name="Id"/>
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false"/>
+        <NavigationProperty Name="Locations" Type="Collection(MockService.Location)"/>
+        <NavigationProperty Name="Monsters" Type="Collection(MockService.Monster)"/>
+      </EntityType>
+
+      <!-- Entity: Monster -->
+      <EntityType Name="Monster">
+        <Key>
+          <PropertyRef Name="Id"/>
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="Name" Type="Edm.String" Nullable="false"/>
+        <NavigationProperty Name="Locations" Type="Collection(MockService.Location)"/>
+      </EntityType>
+
+      <!-- Entity: Location (New) -->
+      <EntityType Name="Location">
+        <Key>
+          <PropertyRef Name="Id"/>
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="Name" Type="Edm.String"/>
+      </EntityType>
+
+      <!-- Entity Container -->
+      <EntityContainer Name="MockServiceContainer">
+        <EntitySet Name="Items" EntityType="MockService.Item"/>
+        <EntitySet Name="StatEntries" EntityType="MockService.StatEntry"/>
+        <EntitySet Name="Drops" EntityType="MockService.Drop"/>
+        <EntitySet Name="Monsters" EntityType="MockService.Monster"/>
+        <EntitySet Name="Locations" EntityType="MockService.Location"/>
+      </EntityContainer>
+
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

@@ -1,0 +1,638 @@
+[
+  {
+    "Id": 3000,
+    "Name": "Fortoise"
+  },
+  {
+    "Id": 3001,
+    "Name": "Slime"
+  },
+  {
+    "Id": 3002,
+    "Name": "Dark Slime"
+  },
+  {
+    "Id": 3003,
+    "Name": "Little Golem"
+  },
+  {
+    "Id": 3004,
+    "Name": "Crystal Mammoth"
+  },
+  {
+    "Id": 3005,
+    "Name": "G Golem"
+  },
+  {
+    "Id": 3006,
+    "Name": "Emerald"
+  },
+  {
+    "Id": 3007,
+    "Name": "Green"
+  },
+  {
+    "Id": 3008,
+    "Name": "Red"
+  },
+  {
+    "Id": 3009,
+    "Name": "Rouge"
+  },
+  {
+    "Id": 3010,
+    "Name": "Olive"
+  },
+  {
+    "Id": 3011,
+    "Name": "Yellow"
+  },
+  {
+    "Id": 3012,
+    "Name": "Blue"
+  },
+  {
+    "Id": 3013,
+    "Name": "Marin"
+  },
+  {
+    "Id": 3014,
+    "Name": "Sarcophagus"
+  },
+  {
+    "Id": 3015,
+    "Name": "Airror"
+  },
+  {
+    "Id": 3016,
+    "Name": "Flare Mage"
+  },
+  {
+    "Id": 3017,
+    "Name": "Gaias"
+  },
+  {
+    "Id": 3018,
+    "Name": "Ignis"
+  },
+  {
+    "Id": 3019,
+    "Name": "Little Emperor"
+  },
+  {
+    "Id": 3020,
+    "Name": "Little Mage"
+  },
+  {
+    "Id": 3021,
+    "Name": "Ice Wizard"
+  },
+  {
+    "Id": 3022,
+    "Name": "Little Wizard"
+  },
+  {
+    "Id": 3023,
+    "Name": "Spirit"
+  },
+  {
+    "Id": 3024,
+    "Name": "Tundra"
+  },
+  {
+    "Id": 3025,
+    "Name": "Dead Tree"
+  },
+  {
+    "Id": 3026,
+    "Name": "Ragnarok"
+  },
+  {
+    "Id": 3027,
+    "Name": "Bane Dragon"
+  },
+  {
+    "Id": 3028,
+    "Name": "Chipsqueek"
+  },
+  {
+    "Id": 3029,
+    "Name": "Orc"
+  },
+  {
+    "Id": 3030,
+    "Name": "Orc Archer"
+  },
+  {
+    "Id": 3031,
+    "Name": "High Orc"
+  },
+  {
+    "Id": 3032,
+    "Name": "Orc Hunter"
+  },
+  {
+    "Id": 3033,
+    "Name": "Weagle"
+  },
+  {
+    "Id": 3034,
+    "Name": "Ghost"
+  },
+  {
+    "Id": 3035,
+    "Name": "Ghost Ray"
+  },
+  {
+    "Id": 3036,
+    "Name": "Blackbird"
+  },
+  {
+    "Id": 3037,
+    "Name": "Beetle"
+  },
+  {
+    "Id": 3038,
+    "Name": "Flower Blossom"
+  },
+  {
+    "Id": 3039,
+    "Name": "Flower Crystal"
+  },
+  {
+    "Id": 3040,
+    "Name": "Flower Lily"
+  },
+  {
+    "Id": 3041,
+    "Name": "Flower Lion"
+  },
+  {
+    "Id": 3042,
+    "Name": "Leaf Ball"
+  },
+  {
+    "Id": 3043,
+    "Name": "Planchoa"
+  },
+  {
+    "Id": 3044,
+    "Name": "Buffaloo"
+  },
+  {
+    "Id": 3045,
+    "Name": "Heracles"
+  },
+  {
+    "Id": 3046,
+    "Name": "Gigantes"
+  },
+  {
+    "Id": 3047,
+    "Name": "Arch-Demon"
+  },
+  {
+    "Id": 3048,
+    "Name": "Minotaur"
+  },
+  {
+    "Id": 3049,
+    "Name": "Typhoon"
+  },
+  {
+    "Id": 3050,
+    "Name": "Goblin"
+  },
+  {
+    "Id": 3051,
+    "Name": "Rider Orc"
+  },
+  {
+    "Id": 3052,
+    "Name": "Hobgoblin"
+  },
+  {
+    "Id": 3053,
+    "Name": "Ogre Viking"
+  },
+  {
+    "Id": 3054,
+    "Name": "Orc Viking"
+  },
+  {
+    "Id": 3055,
+    "Name": "High Ogre Viking"
+  },
+  {
+    "Id": 3056,
+    "Name": "Baal"
+  },
+  {
+    "Id": 3057,
+    "Name": "Blood Panther"
+  },
+  {
+    "Id": 3058,
+    "Name": "Chimera"
+  },
+  {
+    "Id": 3059,
+    "Name": "Daemon"
+  },
+  {
+    "Id": 3060,
+    "Name": "Hornet Queen"
+  },
+  {
+    "Id": 3061,
+    "Name": "King Bee"
+  },
+  {
+    "Id": 3062,
+    "Name": "Cluckadoodle"
+  },
+  {
+    "Id": 3063,
+    "Name": "Duck"
+  },
+  {
+    "Id": 3064,
+    "Name": "Mamadoodle"
+  },
+  {
+    "Id": 3065,
+    "Name": "Big Duck"
+  },
+  {
+    "Id": 3066,
+    "Name": "Thunderbird"
+  },
+  {
+    "Id": 3067,
+    "Name": "Aquaticus"
+  },
+  {
+    "Id": 3068,
+    "Name": "Tortas"
+  },
+  {
+    "Id": 3069,
+    "Name": "Ancient Bone"
+  },
+  {
+    "Id": 3070,
+    "Name": "Octopirate"
+  },
+  {
+    "Id": 3071,
+    "Name": "Sealy"
+  },
+  {
+    "Id": 3072,
+    "Name": "Sky Fish"
+  },
+  {
+    "Id": 3073,
+    "Name": "Captain Goblin"
+  },
+  {
+    "Id": 3074,
+    "Name": "Goblin Don"
+  },
+  {
+    "Id": 3075,
+    "Name": "Necro"
+  },
+  {
+    "Id": 3076,
+    "Name": "Golem"
+  },
+  {
+    "Id": 3077,
+    "Name": "Sechs Golem"
+  },
+  {
+    "Id": 3078,
+    "Name": "Guardian"
+  },
+  {
+    "Id": 3079,
+    "Name": "Gangster Goblin"
+  },
+  {
+    "Id": 3080,
+    "Name": "Goblin Archer"
+  },
+  {
+    "Id": 3081,
+    "Name": "Goblin Pirate"
+  },
+  {
+    "Id": 3082,
+    "Name": "Ambrosia"
+  },
+  {
+    "Id": 3083,
+    "Name": "Hell Spider"
+  },
+  {
+    "Id": 3084,
+    "Name": "Spider"
+  },
+  {
+    "Id": 3085,
+    "Name": "Marionetta"
+  },
+  {
+    "Id": 3086,
+    "Name": "Death Stalker"
+  },
+  {
+    "Id": 3087,
+    "Name": "Heaven's Scissors"
+  },
+  {
+    "Id": 3088,
+    "Name": "Scorpion"
+  },
+  {
+    "Id": 3089,
+    "Name": "Chimera 2"
+  },
+  {
+    "Id": 3090,
+    "Name": "Gobble Box"
+  },
+  {
+    "Id": 3091,
+    "Name": "Monster Box"
+  },
+  {
+    "Id": 3092,
+    "Name": "Hammer Troll"
+  },
+  {
+    "Id": 3093,
+    "Name": "Minotaur King"
+  },
+  {
+    "Id": 3094,
+    "Name": "Sechs Tank"
+  },
+  {
+    "Id": 3095,
+    "Name": "Faust"
+  },
+  {
+    "Id": 3096,
+    "Name": "Sano"
+  },
+  {
+    "Id": 3097,
+    "Name": "Uno"
+  },
+  {
+    "Id": 3098,
+    "Name": "Armoured Tank+"
+  },
+  {
+    "Id": 3099,
+    "Name": "Death Wall"
+  },
+  {
+    "Id": 3100,
+    "Name": "King Wooly"
+  },
+  {
+    "Id": 3101,
+    "Name": "Shmooly"
+  },
+  {
+    "Id": 3102,
+    "Name": "Wooly"
+  },
+  {
+    "Id": 3103,
+    "Name": "Hinoe"
+  },
+  {
+    "Id": 3104,
+    "Name": "Kinoto"
+  },
+  {
+    "Id": 3105,
+    "Name": "Leoplicant"
+  },
+  {
+    "Id": 3106,
+    "Name": "Malm Tiger"
+  },
+  {
+    "Id": 3107,
+    "Name": "Palm Cat"
+  },
+  {
+    "Id": 3108,
+    "Name": "Thunderbolt"
+  },
+  {
+    "Id": 3109,
+    "Name": "Hunter Wolf"
+  },
+  {
+    "Id": 3110,
+    "Name": "Shadow Panther"
+  },
+  {
+    "Id": 3111,
+    "Name": "Silver Wolf"
+  },
+  {
+    "Id": 3112,
+    "Name": "Furpy"
+  },
+  {
+    "Id": 3113,
+    "Name": "Emperor Penguin"
+  },
+  {
+    "Id": 3114,
+    "Name": "Greater Demon"
+  },
+  {
+    "Id": 3115,
+    "Name": "Big Muck"
+  },
+  {
+    "Id": 3116,
+    "Name": "Tricky Muck"
+  },
+  {
+    "Id": 3117,
+    "Name": "Death Fungus"
+  },
+  {
+    "Id": 3118,
+    "Name": "Dark Fairy"
+  },
+  {
+    "Id": 3119,
+    "Name": "Fairy"
+  },
+  {
+    "Id": 3120,
+    "Name": "Goblin Sniper"
+  },
+  {
+    "Id": 3121,
+    "Name": "Rafflesia"
+  },
+  {
+    "Id": 3122,
+    "Name": "???"
+  },
+  {
+    "Id": 3123,
+    "Name": "Terraclone"
+  },
+  {
+    "Id": 3124,
+    "Name": "Elemental Emperor"
+  },
+  {
+    "Id": 3125,
+    "Name": "Fiergaenger"
+  },
+  {
+    "Id": 3126,
+    "Name": "Aquameleon"
+  },
+  {
+    "Id": 3127,
+    "Name": "Turnip Ghost"
+  },
+  {
+    "Id": 3128,
+    "Name": "Siren"
+  },
+  {
+    "Id": 3129,
+    "Name": "Ant"
+  },
+  {
+    "Id": 3130,
+    "Name": "Killer Ant"
+  },
+  {
+    "Id": 3131,
+    "Name": "Hornet"
+  },
+  {
+    "Id": 3132,
+    "Name": "Ant Queen"
+  },
+  {
+    "Id": 3133,
+    "Name": "Onion Ghost"
+  },
+  {
+    "Id": 3134,
+    "Name": "Tomato Ghost"
+  },
+  {
+    "Id": 3135,
+    "Name": "Onionger"
+  },
+  {
+    "Id": 3136,
+    "Name": "Master Giant"
+  },
+  {
+    "Id": 3137,
+    "Name": "Master Troll"
+  },
+  {
+    "Id": 3138,
+    "Name": "Titan"
+  },
+  {
+    "Id": 3139,
+    "Name": "Death Orc"
+  },
+  {
+    "Id": 3140,
+    "Name": "Troll"
+  },
+  {
+    "Id": 3141,
+    "Name": "Elefun"
+  },
+  {
+    "Id": 3142,
+    "Name": "Mammoo"
+  },
+  {
+    "Id": 3143,
+    "Name": "Hover Soldier"
+  },
+  {
+    "Id": 3144,
+    "Name": "Hover Warrior"
+  },
+  {
+    "Id": 3145,
+    "Name": "Black Dragon"
+  },
+  {
+    "Id": 3146,
+    "Name": "Blue Dragon"
+  },
+  {
+    "Id": 3147,
+    "Name": "Fiersome"
+  },
+  {
+    "Id": 3148,
+    "Name": "Green Dragon"
+  },
+  {
+    "Id": 3149,
+    "Name": "Grimoire"
+  },
+  {
+    "Id": 3150,
+    "Name": "Little Dragon"
+  },
+  {
+    "Id": 3151,
+    "Name": "Pink Dragon"
+  },
+  {
+    "Id": 3152,
+    "Name": "Red Dragon"
+  },
+  {
+    "Id": 3153,
+    "Name": "Terrable"
+  },
+  {
+    "Id": 3154,
+    "Name": "Ventuswill"
+  },
+  {
+    "Id": 3155,
+    "Name": "Yellow Dragon"
+  },
+  {
+    "Id": 3156,
+    "Name": "Mineral Squeek"
+  },
+  {
+    "Id": 3157,
+    "Name": "Ethelwill"
+  },
+  {
+    "Id": 3158,
+    "Name": "Magnuto"
+  }
+]
