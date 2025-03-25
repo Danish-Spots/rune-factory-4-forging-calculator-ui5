@@ -12,6 +12,15 @@
       "bundleName": "rf.calculator.i18n.i18n",
       "supportedLocales": [""],
       "fallbackLocale": ""
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/data",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "2.0"
+        }
+      }
     }
   },
   "sap.ui": {
@@ -45,8 +54,7 @@
         }
       },
       "material": {
-        "type": "sap.ui.model.json.JSONModel",
-        "uri": "model/localMaterial.json"
+        "dataSource": "remote"
       }
     }
   }
