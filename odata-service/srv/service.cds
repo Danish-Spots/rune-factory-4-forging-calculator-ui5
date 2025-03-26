@@ -1,6 +1,6 @@
-using rf.calculator as calc;
+using { RF_Entity } from '../db/schema';
 
 service DataService {
-    entity Materials as projection on calc.Material;
-    entity Locations as projection on calc.Location;
+    entity Materials as projection on RF_Entity.Material;
+    entity Locations as projection on RF_Entity.Location;
 }

@@ -15,31 +15,5 @@
   },
   "scripts": {
     "start": "cds-serve"
-  },
-  "cds": {
-    "requires": {
-      "cors": {
-        "enabled": true,
-        "allowedOrigins": [
-          "*"
-        ],
-        "allowedHeaders": [
-          "Content-Type",
-          "Authorization",
-          "Accept",
-          "x-csrf-token"
-        ],
-        "allowedMethods": [
-          "GET",
-          "POST",
-          "PUT",
-          "DELETE",
-          "OPTIONS"
-        ],
-        "exposedHeaders": [
-          "x-csrf-token"
-        ]
-      }
-    }
   }
 }

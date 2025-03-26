@@ -15,7 +15,7 @@
     },
     "dataSources": {
       "dataRemote": {
-        "uri": "http://localhost:4004/odata/v4/data/",
+        "uri": "/odata/v4/data/",
         "type": "OData",
         "settings": {
           "odataVersion": "4.0"
@@ -55,7 +55,14 @@
         }
       },
       "data": {
-        "dataSource": "dataRemote"
+        "type": "sap.ui.model.odata.v4.ODataModel",
+        "dataSource": "dataRemote",
+        "preload": true,
+        "settings": {
+          "synchronizationMode": "None",
+          "operationMode": "Server",
+          "earlyRequests": true
+        }
       }
     }
   }

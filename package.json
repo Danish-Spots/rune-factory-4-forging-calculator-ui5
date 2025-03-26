@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Rune Factory 4 - Forging Calculator",
   "scripts": {
-    "start": "ui5 serve -o index.html"
+    "start": "ui5 serve"
   },
   "devDependencies": {
     "@types/openui5": "^1.134.0",

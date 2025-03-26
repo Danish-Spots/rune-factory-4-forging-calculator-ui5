@@ -1,4 +1,4 @@
-namespace rf.calculator;
+namespace RF_Entity;
 
 entity Material {
   key Id        : Integer;
