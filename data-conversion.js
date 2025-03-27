@@ -60,11 +60,17 @@ function convertData(input) {
           locations.push({ Id: locationId++, Name: location });
         }
         const locId = locations.find((loc) => loc.Name === location).Id;
-        monsterLocations.push({
-          Monster_Location_Id: Monster_Location_Id++,
-          Monster: { MonsterId: monId },
-          Location: { LocationId: locId },
-        });
+        if (
+          !monsterLocations.some(
+            (ml) =>
+              ml.Monster.MonsterId === monId && ml.Location.LocationId === locId
+          )
+        )
+          monsterLocations.push({
+            Monster_Location_Id: Monster_Location_Id++,
+            Monster: { MonsterId: monId },
+            Location: { LocationId: locId },
+          });
       });
 
       materialMonsterDrops.push({
