@@ -14,6 +14,7 @@ function convertData(input) {
   let materialId = 1000;
   let locationId = 2000;
   let monsterId = 3000;
+  let Monster_Location_Id = 4000;
 
   const materials = [];
   const monsters = [];
@@ -59,7 +60,11 @@ function convertData(input) {
           locations.push({ Id: locationId++, Name: location });
         }
         const locId = locations.find((loc) => loc.Name === location).Id;
-        monsterLocations.push({ MonsterId: monId, LocationId: locId });
+        monsterLocations.push({
+          Monster_Location_Id: Monster_Location_Id++,
+          Monster: { MonsterId: monId },
+          Location: { LocationId: locId },
+        });
       });
 
       materialMonsterDrops.push({

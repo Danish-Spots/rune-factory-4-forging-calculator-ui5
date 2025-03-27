@@ -23,7 +23,9 @@
       <items>
          <ObjectListItem
             title="{data>Name} - {data>Category}"
-            number="{data>Rarity}">
+            number="{data>Rarity}"
+            type="Navigation"
+            press=".onPress">
             <!-- <firstStatus>
                 <ObjectStatus core:require="{
                         Formatter: 'rf/calculator/model/formatter'

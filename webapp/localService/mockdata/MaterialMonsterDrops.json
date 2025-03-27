@@ -1,0 +1,1306 @@
+[
+  {
+    "MaterialId": 1006,
+    "MonsterId": 3000
+  },
+  {
+    "MaterialId": 1010,
+    "MonsterId": 3001
+  },
+  {
+    "MaterialId": 1011,
+    "MonsterId": 3001
+  },
+  {
+    "MaterialId": 1012,
+    "MonsterId": 3002
+  },
+  {
+    "MaterialId": 1013,
+    "MonsterId": 3003
+  },
+  {
+    "MaterialId": 1014,
+    "MonsterId": 3002
+  },
+  {
+    "MaterialId": 1015,
+    "MonsterId": 3004
+  },
+  {
+    "MaterialId": 1015,
+    "MonsterId": 3005
+  },
+  {
+    "MaterialId": 1016,
+    "MonsterId": 3006
+  },
+  {
+    "MaterialId": 1016,
+    "MonsterId": 3007
+  },
+  {
+    "MaterialId": 1017,
+    "MonsterId": 3008
+  },
+  {
+    "MaterialId": 1017,
+    "MonsterId": 3009
+  },
+  {
+    "MaterialId": 1018,
+    "MonsterId": 3010
+  },
+  {
+    "MaterialId": 1018,
+    "MonsterId": 3011
+  },
+  {
+    "MaterialId": 1019,
+    "MonsterId": 3012
+  },
+  {
+    "MaterialId": 1019,
+    "MonsterId": 3013
+  },
+  {
+    "MaterialId": 1020,
+    "MonsterId": 3014
+  },
+  {
+    "MaterialId": 1021,
+    "MonsterId": 3015
+  },
+  {
+    "MaterialId": 1021,
+    "MonsterId": 3016
+  },
+  {
+    "MaterialId": 1021,
+    "MonsterId": 3017
+  },
+  {
+    "MaterialId": 1021,
+    "MonsterId": 3018
+  },
+  {
+    "MaterialId": 1021,
+    "MonsterId": 3019
+  },
+  {
+    "MaterialId": 1021,
+    "MonsterId": 3020
+  },
+  {
+    "MaterialId": 1021,
+    "MonsterId": 3021
+  },
+  {
+    "MaterialId": 1021,
+    "MonsterId": 3022
+  },
+  {
+    "MaterialId": 1021,
+    "MonsterId": 3014
+  },
+  {
+    "MaterialId": 1021,
+    "MonsterId": 3023
+  },
+  {
+    "MaterialId": 1021,
+    "MonsterId": 3024
+  },
+  {
+    "MaterialId": 1022,
+    "MonsterId": 3002
+  },
+  {
+    "MaterialId": 1022,
+    "MonsterId": 3023
+  },
+  {
+    "MaterialId": 1023,
+    "MonsterId": 3018
+  },
+  {
+    "MaterialId": 1023,
+    "MonsterId": 3008
+  },
+  {
+    "MaterialId": 1023,
+    "MonsterId": 3009
+  },
+  {
+    "MaterialId": 1024,
+    "MonsterId": 3017
+  },
+  {
+    "MaterialId": 1024,
+    "MonsterId": 3010
+  },
+  {
+    "MaterialId": 1024,
+    "MonsterId": 3011
+  },
+  {
+    "MaterialId": 1026,
+    "MonsterId": 3015
+  },
+  {
+    "MaterialId": 1026,
+    "MonsterId": 3006
+  },
+  {
+    "MaterialId": 1026,
+    "MonsterId": 3007
+  },
+  {
+    "MaterialId": 1027,
+    "MonsterId": 3012
+  },
+  {
+    "MaterialId": 1027,
+    "MonsterId": 3013
+  },
+  {
+    "MaterialId": 1027,
+    "MonsterId": 3024
+  },
+  {
+    "MaterialId": 1029,
+    "MonsterId": 3025
+  },
+  {
+    "MaterialId": 1029,
+    "MonsterId": 3016
+  },
+  {
+    "MaterialId": 1029,
+    "MonsterId": 3021
+  },
+  {
+    "MaterialId": 1029,
+    "MonsterId": 3022
+  },
+  {
+    "MaterialId": 1029,
+    "MonsterId": 3010
+  },
+  {
+    "MaterialId": 1029,
+    "MonsterId": 3026
+  },
+  {
+    "MaterialId": 1031,
+    "MonsterId": 3010
+  },
+  {
+    "MaterialId": 1031,
+    "MonsterId": 3009
+  },
+  {
+    "MaterialId": 1031,
+    "MonsterId": 3026
+  },
+  {
+    "MaterialId": 1032,
+    "MonsterId": 3027
+  },
+  {
+    "MaterialId": 1033,
+    "MonsterId": 3028
+  },
+  {
+    "MaterialId": 1033,
+    "MonsterId": 3029
+  },
+  {
+    "MaterialId": 1033,
+    "MonsterId": 3030
+  },
+  {
+    "MaterialId": 1033,
+    "MonsterId": 3031
+  },
+  {
+    "MaterialId": 1033,
+    "MonsterId": 3032
+  },
+  {
+    "MaterialId": 1033,
+    "MonsterId": 3033
+  },
+  {
+    "MaterialId": 1033,
+    "MonsterId": 3034
+  },
+  {
+    "MaterialId": 1033,
+    "MonsterId": 3035
+  },
+  {
+    "MaterialId": 1033,
+    "MonsterId": 3036
+  },
+  {
+    "MaterialId": 1034,
+    "MonsterId": 3037
+  },
+  {
+    "MaterialId": 1035,
+    "MonsterId": 3038
+  },
+  {
+    "MaterialId": 1035,
+    "MonsterId": 3039
+  },
+  {
+    "MaterialId": 1035,
+    "MonsterId": 3040
+  },
+  {
+    "MaterialId": 1035,
+    "MonsterId": 3041
+  },
+  {
+    "MaterialId": 1035,
+    "MonsterId": 3042
+  },
+  {
+    "MaterialId": 1035,
+    "MonsterId": 3043
+  },
+  {
+    "MaterialId": 1036,
+    "MonsterId": 3044
+  },
+  {
+    "MaterialId": 1037,
+    "MonsterId": 3025
+  },
+  {
+    "MaterialId": 1038,
+    "MonsterId": 3045
+  },
+  {
+    "MaterialId": 1039,
+    "MonsterId": 3035
+  },
+  {
+    "MaterialId": 1039,
+    "MonsterId": 3046
+  },
+  {
+    "MaterialId": 1040,
+    "MonsterId": 3047
+  },
+  {
+    "MaterialId": 1040,
+    "MonsterId": 3020
+  },
+  {
+    "MaterialId": 1040,
+    "MonsterId": 3048
+  },
+  {
+    "MaterialId": 1040,
+    "MonsterId": 3049
+  },
+  {
+    "MaterialId": 1041,
+    "MonsterId": 3050
+  },
+  {
+    "MaterialId": 1041,
+    "MonsterId": 3031
+  },
+  {
+    "MaterialId": 1041,
+    "MonsterId": 3051
+  },
+  {
+    "MaterialId": 1041,
+    "MonsterId": 3052
+  },
+  {
+    "MaterialId": 1041,
+    "MonsterId": 3053
+  },
+  {
+    "MaterialId": 1041,
+    "MonsterId": 3054
+  },
+  {
+    "MaterialId": 1041,
+    "MonsterId": 3055
+  },
+  {
+    "MaterialId": 1042,
+    "MonsterId": 3047
+  },
+  {
+    "MaterialId": 1042,
+    "MonsterId": 3056
+  },
+  {
+    "MaterialId": 1042,
+    "MonsterId": 3057
+  },
+  {
+    "MaterialId": 1042,
+    "MonsterId": 3058
+  },
+  {
+    "MaterialId": 1042,
+    "MonsterId": 3059
+  },
+  {
+    "MaterialId": 1042,
+    "MonsterId": 3049
+  },
+  {
+    "MaterialId": 1043,
+    "MonsterId": 3060
+  },
+  {
+    "MaterialId": 1044,
+    "MonsterId": 3061
+  },
+  {
+    "MaterialId": 1045,
+    "MonsterId": 3062
+  },
+  {
+    "MaterialId": 1045,
+    "MonsterId": 3063
+  },
+  {
+    "MaterialId": 1045,
+    "MonsterId": 3064
+  },
+  {
+    "MaterialId": 1045,
+    "MonsterId": 3033
+  },
+  {
+    "MaterialId": 1046,
+    "MonsterId": 3065
+  },
+  {
+    "MaterialId": 1047,
+    "MonsterId": 3036
+  },
+  {
+    "MaterialId": 1048,
+    "MonsterId": 3066
+  },
+  {
+    "MaterialId": 1049,
+    "MonsterId": 3067
+  },
+  {
+    "MaterialId": 1050,
+    "MonsterId": 3068
+  },
+  {
+    "MaterialId": 1051,
+    "MonsterId": 3069
+  },
+  {
+    "MaterialId": 1051,
+    "MonsterId": 3070
+  },
+  {
+    "MaterialId": 1051,
+    "MonsterId": 3071
+  },
+  {
+    "MaterialId": 1051,
+    "MonsterId": 3072
+  },
+  {
+    "MaterialId": 1052,
+    "MonsterId": 3069
+  },
+  {
+    "MaterialId": 1053,
+    "MonsterId": 3034
+  },
+  {
+    "MaterialId": 1053,
+    "MonsterId": 3069
+  },
+  {
+    "MaterialId": 1053,
+    "MonsterId": 3073
+  },
+  {
+    "MaterialId": 1053,
+    "MonsterId": 3074
+  },
+  {
+    "MaterialId": 1053,
+    "MonsterId": 3075
+  },
+  {
+    "MaterialId": 1054,
+    "MonsterId": 3000
+  },
+  {
+    "MaterialId": 1055,
+    "MonsterId": 3070
+  },
+  {
+    "MaterialId": 1057,
+    "MonsterId": 3003
+  },
+  {
+    "MaterialId": 1058,
+    "MonsterId": 3076
+  },
+  {
+    "MaterialId": 1058,
+    "MonsterId": 3077
+  },
+  {
+    "MaterialId": 1059,
+    "MonsterId": 3077
+  },
+  {
+    "MaterialId": 1060,
+    "MonsterId": 3078
+  },
+  {
+    "MaterialId": 1061,
+    "MonsterId": 3005
+  },
+  {
+    "MaterialId": 1063,
+    "MonsterId": 3079
+  },
+  {
+    "MaterialId": 1063,
+    "MonsterId": 3050
+  },
+  {
+    "MaterialId": 1063,
+    "MonsterId": 3080
+  },
+  {
+    "MaterialId": 1063,
+    "MonsterId": 3081
+  },
+  {
+    "MaterialId": 1064,
+    "MonsterId": 3082
+  },
+  {
+    "MaterialId": 1065,
+    "MonsterId": 3083
+  },
+  {
+    "MaterialId": 1065,
+    "MonsterId": 3084
+  },
+  {
+    "MaterialId": 1066,
+    "MonsterId": 3085
+  },
+  {
+    "MaterialId": 1067,
+    "MonsterId": 3041
+  },
+  {
+    "MaterialId": 1068,
+    "MonsterId": 3086
+  },
+  {
+    "MaterialId": 1068,
+    "MonsterId": 3087
+  },
+  {
+    "MaterialId": 1068,
+    "MonsterId": 3088
+  },
+  {
+    "MaterialId": 1069,
+    "MonsterId": 3038
+  },
+  {
+    "MaterialId": 1069,
+    "MonsterId": 3039
+  },
+  {
+    "MaterialId": 1069,
+    "MonsterId": 3040
+  },
+  {
+    "MaterialId": 1069,
+    "MonsterId": 3043
+  },
+  {
+    "MaterialId": 1070,
+    "MonsterId": 3083
+  },
+  {
+    "MaterialId": 1071,
+    "MonsterId": 3089
+  },
+  {
+    "MaterialId": 1072,
+    "MonsterId": 3080
+  },
+  {
+    "MaterialId": 1072,
+    "MonsterId": 3030
+  },
+  {
+    "MaterialId": 1072,
+    "MonsterId": 3032
+  },
+  {
+    "MaterialId": 1073,
+    "MonsterId": 3050
+  },
+  {
+    "MaterialId": 1073,
+    "MonsterId": 3051
+  },
+  {
+    "MaterialId": 1073,
+    "MonsterId": 3052
+  },
+  {
+    "MaterialId": 1074,
+    "MonsterId": 3090
+  },
+  {
+    "MaterialId": 1074,
+    "MonsterId": 3091
+  },
+  {
+    "MaterialId": 1075,
+    "MonsterId": 3090
+  },
+  {
+    "MaterialId": 1076,
+    "MonsterId": 3046
+  },
+  {
+    "MaterialId": 1076,
+    "MonsterId": 3092
+  },
+  {
+    "MaterialId": 1076,
+    "MonsterId": 3048
+  },
+  {
+    "MaterialId": 1076,
+    "MonsterId": 3093
+  },
+  {
+    "MaterialId": 1077,
+    "MonsterId": 3053
+  },
+  {
+    "MaterialId": 1077,
+    "MonsterId": 3054
+  },
+  {
+    "MaterialId": 1078,
+    "MonsterId": 3094
+  },
+  {
+    "MaterialId": 1079,
+    "MonsterId": 3094
+  },
+  {
+    "MaterialId": 1080,
+    "MonsterId": 3095
+  },
+  {
+    "MaterialId": 1081,
+    "MonsterId": 3056
+  },
+  {
+    "MaterialId": 1082,
+    "MonsterId": 3096
+  },
+  {
+    "MaterialId": 1083,
+    "MonsterId": 3097
+  },
+  {
+    "MaterialId": 1084,
+    "MonsterId": 3098
+  },
+  {
+    "MaterialId": 1085,
+    "MonsterId": 3055
+  },
+  {
+    "MaterialId": 1086,
+    "MonsterId": 3099
+  },
+  {
+    "MaterialId": 1087,
+    "MonsterId": 3100
+  },
+  {
+    "MaterialId": 1087,
+    "MonsterId": 3085
+  },
+  {
+    "MaterialId": 1087,
+    "MonsterId": 3101
+  },
+  {
+    "MaterialId": 1087,
+    "MonsterId": 3102
+  },
+  {
+    "MaterialId": 1088,
+    "MonsterId": 3057
+  },
+  {
+    "MaterialId": 1088,
+    "MonsterId": 3028
+  },
+  {
+    "MaterialId": 1088,
+    "MonsterId": 3103
+  },
+  {
+    "MaterialId": 1088,
+    "MonsterId": 3104
+  },
+  {
+    "MaterialId": 1088,
+    "MonsterId": 3105
+  },
+  {
+    "MaterialId": 1088,
+    "MonsterId": 3106
+  },
+  {
+    "MaterialId": 1088,
+    "MonsterId": 3107
+  },
+  {
+    "MaterialId": 1088,
+    "MonsterId": 3108
+  },
+  {
+    "MaterialId": 1089,
+    "MonsterId": 3065
+  },
+  {
+    "MaterialId": 1089,
+    "MonsterId": 3063
+  },
+  {
+    "MaterialId": 1090,
+    "MonsterId": 3028
+  },
+  {
+    "MaterialId": 1090,
+    "MonsterId": 3103
+  },
+  {
+    "MaterialId": 1090,
+    "MonsterId": 3109
+  },
+  {
+    "MaterialId": 1090,
+    "MonsterId": 3104
+  },
+  {
+    "MaterialId": 1090,
+    "MonsterId": 3105
+  },
+  {
+    "MaterialId": 1090,
+    "MonsterId": 3106
+  },
+  {
+    "MaterialId": 1090,
+    "MonsterId": 3110
+  },
+  {
+    "MaterialId": 1090,
+    "MonsterId": 3111
+  },
+  {
+    "MaterialId": 1091,
+    "MonsterId": 3108
+  },
+  {
+    "MaterialId": 1092,
+    "MonsterId": 3112
+  },
+  {
+    "MaterialId": 1093,
+    "MonsterId": 3085
+  },
+  {
+    "MaterialId": 1093,
+    "MonsterId": 3101
+  },
+  {
+    "MaterialId": 1094,
+    "MonsterId": 3100
+  },
+  {
+    "MaterialId": 1094,
+    "MonsterId": 3101
+  },
+  {
+    "MaterialId": 1095,
+    "MonsterId": 3101
+  },
+  {
+    "MaterialId": 1096,
+    "MonsterId": 3113
+  },
+  {
+    "MaterialId": 1097,
+    "MonsterId": 3103
+  },
+  {
+    "MaterialId": 1098,
+    "MonsterId": 3104
+  },
+  {
+    "MaterialId": 1099,
+    "MonsterId": 3114
+  },
+  {
+    "MaterialId": 1100,
+    "MonsterId": 3115
+  },
+  {
+    "MaterialId": 1100,
+    "MonsterId": 3116
+  },
+  {
+    "MaterialId": 1100,
+    "MonsterId": 3117
+  },
+  {
+    "MaterialId": 1101,
+    "MonsterId": 3118
+  },
+  {
+    "MaterialId": 1101,
+    "MonsterId": 3119
+  },
+  {
+    "MaterialId": 1102,
+    "MonsterId": 3030
+  },
+  {
+    "MaterialId": 1102,
+    "MonsterId": 3120
+  },
+  {
+    "MaterialId": 1102,
+    "MonsterId": 3032
+  },
+  {
+    "MaterialId": 1103,
+    "MonsterId": 3116
+  },
+  {
+    "MaterialId": 1103,
+    "MonsterId": 3117
+  },
+  {
+    "MaterialId": 1104,
+    "MonsterId": 3117
+  },
+  {
+    "MaterialId": 1105,
+    "MonsterId": 3038
+  },
+  {
+    "MaterialId": 1105,
+    "MonsterId": 3039
+  },
+  {
+    "MaterialId": 1105,
+    "MonsterId": 3040
+  },
+  {
+    "MaterialId": 1105,
+    "MonsterId": 3043
+  },
+  {
+    "MaterialId": 1105,
+    "MonsterId": 3121
+  },
+  {
+    "MaterialId": 1106,
+    "MonsterId": 3020
+  },
+  {
+    "MaterialId": 1107,
+    "MonsterId": 3122
+  },
+  {
+    "MaterialId": 1108,
+    "MonsterId": 3123
+  },
+  {
+    "MaterialId": 1109,
+    "MonsterId": 3124
+  },
+  {
+    "MaterialId": 1109,
+    "MonsterId": 3016
+  },
+  {
+    "MaterialId": 1109,
+    "MonsterId": 3022
+  },
+  {
+    "MaterialId": 1109,
+    "MonsterId": 3021
+  },
+  {
+    "MaterialId": 1110,
+    "MonsterId": 3125
+  },
+  {
+    "MaterialId": 1111,
+    "MonsterId": 3118
+  },
+  {
+    "MaterialId": 1112,
+    "MonsterId": 3126
+  },
+  {
+    "MaterialId": 1113,
+    "MonsterId": 3127
+  },
+  {
+    "MaterialId": 1114,
+    "MonsterId": 3128
+  },
+  {
+    "MaterialId": 1115,
+    "MonsterId": 3031
+  },
+  {
+    "MaterialId": 1115,
+    "MonsterId": 3029
+  },
+  {
+    "MaterialId": 1115,
+    "MonsterId": 3051
+  },
+  {
+    "MaterialId": 1116,
+    "MonsterId": 3129
+  },
+  {
+    "MaterialId": 1116,
+    "MonsterId": 3037
+  },
+  {
+    "MaterialId": 1116,
+    "MonsterId": 3130
+  },
+  {
+    "MaterialId": 1116,
+    "MonsterId": 3131
+  },
+  {
+    "MaterialId": 1116,
+    "MonsterId": 3088
+  },
+  {
+    "MaterialId": 1116,
+    "MonsterId": 3132
+  },
+  {
+    "MaterialId": 1117,
+    "MonsterId": 3095
+  },
+  {
+    "MaterialId": 1117,
+    "MonsterId": 3034
+  },
+  {
+    "MaterialId": 1117,
+    "MonsterId": 3035
+  },
+  {
+    "MaterialId": 1117,
+    "MonsterId": 3075
+  },
+  {
+    "MaterialId": 1117,
+    "MonsterId": 3133
+  },
+  {
+    "MaterialId": 1117,
+    "MonsterId": 3134
+  },
+  {
+    "MaterialId": 1118,
+    "MonsterId": 3129
+  },
+  {
+    "MaterialId": 1118,
+    "MonsterId": 3132
+  },
+  {
+    "MaterialId": 1118,
+    "MonsterId": 3037
+  },
+  {
+    "MaterialId": 1118,
+    "MonsterId": 3086
+  },
+  {
+    "MaterialId": 1118,
+    "MonsterId": 3087
+  },
+  {
+    "MaterialId": 1118,
+    "MonsterId": 3045
+  },
+  {
+    "MaterialId": 1118,
+    "MonsterId": 3131
+  },
+  {
+    "MaterialId": 1118,
+    "MonsterId": 3060
+  },
+  {
+    "MaterialId": 1118,
+    "MonsterId": 3130
+  },
+  {
+    "MaterialId": 1119,
+    "MonsterId": 3079
+  },
+  {
+    "MaterialId": 1119,
+    "MonsterId": 3081
+  },
+  {
+    "MaterialId": 1120,
+    "MonsterId": 3135
+  },
+  {
+    "MaterialId": 1121,
+    "MonsterId": 3073
+  },
+  {
+    "MaterialId": 1121,
+    "MonsterId": 3052
+  },
+  {
+    "MaterialId": 1122,
+    "MonsterId": 3092
+  },
+  {
+    "MaterialId": 1122,
+    "MonsterId": 3136
+  },
+  {
+    "MaterialId": 1122,
+    "MonsterId": 3137
+  },
+  {
+    "MaterialId": 1123,
+    "MonsterId": 3138
+  },
+  {
+    "MaterialId": 1124,
+    "MonsterId": 3139
+  },
+  {
+    "MaterialId": 1125,
+    "MonsterId": 3129
+  },
+  {
+    "MaterialId": 1125,
+    "MonsterId": 3131
+  },
+  {
+    "MaterialId": 1125,
+    "MonsterId": 3060
+  },
+  {
+    "MaterialId": 1125,
+    "MonsterId": 3130
+  },
+  {
+    "MaterialId": 1126,
+    "MonsterId": 3110
+  },
+  {
+    "MaterialId": 1127,
+    "MonsterId": 3111
+  },
+  {
+    "MaterialId": 1128,
+    "MonsterId": 3105
+  },
+  {
+    "MaterialId": 1128,
+    "MonsterId": 3107
+  },
+  {
+    "MaterialId": 1129,
+    "MonsterId": 3092
+  },
+  {
+    "MaterialId": 1129,
+    "MonsterId": 3138
+  },
+  {
+    "MaterialId": 1129,
+    "MonsterId": 3140
+  },
+  {
+    "MaterialId": 1130,
+    "MonsterId": 3058
+  },
+  {
+    "MaterialId": 1131,
+    "MonsterId": 3141
+  },
+  {
+    "MaterialId": 1131,
+    "MonsterId": 3142
+  },
+  {
+    "MaterialId": 1132,
+    "MonsterId": 3137
+  },
+  {
+    "MaterialId": 1133,
+    "MonsterId": 3142
+  },
+  {
+    "MaterialId": 1134,
+    "MonsterId": 3086
+  },
+  {
+    "MaterialId": 1135,
+    "MonsterId": 3143
+  },
+  {
+    "MaterialId": 1135,
+    "MonsterId": 3144
+  },
+  {
+    "MaterialId": 1136,
+    "MonsterId": 3109
+  },
+  {
+    "MaterialId": 1137,
+    "MonsterId": 3144
+  },
+  {
+    "MaterialId": 1138,
+    "MonsterId": 3057
+  },
+  {
+    "MaterialId": 1139,
+    "MonsterId": 3145
+  },
+  {
+    "MaterialId": 1139,
+    "MonsterId": 3146
+  },
+  {
+    "MaterialId": 1139,
+    "MonsterId": 3147
+  },
+  {
+    "MaterialId": 1139,
+    "MonsterId": 3148
+  },
+  {
+    "MaterialId": 1139,
+    "MonsterId": 3149
+  },
+  {
+    "MaterialId": 1139,
+    "MonsterId": 3150
+  },
+  {
+    "MaterialId": 1139,
+    "MonsterId": 3151
+  },
+  {
+    "MaterialId": 1139,
+    "MonsterId": 3152
+  },
+  {
+    "MaterialId": 1139,
+    "MonsterId": 3153
+  },
+  {
+    "MaterialId": 1139,
+    "MonsterId": 3154
+  },
+  {
+    "MaterialId": 1139,
+    "MonsterId": 3155
+  },
+  {
+    "MaterialId": 1140,
+    "MonsterId": 3105
+  },
+  {
+    "MaterialId": 1140,
+    "MonsterId": 3106
+  },
+  {
+    "MaterialId": 1141,
+    "MonsterId": 3132
+  },
+  {
+    "MaterialId": 1142,
+    "MonsterId": 3087
+  },
+  {
+    "MaterialId": 1143,
+    "MonsterId": 3154
+  },
+  {
+    "MaterialId": 1144,
+    "MonsterId": 3071
+  },
+  {
+    "MaterialId": 1145,
+    "MonsterId": 3148
+  },
+  {
+    "MaterialId": 1145,
+    "MonsterId": 3154
+  },
+  {
+    "MaterialId": 1146,
+    "MonsterId": 3152
+  },
+  {
+    "MaterialId": 1147,
+    "MonsterId": 3146
+  },
+  {
+    "MaterialId": 1148,
+    "MonsterId": 3155
+  },
+  {
+    "MaterialId": 1149,
+    "MonsterId": 3151
+  },
+  {
+    "MaterialId": 1150,
+    "MonsterId": 3145
+  },
+  {
+    "MaterialId": 1151,
+    "MonsterId": 3149
+  },
+  {
+    "MaterialId": 1152,
+    "MonsterId": 3147
+  },
+  {
+    "MaterialId": 1153,
+    "MonsterId": 3153
+  },
+  {
+    "MaterialId": 1154,
+    "MonsterId": 3067
+  },
+  {
+    "MaterialId": 1155,
+    "MonsterId": 3156
+  },
+  {
+    "MaterialId": 1156,
+    "MonsterId": 3156
+  },
+  {
+    "MaterialId": 1160,
+    "MonsterId": 3157
+  },
+  {
+    "MaterialId": 1160,
+    "MonsterId": 3026
+  },
+  {
+    "MaterialId": 1162,
+    "MonsterId": 3158
+  },
+  {
+    "MaterialId": 1163,
+    "MonsterId": 3004
+  },
+  {
+    "MaterialId": 1164,
+    "MonsterId": 3064
+  },
+  {
+    "MaterialId": 1165,
+    "MonsterId": 3121
+  },
+  {
+    "MaterialId": 1166,
+    "MonsterId": 3085
+  },
+  {
+    "MaterialId": 1167,
+    "MonsterId": 3073
+  },
+  {
+    "MaterialId": 1168,
+    "MonsterId": 3074
+  },
+  {
+    "MaterialId": 1169,
+    "MonsterId": 3026
+  },
+  {
+    "MaterialId": 1174,
+    "MonsterId": 3036
+  },
+  {
+    "MaterialId": 1174,
+    "MonsterId": 3028
+  },
+  {
+    "MaterialId": 1174,
+    "MonsterId": 3112
+  },
+  {
+    "MaterialId": 1174,
+    "MonsterId": 3066
+  },
+  {
+    "MaterialId": 1174,
+    "MonsterId": 3033
+  },
+  {
+    "MaterialId": 1175,
+    "MonsterId": 3096
+  },
+  {
+    "MaterialId": 1175,
+    "MonsterId": 3097
+  },
+  {
+    "MaterialId": 1207,
+    "MonsterId": 3082
+  }
+]

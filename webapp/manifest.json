@@ -64,6 +64,38 @@
           "earlyRequests": true
         }
       }
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "type": "View",
+        "viewType": "XML",
+        "controlId": "app",
+        "controlAggregation": "pages",
+        "path": "rf.calculator.view"
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "overview",
+          "target": "overview"
+        },
+        {
+          "pattern": "material/{materialId}",
+          "name": "material",
+          "target": "material"
+        }
+      ],
+      "targets": {
+        "overview": {
+          "id": "overview",
+          "name": "Overview"
+        },
+        "material": {
+          "id": "material",
+          "name": "Material"
+        }
+      }
     }
   }
 }

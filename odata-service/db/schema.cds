@@ -1,7 +1,9 @@
+using { managed } from '@sap/cds/common';
+
 namespace RF_Entity;
 
 entity Material {
-  key Id        : Integer;
+  key MaterialId        : Integer;
   Name         : String;
   Rarity       : Integer;
   Category     : String;
@@ -19,20 +21,28 @@ entity Drop {
 }
 
 entity Location {
-  key Id       : Integer;
+  key LocationId       : Integer;
   Name        : String;
+  Monsters    : Association to many MonsterToLocation on Monsters.Location = $self;
 }
 
 entity Monster {
-  key Id       : Integer;
+  key MonsterId       : Integer;
   Name        : String;
-  Locations   : Association to many Location;
+  Locations : Association to  many MonsterToLocation on Locations.Monster = $self;
+}
+
+entity MonsterToLocation {
+  key Monster_Location_Id: Integer;
+  Monster : Association to one Monster;
+  Location : Association to one Location;
 }
 
 entity Other {
   key Id       : Integer;
   Name        : String;
-  Locations   : Association to many Location;
+  LocationId   : Integer;
+  Location    : Association to Location on LocationId = $self.LocationId;
 }
 
 entity Fishing {

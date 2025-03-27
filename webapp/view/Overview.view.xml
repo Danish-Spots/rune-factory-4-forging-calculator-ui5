@@ -1,0 +1,11 @@
+<mvc:View
+    controllerName="rf.calculator.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true">
+    <Page title="{i18n>materialListPageTitle}">
+        <content>
+            <mvc:XMLView viewName="rf.calculator.view.MaterialList" />
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,194 @@
+[
+  {
+    "MaterialId": 1006,
+    "LocationId": 2000
+  },
+  {
+    "MaterialId": 1006,
+    "LocationId": 2001
+  },
+  {
+    "MaterialId": 1008,
+    "LocationId": 2003
+  },
+  {
+    "MaterialId": 1009,
+    "LocationId": 2004
+  },
+  {
+    "MaterialId": 1010,
+    "LocationId": 2005
+  },
+  {
+    "MaterialId": 1011,
+    "LocationId": 2007
+  },
+  {
+    "MaterialId": 1011,
+    "LocationId": 2001
+  },
+  {
+    "MaterialId": 1012,
+    "LocationId": 2008
+  },
+  {
+    "MaterialId": 1012,
+    "LocationId": 2001
+  },
+  {
+    "MaterialId": 1013,
+    "LocationId": 2009
+  },
+  {
+    "MaterialId": 1013,
+    "LocationId": 2001
+  },
+  {
+    "MaterialId": 1014,
+    "LocationId": 2010
+  },
+  {
+    "MaterialId": 1015,
+    "LocationId": 2011
+  },
+  {
+    "MaterialId": 1015,
+    "LocationId": 2012
+  },
+  {
+    "MaterialId": 1161,
+    "LocationId": 2003
+  },
+  {
+    "MaterialId": 1161,
+    "LocationId": 2006
+  },
+  {
+    "MaterialId": 1162,
+    "LocationId": 2030
+  },
+  {
+    "MaterialId": 1170,
+    "LocationId": 2011
+  },
+  {
+    "MaterialId": 1229,
+    "LocationId": 2006
+  },
+  {
+    "MaterialId": 1229,
+    "LocationId": 2024
+  },
+  {
+    "MaterialId": 1229,
+    "LocationId": 2001
+  },
+  {
+    "MaterialId": 1230,
+    "LocationId": 2010
+  },
+  {
+    "MaterialId": 1230,
+    "LocationId": 2024
+  },
+  {
+    "MaterialId": 1230,
+    "LocationId": 2001
+  },
+  {
+    "MaterialId": 1231,
+    "LocationId": 2009
+  },
+  {
+    "MaterialId": 1231,
+    "LocationId": 2024
+  },
+  {
+    "MaterialId": 1231,
+    "LocationId": 2001
+  },
+  {
+    "MaterialId": 1232,
+    "LocationId": 2015
+  },
+  {
+    "MaterialId": 1232,
+    "LocationId": 2024
+  },
+  {
+    "MaterialId": 1232,
+    "LocationId": 2001
+  },
+  {
+    "MaterialId": 1233,
+    "LocationId": 2019
+  },
+  {
+    "MaterialId": 1233,
+    "LocationId": 2005
+  },
+  {
+    "MaterialId": 1233,
+    "LocationId": 2024
+  },
+  {
+    "MaterialId": 1233,
+    "LocationId": 2001
+  },
+  {
+    "MaterialId": 1234,
+    "LocationId": 2032
+  },
+  {
+    "MaterialId": 1234,
+    "LocationId": 2019
+  },
+  {
+    "MaterialId": 1234,
+    "LocationId": 2024
+  },
+  {
+    "MaterialId": 1234,
+    "LocationId": 2001
+  },
+  {
+    "MaterialId": 1235,
+    "LocationId": 2019
+  },
+  {
+    "MaterialId": 1235,
+    "LocationId": 2024
+  },
+  {
+    "MaterialId": 1235,
+    "LocationId": 2001
+  },
+  {
+    "MaterialId": 1236,
+    "LocationId": 2008
+  },
+  {
+    "MaterialId": 1236,
+    "LocationId": 2024
+  },
+  {
+    "MaterialId": 1236,
+    "LocationId": 2001
+  },
+  {
+    "MaterialId": 1237,
+    "LocationId": 2011
+  },
+  {
+    "MaterialId": 1237,
+    "LocationId": 2024
+  },
+  {
+    "MaterialId": 1237,
+    "LocationId": 2001
+  },
+  {
+    "MaterialId": 1238,
+    "LocationId": 2030
+  }
+]

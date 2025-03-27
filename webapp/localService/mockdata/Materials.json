@@ -1,6 +1,6 @@
 [
   {
-    "MaterialId": 1000,
+    "Id": 1000,
     "Name": "Fodder",
     "Category": "Collectible",
     "Rarity": 0,
@@ -10,7 +10,7 @@
     }
   },
   {
-    "MaterialId": 1001,
+    "Id": 1001,
     "Name": "Scrap Metal",
     "Category": "Collectible",
     "Rarity": 0,
@@ -20,7 +20,7 @@
     }
   },
   {
-    "MaterialId": 1002,
+    "Id": 1002,
     "Name": "Iron",
     "Category": "Minerals",
     "Rarity": 1,
@@ -30,7 +30,7 @@
     }
   },
   {
-    "MaterialId": 1003,
+    "Id": 1003,
     "Name": "Scrap Metal+",
     "Category": "Minerals",
     "Rarity": 2,
@@ -40,7 +40,7 @@
     }
   },
   {
-    "MaterialId": 1004,
+    "Id": 1004,
     "Name": "Bronze",
     "Category": "Minerals",
     "Rarity": 4,
@@ -50,7 +50,7 @@
     }
   },
   {
-    "MaterialId": 1005,
+    "Id": 1005,
     "Name": "Silver",
     "Category": "Minerals",
     "Rarity": 7,
@@ -60,7 +60,7 @@
     }
   },
   {
-    "MaterialId": 1006,
+    "Id": 1006,
     "Name": "Gold",
     "Category": "Minerals",
     "Rarity": 9,
@@ -70,7 +70,7 @@
     }
   },
   {
-    "MaterialId": 1007,
+    "Id": 1007,
     "Name": "Platinum",
     "Category": "Minerals",
     "Rarity": 12,
@@ -80,7 +80,7 @@
     }
   },
   {
-    "MaterialId": 1008,
+    "Id": 1008,
     "Name": "Orichalcum",
     "Category": "Minerals",
     "Rarity": 13,
@@ -90,7 +90,7 @@
     }
   },
   {
-    "MaterialId": 1009,
+    "Id": 1009,
     "Name": "Dragonic Stone",
     "Category": "Minerals",
     "Rarity": 15,
@@ -100,7 +100,7 @@
     }
   },
   {
-    "MaterialId": 1010,
+    "Id": 1010,
     "Name": "Amethyst",
     "Category": "Jewels",
     "Rarity": 0,
@@ -110,7 +110,7 @@
     }
   },
   {
-    "MaterialId": 1011,
+    "Id": 1011,
     "Name": "Aquamarine",
     "Category": "Jewels",
     "Rarity": 2,
@@ -120,7 +120,7 @@
     }
   },
   {
-    "MaterialId": 1012,
+    "Id": 1012,
     "Name": "Emerald",
     "Category": "Jewels",
     "Rarity": 5,
@@ -130,7 +130,7 @@
     }
   },
   {
-    "MaterialId": 1013,
+    "Id": 1013,
     "Name": "Ruby",
     "Category": "Jewels",
     "Rarity": 7,
@@ -140,7 +140,7 @@
     }
   },
   {
-    "MaterialId": 1014,
+    "Id": 1014,
     "Name": "Sapphire",
     "Category": "Jewels",
     "Rarity": 8,
@@ -150,7 +150,7 @@
     }
   },
   {
-    "MaterialId": 1015,
+    "Id": 1015,
     "Name": "Diamond",
     "Category": "Jewels",
     "Rarity": 11,
@@ -160,7 +160,7 @@
     }
   },
   {
-    "MaterialId": 1016,
+    "Id": 1016,
     "Name": "Green Core",
     "Category": "Jewels",
     "Rarity": 13,
@@ -170,7 +170,7 @@
     }
   },
   {
-    "MaterialId": 1017,
+    "Id": 1017,
     "Name": "Red Core",
     "Category": "Jewels",
     "Rarity": 13,
@@ -180,7 +180,7 @@
     }
   },
   {
-    "MaterialId": 1018,
+    "Id": 1018,
     "Name": "Yellow Core",
     "Category": "Jewels",
     "Rarity": 13,
@@ -190,7 +190,7 @@
     }
   },
   {
-    "MaterialId": 1019,
+    "Id": 1019,
     "Name": "Blue Core",
     "Category": "Jewels",
     "Rarity": 13,
@@ -200,7 +200,7 @@
     }
   },
   {
-    "MaterialId": 1020,
+    "Id": 1020,
     "Name": "Crystal Skull",
     "Category": "Jewels",
     "Rarity": 15,
@@ -211,7 +211,7 @@
     }
   },
   {
-    "MaterialId": 1021,
+    "Id": 1021,
     "Name": "Magic Crystal",
     "Category": "Crystals",
     "Rarity": 4,
@@ -222,7 +222,7 @@
     }
   },
   {
-    "MaterialId": 1022,
+    "Id": 1022,
     "Name": "Dark Crystal",
     "Category": "Crystals",
     "Rarity": 3,
@@ -233,7 +233,7 @@
     }
   },
   {
-    "MaterialId": 1023,
+    "Id": 1023,
     "Name": "Fire Crystal",
     "Category": "Crystals",
     "Rarity": 7,
@@ -243,7 +243,7 @@
     }
   },
   {
-    "MaterialId": 1024,
+    "Id": 1024,
     "Name": "Earth Crystal",
     "Category": "Crystals",
     "Rarity": 8,
@@ -253,7 +253,7 @@
     }
   },
   {
-    "MaterialId": 1025,
+    "Id": 1025,
     "Name": "Love Crystal",
     "Category": "Crystals",
     "Rarity": 9,
@@ -263,7 +263,7 @@
     }
   },
   {
-    "MaterialId": 1026,
+    "Id": 1026,
     "Name": "Wind Crystal",
     "Category": "Crystals",
     "Rarity": 10,
@@ -273,7 +273,7 @@
     }
   },
   {
-    "MaterialId": 1027,
+    "Id": 1027,
     "Name": "Water Crystal",
     "Category": "Crystals",
     "Rarity": 11,
@@ -283,7 +283,7 @@
     }
   },
   {
-    "MaterialId": 1028,
+    "Id": 1028,
     "Name": "Light Crystal",
     "Category": "Crystals",
     "Rarity": 12,
@@ -294,7 +294,7 @@
     }
   },
   {
-    "MaterialId": 1029,
+    "Id": 1029,
     "Name": "Small Crystal",
     "Category": "Crystals",
     "Rarity": 13,
@@ -304,7 +304,7 @@
     }
   },
   {
-    "MaterialId": 1030,
+    "Id": 1030,
     "Name": "Big Crystal",
     "Category": "Crystals",
     "Rarity": 13,
@@ -315,7 +315,7 @@
     }
   },
   {
-    "MaterialId": 1031,
+    "Id": 1031,
     "Name": "Rune Crystal",
     "Category": "Crystals",
     "Rarity": 14,
@@ -325,7 +325,7 @@
     }
   },
   {
-    "MaterialId": 1032,
+    "Id": 1032,
     "Name": "Electro Crystal",
     "Category": "Crystals",
     "Rarity": 15,
@@ -338,7 +338,7 @@
     }
   },
   {
-    "MaterialId": 1033,
+    "Id": 1033,
     "Name": "Stick",
     "Category": "Sticks and Stems",
     "Rarity": 0,
@@ -348,7 +348,7 @@
     }
   },
   {
-    "MaterialId": 1034,
+    "Id": 1034,
     "Name": "Insect Horn",
     "Category": "Sticks and Stems",
     "Rarity": 1,
@@ -358,7 +358,7 @@
     }
   },
   {
-    "MaterialId": 1035,
+    "Id": 1035,
     "Name": "Plant Stem",
     "Category": "Sticks and Stems",
     "Rarity": 3,
@@ -369,7 +369,7 @@
     }
   },
   {
-    "MaterialId": 1036,
+    "Id": 1036,
     "Name": "Bull's Horn",
     "Category": "Sticks and Stems",
     "Rarity": 7,
@@ -380,7 +380,7 @@
     }
   },
   {
-    "MaterialId": 1037,
+    "Id": 1037,
     "Name": "Moving Branch",
     "Category": "Sticks and Stems",
     "Rarity": 9,
@@ -391,8 +391,8 @@
     }
   },
   {
-    "MaterialId": 1038,
-    "Name": "RigMaterialId Horn",
+    "Id": 1038,
+    "Name": "Rigid Horn",
     "Category": "Sticks and Stems",
     "Rarity": 10,
     "Difficulty": 52,
@@ -402,7 +402,7 @@
     }
   },
   {
-    "MaterialId": 1039,
+    "Id": 1039,
     "Name": "Thick Stick",
     "Category": "Sticks and Stems",
     "Rarity": 12,
@@ -412,7 +412,7 @@
     }
   },
   {
-    "MaterialId": 1040,
+    "Id": 1040,
     "Name": "Devil Horn",
     "Category": "Sticks and Stems",
     "Rarity": 13,
@@ -423,9 +423,9 @@
     }
   },
   {
-    "MaterialId": 1041,
+    "Id": 1041,
     "Name": "Glue",
-    "Category": "LiquMaterialIds",
+    "Category": "Liquids",
     "Rarity": 5,
     "Difficulty": 26,
     "StatInfo": {
@@ -435,9 +435,9 @@
     }
   },
   {
-    "MaterialId": 1042,
+    "Id": 1042,
     "Name": "Devil Blood",
-    "Category": "LiquMaterialIds",
+    "Category": "Liquids",
     "Rarity": 9,
     "Difficulty": 39,
     "StatInfo": {
@@ -446,9 +446,9 @@
     }
   },
   {
-    "MaterialId": 1043,
+    "Id": 1043,
     "Name": "Paralysis Poison",
-    "Category": "LiquMaterialIds",
+    "Category": "Liquids",
     "Rarity": 10,
     "Difficulty": 30,
     "StatInfo": {
@@ -456,9 +456,9 @@
     }
   },
   {
-    "MaterialId": 1044,
+    "Id": 1044,
     "Name": "Poison King",
-    "Category": "LiquMaterialIds",
+    "Category": "Liquids",
     "Rarity": 14,
     "Difficulty": 86,
     "StatInfo": {
@@ -468,7 +468,7 @@
     }
   },
   {
-    "MaterialId": 1045,
+    "Id": 1045,
     "Name": "Bird's Feather",
     "Category": "Feathers",
     "Rarity": 2,
@@ -478,7 +478,7 @@
     }
   },
   {
-    "MaterialId": 1046,
+    "Id": 1046,
     "Name": "Yellow Feather",
     "Category": "Feathers",
     "Rarity": 5,
@@ -488,7 +488,7 @@
     }
   },
   {
-    "MaterialId": 1047,
+    "Id": 1047,
     "Name": "Black Bird's Feather",
     "Category": "Feathers",
     "Rarity": 10,
@@ -498,7 +498,7 @@
     }
   },
   {
-    "MaterialId": 1048,
+    "Id": 1048,
     "Name": "Thunderbird Feather",
     "Category": "Feathers",
     "Rarity": 12,
@@ -508,7 +508,7 @@
     }
   },
   {
-    "MaterialId": 1049,
+    "Id": 1049,
     "Name": "Dragon Fin",
     "Category": "Feathers",
     "Rarity": 15,
@@ -519,7 +519,7 @@
     }
   },
   {
-    "MaterialId": 1050,
+    "Id": 1050,
     "Name": "Turtle Shell",
     "Category": "Shells and Bones",
     "Rarity": 2,
@@ -531,7 +531,7 @@
     }
   },
   {
-    "MaterialId": 1051,
+    "Id": 1051,
     "Name": "Fish Fossil",
     "Category": "Shells and Bones",
     "Rarity": 3,
@@ -542,7 +542,7 @@
     }
   },
   {
-    "MaterialId": 1052,
+    "Id": 1052,
     "Name": "Dragon Bones",
     "Category": "Shells and Bones",
     "Rarity": 8,
@@ -554,7 +554,7 @@
     }
   },
   {
-    "MaterialId": 1053,
+    "Id": 1053,
     "Name": "Skull",
     "Category": "Shells and Bones",
     "Rarity": 9,
@@ -567,7 +567,7 @@
     }
   },
   {
-    "MaterialId": 1054,
+    "Id": 1054,
     "Name": "Blk. Tortoise Shell",
     "Category": "Shells and Bones",
     "Rarity": 12,
@@ -578,7 +578,7 @@
     }
   },
   {
-    "MaterialId": 1055,
+    "Id": 1055,
     "Name": "Ammonite",
     "Category": "Shells and Bones",
     "Rarity": 15,
@@ -590,7 +590,7 @@
     }
   },
   {
-    "MaterialId": 1056,
+    "Id": 1056,
     "Name": "Round Stone",
     "Category": "Stones",
     "Rarity": 4,
@@ -601,7 +601,7 @@
     }
   },
   {
-    "MaterialId": 1057,
+    "Id": 1057,
     "Name": "Tiny Golem Stone",
     "Category": "Stones",
     "Rarity": 9,
@@ -612,7 +612,7 @@
     }
   },
   {
-    "MaterialId": 1058,
+    "Id": 1058,
     "Name": "Golem Stone",
     "Category": "Stones",
     "Rarity": 12,
@@ -623,7 +623,7 @@
     }
   },
   {
-    "MaterialId": 1059,
+    "Id": 1059,
     "Name": "Golem Tablet",
     "Category": "Stones",
     "Rarity": 13,
@@ -634,7 +634,7 @@
     }
   },
   {
-    "MaterialId": 1060,
+    "Id": 1060,
     "Name": "Golem Spirit Stone",
     "Category": "Stones",
     "Rarity": 14,
@@ -645,7 +645,7 @@
     }
   },
   {
-    "MaterialId": 1061,
+    "Id": 1061,
     "Name": "Tablet of Truth",
     "Category": "Stones",
     "Rarity": 15,
@@ -659,7 +659,7 @@
     }
   },
   {
-    "MaterialId": 1062,
+    "Id": 1062,
     "Name": "Yarn",
     "Category": "Strings",
     "Rarity": 1,
@@ -670,7 +670,7 @@
     }
   },
   {
-    "MaterialId": 1063,
+    "Id": 1063,
     "Name": "Old Bandage",
     "Category": "Strings",
     "Rarity": 2,
@@ -681,7 +681,7 @@
     }
   },
   {
-    "MaterialId": 1064,
+    "Id": 1064,
     "Name": "Ambrosia's Thorns",
     "Category": "Strings",
     "Rarity": 2,
@@ -693,8 +693,8 @@
     }
   },
   {
-    "MaterialId": 1065,
-    "Name": "SpMaterialIder's Thread",
+    "Id": 1065,
+    "Name": "Spider's Thread",
     "Category": "Strings",
     "Rarity": 4,
     "Difficulty": 18,
@@ -705,7 +705,7 @@
     }
   },
   {
-    "MaterialId": 1066,
+    "Id": 1066,
     "Name": "Puppetry Strings",
     "Category": "Strings",
     "Rarity": 6,
@@ -718,7 +718,7 @@
     }
   },
   {
-    "MaterialId": 1067,
+    "Id": 1067,
     "Name": "Vine",
     "Category": "Strings",
     "Rarity": 6,
@@ -729,7 +729,7 @@
     }
   },
   {
-    "MaterialId": 1068,
+    "Id": 1068,
     "Name": "Scorpion Tail",
     "Category": "Strings",
     "Rarity": 7,
@@ -740,7 +740,7 @@
     }
   },
   {
-    "MaterialId": 1069,
+    "Id": 1069,
     "Name": "Strong Vine",
     "Category": "Strings",
     "Rarity": 10,
@@ -751,7 +751,7 @@
     }
   },
   {
-    "MaterialId": 1070,
+    "Id": 1070,
     "Name": "Pretty Thread",
     "Category": "Strings",
     "Rarity": 12,
@@ -763,7 +763,7 @@
     }
   },
   {
-    "MaterialId": 1071,
+    "Id": 1071,
     "Name": "Chimera Tail",
     "Category": "Strings",
     "Rarity": 15,
@@ -776,7 +776,7 @@
     }
   },
   {
-    "MaterialId": 1072,
+    "Id": 1072,
     "Name": "Arrowhead",
     "Category": "Shards",
     "Rarity": 0,
@@ -786,7 +786,7 @@
     }
   },
   {
-    "MaterialId": 1073,
+    "Id": 1073,
     "Name": "Blade Shard",
     "Category": "Shards",
     "Rarity": 2,
@@ -796,7 +796,7 @@
     }
   },
   {
-    "MaterialId": 1074,
+    "Id": 1074,
     "Name": "Broken Hilt",
     "Category": "Shards",
     "Rarity": 5,
@@ -812,7 +812,7 @@
     }
   },
   {
-    "MaterialId": 1075,
+    "Id": 1075,
     "Name": "Broken Box",
     "Category": "Shards",
     "Rarity": 8,
@@ -828,7 +828,7 @@
     }
   },
   {
-    "MaterialId": 1076,
+    "Id": 1076,
     "Name": "Hammer Piece",
     "Category": "Shards",
     "Rarity": 9,
@@ -840,7 +840,7 @@
     }
   },
   {
-    "MaterialId": 1077,
+    "Id": 1077,
     "Name": "Shoulder Piece",
     "Category": "Shards",
     "Rarity": 11,
@@ -851,7 +851,7 @@
     }
   },
   {
-    "MaterialId": 1078,
+    "Id": 1078,
     "Name": "Rusty Screw",
     "Category": "Shards",
     "Rarity": 11,
@@ -862,7 +862,7 @@
     }
   },
   {
-    "MaterialId": 1079,
+    "Id": 1079,
     "Name": "Shiney Screw",
     "Category": "Shards",
     "Rarity": 12,
@@ -874,7 +874,7 @@
     }
   },
   {
-    "MaterialId": 1080,
+    "Id": 1080,
     "Name": "Glistening Blade",
     "Category": "Shards",
     "Rarity": 12,
@@ -884,7 +884,7 @@
     }
   },
   {
-    "MaterialId": 1081,
+    "Id": 1081,
     "Name": "Great Hammer Shard",
     "Category": "Shards",
     "Rarity": 12,
@@ -895,7 +895,7 @@
     }
   },
   {
-    "MaterialId": 1082,
+    "Id": 1082,
     "Name": "Left Rock Shard",
     "Category": "Shards",
     "Rarity": 14,
@@ -914,7 +914,7 @@
     }
   },
   {
-    "MaterialId": 1083,
+    "Id": 1083,
     "Name": "Right Rock Shard",
     "Category": "Shards",
     "Rarity": 14,
@@ -928,7 +928,7 @@
     }
   },
   {
-    "MaterialId": 1084,
+    "Id": 1084,
     "Name": "MTGU Plate",
     "Category": "Shards",
     "Rarity": 14,
@@ -940,7 +940,7 @@
     }
   },
   {
-    "MaterialId": 1085,
+    "Id": 1085,
     "Name": "Pirate's Armour",
     "Category": "Shards",
     "Rarity": 14,
@@ -951,7 +951,7 @@
     }
   },
   {
-    "MaterialId": 1086,
+    "Id": 1086,
     "Name": "Broken Ice Wall",
     "Category": "Shards",
     "Rarity": 15,
@@ -965,7 +965,7 @@
     }
   },
   {
-    "MaterialId": 1087,
+    "Id": 1087,
     "Name": "Fur (S)",
     "Category": "Furs",
     "Rarity": 0,
@@ -976,7 +976,7 @@
     }
   },
   {
-    "MaterialId": 1088,
+    "Id": 1088,
     "Name": "Fur",
     "Category": "Furs",
     "Rarity": 1,
@@ -988,7 +988,7 @@
     }
   },
   {
-    "MaterialId": 1089,
+    "Id": 1089,
     "Name": "Yellow Down",
     "Category": "Furs",
     "Rarity": 3,
@@ -1000,7 +1000,7 @@
     }
   },
   {
-    "MaterialId": 1090,
+    "Id": 1090,
     "Name": "Quality Fur",
     "Category": "Furs",
     "Rarity": 4,
@@ -1012,7 +1012,7 @@
     }
   },
   {
-    "MaterialId": 1091,
+    "Id": 1091,
     "Name": "Lightning Mane",
     "Category": "Furs",
     "Rarity": 5,
@@ -1025,7 +1025,7 @@
     }
   },
   {
-    "MaterialId": 1092,
+    "Id": 1092,
     "Name": "Quality Puffy Fur",
     "Category": "Furs",
     "Rarity": 6,
@@ -1037,7 +1037,7 @@
     }
   },
   {
-    "MaterialId": 1093,
+    "Id": 1093,
     "Name": "Fur (M)",
     "Category": "Furs",
     "Rarity": 1,
@@ -1049,7 +1049,7 @@
     }
   },
   {
-    "MaterialId": 1094,
+    "Id": 1094,
     "Name": "Wooly Furball",
     "Category": "Furs",
     "Rarity": 9,
@@ -1062,7 +1062,7 @@
     }
   },
   {
-    "MaterialId": 1095,
+    "Id": 1095,
     "Name": "Fur (L)",
     "Category": "Furs",
     "Rarity": 10,
@@ -1075,7 +1075,7 @@
     }
   },
   {
-    "MaterialId": 1096,
+    "Id": 1096,
     "Name": "Penguin Down",
     "Category": "Furs",
     "Rarity": 11,
@@ -1087,7 +1087,7 @@
     }
   },
   {
-    "MaterialId": 1097,
+    "Id": 1097,
     "Name": "Red Lion Fur",
     "Category": "Furs",
     "Rarity": 15,
@@ -1100,7 +1100,7 @@
     }
   },
   {
-    "MaterialId": 1098,
+    "Id": 1098,
     "Name": "Blue Lion Fur",
     "Category": "Furs",
     "Rarity": 15,
@@ -1113,7 +1113,7 @@
     }
   },
   {
-    "MaterialId": 1099,
+    "Id": 1099,
     "Name": "Chest Hair",
     "Category": "Furs",
     "Rarity": 15,
@@ -1127,7 +1127,7 @@
     }
   },
   {
-    "MaterialId": 1100,
+    "Id": 1100,
     "Name": "Spore",
     "Category": "Powders and Spores",
     "Rarity": 1,
@@ -1137,7 +1137,7 @@
     }
   },
   {
-    "MaterialId": 1101,
+    "Id": 1101,
     "Name": "Fairy Dust",
     "Category": "Powders and Spores",
     "Rarity": 3,
@@ -1147,7 +1147,7 @@
     }
   },
   {
-    "MaterialId": 1102,
+    "Id": 1102,
     "Name": "Gunpowder",
     "Category": "Powders and Spores",
     "Rarity": 5,
@@ -1158,7 +1158,7 @@
     }
   },
   {
-    "MaterialId": 1103,
+    "Id": 1103,
     "Name": "Poison Powder",
     "Category": "Powders and Spores",
     "Rarity": 6,
@@ -1170,7 +1170,7 @@
     }
   },
   {
-    "MaterialId": 1104,
+    "Id": 1104,
     "Name": "Holy Spore",
     "Category": "Powders and Spores",
     "Rarity": 7,
@@ -1183,7 +1183,7 @@
     }
   },
   {
-    "MaterialId": 1105,
+    "Id": 1105,
     "Name": "Root",
     "Category": "Powders and Spores",
     "Rarity": 8,
@@ -1193,7 +1193,7 @@
     }
   },
   {
-    "MaterialId": 1106,
+    "Id": 1106,
     "Name": "Magic Powder",
     "Category": "Powders and Spores",
     "Rarity": 9,
@@ -1203,7 +1203,7 @@
     }
   },
   {
-    "MaterialId": 1107,
+    "Id": 1107,
     "Name": "Mysterious Powder",
     "Category": "Powders and Spores",
     "Rarity": 10,
@@ -1215,7 +1215,7 @@
     }
   },
   {
-    "MaterialId": 1108,
+    "Id": 1108,
     "Name": "Earth Dragon Ash",
     "Category": "Powders and Spores",
     "Rarity": 11,
@@ -1227,7 +1227,7 @@
     }
   },
   {
-    "MaterialId": 1109,
+    "Id": 1109,
     "Name": "Magic",
     "Category": "Powders and Spores",
     "Rarity": 11,
@@ -1237,7 +1237,7 @@
     }
   },
   {
-    "MaterialId": 1110,
+    "Id": 1110,
     "Name": "Fire Dragon Ash",
     "Category": "Powders and Spores",
     "Rarity": 12,
@@ -1248,7 +1248,7 @@
     }
   },
   {
-    "MaterialId": 1111,
+    "Id": 1111,
     "Name": "Fairy Elixir",
     "Category": "Powders and Spores",
     "Rarity": 12,
@@ -1258,7 +1258,7 @@
     }
   },
   {
-    "MaterialId": 1112,
+    "Id": 1112,
     "Name": "Water Dragon Ash",
     "Category": "Powders and Spores",
     "Rarity": 13,
@@ -1269,7 +1269,7 @@
     }
   },
   {
-    "MaterialId": 1113,
+    "Id": 1113,
     "Name": "Turnip's Miracle",
     "Category": "Powders and Spores",
     "Rarity": 14,
@@ -1279,7 +1279,7 @@
     }
   },
   {
-    "MaterialId": 1114,
+    "Id": 1114,
     "Name": "Melody Bottle",
     "Category": "Powders and Spores",
     "Rarity": 15,
@@ -1299,7 +1299,7 @@
     }
   },
   {
-    "MaterialId": 1115,
+    "Id": 1115,
     "Name": "Cheap Cloth",
     "Category": "Cloths and Skins",
     "Rarity": 0,
@@ -1310,7 +1310,7 @@
     }
   },
   {
-    "MaterialId": 1116,
+    "Id": 1116,
     "Name": "Insect Carapace",
     "Category": "Cloths and Skins",
     "Rarity": 1,
@@ -1321,7 +1321,7 @@
     }
   },
   {
-    "MaterialId": 1117,
+    "Id": 1117,
     "Name": "Ghost Hood",
     "Category": "Cloths and Skins",
     "Rarity": 4,
@@ -1332,7 +1332,7 @@
     }
   },
   {
-    "MaterialId": 1118,
+    "Id": 1118,
     "Name": "Pretty Carapace",
     "Category": "Cloths and Skins",
     "Rarity": 6,
@@ -1344,7 +1344,7 @@
     }
   },
   {
-    "MaterialId": 1119,
+    "Id": 1119,
     "Name": "Quality Cloth",
     "Category": "Cloths and Skins",
     "Rarity": 7,
@@ -1355,7 +1355,7 @@
     }
   },
   {
-    "MaterialId": 1120,
+    "Id": 1120,
     "Name": "Quality Worn Cloth",
     "Category": "Cloths and Skins",
     "Rarity": 8,
@@ -1369,7 +1369,7 @@
     }
   },
   {
-    "MaterialId": 1121,
+    "Id": 1121,
     "Name": "Silk Cloth",
     "Category": "Cloths and Skins",
     "Rarity": 9,
@@ -1380,7 +1380,7 @@
     }
   },
   {
-    "MaterialId": 1122,
+    "Id": 1122,
     "Name": "Giant's Glove",
     "Category": "Cloths and Skins",
     "Rarity": 10,
@@ -1392,7 +1392,7 @@
     }
   },
   {
-    "MaterialId": 1123,
+    "Id": 1123,
     "Name": "Blue Giant's Glove",
     "Category": "Cloths and Skins",
     "Rarity": 11,
@@ -1404,7 +1404,7 @@
     }
   },
   {
-    "MaterialId": 1124,
+    "Id": 1124,
     "Name": "Ancient Orc Cloth",
     "Category": "Cloths and Skins",
     "Rarity": 14,
@@ -1418,7 +1418,7 @@
     }
   },
   {
-    "MaterialId": 1125,
+    "Id": 1125,
     "Name": "Insect Jaw",
     "Category": "Claws and Fangs",
     "Rarity": 0,
@@ -1428,7 +1428,7 @@
     }
   },
   {
-    "MaterialId": 1126,
+    "Id": 1126,
     "Name": "Panther Claw",
     "Category": "Claws and Fangs",
     "Rarity": 4,
@@ -1438,7 +1438,7 @@
     }
   },
   {
-    "MaterialId": 1127,
+    "Id": 1127,
     "Name": "Wolf Fang",
     "Category": "Claws and Fangs",
     "Rarity": 5,
@@ -1448,7 +1448,7 @@
     }
   },
   {
-    "MaterialId": 1128,
+    "Id": 1128,
     "Name": "Palm Claw",
     "Category": "Claws and Fangs",
     "Rarity": 6,
@@ -1458,7 +1458,7 @@
     }
   },
   {
-    "MaterialId": 1129,
+    "Id": 1129,
     "Name": "Giant's Nail",
     "Category": "Claws and Fangs",
     "Rarity": 7,
@@ -1468,7 +1468,7 @@
     }
   },
   {
-    "MaterialId": 1130,
+    "Id": 1130,
     "Name": "Chimera's Claw",
     "Category": "Claws and Fangs",
     "Rarity": 7,
@@ -1481,7 +1481,7 @@
     }
   },
   {
-    "MaterialId": 1131,
+    "Id": 1131,
     "Name": "Ivory Tusk",
     "Category": "Claws and Fangs",
     "Rarity": 8,
@@ -1493,7 +1493,7 @@
     }
   },
   {
-    "MaterialId": 1132,
+    "Id": 1132,
     "Name": "Big Gaint's Nail",
     "Category": "Claws and Fangs",
     "Rarity": 9,
@@ -1503,7 +1503,7 @@
     }
   },
   {
-    "MaterialId": 1133,
+    "Id": 1133,
     "Name": "Unbroken Ivory Tusk",
     "Category": "Claws and Fangs",
     "Rarity": 10,
@@ -1514,7 +1514,7 @@
     }
   },
   {
-    "MaterialId": 1134,
+    "Id": 1134,
     "Name": "Scorpion Pincer",
     "Category": "Claws and Fangs",
     "Rarity": 11,
@@ -1525,7 +1525,7 @@
     }
   },
   {
-    "MaterialId": 1135,
+    "Id": 1135,
     "Name": "Cheap Propeller",
     "Category": "Claws and Fangs",
     "Rarity": 11,
@@ -1536,7 +1536,7 @@
     }
   },
   {
-    "MaterialId": 1136,
+    "Id": 1136,
     "Name": "Gold Wolf Fang",
     "Category": "Claws and Fangs",
     "Rarity": 11,
@@ -1546,7 +1546,7 @@
     }
   },
   {
-    "MaterialId": 1137,
+    "Id": 1137,
     "Name": "Quality Propeller",
     "Category": "Claws and Fangs",
     "Rarity": 12,
@@ -1557,7 +1557,7 @@
     }
   },
   {
-    "MaterialId": 1138,
+    "Id": 1138,
     "Name": "Magic Claw",
     "Category": "Claws and Fangs",
     "Rarity": 12,
@@ -1568,7 +1568,7 @@
     }
   },
   {
-    "MaterialId": 1139,
+    "Id": 1139,
     "Name": "Dragon Fang",
     "Category": "Claws and Fangs",
     "Rarity": 13,
@@ -1578,7 +1578,7 @@
     }
   },
   {
-    "MaterialId": 1140,
+    "Id": 1140,
     "Name": "Malm Claw",
     "Category": "Claws and Fangs",
     "Rarity": 14,
@@ -1588,7 +1588,7 @@
     }
   },
   {
-    "MaterialId": 1141,
+    "Id": 1141,
     "Name": "Queen's Jaw",
     "Category": "Claws and Fangs",
     "Rarity": 14,
@@ -1601,7 +1601,7 @@
     }
   },
   {
-    "MaterialId": 1142,
+    "Id": 1142,
     "Name": "Dangerous Scissors",
     "Category": "Claws and Fangs",
     "Rarity": 14,
@@ -1612,7 +1612,7 @@
     }
   },
   {
-    "MaterialId": 1143,
+    "Id": 1143,
     "Name": "Wind Dragon Tooth",
     "Category": "Claws and Fangs",
     "Rarity": 15,
@@ -1623,7 +1623,7 @@
     }
   },
   {
-    "MaterialId": 1144,
+    "Id": 1144,
     "Name": "Wet Scale",
     "Category": "Scales",
     "Rarity": 11,
@@ -1633,7 +1633,7 @@
     }
   },
   {
-    "MaterialId": 1145,
+    "Id": 1145,
     "Name": "Dragon Scale",
     "Category": "Scales",
     "Rarity": 14,
@@ -1644,7 +1644,7 @@
     }
   },
   {
-    "MaterialId": 1146,
+    "Id": 1146,
     "Name": "Crimson Scale",
     "Category": "Scales",
     "Rarity": 14,
@@ -1655,7 +1655,7 @@
     }
   },
   {
-    "MaterialId": 1147,
+    "Id": 1147,
     "Name": "Blue Scale",
     "Category": "Scales",
     "Rarity": 14,
@@ -1666,7 +1666,7 @@
     }
   },
   {
-    "MaterialId": 1148,
+    "Id": 1148,
     "Name": "Glitter Scale",
     "Category": "Scales",
     "Rarity": 14,
@@ -1678,7 +1678,7 @@
     }
   },
   {
-    "MaterialId": 1149,
+    "Id": 1149,
     "Name": "Love Scale",
     "Category": "Scales",
     "Rarity": 14,
@@ -1690,7 +1690,7 @@
     }
   },
   {
-    "MaterialId": 1150,
+    "Id": 1150,
     "Name": "Black Scale",
     "Category": "Scales",
     "Rarity": 14,
@@ -1702,7 +1702,7 @@
     }
   },
   {
-    "MaterialId": 1151,
+    "Id": 1151,
     "Name": "Grimoire Scale",
     "Category": "Scales",
     "Rarity": 15,
@@ -1714,7 +1714,7 @@
     }
   },
   {
-    "MaterialId": 1152,
+    "Id": 1152,
     "Name": "Firewyrm Scale",
     "Category": "Scales",
     "Rarity": 15,
@@ -1725,7 +1725,7 @@
     }
   },
   {
-    "MaterialId": 1153,
+    "Id": 1153,
     "Name": "Earthwyrm Scale",
     "Category": "Scales",
     "Rarity": 15,
@@ -1737,7 +1737,7 @@
     }
   },
   {
-    "MaterialId": 1154,
+    "Id": 1154,
     "Name": "Legendary Scale",
     "Category": "Scales",
     "Rarity": 15,
@@ -1747,7 +1747,7 @@
     }
   },
   {
-    "MaterialId": 1155,
+    "Id": 1155,
     "Name": "Double Steel",
     "Category": "Collectible",
     "Rarity": 5,
@@ -1757,7 +1757,7 @@
     }
   },
   {
-    "MaterialId": 1156,
+    "Id": 1156,
     "Name": "10-Fold Steel",
     "Category": "Collectible",
     "Rarity": 10,
@@ -1767,7 +1767,7 @@
     }
   },
   {
-    "MaterialId": 1157,
+    "Id": 1157,
     "Name": "Glitta Augite",
     "Category": "Collectible",
     "Rarity": 8,
@@ -1777,7 +1777,7 @@
     }
   },
   {
-    "MaterialId": 1158,
+    "Id": 1158,
     "Name": "Invisible Stone",
     "Category": "Collectible",
     "Rarity": 5,
@@ -1787,7 +1787,7 @@
     }
   },
   {
-    "MaterialId": 1159,
+    "Id": 1159,
     "Name": "Light Ore",
     "Category": "Collectible",
     "Rarity": 13,
@@ -1797,7 +1797,7 @@
     }
   },
   {
-    "MaterialId": 1160,
+    "Id": 1160,
     "Name": "Rune Sphere Shard",
     "Category": "Collectible",
     "Rarity": 15,
@@ -1809,7 +1809,7 @@
     }
   },
   {
-    "MaterialId": 1161,
+    "Id": 1161,
     "Name": "Shade Stone",
     "Category": "Collectible",
     "Rarity": 6,
@@ -1819,7 +1819,7 @@
     }
   },
   {
-    "MaterialId": 1162,
+    "Id": 1162,
     "Name": "Raccoon Leaf",
     "Category": "Collectible",
     "Rarity": 10,
@@ -1830,7 +1830,7 @@
     }
   },
   {
-    "MaterialId": 1163,
+    "Id": 1163,
     "Name": "Icy Nose",
     "Category": "Collectible",
     "Rarity": 15,
@@ -1845,7 +1845,7 @@
     }
   },
   {
-    "MaterialId": 1164,
+    "Id": 1164,
     "Name": "Big Bird's Comb",
     "Category": "Collectible",
     "Rarity": 10,
@@ -1856,7 +1856,7 @@
     }
   },
   {
-    "MaterialId": 1165,
+    "Id": 1165,
     "Name": "Rafflesia Petal",
     "Category": "Collectible",
     "Rarity": 9,
@@ -1869,7 +1869,7 @@
     }
   },
   {
-    "MaterialId": 1166,
+    "Id": 1166,
     "Name": "Cursed Doll",
     "Category": "Collectible",
     "Rarity": 6,
@@ -1883,7 +1883,7 @@
     }
   },
   {
-    "MaterialId": 1167,
+    "Id": 1167,
     "Name": "Warrior's Proof",
     "Category": "Collectible",
     "Rarity": 13,
@@ -1895,7 +1895,7 @@
     }
   },
   {
-    "MaterialId": 1168,
+    "Id": 1168,
     "Name": "Proof of Rank",
     "Category": "Collectible",
     "Rarity": 13,
@@ -1907,7 +1907,7 @@
     }
   },
   {
-    "MaterialId": 1169,
+    "Id": 1169,
     "Name": "Throne of the Empire",
     "Category": "Collectible",
     "Rarity": 14,
@@ -1918,63 +1918,63 @@
     }
   },
   {
-    "MaterialId": 1170,
+    "Id": 1170,
     "Name": "White Stone",
     "Category": "Collectible",
     "Rarity": 13,
     "Difficulty": 30
   },
   {
-    "MaterialId": 1171,
+    "Id": 1171,
     "Name": "Boot",
     "Category": "Trash",
     "Rarity": 0,
     "Difficulty": 0
   },
   {
-    "MaterialId": 1172,
+    "Id": 1172,
     "Name": "Can",
     "Category": "Trash",
     "Rarity": 0,
     "Difficulty": 0
   },
   {
-    "MaterialId": 1173,
+    "Id": 1173,
     "Name": "Rare Can",
     "Category": "Trash",
     "Rarity": 5,
     "Difficulty": 0
   },
   {
-    "MaterialId": 1174,
+    "Id": 1174,
     "Name": "Branch",
     "Category": "Other",
     "Rarity": 0,
     "Difficulty": 0
   },
   {
-    "MaterialId": 1175,
+    "Id": 1175,
     "Name": "Rock",
     "Category": "Other",
     "Rarity": 0,
     "Difficulty": 0
   },
   {
-    "MaterialId": 1176,
+    "Id": 1176,
     "Name": "Material Stone",
     "Category": "Other",
     "Rarity": 0,
     "Difficulty": 0
   },
   {
-    "MaterialId": 1177,
+    "Id": 1177,
     "Name": "Lumber",
     "Category": "Other",
     "Rarity": 0,
     "Difficulty": 0
   },
   {
-    "MaterialId": 1178,
+    "Id": 1178,
     "Name": "Cabbage",
     "Category": "Vegetable",
     "Rarity": 6,
@@ -1984,7 +1984,7 @@
     }
   },
   {
-    "MaterialId": 1179,
+    "Id": 1179,
     "Name": "Pink Turnip",
     "Category": "Vegetable",
     "Rarity": 3,
@@ -1994,7 +1994,7 @@
     }
   },
   {
-    "MaterialId": 1180,
+    "Id": 1180,
     "Name": "Pink Melon",
     "Category": "Vegetable",
     "Rarity": 7,
@@ -2004,7 +2004,7 @@
     }
   },
   {
-    "MaterialId": 1181,
+    "Id": 1181,
     "Name": "Onion",
     "Category": "Vegetable",
     "Rarity": 6,
@@ -2014,7 +2014,7 @@
     }
   },
   {
-    "MaterialId": 1182,
+    "Id": 1182,
     "Name": "Pumpkin",
     "Category": "Vegetable",
     "Rarity": 3,
@@ -2024,7 +2024,7 @@
     }
   },
   {
-    "MaterialId": 1183,
+    "Id": 1183,
     "Name": "Cucumber",
     "Category": "Vegetable",
     "Rarity": 3,
@@ -2034,7 +2034,7 @@
     }
   },
   {
-    "MaterialId": 1184,
+    "Id": 1184,
     "Name": "Corn",
     "Category": "Vegetable",
     "Rarity": 4,
@@ -2044,7 +2044,7 @@
     }
   },
   {
-    "MaterialId": 1185,
+    "Id": 1185,
     "Name": "Tomato",
     "Category": "Vegetable",
     "Rarity": 7,
@@ -2054,7 +2054,7 @@
     }
   },
   {
-    "MaterialId": 1186,
+    "Id": 1186,
     "Name": "Eggplant",
     "Category": "Vegetable",
     "Rarity": 5,
@@ -2064,7 +2064,7 @@
     }
   },
   {
-    "MaterialId": 1187,
+    "Id": 1187,
     "Name": "Yam",
     "Category": "Vegetable",
     "Rarity": 3,
@@ -2074,7 +2074,7 @@
     }
   },
   {
-    "MaterialId": 1188,
+    "Id": 1188,
     "Name": "Potato",
     "Category": "Vegetable",
     "Rarity": 1,
@@ -2084,7 +2084,7 @@
     }
   },
   {
-    "MaterialId": 1189,
+    "Id": 1189,
     "Name": "Carrot",
     "Category": "Vegetable",
     "Rarity": 4,
@@ -2094,7 +2094,7 @@
     }
   },
   {
-    "MaterialId": 1190,
+    "Id": 1190,
     "Name": "Green Pepper",
     "Category": "Vegetable",
     "Rarity": 5,
@@ -2104,7 +2104,7 @@
     }
   },
   {
-    "MaterialId": 1191,
+    "Id": 1191,
     "Name": "Spinach",
     "Category": "Vegetable",
     "Rarity": 1,
@@ -2114,7 +2114,7 @@
     }
   },
   {
-    "MaterialId": 1192,
+    "Id": 1192,
     "Name": "Turnip",
     "Category": "Vegetable",
     "Rarity": 0,
@@ -2124,7 +2124,7 @@
     }
   },
   {
-    "MaterialId": 1193,
+    "Id": 1193,
     "Name": "Radish",
     "Category": "Vegetable",
     "Rarity": 2,
@@ -2134,7 +2134,7 @@
     }
   },
   {
-    "MaterialId": 1194,
+    "Id": 1194,
     "Name": "Leek",
     "Category": "Vegetable",
     "Rarity": 5,
@@ -2144,7 +2144,7 @@
     }
   },
   {
-    "MaterialId": 1195,
+    "Id": 1195,
     "Name": "Bok Choy",
     "Category": "Vegetable",
     "Rarity": 6,
@@ -2154,7 +2154,7 @@
     }
   },
   {
-    "MaterialId": 1196,
+    "Id": 1196,
     "Name": "Hot-Hot Fruit",
     "Category": "Vegetable",
     "Rarity": 5,
@@ -2165,7 +2165,7 @@
     }
   },
   {
-    "MaterialId": 1197,
+    "Id": 1197,
     "Name": "Golden Cabbage",
     "Category": "Vegetable",
     "Rarity": 9,
@@ -2176,7 +2176,7 @@
     }
   },
   {
-    "MaterialId": 1198,
+    "Id": 1198,
     "Name": "Golden Pumpkin",
     "Category": "Vegetable",
     "Rarity": 9,
@@ -2187,7 +2187,7 @@
     }
   },
   {
-    "MaterialId": 1199,
+    "Id": 1199,
     "Name": "Golden Potato",
     "Category": "Vegetable",
     "Rarity": 9,
@@ -2198,7 +2198,7 @@
     }
   },
   {
-    "MaterialId": 1200,
+    "Id": 1200,
     "Name": "Bamboo Sprout",
     "Category": "Vegetable",
     "Rarity": 0,
@@ -2208,14 +2208,14 @@
     }
   },
   {
-    "MaterialId": 1201,
+    "Id": 1201,
     "Name": "Mushroom",
     "Category": "Mushroom",
     "Rarity": 0,
     "Difficulty": 0
   },
   {
-    "MaterialId": 1202,
+    "Id": 1202,
     "Name": "Grapes",
     "Category": "Fruit",
     "Rarity": 5,
@@ -2226,7 +2226,7 @@
     }
   },
   {
-    "MaterialId": 1203,
+    "Id": 1203,
     "Name": "Apple",
     "Category": "Fruit",
     "Rarity": 5,
@@ -2237,7 +2237,7 @@
     }
   },
   {
-    "MaterialId": 1204,
+    "Id": 1204,
     "Name": "Orange",
     "Category": "Fruit",
     "Rarity": 5,
@@ -2248,7 +2248,7 @@
     }
   },
   {
-    "MaterialId": 1205,
+    "Id": 1205,
     "Name": "Strawberry",
     "Category": "Fruit",
     "Rarity": 4,
@@ -2259,7 +2259,7 @@
     }
   },
   {
-    "MaterialId": 1206,
+    "Id": 1206,
     "Name": "Pineapple",
     "Category": "Fruit",
     "Rarity": 8,
@@ -2269,7 +2269,7 @@
     }
   },
   {
-    "MaterialId": 1207,
+    "Id": 1207,
     "Name": "Toyherb",
     "Category": "Plant",
     "Rarity": 0,
@@ -2280,7 +2280,7 @@
     }
   },
   {
-    "MaterialId": 1208,
+    "Id": 1208,
     "Name": "Toyherb",
     "Category": "Plant",
     "Rarity": 0,
@@ -2291,7 +2291,7 @@
     }
   },
   {
-    "MaterialId": 1209,
+    "Id": 1209,
     "Name": "MoonDrop Flower",
     "Category": "Plant",
     "Rarity": 1,
@@ -2301,14 +2301,14 @@
     }
   },
   {
-    "MaterialId": 1210,
+    "Id": 1210,
     "Name": "Elli Leaves",
     "Category": "Plant",
     "Rarity": 10,
     "Difficulty": 60
   },
   {
-    "MaterialId": 1211,
+    "Id": 1211,
     "Name": "Pink Cat",
     "Category": "Plant",
     "Rarity": 2,
@@ -2318,7 +2318,7 @@
     }
   },
   {
-    "MaterialId": 1212,
+    "Id": 1212,
     "Name": "Charm Blue",
     "Category": "Plant",
     "Rarity": 3,
@@ -2328,7 +2328,7 @@
     }
   },
   {
-    "MaterialId": 1213,
+    "Id": 1213,
     "Name": "Cherry Grass",
     "Category": "Plant",
     "Rarity": 3,
@@ -2339,7 +2339,7 @@
     }
   },
   {
-    "MaterialId": 1214,
+    "Id": 1214,
     "Name": "Lamp Grass",
     "Category": "Plant",
     "Rarity": 4,
@@ -2349,7 +2349,7 @@
     }
   },
   {
-    "MaterialId": 1215,
+    "Id": 1215,
     "Name": "Blue Crystal",
     "Category": "Plant",
     "Rarity": 8,
@@ -2362,7 +2362,7 @@
     }
   },
   {
-    "MaterialId": 1216,
+    "Id": 1216,
     "Name": "Emery Flower",
     "Category": "Plant",
     "Rarity": 10,
@@ -2372,7 +2372,7 @@
     }
   },
   {
-    "MaterialId": 1217,
+    "Id": 1217,
     "Name": "Great Emery Flower",
     "Category": "Plant",
     "Rarity": 15,
@@ -2382,7 +2382,7 @@
     }
   },
   {
-    "MaterialId": 1218,
+    "Id": 1218,
     "Name": "Ironleaf",
     "Category": "Plant",
     "Rarity": 4,
@@ -2392,21 +2392,21 @@
     }
   },
   {
-    "MaterialId": 1219,
+    "Id": 1219,
     "Name": "4-Leaf Clover",
     "Category": "Plant",
     "Rarity": 4,
     "Difficulty": 29
   },
   {
-    "MaterialId": 1220,
+    "Id": 1220,
     "Name": "Fireflower",
     "Category": "Plant",
     "Rarity": 6,
     "Difficulty": 41
   },
   {
-    "MaterialId": 1221,
+    "Id": 1221,
     "Name": "Green Crystal",
     "Category": "Plant",
     "Rarity": 8,
@@ -2417,7 +2417,7 @@
     }
   },
   {
-    "MaterialId": 1222,
+    "Id": 1222,
     "Name": "Noel Grass",
     "Category": "Plant",
     "Rarity": 6,
@@ -2427,7 +2427,7 @@
     }
   },
   {
-    "MaterialId": 1223,
+    "Id": 1223,
     "Name": "Autumn Grass",
     "Category": "Plant",
     "Rarity": 5,
@@ -2437,7 +2437,7 @@
     }
   },
   {
-    "MaterialId": 1224,
+    "Id": 1224,
     "Name": "Pom-Pom Grass",
     "Category": "Plant",
     "Rarity": 4,
@@ -2448,7 +2448,7 @@
     }
   },
   {
-    "MaterialId": 1225,
+    "Id": 1225,
     "Name": "Red Crystal",
     "Category": "Plant",
     "Rarity": 8,
@@ -2459,7 +2459,7 @@
     }
   },
   {
-    "MaterialId": 1226,
+    "Id": 1226,
     "Name": "White Crystal",
     "Category": "Plant",
     "Rarity": 8,
@@ -2470,7 +2470,7 @@
     }
   },
   {
-    "MaterialId": 1227,
+    "Id": 1227,
     "Name": "Medicinal Herb",
     "Category": "Plant",
     "Rarity": 0,
@@ -2480,8 +2480,8 @@
     }
   },
   {
-    "MaterialId": 1228,
-    "Name": "AntMaterialIdotal Herb",
+    "Id": 1228,
+    "Name": "Antidotal Herb",
     "Category": "Plant",
     "Rarity": 0,
     "Difficulty": 8,
@@ -2490,77 +2490,77 @@
     }
   },
   {
-    "MaterialId": 1229,
+    "Id": 1229,
     "Name": "Black Grass",
     "Category": "Plant",
     "Rarity": 3,
     "Difficulty": 23
   },
   {
-    "MaterialId": 1230,
+    "Id": 1230,
     "Name": "Orange Grass",
     "Category": "Plant",
     "Rarity": 7,
     "Difficulty": 48
   },
   {
-    "MaterialId": 1231,
+    "Id": 1231,
     "Name": "Red Grass",
     "Category": "Plant",
     "Rarity": 6,
     "Difficulty": 40
   },
   {
-    "MaterialId": 1232,
+    "Id": 1232,
     "Name": "Yellow Grass",
     "Category": "Plant",
     "Rarity": 5,
     "Difficulty": 39
   },
   {
-    "MaterialId": 1233,
+    "Id": 1233,
     "Name": "Blue Grass",
     "Category": "Plant",
     "Rarity": 0,
     "Difficulty": 1
   },
   {
-    "MaterialId": 1234,
+    "Id": 1234,
     "Name": "Green Grass",
     "Category": "Plant",
     "Rarity": 0,
     "Difficulty": 1
   },
   {
-    "MaterialId": 1235,
+    "Id": 1235,
     "Name": "Purple Grass",
     "Category": "Plant",
     "Rarity": 1,
     "Difficulty": 5
   },
   {
-    "MaterialId": 1236,
+    "Id": 1236,
     "Name": "Indigo Grass",
     "Category": "Plant",
     "Rarity": 4,
     "Difficulty": 29
   },
   {
-    "MaterialId": 1237,
+    "Id": 1237,
     "Name": "White Grass",
     "Category": "Plant",
     "Rarity": 8,
     "Difficulty": 65
   },
   {
-    "MaterialId": 1238,
+    "Id": 1238,
     "Name": "Weeds",
     "Category": "Plant",
     "Rarity": 0,
     "Difficulty": 1
   },
   {
-    "MaterialId": 1239,
+    "Id": 1239,
     "Name": "Withered Weeds",
     "Category": "Plant",
     "Rarity": 0,
