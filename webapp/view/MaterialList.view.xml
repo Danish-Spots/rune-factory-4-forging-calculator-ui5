@@ -8,12 +8,17 @@
         headerText="{i18n>materialListTitle}"
         class="sapUiResponsiveMargin"
         width="auto"
+        growing="true"
+        growingThreshold="250"
         items="{
-            path: 'data>/Materials'
+            path: 'data>/Materials',
+            parameters: {
+                $count: true
+            }
         }" >
       <headerToolbar>
         <Toolbar>
-            <Title text="{i18n>materialListTitle}"></Title>
+            <Title text="{data>/Materials/$count} - {i18n>materialListTitle}"></Title>
             <ToolbarSpacer></ToolbarSpacer>
             <SearchField 
                 width="50%"

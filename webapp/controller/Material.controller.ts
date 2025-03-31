@@ -1,6 +1,12 @@
+import List from "sap/m/List";
 import Controller from "sap/ui/core/mvc/Controller";
 import { Route$PatternMatchedEvent } from "sap/ui/core/routing/Route";
 import UIComponent from "sap/ui/core/UIComponent";
+import Filter from "sap/ui/model/Filter";
+import FilterOperator from "sap/ui/model/FilterOperator";
+import JSONModel from "sap/ui/model/json/JSONModel";
+import ListBinding from "sap/ui/model/ListBinding";
+import History from "sap/ui/core/routing/History";
 
 export default class Material extends Controller {
   onInit(): void | undefined {
@@ -13,17 +19,21 @@ export default class Material extends Controller {
   onObjectMatched(event: Route$PatternMatchedEvent): void | undefined {
     const view = this.getView();
     const args: any = event.getParameter("arguments");
+
     view?.bindElement({
       model: "data",
-      path: `/Materials('${args?.materialId}')`,
+      path: `/Materials('${args?.ID}')`,
+      parameters: {
+        $expand: {
+          Drops: "Monster,Location",
+        },
+      },
       events: {
         change: this.onBindingChange.bind(this),
         dataRequested: function (_event: any) {
-          console.log("dataRequested");
           view.setBusy(true);
         },
         dataReceived: function (_event: any) {
-          console.log("dataReceived");
           view.setBusy(false);
         },
       },
@@ -34,5 +44,17 @@ export default class Material extends Controller {
     // if (!this.getView()?.getBindingContext("data")) {
     //   UIComponent.getRouterFor(this)?.getTargets()?.display("notFound");
     // }
+  }
+
+  onNavBack(): void {
+    const history = History.getInstance();
+    const previousHash = history.getPreviousHash();
+
+    if (previousHash !== undefined) {
+      window.history.go(-1);
+    } else {
+      const router = UIComponent.getRouterFor(this);
+      router.navTo("overview", {}, true);
+    }
   }
 }

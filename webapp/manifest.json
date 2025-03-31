@@ -81,7 +81,7 @@
           "target": "overview"
         },
         {
-          "pattern": "material/{materialId}",
+          "pattern": "material/{ID}",
           "name": "material",
           "target": "material"
         }

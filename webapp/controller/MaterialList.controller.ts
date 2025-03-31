@@ -26,9 +26,7 @@ export default class MaterialList extends Controller {
 
     const router = UIComponent.getRouterFor(this);
     router.navTo("material", {
-      materialId: item
-        .getBindingContext("data")
-        ?.getProperty("MaterialId") as string,
+      ID: item.getBindingContext("data")?.getProperty("ID") as string,
     });
   }
 }
