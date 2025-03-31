@@ -3,39 +3,77 @@ using { managed } from '@sap/cds/common';
 namespace RF_Entity;
 
 entity Material {
-  key MaterialId        : Integer;
+  key ID        : Integer;
   Name         : String;
   Rarity       : Integer;
   Category     : String;
   Difficulty   : Integer;
-  StatInfo     : String;
-  Drops        : Association to many Drop;
+  matk        : Integer;
+  def         : Integer;
+  mdef        : Integer;
+  str         : Integer;
+  vit         : Integer;
+  atk         : Integer;
+  drainAtk        : Integer;
+  int         : Integer;
+  parAtk        : Integer;
+  crit        : Integer;
+  drainRes        : Integer;
+  psnAtk        : Integer;
+  sickAtk         : Integer;
+  slpAtk        : Integer;
+  sealAtk         : Integer;
+  psnRes        : Integer;
+  sealRes         : Integer;
+  parRes        : Integer;
+  slpRes        : Integer;
+  ftgRes        : Integer;
+  sickRes         : Integer;
+  diz         : Integer;
+  knockAtk        : Integer;
+  faintRes        : Integer;
+  dizRes        : Integer;
+  critRes         : Integer;
+  knockRes        : Integer;
+  knock         : Integer;
+  stun        : Integer;
+  ftgAtk        : Integer;
+  faintAtk        : Integer;
+  upgradeEffct        : Integer;
+  effect        : String;
+  fireRes         : Integer;
+  waterRes        : Integer;
+  windRes         : Integer;
+  earthRes        : Integer;
+
+  Drops       : Association to many Drop on Drops.Material = $self;
 }
 
 entity Drop {
-  Locations    : Association to many Location;
-  Monsters     : Association to many Monster;
-  Other        : Association to many Other;
-  Fishing      : Association to many Fishing;
-  Chopping     : Association to many Chopping;
+  key ID : Integer;
+  Location    : Association to  Location;
+  Monster     : Association to  Monster;
+  Material  : Association to Material;
 }
 
 entity Location {
-  key LocationId       : Integer;
+  key ID       : Integer;
   Name        : String;
-  Monsters    : Association to many MonsterToLocation on Monsters.Location = $self;
+  Monsters    : Association to many Monster_Location on Monsters.Location = $self;
+  Drops       : Association to many Drop on Drops.Location = $self;
 }
 
 entity Monster {
-  key MonsterId       : Integer;
+  key ID       : Integer;
   Name        : String;
-  Locations : Association to  many MonsterToLocation on Locations.Monster = $self;
+  Locations : Association to  many Monster_Location on Locations.Monster = $self;
+  Drops       : Association to many Drop on Drops.Monster = $self;
 }
 
-entity MonsterToLocation {
-  key Monster_Location_Id: Integer;
-  Monster : Association to one Monster;
-  Location : Association to one Location;
+@cds.autoexpose entity Monster_Location {
+  key ID: Integer;
+  Monster : Association to Monster;
+  Location : Association to Location;
 }
 
 entity Other {
