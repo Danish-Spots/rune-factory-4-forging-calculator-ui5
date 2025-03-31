@@ -56,11 +56,14 @@ function convertData(input) {
   let monsterId = 3000;
   let Monster_Location_Id = 4000;
   let dropId = 5000;
+  let statId = 6000;
 
   const materialHeaders = "ID,Name,Category,Rarity,Difficulty";
+  const statHeaders = `ID,Material_ID,${statInfoKeys.join(",")}\n`;
 
   // const materials = [];
-  let materials = `${materialHeaders},${statInfoKeys.join(",")}\n`;
+  let materials = `${materialHeaders}\n`;
+  let stats = statHeaders;
   const monsters = [];
   const locations = [];
   const drops = [];
@@ -70,28 +73,28 @@ function convertData(input) {
   const monsterLocations = [];
 
   input.forEach((item) => {
-    materials += `${materialId},${item.Name},${item.Category},${item.Rarity},${item.Difficulty}`;
-
+    materials += `${materialId},${item.Name},${item.Category},${item.Rarity},${item.Difficulty}\n`;
+    stats += `${statId++},${materialId},`;
     statInfoKeys.forEach((key) => {
       if (item.StatInfo && item.StatInfo[key] !== undefined) {
-        materials += `,${item.StatInfo[key]}`;
+        stats += `${item.StatInfo[key]},`;
       } else {
-        materials += ",";
+        stats += ",";
       }
     });
-    materials += "\n";
+    stats += "\n";
 
     // Process Locations
     item.Drop.Locations?.forEach((location) => {
       if (!locations.some((loc) => loc.Name === location)) {
         locations.push({ ID: locationId++, Name: location });
       }
-      const locId = locations.find((loc) => loc.Name === location).Id;
+      const locId = locations.find((loc) => loc.Name === location).ID;
       drops.push({
         ID: dropId++,
         Material_ID: materialId,
-        Monster_ID: undefined,
         Location_ID: locId,
+        Monster_ID: undefined,
       });
     });
 
@@ -120,8 +123,8 @@ function convertData(input) {
           drops.push({
             ID: dropId++,
             Material_ID: materialId,
-            Monster_ID: monId,
             Location_ID: locId,
+            Monster_ID: monId,
           });
         }
       });
@@ -136,6 +139,7 @@ function convertData(input) {
     locations,
     drops,
     monsterLocations,
+    stats,
   };
 }
 
@@ -178,5 +182,6 @@ file.readFile(inputFilePath, "utf-8", (err, data) => {
   convertToCsvFile("MonsterLocations.csv", result.monsterLocations); // Monster ⇄ Location mapping
 
   convertToCsvFile("Drops.csv", result.drops); // Material ⇄ Monster mapping
+  writeCSVFile2("Stats.csv", result.stats); // Material ⇄ Monster mapping
   // writeJsonFile("MaterialLocationDrops.json", result.materialLocationDrops); // Material ⇄ Location mapping
 });

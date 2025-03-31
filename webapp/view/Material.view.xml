@@ -15,59 +15,61 @@
                     </uxap:expandedHeading>
                 </uxap:ObjectPageDynamicHeaderTitle>
             </uxap:headerTitle>
-
-            <uxap:headerContent>
-                <VBox >
-                    <HBox id="statHeaders">
-                        <Text text="Magic Attack"></Text>
-                    </HBox>
-                    <HBox id="statContent">
-                        <Text text="{data>matk}"></Text>
-                    </HBox>
-                </VBox>
-            </uxap:headerContent>
-
-            <uxap:ObjectPageSection >
-                <uxap:ObjectPageSubSection >
-                    <Table
-                        id="dropsList"
-                        headerText="{i18n>dropListTitle}"
-                        class="sapUiResponsiveMargin"
-                        width="auto"
-                        items="{
-                            path: 'data>Drops',
-                            parameters: {
-                                $expand: 'Monster,Location',
-                                $count: true
-                            }
-                        }"
-                        >
-                        <headerToolbar>
-                            <Toolbar>
-                                <Title text="{data>Drops/$count} Drops"></Title>
-                            </Toolbar>
-                        </headerToolbar>
-                        <columns>
-                            <Column >
-                                <Text text="Monster name"></Text>
-                            </Column>
-                            <Column >
-                                <Text text="Location name"></Text>
-                            </Column>
-                        </columns>
-                        <items>
-                            <ColumnListItem >
-                                <cells>
-                                    <Text text="{data>Monster/Name}"></Text>
-                                </cells>
-                                <cells>
-                                    <Text text="{data>Location/Name}"></Text>
-                                </cells>
-                            </ColumnListItem>
-                        </items>
-                    </Table>
-                </uxap:ObjectPageSubSection>
-            </uxap:ObjectPageSection>
+            <uxap:sections>
+                <uxap:ObjectPageSection >
+                    <uxap:subSections>
+                        <uxap:ObjectPageSubSection title="Stats">
+                            <VBox >
+                                <HBox id="statHeaders">
+                                    <Text text="Magic Attack"></Text>
+                                </HBox>
+                                <HBox id="statContent">
+                                    <Text text="{data>matk}"></Text>
+                                </HBox>
+                            </VBox>
+                        </uxap:ObjectPageSubSection>
+                        <uxap:ObjectPageSubSection title="Drop locations">
+                            <Table
+                                id="dropsList"
+                                headerText="{i18n>dropListTitle}"
+                                class="sapUiResponsiveMargin"
+                                width="auto"
+                                items="{
+                                    path: 'data>Drops',
+                                    parameters: {
+                                        $expand: 'Monster,Location',
+                                        $count: true
+                                    }
+                                }"
+                                >
+                                <headerToolbar>
+                                    <Toolbar>
+                                        <Title text="{data>Drops/$count} Drops"></Title>
+                                    </Toolbar>
+                                </headerToolbar>
+                                <columns>
+                                    <Column >
+                                        <Text text="Monster name"></Text>
+                                    </Column>
+                                    <Column >
+                                        <Text text="Location name"></Text>
+                                    </Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem >
+                                        <cells>
+                                            <Text text="{= ${data>Monster/Name} || '-'}"></Text>
+                                        </cells>
+                                        <cells>
+                                            <Text text="{data>Location/Name}"></Text>
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                        </uxap:ObjectPageSubSection>
+                    </uxap:subSections>
+                </uxap:ObjectPageSection>
+            </uxap:sections>
         </uxap:ObjectPageLayout>
     </Page>
     <!-- <Page 
