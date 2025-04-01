@@ -2,6 +2,7 @@
     controllerName="rf.calculator.controller.Material"
     xmlns="sap.m"
     xmlns:uxap="sap.uxap"
+    xmlns:core="sap.ui.core"
     xmlns:mvc="sap.ui.core.mvc">
     <Page 
         title="{i18n>materialPageTitle}"
@@ -39,7 +40,15 @@
                                 <items>
                                     <ColumnListItem >
                                         <cells>
-                                            <Text text="{data>Stat_Key}"></Text>
+                                            <Text
+                                                core:require="{
+                                                    Formatter: 'rf/calculator/model/formatter'
+                                                }"
+                                                text="{
+                                                    path: 'data>Stat_Key',
+                                                    formatter: 'Formatter.statName.bind($controller)'
+                                                }">
+                                            </Text>
                                         </cells>
                                         <cells>
                                             <Text text="{data>Stat_Value}"></Text>
@@ -92,48 +101,4 @@
             </uxap:sections>
         </uxap:ObjectPageLayout>
     </Page>
-    <!-- <Page 
-        title="{i18n>materialPageTitle}"
-        showNavButton="true"
-        navButtonPress=".onNavBack">
-        <ObjectHeader title="{data>Name}"></ObjectHeader>
-        <Table
-            id="dropsList"
-            headerText="{i18n>dropListTitle}"
-            class="sapUiResponsiveMargin"
-            width="auto"
-            items="{
-                path: 'data>Drops',
-                parameters: {
-                    $expand: 'Monster,Location',
-                    $count: true
-                }
-            }"
-            >
-            <headerToolbar>
-                <Toolbar>
-                    <Title text="{data>Drops/$count} Drops"></Title>
-                </Toolbar>
-            </headerToolbar>
-            <columns>
-                <Column >
-                    <Text text="Monster name"></Text>
-                </Column>
-                <Column >
-                    <Text text="Location name"></Text>
-                </Column>
-            </columns>
-            <items>
-                <ColumnListItem >
-                    <cells>
-                        <Text text="{data>Monster/Name}"></Text>
-                    </cells>
-                    <cells>
-                        <Text text="{data>Location/Name}"></Text>
-                    </cells>
-                </ColumnListItem>
-            </items>
-        </Table>
-    </Page> -->
-    
 </mvc:View>

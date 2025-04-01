@@ -16,4 +16,11 @@ export default {
     }
     return str;
   },
+
+  statName: function (this: Controller, statKey: string): string {
+    const resourceBundle = (
+      this?.getOwnerComponent()?.getModel("i18n") as ResourceModel
+    )?.getResourceBundle() as ResourceBundle;
+    return resourceBundle.getText(statKey) || "N/A";
+  },
 };
