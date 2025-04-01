@@ -59,7 +59,7 @@ function convertData(input) {
   let statId = 6000;
 
   const materialHeaders = "ID,Name,Category,Rarity,Difficulty";
-  const statHeaders = `ID,Material_ID,${statInfoKeys.join(",")}\n`;
+  const statHeaders = `ID,Material_ID,Stat_Key,Stat_Value\n`;
 
   // const materials = [];
   let materials = `${materialHeaders}\n`;
@@ -74,15 +74,12 @@ function convertData(input) {
 
   input.forEach((item) => {
     materials += `${materialId},${item.Name},${item.Category},${item.Rarity},${item.Difficulty}\n`;
-    stats += `${statId++},${materialId},`;
     statInfoKeys.forEach((key) => {
       if (item.StatInfo && item.StatInfo[key] !== undefined) {
-        stats += `${item.StatInfo[key]},`;
-      } else {
-        stats += ",";
+        stats += `${statId++},${materialId},`;
+        stats += `${key},${item.StatInfo[key]}\n`;
       }
     });
-    stats += "\n";
 
     // Process Locations
     item.Drop.Locations?.forEach((location) => {

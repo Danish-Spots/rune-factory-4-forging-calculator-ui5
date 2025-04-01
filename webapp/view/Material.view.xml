@@ -19,14 +19,34 @@
                 <uxap:ObjectPageSection >
                     <uxap:subSections>
                         <uxap:ObjectPageSubSection title="Stats">
-                            <VBox >
-                                <HBox id="statHeaders">
-                                    <Text text="Magic Attack"></Text>
-                                </HBox>
-                                <HBox id="statContent">
-                                    <Text text="{data>matk}"></Text>
-                                </HBox>
-                            </VBox>
+                            <Table
+                                class="sapUiResponsiveMargin"
+                                width="auto"
+                                items="{
+                                    path: 'data>Stats',
+                                    parameters: {
+                                    }
+                                }">
+                                <headerToolbar></headerToolbar>
+                                <columns>
+                                    <Column>
+                                        <Text text="Stat"></Text>
+                                    </Column>
+                                    <Column>
+                                        <Text text="Value"></Text>
+                                    </Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem >
+                                        <cells>
+                                            <Text text="{data>Stat_Key}"></Text>
+                                        </cells>
+                                        <cells>
+                                            <Text text="{data>Stat_Value}"></Text>
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
                         </uxap:ObjectPageSubSection>
                         <uxap:ObjectPageSubSection title="Drop locations">
                             <Table

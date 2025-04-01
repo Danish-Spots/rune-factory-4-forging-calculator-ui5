@@ -1,241 +1,241 @@
-ID,Name,Category,Rarity,Difficulty,matk,def,mdef,str,vit,atk,drainAtk,int,parAtk,crit,drainRes,psnAtk,sickAtk,slpAtk,sealAtk,psnRes,sealRes,parRes,slpRes,ftgRes,sickRes,diz,knockAtk,faintRes,dizRes,critRes,knockRes,knock,stun,ftgAtk,faintAtk,upgradeEffct,effect,fireRes,waterRes,windRes,earthRes
-1000,Fodder,Collectible,0,0,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1001,Scrap Metal,Collectible,0,1,,-2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1002,Iron,Minerals,1,2,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1003,Scrap Metal+,Minerals,2,0,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1004,Bronze,Minerals,4,15,,4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1005,Silver,Minerals,7,32,,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1006,Gold,Minerals,9,40,,10,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1007,Platinum,Minerals,12,50,,25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1008,Orichalcum,Minerals,13,80,,95,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1009,Dragonic Stone,Minerals,15,80,,95,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1010,Amethyst,Jewels,0,4,,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1011,Aquamarine,Jewels,2,11,,,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1012,Emerald,Jewels,5,26,,,5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1013,Ruby,Jewels,7,36,,,8,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1014,Sapphire,Jewels,8,42,,,12,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1015,Diamond,Jewels,11,50,,,24,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1016,Green Core,Jewels,13,81,,,77,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1017,Red Core,Jewels,13,81,,,77,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1018,Yellow Core,Jewels,13,81,,,77,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1019,Blue Core,Jewels,13,81,,,77,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1020,Crystal Skull,Jewels,15,95,60,,195,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1021,Magic Crystal,Crystals,4,27,5,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1022,Dark Crystal,Crystals,3,25,,,,3,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1023,Fire Crystal,Crystals,7,25,,,,,,5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1024,Earth Crystal,Crystals,8,25,,5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1025,Love Crystal,Crystals,9,50,,,,,,,0.03,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1026,Wind Crystal,Crystals,10,25,,,5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1027,Water Crystal,Crystals,11,25,5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1028,Light Crystal,Crystals,12,25,,,,,3,,,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1029,Small Crystal,Crystals,13,80,,,,,,80,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1030,Big Crystal,Crystals,13,83,40,,,,,40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1031,Rune Crystal,Crystals,14,89,100,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1032,Electro Crystal,Crystals,15,93,150,,-5,,,60,,,0.35,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1033,Stick,Sticks and Stems,0,2,,,,,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1034,Insect Horn,Sticks and Stems,1,7,,,,,,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1035,Plant Stem,Sticks and Stems,3,28,3,,,,,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1036,Bull's Horn,Sticks and Stems,7,36,,1,,,,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1037,Moving Branch,Sticks and Stems,9,95,200,,,,,-10,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1038,Rigid Horn,Sticks and Stems,10,52,,,,,,15,,,,0.01,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1039,Thick Stick,Sticks and Stems,12,65,,,,,,34,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1040,Devil Horn,Sticks and Stems,13,86,50,,,,,55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1041,Glue,Liquids,5,26,,2,2,,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1042,Devil Blood,Liquids,9,39,9,,,,,,,,,,0.15,,,,,,,,,,,,,,,,,,,,,,,,,,
-1043,Paralysis Poison,Liquids,10,30,,,,,,,,,,,,0.2,,,,,,,,,,,,,,,,,,,,,,,,,
-1044,Poison King,Liquids,14,86,88,,,,,5,,,,,,0.8,,,,,,,,,,,,,,,,,,,,,,,,,
-1045,Bird's Feather,Feathers,2,10,,,,,,,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1046,Yellow Feather,Feathers,5,90,,,,,,,,130,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1047,Black Bird's Feather,Feathers,10,50,,,,,,,,14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1048,Thunderbird Feather,Feathers,12,58,,,,,,,,28,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1049,Dragon Fin,Feathers,15,96,,,,,-10,,,300,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1050,Turtle Shell,Shells and Bones,2,15,,4,1,,,,,,,-0.03,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1051,Fish Fossil,Shells and Bones,3,20,4,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1052,Dragon Bones,Shells and Bones,8,50,,10,10,,10,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1053,Skull,Shells and Bones,9,39,8,4,5,,,,,,,,,,0.04,,,,,,,,,,,,,,,,,,,,,,,,
-1054,Blk. Tortoise Shell,Shells and Bones,12,62,,26,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1055,Ammonite,Shells and Bones,15,92,,135,82,-5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1056,Round Stone,Stones,4,25,,,,,,5,,,,0.05,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1057,Tiny Golem Stone,Stones,9,38,,8,,,,,,,,0.02,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1058,Golem Stone,Stones,12,53,,15,,,,,,,,0.03,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1059,Golem Tablet,Stones,13,80,,30,,,,,,,,0.05,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1060,Golem Spirit Stone,Stones,14,85,,105,,,,,,,,0.06,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1061,Tablet of Truth,Stones,15,95,20,160,-15,,,50,,,,0.1,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1062,Yarn,Strings,1,4,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1063,Old Bandage,Strings,2,11,2,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1064,Ambrosia's Thorns,Strings,2,30,7,,,,,7,,,,,,,,0.1,,,,,,,,,,,,,,,,,,,,,,,
-1065,Spider's Thread,Strings,4,18,2,,,,,2,,,0.05,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1066,Puppetry Strings,Strings,6,40,8,,,,,5,,,0.05,,,,,,0.15,,,,,,,,,,,,,,,,,,,,,,
-1067,Vine,Strings,6,30,7,,,,,,,,,,,,,,0.04,,,,,,,,,,,,,,,,,,,,,,
-1068,Scorpion Tail,Strings,7,30,,,,,,5,,,,,,0.08,,,,,,,,,,,,,,,,,,,,,,,,,
-1069,Strong Vine,Strings,10,44,12,,,,,,,,,,,,,,0.1,,,,,,,,,,,,,,,,,,,,,,
-1070,Pretty Thread,Strings,12,52,16,,,,,2,,,0.25,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1071,Chimera Tail,Strings,15,95,-10,,,,,200,,,0.5,,,0.5,,,,,,,,,,,,,,,,,,,,,,,,,
-1072,Arrowhead,Shards,0,3,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1073,Blade Shard,Shards,2,9,,,,,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1074,Broken Hilt,Shards,5,21,,2,,,,,,,,,,,,,,0.05,0.05,0.05,0.05,0.05,0.05,,,,,,,,,,,,,,,,
-1075,Broken Box,Shards,8,44,,4,,,,,,,,,,,,,,0.1,0.1,0.1,0.1,0.1,0.05,,,,,,,,,,,,,,,,
-1076,Hammer Piece,Shards,9,37,,4,,6,,,,,,,,,,,,,,,,,,1,,,,,,,,,,,,,,,
-1077,Shoulder Piece,Shards,11,45,,11,,,,,,,,,,,,,,,,,,,,,0.08,,,,,,,,,,,,,,
-1078,Rusty Screw,Shards,11,57,25,,-2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1079,Shiney Screw,Shards,12,80,40,30,10,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1080,Glistening Blade,Shards,12,66,,,,,,38,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1081,Great Hammer Shard,Shards,12,60,,,,30,,,,,,,,,,,,,,,,,,2,,,,,,,,,,,,,,,
-1082,Left Rock Shard,Shards,14,88,,120,35,,,,,,,,0.01,,,,,0.06,0.06,0.06,0.06,0.06,0.06,,,0.01,,,,,,,,,,,,,
-1083,Right Rock Shard,Shards,14,88,,35,120,,,,,,,,,,,,,,,,,,,,,,0.05,0.03,0.15,,,,,,,,,,
-1084,MTGU Plate,Shards,14,80,,8,,,,,,,,,,,,,,,,,,0.08,0.08,,,,,,,,,,,,,,,,
-1085,Pirate's Armour,Shards,14,84,,83,,,,,,,,,,,,,,,,,,,,,,,,,,0.15,,,,,,,,,
-1086,Broken Ice Wall,Shards,15,96,95,4,,,,105,,,,,,,,,,,,,0.1,,,,,,,,,,0.25,,,,,,,,
-1087,Fur (S),Furs,0,1,,,,,1,,,,,,,,,,,,,,,,,,,,0.01,,,,,,,,,,,,
-1088,Fur,Furs,1,8,,2,1,,,,,,,,,,,,,,,,,,,,,,0.02,,,,,,,,,,,,
-1089,Yellow Down,Furs,3,17,,2,2,,,,,,,,,,,,,,,,,,,,,,0.05,,,,,,,,,,,,
-1090,Quality Fur,Furs,4,23,,3,2,,,,,,,,,,,,,,,,,,,,,,0.1,,,,,,,,,,,,
-1091,Lightning Mane,Furs,5,35,,7,6,,4,,,,,,,,,,,,,,,,,,,,0.2,,,,,,,,,,,,
-1092,Quality Puffy Fur,Furs,6,36,,5,3,,,,,,,,,,,,,,,,,,,,,,0.08,,,,,,,,,,,,
-1093,Fur (M),Furs,1,35,,5,3,,,,,,,,,,,,,,,,,,,,,,0.1,,,,,,,,,,,,
-1094,Wooly Furball,Furs,9,41,,8,4,,,,,,,,,,,0.01,,,,,,,,,,,0.16,,,,,,,,,,,,
-1095,Fur (L),Furs,10,52,,10,5,,,,,,,,,,,0.03,,,,,,,,,,,0.25,,,,,,,,,,,,
-1096,Penguin Down,Furs,11,66,,30,8,,,,,,,,,,,,,,,,,,,,,,0.18,,,,,,,,,,,,
-1097,Red Lion Fur,Furs,15,92,,105,35,,,10,,,,,,,,,,,,,,,,,,,0.2,,,,,,,,,,,,
-1098,Blue Lion Fur,Furs,15,92,10,35,105,,,,,,,,,,,,,,,,,,,,,,0.2,,,,,,,,,,,,
-1099,Chest Hair,Furs,15,91,,110,60,,,25,,-5,,,,,,,,,,,,,,,,,0.25,,,,,,,,,,,,
-1100,Spore,Powders and Spores,1,8,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1101,Fairy Dust,Powders and Spores,3,19,5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1102,Gunpowder,Powders and Spores,5,27,5,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1103,Poison Powder,Powders and Spores,6,20,2,,2,,,,,,,,,0.05,,,,,,,,,,,,,,,,,,,,,,,,,
-1104,Holy Spore,Powders and Spores,7,33,10,,,,,,,,,,0.5,0.33,,,0.33,,,,,,,,,,,,,,,,,,,,,,
-1105,Root,Powders and Spores,8,35,8,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1106,Magic Powder,Powders and Spores,9,40,10,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1107,Mysterious Powder,Powders and Spores,10,55,15,,,,,,,,,,,,0.05,,,,,,,,,,,,,,,,,0.1,,,,,,,
-1108,Earth Dragon Ash,Powders and Spores,11,80,,33,33,,5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1109,Magic,Powders and Spores,11,53,20,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1110,Fire Dragon Ash,Powders and Spores,12,80,,,,10,,80,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1111,Fairy Elixir,Powders and Spores,12,67,40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1112,Water Dragon Ash,Powders and Spores,13,80,80,,,,,,,10,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1113,Turnip's Miracle,Powders and Spores,14,85,,,99,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1114,Melody Bottle,Powders and Spores,15,94,170,-10,30,,,30,,,0.1,,,0.1,0.1,0.1,0.1,,,,,,,,,,,,,,,0.1,0.01,,,,,,
-1115,Cheap Cloth,Cloths and Skins,0,2,,1,,,,,,,,,,,,,,,,,,,,,,,,0.01,,,,,,,,,,,
-1116,Insect Carapace,Cloths and Skins,1,7,,1,,,,,,,,,,,,,,0.15,,,,,,,,,,,,,,,,,,,,,
-1117,Ghost Hood,Cloths and Skins,4,24,,3,,,,,,,,,,,,,,,0.3,,,,,,,,,,,,,,,,,,,,
-1118,Pretty Carapace,Cloths and Skins,6,35,,3,,,,,,,,,,,,,,,0.05,0.25,,,,,,,,,,,,,,,,,,,
-1119,Quality Cloth,Cloths and Skins,7,32,,5,,,,,,,,,,,,,,,,,,,,,,,,0.05,,,,,,,,,,,
-1120,Quality Worn Cloth,Cloths and Skins,8,83,,52,35,,,,,,,,,,,,,,0.3,,,,,,,,0.1,0.1,,,,,,,,,,,
-1121,Silk Cloth,Cloths and Skins,9,38,,9,,,,,,,,,,,,,,,,,,,,,,,,0.04,,,,,,,,,,,
-1122,Giant's Glove,Cloths and Skins,10,43,,8,,,,3,,,,,,,,,,,,,,,,,,,,0.06,,,,,,,,,,,
-1123,Blue Giant's Glove,Cloths and Skins,11,54,,12,,,,6,,,,,,,,,,,,,,,,,,,,0.08,,,,,,,,,,,
-1124,Ancient Orc Cloth,Cloths and Skins,14,90,,96,48,,,,,,,,,,,,,,0.3,,,,,,,,0.15,0.15,,,,,,,,,,,
-1125,Insect Jaw,Claws and Fangs,0,4,,,,,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1126,Panther Claw,Claws and Fangs,4,20,,,,,,4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1127,Wolf Fang,Claws and Fangs,5,30,,,,,,6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1128,Palm Claw,Claws and Fangs,6,32,,,,,,8,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1129,Giant's Nail,Claws and Fangs,7,40,,,,,,10,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1130,Chimera's Claw,Claws and Fangs,7,45,2,,,,,15,,,0.05,,,0.05,,,,,,,,,,,,,,,,,,,,,,,,,
-1131,Ivory Tusk,Claws and Fangs,8,50,1,-5,,,,15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1132,Big Gaint's Nail,Claws and Fangs,9,90,,,,,,150,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1133,Unbroken Ivory Tusk,Claws and Fangs,10,55,2,,,,,19,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1134,Scorpion Pincer,Claws and Fangs,11,60,,-5,,,,30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1135,Cheap Propeller,Claws and Fangs,11,62,,-2,,,,29,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1136,Gold Wolf Fang,Claws and Fangs,11,61,,,,,,26,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1137,Quality Propeller,Claws and Fangs,12,69,,-5,,,,40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1138,Magic Claw,Claws and Fangs,12,74,15,,,,,42,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1139,Dragon Fang,Claws and Fangs,13,80,,,,,,60,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1140,Malm Claw,Claws and Fangs,14,88,,,,,,121,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1141,Queen's Jaw,Claws and Fangs,14,89,40,10,10,,,100,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1142,Dangerous Scissors,Claws and Fangs,14,90,,-50,,,,195,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1143,Wind Dragon Tooth,Claws and Fangs,15,98,180,,,,,180,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1144,Wet Scale,Scales,11,58,,,,,22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1145,Dragon Scale,Scales,14,88,,,,10,140,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1146,Crimson Scale,Scales,14,88,,,,140,10,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1147,Blue Scale,Scales,14,88,,,,,10,,,140,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1148,Glitter Scale,Scales,14,96,,,,70,10,,,70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1149,Love Scale,Scales,14,88,,,,50,50,,,50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1150,Black Scale,Scales,14,88,,,,10,70,,,70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1151,Grimoire Scale,Scales,15,95,,,,50,160,,,50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1152,Firewyrm Scale,Scales,15,96,,,,300,,,,-10,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1153,Earthwyrm Scale,Scales,15,96,,,,-10,300,,,-10,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1154,Legendary Scale,Scales,15,90,,,,,,,0.1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1155,Double Steel,Collectible,5,50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2,,,,,
-1156,10-Fold Steel,Collectible,10,95,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,8,,,,,
-1157,Glitta Augite,Collectible,8,50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Increase attack range,,,,
-1158,Invisible Stone,Collectible,5,33,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Makes item invisible,,,,
-1159,Light Ore,Collectible,13,50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Change weapon Category,,,,
-1160,Rune Sphere Shard,Collectible,15,99,,,,120,120,,,120,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1161,Shade Stone,Collectible,6,40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Decrease enemy tolerance on hit,,,,
-1162,Raccoon Leaf,Collectible,10,65,,,,,,,,40,,,,,,,,,,,,,,,,,,,,,,,,,Increase attack range,,,,
-1163,Icy Nose,Collectible,15,92,90,,,,,128,,-5,,0.02,,,,,,,,,,,,1,,,,,,,0.05,,,,,,,,
-1164,Big Bird's Comb,Collectible,10,65,,,,,,22,,,,,,,,,,,,,,,,,,0.5,,,,,,,,,,,,,
-1165,Rafflesia Petal,Collectible,9,55,17,,,,,7,,,,,,,0.15,,,,,,,,,,,,,,,,,0.2,,,,,,,
-1166,Cursed Doll,Collectible,6,40,,4,7,,,,,,,,0.15,,,,,,0.15,0.15,,,,,,,,,,,,,,,,,,,
-1167,Warrior's Proof,Collectible,13,77,,,,58,,,,5,,,,,,,,,,,,,,,,0.15,,,,,,,,,,,,,
-1168,Proof of Rank,Collectible,13,77,,,,15,,,,48,,,,,,,,,,,,,,,,0.15,,,,,,,,,,,,,
-1169,Throne of the Empire,Collectible,14,97,,,,,,,,-5,,,,,,,,,,,,,,,,,,,,0.3,,,,,,,,,
-1170,White Stone,Collectible,13,30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1171,Boot,Trash,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1172,Can,Trash,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1173,Rare Can,Trash,5,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1174,Branch,Other,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1175,Rock,Other,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1176,Material Stone,Other,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1177,Lumber,Other,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1178,Cabbage,Vegetable,6,37,,,,,,,,6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1179,Pink Turnip,Vegetable,3,21,,,,4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1180,Pink Melon,Vegetable,7,45,,,,,,,,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1181,Onion,Vegetable,6,37,,,,,10,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1182,Pumpkin,Vegetable,3,19,,,,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1183,Cucumber,Vegetable,3,17,,,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1184,Corn,Vegetable,4,27,,,,,6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1185,Tomato,Vegetable,7,43,,,,9,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1186,Eggplant,Vegetable,5,33,,,,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1187,Yam,Vegetable,3,18,,,,,5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1188,Potato,Vegetable,1,7,,,,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1189,Carrot,Vegetable,4,7,,,,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1190,Green Pepper,Vegetable,5,31,,,,6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1191,Spinach,Vegetable,1,9,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1192,Turnip,Vegetable,0,1,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1193,Radish,Vegetable,2,12,,,,,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1194,Leek,Vegetable,5,35,6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1195,Bok Choy,Vegetable,6,36,8,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1196,Hot-Hot Fruit,Vegetable,5,35,,,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.05,,,
-1197,Golden Cabbage,Vegetable,9,59,,,,,,,,20,,,,,,,,,,,,,,,,,,,,,,,0.01,,,,,,
-1198,Golden Pumpkin,Vegetable,9,56,,,,25,,,,,,,,,,,,,,,,,,,,,,,,,,,0.01,,,,,,
-1199,Golden Potato,Vegetable,9,55,,,,,30,,,,,,,,,,,,,,,,,,,,,,,,,,0.01,,,,,,
-1200,Bamboo Sprout,Vegetable,0,1,,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1201,Mushroom,Mushroom,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1202,Grapes,Fruit,5,30,,,,4,4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1203,Apple,Fruit,5,32,,,,4,,,,4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1204,Orange,Fruit,5,30,,,,,4,,,4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1205,Strawberry,Fruit,4,24,,,,3,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1206,Pineapple,Fruit,8,50,,,,15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1207,Toyherb,Plant,0,1,,,,,1,,,,,,,,,,,,,,,0.05,,,,,,,,,,,,,,,,,
-1208,Toyherb,Plant,0,1,,,,,1,,,,,,,,,,,,,,,0.05,,,,,,,,,,,,,,,,,
-1209,MoonDrop Flower,Plant,1,10,,,,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1210,Elli Leaves,Plant,10,60,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1211,Pink Cat,Plant,2,15,,,,,,,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1212,Charm Blue,Plant,3,20,,,,,,,,,,,,0.05,,,,,,,,,,,,,,,,,,,,,,,,,
-1213,Cherry Grass,Plant,3,22,,,,,1,,,,,,,,,0.01,,,,,,,,,,,,,,,,,,,,,,,
-1214,Lamp Grass,Plant,4,28,,,,,,,,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1215,Blue Crystal,Plant,8,53,10,,10,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.05,,
-1216,Emery Flower,Plant,10,66,,,,,,,,30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1217,Great Emery Flower,Plant,15,95,,,,,,,,80,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1218,Ironleaf,Plant,4,29,,,,,,4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1219,4-Leaf Clover,Plant,4,29,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1220,Fireflower,Plant,6,41,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1221,Green Crystal,Plant,8,53,,,20,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.05,
-1222,Noel Grass,Plant,6,41,,,,,,,,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1223,Autumn Grass,Plant,5,35,,,,,,,,,,,,,,,,,,,0.06,,,,,,,,,,,,,,,,,,
-1224,Pom-Pom Grass,Plant,4,28,,,,,,,,,,,,0.03,,,,0.05,,,,,,,,,,,,,,,,,,,,,
-1225,Red Crystal,Plant,8,53,20,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.05,,,
-1226,White Crystal,Plant,8,53,,,,,,,,20,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.05
-1227,Medicinal Herb,Plant,0,2,,,,,,,,,,,,,,,,,,,,0.01,,,,,,,,,,,,,,,,,
-1228,Antidotal Herb,Plant,0,8,,,,,,,,,,,,,,,,0.03,,,,,,,,,,,,,,,,,,,,,
-1229,Black Grass,Plant,3,23,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1230,Orange Grass,Plant,7,48,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1231,Red Grass,Plant,6,40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1232,Yellow Grass,Plant,5,39,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1233,Blue Grass,Plant,0,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1234,Green Grass,Plant,0,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1235,Purple Grass,Plant,1,5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1236,Indigo Grass,Plant,4,29,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1237,White Grass,Plant,8,65,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1238,Weeds,Plant,0,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-1239,Withered Weeds,Plant,0,1,,,,,-1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ID,Name,Category,Rarity,Difficulty
+1000,Fodder,Collectible,0,0
+1001,Scrap Metal,Collectible,0,1
+1002,Iron,Minerals,1,2
+1003,Scrap Metal+,Minerals,2,0
+1004,Bronze,Minerals,4,15
+1005,Silver,Minerals,7,32
+1006,Gold,Minerals,9,40
+1007,Platinum,Minerals,12,50
+1008,Orichalcum,Minerals,13,80
+1009,Dragonic Stone,Minerals,15,80
+1010,Amethyst,Jewels,0,4
+1011,Aquamarine,Jewels,2,11
+1012,Emerald,Jewels,5,26
+1013,Ruby,Jewels,7,36
+1014,Sapphire,Jewels,8,42
+1015,Diamond,Jewels,11,50
+1016,Green Core,Jewels,13,81
+1017,Red Core,Jewels,13,81
+1018,Yellow Core,Jewels,13,81
+1019,Blue Core,Jewels,13,81
+1020,Crystal Skull,Jewels,15,95
+1021,Magic Crystal,Crystals,4,27
+1022,Dark Crystal,Crystals,3,25
+1023,Fire Crystal,Crystals,7,25
+1024,Earth Crystal,Crystals,8,25
+1025,Love Crystal,Crystals,9,50
+1026,Wind Crystal,Crystals,10,25
+1027,Water Crystal,Crystals,11,25
+1028,Light Crystal,Crystals,12,25
+1029,Small Crystal,Crystals,13,80
+1030,Big Crystal,Crystals,13,83
+1031,Rune Crystal,Crystals,14,89
+1032,Electro Crystal,Crystals,15,93
+1033,Stick,Sticks and Stems,0,2
+1034,Insect Horn,Sticks and Stems,1,7
+1035,Plant Stem,Sticks and Stems,3,28
+1036,Bull's Horn,Sticks and Stems,7,36
+1037,Moving Branch,Sticks and Stems,9,95
+1038,Rigid Horn,Sticks and Stems,10,52
+1039,Thick Stick,Sticks and Stems,12,65
+1040,Devil Horn,Sticks and Stems,13,86
+1041,Glue,Liquids,5,26
+1042,Devil Blood,Liquids,9,39
+1043,Paralysis Poison,Liquids,10,30
+1044,Poison King,Liquids,14,86
+1045,Bird's Feather,Feathers,2,10
+1046,Yellow Feather,Feathers,5,90
+1047,Black Bird's Feather,Feathers,10,50
+1048,Thunderbird Feather,Feathers,12,58
+1049,Dragon Fin,Feathers,15,96
+1050,Turtle Shell,Shells and Bones,2,15
+1051,Fish Fossil,Shells and Bones,3,20
+1052,Dragon Bones,Shells and Bones,8,50
+1053,Skull,Shells and Bones,9,39
+1054,Blk. Tortoise Shell,Shells and Bones,12,62
+1055,Ammonite,Shells and Bones,15,92
+1056,Round Stone,Stones,4,25
+1057,Tiny Golem Stone,Stones,9,38
+1058,Golem Stone,Stones,12,53
+1059,Golem Tablet,Stones,13,80
+1060,Golem Spirit Stone,Stones,14,85
+1061,Tablet of Truth,Stones,15,95
+1062,Yarn,Strings,1,4
+1063,Old Bandage,Strings,2,11
+1064,Ambrosia's Thorns,Strings,2,30
+1065,Spider's Thread,Strings,4,18
+1066,Puppetry Strings,Strings,6,40
+1067,Vine,Strings,6,30
+1068,Scorpion Tail,Strings,7,30
+1069,Strong Vine,Strings,10,44
+1070,Pretty Thread,Strings,12,52
+1071,Chimera Tail,Strings,15,95
+1072,Arrowhead,Shards,0,3
+1073,Blade Shard,Shards,2,9
+1074,Broken Hilt,Shards,5,21
+1075,Broken Box,Shards,8,44
+1076,Hammer Piece,Shards,9,37
+1077,Shoulder Piece,Shards,11,45
+1078,Rusty Screw,Shards,11,57
+1079,Shiney Screw,Shards,12,80
+1080,Glistening Blade,Shards,12,66
+1081,Great Hammer Shard,Shards,12,60
+1082,Left Rock Shard,Shards,14,88
+1083,Right Rock Shard,Shards,14,88
+1084,MTGU Plate,Shards,14,80
+1085,Pirate's Armour,Shards,14,84
+1086,Broken Ice Wall,Shards,15,96
+1087,Fur (S),Furs,0,1
+1088,Fur,Furs,1,8
+1089,Yellow Down,Furs,3,17
+1090,Quality Fur,Furs,4,23
+1091,Lightning Mane,Furs,5,35
+1092,Quality Puffy Fur,Furs,6,36
+1093,Fur (M),Furs,1,35
+1094,Wooly Furball,Furs,9,41
+1095,Fur (L),Furs,10,52
+1096,Penguin Down,Furs,11,66
+1097,Red Lion Fur,Furs,15,92
+1098,Blue Lion Fur,Furs,15,92
+1099,Chest Hair,Furs,15,91
+1100,Spore,Powders and Spores,1,8
+1101,Fairy Dust,Powders and Spores,3,19
+1102,Gunpowder,Powders and Spores,5,27
+1103,Poison Powder,Powders and Spores,6,20
+1104,Holy Spore,Powders and Spores,7,33
+1105,Root,Powders and Spores,8,35
+1106,Magic Powder,Powders and Spores,9,40
+1107,Mysterious Powder,Powders and Spores,10,55
+1108,Earth Dragon Ash,Powders and Spores,11,80
+1109,Magic,Powders and Spores,11,53
+1110,Fire Dragon Ash,Powders and Spores,12,80
+1111,Fairy Elixir,Powders and Spores,12,67
+1112,Water Dragon Ash,Powders and Spores,13,80
+1113,Turnip's Miracle,Powders and Spores,14,85
+1114,Melody Bottle,Powders and Spores,15,94
+1115,Cheap Cloth,Cloths and Skins,0,2
+1116,Insect Carapace,Cloths and Skins,1,7
+1117,Ghost Hood,Cloths and Skins,4,24
+1118,Pretty Carapace,Cloths and Skins,6,35
+1119,Quality Cloth,Cloths and Skins,7,32
+1120,Quality Worn Cloth,Cloths and Skins,8,83
+1121,Silk Cloth,Cloths and Skins,9,38
+1122,Giant's Glove,Cloths and Skins,10,43
+1123,Blue Giant's Glove,Cloths and Skins,11,54
+1124,Ancient Orc Cloth,Cloths and Skins,14,90
+1125,Insect Jaw,Claws and Fangs,0,4
+1126,Panther Claw,Claws and Fangs,4,20
+1127,Wolf Fang,Claws and Fangs,5,30
+1128,Palm Claw,Claws and Fangs,6,32
+1129,Giant's Nail,Claws and Fangs,7,40
+1130,Chimera's Claw,Claws and Fangs,7,45
+1131,Ivory Tusk,Claws and Fangs,8,50
+1132,Big Gaint's Nail,Claws and Fangs,9,90
+1133,Unbroken Ivory Tusk,Claws and Fangs,10,55
+1134,Scorpion Pincer,Claws and Fangs,11,60
+1135,Cheap Propeller,Claws and Fangs,11,62
+1136,Gold Wolf Fang,Claws and Fangs,11,61
+1137,Quality Propeller,Claws and Fangs,12,69
+1138,Magic Claw,Claws and Fangs,12,74
+1139,Dragon Fang,Claws and Fangs,13,80
+1140,Malm Claw,Claws and Fangs,14,88
+1141,Queen's Jaw,Claws and Fangs,14,89
+1142,Dangerous Scissors,Claws and Fangs,14,90
+1143,Wind Dragon Tooth,Claws and Fangs,15,98
+1144,Wet Scale,Scales,11,58
+1145,Dragon Scale,Scales,14,88
+1146,Crimson Scale,Scales,14,88
+1147,Blue Scale,Scales,14,88
+1148,Glitter Scale,Scales,14,96
+1149,Love Scale,Scales,14,88
+1150,Black Scale,Scales,14,88
+1151,Grimoire Scale,Scales,15,95
+1152,Firewyrm Scale,Scales,15,96
+1153,Earthwyrm Scale,Scales,15,96
+1154,Legendary Scale,Scales,15,90
+1155,Double Steel,Collectible,5,50
+1156,10-Fold Steel,Collectible,10,95
+1157,Glitta Augite,Collectible,8,50
+1158,Invisible Stone,Collectible,5,33
+1159,Light Ore,Collectible,13,50
+1160,Rune Sphere Shard,Collectible,15,99
+1161,Shade Stone,Collectible,6,40
+1162,Raccoon Leaf,Collectible,10,65
+1163,Icy Nose,Collectible,15,92
+1164,Big Bird's Comb,Collectible,10,65
+1165,Rafflesia Petal,Collectible,9,55
+1166,Cursed Doll,Collectible,6,40
+1167,Warrior's Proof,Collectible,13,77
+1168,Proof of Rank,Collectible,13,77
+1169,Throne of the Empire,Collectible,14,97
+1170,White Stone,Collectible,13,30
+1171,Boot,Trash,0,0
+1172,Can,Trash,0,0
+1173,Rare Can,Trash,5,0
+1174,Branch,Other,0,0
+1175,Rock,Other,0,0
+1176,Material Stone,Other,0,0
+1177,Lumber,Other,0,0
+1178,Cabbage,Vegetable,6,37
+1179,Pink Turnip,Vegetable,3,21
+1180,Pink Melon,Vegetable,7,45
+1181,Onion,Vegetable,6,37
+1182,Pumpkin,Vegetable,3,19
+1183,Cucumber,Vegetable,3,17
+1184,Corn,Vegetable,4,27
+1185,Tomato,Vegetable,7,43
+1186,Eggplant,Vegetable,5,33
+1187,Yam,Vegetable,3,18
+1188,Potato,Vegetable,1,7
+1189,Carrot,Vegetable,4,7
+1190,Green Pepper,Vegetable,5,31
+1191,Spinach,Vegetable,1,9
+1192,Turnip,Vegetable,0,1
+1193,Radish,Vegetable,2,12
+1194,Leek,Vegetable,5,35
+1195,Bok Choy,Vegetable,6,36
+1196,Hot-Hot Fruit,Vegetable,5,35
+1197,Golden Cabbage,Vegetable,9,59
+1198,Golden Pumpkin,Vegetable,9,56
+1199,Golden Potato,Vegetable,9,55
+1200,Bamboo Sprout,Vegetable,0,1
+1201,Mushroom,Mushroom,0,0
+1202,Grapes,Fruit,5,30
+1203,Apple,Fruit,5,32
+1204,Orange,Fruit,5,30
+1205,Strawberry,Fruit,4,24
+1206,Pineapple,Fruit,8,50
+1207,Toyherb,Plant,0,1
+1208,Toyherb,Plant,0,1
+1209,MoonDrop Flower,Plant,1,10
+1210,Elli Leaves,Plant,10,60
+1211,Pink Cat,Plant,2,15
+1212,Charm Blue,Plant,3,20
+1213,Cherry Grass,Plant,3,22
+1214,Lamp Grass,Plant,4,28
+1215,Blue Crystal,Plant,8,53
+1216,Emery Flower,Plant,10,66
+1217,Great Emery Flower,Plant,15,95
+1218,Ironleaf,Plant,4,29
+1219,4-Leaf Clover,Plant,4,29
+1220,Fireflower,Plant,6,41
+1221,Green Crystal,Plant,8,53
+1222,Noel Grass,Plant,6,41
+1223,Autumn Grass,Plant,5,35
+1224,Pom-Pom Grass,Plant,4,28
+1225,Red Crystal,Plant,8,53
+1226,White Crystal,Plant,8,53
+1227,Medicinal Herb,Plant,0,2
+1228,Antidotal Herb,Plant,0,8
+1229,Black Grass,Plant,3,23
+1230,Orange Grass,Plant,7,48
+1231,Red Grass,Plant,6,40
+1232,Yellow Grass,Plant,5,39
+1233,Blue Grass,Plant,0,1
+1234,Green Grass,Plant,0,1
+1235,Purple Grass,Plant,1,5
+1236,Indigo Grass,Plant,4,29
+1237,White Grass,Plant,8,65
+1238,Weeds,Plant,0,1
+1239,Withered Weeds,Plant,0,1
