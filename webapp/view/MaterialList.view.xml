@@ -6,8 +6,6 @@
     xmlns:mdc="sap.ui.mdc"
     xmlns:mdct="sap.ui.mdc.table"
     xmlns:core="sap.ui.core">
-    <core:Fragment fragmentName="rf.calculator.view.fragment.MaterialTableFilterDialog" type="XML"/>
-
     <f:DynamicPage >
         <f:header>
             <f:DynamicPageHeader >

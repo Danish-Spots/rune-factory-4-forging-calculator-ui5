@@ -17,7 +17,6 @@ import ListBinding from "sap/ui/model/ListBinding";
  */
 export default class MaterialList extends Controller {
   onRowPress(event: Event): void {
-    const item = event.getSource();
     const params: any = event.getParameters();
     const router = UIComponent.getRouterFor(this);
     router.navTo("material", {

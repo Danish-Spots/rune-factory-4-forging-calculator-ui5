@@ -1,11 +1,28 @@
 <mvc:View
     controllerName="rf.calculator.controller.App"
+    xmlns:tnt="sap.tnt"
     xmlns="sap.m"
+    xmlns:f="sap.f"
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true">
     <Shell>
-        <App
-            class="myAppDemoWT"
-            id="app"/>
+        <App>
+            <Page >
+                <customHeader>
+                    <f:ShellBar 
+                        title="Rune factory 4 forging calculator"
+                        class="sapFShellBarFCLFPHeader">  
+                        <f:menu>
+                            <Menu itemSelected=".onMenuAction">
+                                <MenuItem text="Materials"  />
+                                <MenuItem text="Calculator"  />
+                            </Menu>
+                        </f:menu>
+                        
+                    </f:ShellBar>
+                </customHeader>
+                <NavContainer id="app"></NavContainer>
+            </Page>
+        </App>
     </Shell>
 </mvc:View>

@@ -81,13 +81,19 @@
         "viewType": "XML",
         "controlId": "app",
         "controlAggregation": "pages",
+        "clearControlAggregation": false,
         "path": "rf.calculator.view"
       },
       "routes": [
         {
           "pattern": "",
-          "name": "overview",
-          "target": "overview"
+          "name": "materials",
+          "target": "materials"
+        },
+        {
+          "pattern": "calculator",
+          "name": "calculator",
+          "target": "calculator"
         },
         {
           "pattern": "material/{ID}",
@@ -96,16 +102,21 @@
         }
       ],
       "targets": {
-        "overview": {
-          "id": "overview",
+        "materials": {
+          "id": "materials",
           "viewType": "XML",
-          "name": "Overview",
+          "name": "Materials",
           "viewName": "MaterialList"
         },
         "material": {
           "id": "material",
           "viewType": "XML",
           "name": "Material"
+        },
+        "calculator": {
+          "id": "calculator",
+          "viewType": "XML",
+          "name": "Calculator"
         }
       }
     }
