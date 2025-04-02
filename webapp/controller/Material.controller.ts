@@ -26,7 +26,6 @@ export default class Material extends Controller {
       parameters: {
         $expand: {
           Drops: "Monster,Location",
-          Stats: true,
         },
       },
       events: {

@@ -56,11 +56,10 @@ class DataService extends cds.ApplicationService {
     // });
     this.after("READ", Materials, (results, req) => {
       results.forEach((m) => {
-        Object.assign(m, { stats: [] });
+        Object.assign(m, { Stats: [] });
         statInfoKeys.forEach((key) => {
           if (m[key] !== undefined && m[key] !== null)
-            m.stats.push({ key, value: m[key] });
-          delete m[key];
+            m.Stats.push({ Stat_Key: key, Stat_Value: m[key] });
         });
       });
     });

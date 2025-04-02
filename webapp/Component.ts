@@ -16,15 +16,6 @@ export default class Component extends UIComponent {
     // call the init function of the parent
     super.init();
 
-    // set data model
-    const data = {
-      recipient: {
-        name: "World",
-      },
-    };
-    const dataModel = new JSONModel(data);
-    this.setModel(dataModel);
-
     this.getRouter().initialize();
   }
 }

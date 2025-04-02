@@ -58,7 +58,9 @@ function convertData(input) {
   let dropId = 5000;
   let statId = 6000;
 
-  const materialHeaders = "ID,Name,Category,Rarity,Difficulty";
+  const materialHeaders = `ID,Name,Category,Rarity,Difficulty,${statInfoKeys.join(
+    ","
+  )}`;
   const statHeaders = `ID,Material_ID,Stat_Key,Stat_Value\n`;
 
   // const materials = [];
@@ -73,13 +75,17 @@ function convertData(input) {
   const monsterLocations = [];
 
   input.forEach((item) => {
-    materials += `${materialId},${item.Name},${item.Category},${item.Rarity},${item.Difficulty}\n`;
+    materials += `${materialId},${item.Name},${item.Category},${item.Rarity},${item.Difficulty},`;
     statInfoKeys.forEach((key) => {
       if (item.StatInfo && item.StatInfo[key] !== undefined) {
         stats += `${statId++},${materialId},`;
         stats += `${key},${item.StatInfo[key]}\n`;
+        materials += `${item.StatInfo[key]},`;
+      } else {
+        materials += ",";
       }
     });
+    materials += "\n";
 
     // Process Locations
     item.Drop.Locations?.forEach((location) => {

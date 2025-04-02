@@ -10,7 +10,7 @@
     "rootDir": "webapp",
     "baseUrl": "./",
     "paths": {
-      "ui5/walkthrough/*": ["webapp/*"]
+      "rf/calculator/*": ["webapp/*"]
     }
   },
   "include": ["webapp/**/*"]
