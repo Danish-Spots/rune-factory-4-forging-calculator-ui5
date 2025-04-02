@@ -48,6 +48,41 @@ const _createSearchFilters = (search: string, keys: string[]) => {
   return [new Filter(filters, false)];
 };
 
+const _recursiveFilterBuild = (filters: Filter[]) => {
+  for (let i = 0; i < filters.length; i++) {
+    if (filters[i].getPath() === "Location") {
+      const newFilter = new Filter({
+        path: "Drops",
+        operator: FilterOperator.Any,
+        variable: "d",
+        condition: new Filter({
+          path: "d/Location/Name",
+          operator: FilterOperator.Contains,
+          value1: filters[i].getValue1(),
+        }),
+      });
+      filters[i] = newFilter;
+    } else if (filters[i].getPath() === undefined)
+      filters = _recursiveFilterBuild(filters[i].getFilters() as Filter[]);
+  }
+  //   for (let filter of filters) {
+  //     if (filter.getPath() === "Location") {
+  //       filter = new Filter({
+  //         path: "Drops",
+  //         operator: FilterOperator.Any,
+  //         variable: "d",
+  //         condition: new Filter({
+  //           path: "d/Location/Name",
+  //           operator: FilterOperator.Contains,
+  //           value1: filter.getValue1(),
+  //         }),
+  //       });
+  //     } else if (filter.getPath() === undefined)
+  //       _recursiveFilterBuild(filter.getFilters() as Filter[]);
+  //   }
+  return filters;
+};
+
 const MaterialTableDelegate = Object.assign(
   {},
   MaterialBaseDelegate,
@@ -67,22 +102,23 @@ MaterialTableDelegate.addItem = async (table: Table, propertyKey: string) => {
 };
 
 MaterialTableDelegate.updateBindingInfo = (table, bindingInfo) => {
-  console.log("update binding info (table)");
   TableDelegate.updateBindingInfo.call(
     MaterialTableDelegate,
     table,
     bindingInfo
   );
+
   bindingInfo.path = (table.getPayload() as TablePayload).bindingPath;
   bindingInfo.templateShareable = true;
 };
 MaterialTableDelegate.getFilters = (table: Table) => {
-  console.log("get filters (table)");
   const search = (
     Element.getElementById(table.getFilter()) as FilterBar
   ).getSearch();
   const keys = (table.getPayload() as TablePayload).searchKeys;
   let filters = TableDelegate.getFilters(table);
+  filters = _recursiveFilterBuild(filters);
+  console.table(filters);
   if (search && keys) {
     filters = filters.concat(_createSearchFilters(search, keys));
   }

@@ -14,11 +14,13 @@
                 <mdc:FilterBar 
                     id="materialFilterBar"
                     p13nMode="Item,Value"
-                    filterItems="{ 
-                        path: 'filter>FilterItems'
-                    }"
                     delegate="{
-                        name: 'rf/calculator/delegate/MaterialFilterBarDelegate'
+                        name: 'rf/calculator/delegate/MaterialFilterBarDelegate',
+                        payload: {
+                            valueHelp: {
+                                Location: 'LocationValueHelp'
+                            }
+                        }
                     }">
                     <mdc:basicSearchField>
                         <mdc:FilterField 
@@ -30,14 +32,20 @@
                         </mdc:FilterField>
                     </mdc:basicSearchField>
                     <mdc:filterItems>
-                        <mdc:FilterField 
-                            delegate="{name: 'sap/ui/mdc/field/FieldBaseDelegate'}"
-                            dataType="sap.ui.model.type.String"
-                            conditions="{$filters>/conditions/Name}"
-                            label="Name"
-                            propertyKey="Name"></mdc:FilterField>
+                        <mdc:FilterField
+							label="Location"
+							propertyKey="Location"
+							dataType="sap.ui.model.type.String"
+							conditions="{$filters>/conditions/Location}"
+							valueHelp="LocationValueHelp"
+							delegate='\{"name": "sap/ui/mdc/field/FieldBaseDelegate"\}'>
+						</mdc:FilterField>
                 
                     </mdc:filterItems>
+                    <mdc:dependents>
+                    <!-- Place custom filter controls here -->
+                        <core:Fragment fragmentName="rf.calculator.view.fragment.LocationValueHelp" type="XML" />
+                    </mdc:dependents>
                 </mdc:FilterBar>
             </f:DynamicPageHeader>
         </f:header>

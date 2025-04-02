@@ -1,0 +1,31 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:mdc="sap.ui.mdc"
+     xmlns:vh="sap.ui.mdc.valuehelp"
+	xmlns:vhc="sap.ui.mdc.valuehelp.content"
+    xmlns:core="sap.ui.core">
+    <mdc:ValueHelp id="LocationValueHelp" delegate='\{"name": "rf/calculator/delegate/MaterialValueHelperDelegate", "payload": \{"searchKeys": ["name"]\}\}'>
+        <mdc:typeahead>
+            <vh:Popover title="Select Location">
+                <vhc:MTable keyPath="Name" descriptionPath="Name">
+                    <Table id="ddListLocations" items='{path : "data>/Locations" }' width="30rem">
+                        <columns>
+                            <Column>
+                                <header>
+                                    <Text text="Name" />
+                                </header>
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem type="Active">
+                                <cells>
+                                    <Text text="{data>Name}"/>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </vhc:MTable>
+            </vh:Popover>
+        </mdc:typeahead>
+    </mdc:ValueHelp>
+</core:FragmentDefinition>

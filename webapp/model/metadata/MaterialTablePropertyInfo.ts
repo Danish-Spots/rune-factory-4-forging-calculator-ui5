@@ -267,4 +267,11 @@ export default [
     dataType: "sap.ui.model.type.Integer",
     path: "earthRes",
   },
+  {
+    key: "Location",
+    path: "Location",
+    label: "Location",
+    visible: true,
+    dataType: "sap.ui.model.type.String",
+  },
 ];

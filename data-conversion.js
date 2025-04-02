@@ -123,13 +123,13 @@ function convertData(input) {
             Monster_ID: monId,
             Location_ID: locId,
           });
-          drops.push({
-            ID: dropId++,
-            Material_ID: materialId,
-            Location_ID: locId,
-            Monster_ID: monId,
-          });
         }
+        drops.push({
+          ID: dropId++,
+          Material_ID: materialId,
+          Location_ID: locId,
+          Monster_ID: monId,
+        });
       });
     });
 
