@@ -4,11 +4,11 @@
      xmlns:vh="sap.ui.mdc.valuehelp"
 	xmlns:vhc="sap.ui.mdc.valuehelp.content"
     xmlns:core="sap.ui.core">
-    <mdc:ValueHelp id="LocationValueHelp" delegate='\{"name": "rf/calculator/delegate/MaterialValueHelperDelegate", "payload": \{"searchKeys": ["Name"]\}\}'>
+    <mdc:ValueHelp id="MonsterValueHelp" delegate='\{"name": "rf/calculator/delegate/MaterialValueHelperDelegate", "payload": \{"searchKeys": ["Name"]\}\}'>
         <mdc:typeahead>
             <vh:Popover title="Select Location">
                 <vhc:MTable keyPath="Name" descriptionPath="Name">
-                    <Table id="ddListLocations" items='{path : "data>/Locations" }' width="20rem">
+                    <Table id="ddListMonsters" items='{path : "data>/Monsters" }' width="20rem">
                         <columns>
                             <Column>
                                 <header>

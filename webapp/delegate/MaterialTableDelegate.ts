@@ -48,38 +48,23 @@ const _createSearchFilters = (search: string, keys: string[]) => {
   return [new Filter(filters, false)];
 };
 
-const _recursiveFilterBuild = (filters: Filter[]) => {
+const _recursiveFilterBuild = (filters: Filter[], key: string) => {
   for (let i = 0; i < filters.length; i++) {
-    if (filters[i].getPath() === "Location") {
+    if (filters[i].getPath() === key) {
       const newFilter = new Filter({
         path: "Drops",
         operator: FilterOperator.Any,
         variable: "d",
         condition: new Filter({
-          path: "d/Location/Name",
+          path: `d/${key}/Name`,
           operator: FilterOperator.Contains,
           value1: filters[i].getValue1(),
         }),
       });
       filters[i] = newFilter;
     } else if (filters[i].getPath() === undefined)
-      filters = _recursiveFilterBuild(filters[i].getFilters() as Filter[]);
+      filters = _recursiveFilterBuild(filters[i].getFilters() as Filter[], key);
   }
-  //   for (let filter of filters) {
-  //     if (filter.getPath() === "Location") {
-  //       filter = new Filter({
-  //         path: "Drops",
-  //         operator: FilterOperator.Any,
-  //         variable: "d",
-  //         condition: new Filter({
-  //           path: "d/Location/Name",
-  //           operator: FilterOperator.Contains,
-  //           value1: filter.getValue1(),
-  //         }),
-  //       });
-  //     } else if (filter.getPath() === undefined)
-  //       _recursiveFilterBuild(filter.getFilters() as Filter[]);
-  //   }
   return filters;
 };
 
@@ -117,7 +102,8 @@ MaterialTableDelegate.getFilters = (table: Table) => {
   ).getSearch();
   const keys = (table.getPayload() as TablePayload).searchKeys;
   let filters = TableDelegate.getFilters(table);
-  filters = _recursiveFilterBuild(filters);
+  filters = _recursiveFilterBuild(filters, "Location");
+  filters = _recursiveFilterBuild(filters, "Monster");
   console.table(filters);
   if (search && keys) {
     filters = filters.concat(_createSearchFilters(search, keys));

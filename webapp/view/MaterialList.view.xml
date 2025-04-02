@@ -18,7 +18,8 @@
                         name: 'rf/calculator/delegate/MaterialFilterBarDelegate',
                         payload: {
                             valueHelp: {
-                                Location: 'LocationValueHelp'
+                                Location: 'LocationValueHelp',
+                                Monster: 'MonsterValueHelp'
                             }
                         }
                     }">
@@ -40,11 +41,20 @@
 							valueHelp="LocationValueHelp"
 							delegate='\{"name": "sap/ui/mdc/field/FieldBaseDelegate"\}'>
 						</mdc:FilterField>
+                        <mdc:FilterField
+							label="Monster"
+							propertyKey="Monster"
+							dataType="sap.ui.model.type.String"
+							conditions="{$filters>/conditions/Monster}"
+							valueHelp="MonsterValueHelp"
+							delegate='\{"name": "sap/ui/mdc/field/FieldBaseDelegate"\}'>
+						</mdc:FilterField>
                 
                     </mdc:filterItems>
                     <mdc:dependents>
                     <!-- Place custom filter controls here -->
                         <core:Fragment fragmentName="rf.calculator.view.fragment.LocationValueHelp" type="XML" />
+                        <core:Fragment fragmentName="rf.calculator.view.fragment.MonsterValueHelp" type="XML" />
                     </mdc:dependents>
                 </mdc:FilterBar>
             </f:DynamicPageHeader>

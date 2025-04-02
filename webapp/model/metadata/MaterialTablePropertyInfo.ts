@@ -271,7 +271,14 @@ export default [
     key: "Location",
     path: "Location",
     label: "Location",
-    visible: true,
+    visible: false,
+    dataType: "sap.ui.model.type.String",
+  },
+  {
+    key: "Monster",
+    path: "Monster",
+    label: "Monster",
+    visible: false,
     dataType: "sap.ui.model.type.String",
   },
 ];
