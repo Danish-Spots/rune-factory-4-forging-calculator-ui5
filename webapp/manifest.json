@@ -1,124 +1,125 @@
 {
-  "_version": "1.70.1",
-  "sap.app": {
-    "id": "rf.calculator",
-    "type": "application",
-    "title": "{{appTitle}}",
-    "description": "{{appDescription}}",
-    "applicationVersion": {
-      "version": "1.0.0"
-    },
-    "i18n": {
-      "bundleName": "rf.calculator.i18n.i18n",
-      "supportedLocales": [""],
-      "fallbackLocale": ""
-    },
-    "dataSources": {
-      "dataRemote": {
-        "uri": "/odata/v4/data/",
-        "type": "OData",
-        "settings": {
-          "odataVersion": "4.0"
-        }
-      }
-    }
-  },
-  "sap.ui": {
-    "technology": "UI5",
-    "deviceTypes": {
-      "desktop": true,
-      "tablet": true,
-      "phone": true
-    }
-  },
-  "sap.ui5": {
-    "flexEnabled": false,
-    "dependencies": {
-      "minUI5Version": "1.134.0",
-      "libs": {
-        "sap.ui.core": {},
-        "sap.m": {},
-        "sap.f": {},
-        "sap.ui.mdc": {},
-        "sap.ui.fl": {}
-      }
-    },
-    "handleValidation": true,
-    "contentDensities": {
-      "compact": true,
-      "cozy": true
-    },
-    "rootView": {
-      "viewName": "rf.calculator.view.App",
-      "type": "XML",
-      "id": "app",
-      "async": true
-    },
-    "models": {
-      "i18n": {
-        "type": "sap.ui.model.resource.ResourceModel",
-        "settings": {
-          "bundleName": "rf.calculator.i18n.i18n",
-          "supportedLocales": [""],
-          "fallbackLocale": ""
-        }
-      },
-      "data": {
-        "type": "sap.ui.model.odata.v4.ODataModel",
-        "dataSource": "dataRemote",
-        "preload": true,
-        "settings": {
-          "synchronizationMode": "None",
-          "operationMode": "Server",
-          "earlyRequests": true
-        }
-      }
-    },
-    "routing": {
-      "config": {
-        "routerClass": "sap.m.routing.Router",
-        "type": "View",
-        "viewType": "XML",
-        "controlId": "app",
-        "controlAggregation": "pages",
-        "clearControlAggregation": false,
-        "path": "rf.calculator.view"
-      },
-      "routes": [
-        {
-          "pattern": "",
-          "name": "materials",
-          "target": "materials"
-        },
-        {
-          "pattern": "calculator",
-          "name": "calculator",
-          "target": "calculator"
-        },
-        {
-          "pattern": "material/{ID}",
-          "name": "material",
-          "target": "material"
-        }
-      ],
-      "targets": {
-        "materials": {
-          "id": "materials",
-          "viewType": "XML",
-          "name": "Materials",
-          "viewName": "MaterialList"
-        },
-        "material": {
-          "id": "material",
-          "viewType": "XML",
-          "name": "Material"
-        },
-        "calculator": {
-          "id": "calculator",
-          "viewType": "XML",
-          "name": "Calculator"
-        }
-      }
-    }
-  }
+	"_version": "1.70.1",
+	"sap.app": {
+		"id": "rf.calculator",
+		"type": "application",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"i18n": {
+			"bundleName": "rf.calculator.i18n.i18n",
+			"supportedLocales": [""],
+			"fallbackLocale": ""
+		},
+		"dataSources": {
+			"dataRemote": {
+				"uri": "/odata/v4/data/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "4.0"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"flexEnabled": false,
+		"dependencies": {
+			"minUI5Version": "1.134.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.f": {},
+				"sap.ui.mdc": {},
+				"sap.ui.fl": {}
+			}
+		},
+		"handleValidation": true,
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"rootView": {
+			"viewName": "rf.calculator.view.App",
+			"type": "XML",
+			"id": "app",
+			"async": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "rf.calculator.i18n.i18n",
+					"supportedLocales": [""],
+					"fallbackLocale": ""
+				}
+			},
+			"data": {
+				"type": "sap.ui.model.odata.v4.ODataModel",
+				"dataSource": "dataRemote",
+				"preload": true,
+				"settings": {
+					"synchronizationMode": "None",
+					"operationMode": "Server",
+					"earlyRequests": true
+				}
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"type": "View",
+				"viewType": "XML",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"clearControlAggregation": false,
+				"path": "rf.calculator.view"
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "materials",
+					"target": "materials"
+				},
+				{
+					"pattern": "calculator",
+					"name": "calculator",
+					"target": "calculator"
+				},
+				{
+					"pattern": "material/{ID}",
+					"name": "material",
+					"target": "material"
+				}
+			],
+			"targets": {
+				"materials": {
+					"id": "materials",
+					"viewType": "XML",
+					"name": "Materials",
+					"viewName": "MaterialList"
+				},
+				"material": {
+					"id": "material",
+					"viewType": "XML",
+					"name": "Material"
+				},
+				"calculator": {
+					"id": "calculator",
+					"viewType": "XML",
+					"name": "Calculator",
+					"viewName": "Calculator"
+				}
+			}
+		}
+	}
 }

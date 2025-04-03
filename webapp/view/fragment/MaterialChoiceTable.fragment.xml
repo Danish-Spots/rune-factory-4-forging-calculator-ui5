@@ -1,0 +1,59 @@
+<core:FragmentDefinition
+  xmlns="sap.m"
+  xmlns:f="sap.f"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:core="sap.ui.core">
+  <Dialog id="materialDialog" title="Material selection">
+    <subHeader>
+      <Toolbar>
+        <Title text="{/selectionCount} materials selected" />
+      </Toolbar>
+    </subHeader>
+    <content>
+      <Table
+        id="materialChoiceTable"
+        mode="MultiSelect"
+        growing="false"
+        sticky="ColumnHeaders,InfoToolbar"
+        includeItemInSelection="true"
+        selectionChange=".onSelectionChange"
+        items="{
+          path: 'data>/Materials'
+         }">
+        <infoToolbar >
+          <OverflowToolbar visible="false">
+            <Label text="Selecting more materials will not apply, only the first 15 will count"/>
+          </OverflowToolbar>
+        </infoToolbar>
+
+        <columns>
+          <Column>
+            <Text text="Material" />
+          </Column>
+          <Column>
+            <Text text="Stats" />
+          </Column>
+        </columns>
+        <items>
+          <ColumnListItem >
+            <cells>
+              <ObjectIdentifier
+                title="{data>Name}"
+                text="Rarity: {data>Rarity}">
+              </ObjectIdentifier>
+
+              <HBox items="{data>Stats}" columnGap="8px" >
+                <Text
+                  text="{data>Stat_Key}: {data>Stat_Value}"/>
+              </HBox>
+            </cells>
+          </ColumnListItem>
+        </items>
+      </Table>
+    </content>
+    <buttons>
+      <Button text="OK" press="onDialogOK"/>
+      <Button text="Cancel" press="onDialogCancel"/>
+    </buttons>
+  </Dialog>
+</core:FragmentDefinition>
