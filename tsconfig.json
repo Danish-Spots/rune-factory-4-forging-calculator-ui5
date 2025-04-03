@@ -1,17 +1,18 @@
 {
-  "compilerOptions": {
-    "target": "es2023",
-    "module": "es2022",
-    "moduleResolution": "node",
-    "skipLibCheck": true,
-    "allowJs": true,
-    "strict": true,
-    "strictPropertyInitialization": false,
-    "rootDir": "webapp",
-    "baseUrl": "./",
-    "paths": {
-      "rf/calculator/*": ["webapp/*"]
-    }
-  },
-  "include": ["webapp/**/*"]
+	"compilerOptions": {
+		"target": "es2023",
+		"module": "es2022",
+		"moduleResolution": "node",
+		"skipLibCheck": true,
+		"allowJs": true,
+		"strict": true,
+		"strictPropertyInitialization": false,
+		"rootDir": "webapp",
+		"baseUrl": "./",
+		"exactOptionalPropertyTypes": true,
+		"paths": {
+			"rf/calculator/*": ["webapp/*"]
+		}
+	},
+	"include": ["webapp/**/*"]
 }
