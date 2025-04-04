@@ -4,7 +4,7 @@
     xmlns:uxap="sap.uxap"
     xmlns:core="sap.ui.core"
     xmlns:mvc="sap.ui.core.mvc">
-    <Page 
+    <Page
         title="{i18n>materialPageTitle}"
         showNavButton="true"
         navButtonPress=".onNavBack">

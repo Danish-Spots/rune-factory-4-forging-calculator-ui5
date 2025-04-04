@@ -104,3 +104,29 @@ entity Chopping {
   key Id       : Integer;
   Name        : String;
 }
+
+entity Weapon {
+  key ID      : Integer;
+  Name        : String;
+  Type        : String;
+  Level       : Integer;
+  Element     : String;
+  atk         : Integer;
+  diz         : Integer;
+  matk        : Integer;
+  def         : Integer;
+  crit        : Integer;
+  int         : Integer;
+  vit         : Integer;
+  parAtk      : Integer;
+  psnAtk      : Integer;
+  knock       : Integer;
+  stun        : Integer;
+  drain       : Integer;
+  virtual Stats   : array of  { Stat_Key : String; Stat_Value : String };
+  Material_1  : String;
+  Material_2  : String;
+  Material_3  : String;
+  Material_4  : String;
+  Material_5  : String;
+}

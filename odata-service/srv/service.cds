@@ -8,5 +8,6 @@ service DataService {
     // entity Stats as projection on RF_Entity.Stat;
     entity Others as projection on RF_Entity.Other;
     entity Drops as projection on RF_Entity.Drop;
+    entity Weapons as projection on RF_Entity.Weapon;
     entity MonsterToLocations as projection on RF_Entity.Monster_Location;
 }

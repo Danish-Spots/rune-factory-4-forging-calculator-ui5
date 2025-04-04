@@ -30,5 +30,5 @@ ID,Type,Name,Level,Element,atk,diz,matk,def,crit,int,vit,paratk,psnatk,knock,stu
 6028,Short sword,Platinum sword +,79,,6050,6,,,,,,,,,,,W:Platinum sword,1009,,,
 6029,Short sword,Dragon slayer,82,,7000,7,,,,,,,,,,,1009,1009,1150,1147,1148
 6030,Short sword,Rune blade,85,Light,8700,6,5000,,,,,,,,,,1009,1153,1031,C:Claws and Fangs,C:Sticks and Stems
-6031,Short sword,Gladius,90,,9800,6,1000,,"0,1",,,,,,,,1009,1152,1029,1169,C:Claws and Fangs
+6031,Short sword,Gladius,90,,9800,6,1000,,0.1,,,,,,,,1009,1152,1029,1169,C:Claws and Fangs
 6032,Short sword,Rune legend,99,,9999,6,9999,,,,,,,,,,1160,1009,1031,1016,1143

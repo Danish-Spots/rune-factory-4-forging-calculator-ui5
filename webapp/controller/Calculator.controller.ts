@@ -4,6 +4,8 @@ import MenuItem from 'sap/m/MenuItem';
 import MessageStrip from 'sap/m/MessageStrip';
 import MessageToast from 'sap/m/MessageToast';
 import Table from 'sap/m/Table';
+import Wizard from 'sap/m/Wizard';
+import WizardStep from 'sap/m/WizardStep';
 import Event from 'sap/ui/base/Event';
 import Fragment from 'sap/ui/core/Fragment';
 import Controller from 'sap/ui/core/mvc/Controller';
@@ -11,6 +13,8 @@ import Device from 'sap/ui/Device';
 import JSONModel from 'sap/ui/model/json/JSONModel';
 import ResourceModel from 'sap/ui/model/resource/ResourceModel';
 import Sorter from 'sap/ui/model/Sorter';
+import { WizardButtons } from './Calculator/WizardButtons';
+import { MaterialChoiceTable } from './Calculator/MaterialChoiceTable';
 /**
  * @name rf.calculator.controller
  */
@@ -38,102 +42,74 @@ export default class Calculator extends Controller {
 	};
 	groupReset: boolean;
 
+	stepIndex: number = 0;
+	step: WizardStep;
+
 	onInit(): void | undefined {
 		this.getView()?.setModel(this.viewModel);
+		this.step = this.byId('ForgingWizardStep') as WizardStep;
+		this.viewModel.setProperty('/nextButtonEnabled', false);
+
+		this.checkButtonState();
 	}
 
 	async openChooseMaterialDialog(): Promise<void> {
-		this.dialog ??= (await this.loadFragment({
-			name: 'rf.calculator.view.fragment.MaterialChoiceTable',
-		})) as Dialog;
-
-		this.dialog.open();
+		MaterialChoiceTable.openChooseMaterialDialog.call(this);
 	}
 
 	onSelectionChange(): void {
-		const table = this.byId('materialChoiceTable') as Table;
-		const messageStrip = this.byId('materialMessageStrip') as MessageStrip;
-		const selectedItems = table.getSelectedItems();
-
-		this.viewModel.setData({
-			selectionCount: selectedItems.length,
-		});
-		if (selectedItems.length > 15) messageStrip.setVisible(true);
-		else messageStrip.setVisible(false);
+		MaterialChoiceTable.onSelectionChange.call(this);
 	}
 
 	async onSortPressed(): Promise<void> {
-		const dialog = await this.getViewSettingsDialog('rf.calculator.view.fragment.SortDialog');
-		dialog.open();
+		MaterialChoiceTable.onSortPressed.call(this);
 	}
 
 	onSortOkPressed(event: Event): void {
-		const table = this.byId('materialChoiceTable') as Table,
-			params = event.getParameters(),
-			binding = table.getBinding('items') as any,
-			sorters = [];
-		let path, descending;
-
-		path = (params as any).sortItem.getKey();
-		descending = (params as any).sortDescending;
-		sorters.push(new Sorter(path, descending));
-		binding?.sort(sorters);
+		MaterialChoiceTable.onSortOkPressed.call(this, event);
 	}
 
 	async onGroupPressed(): Promise<void> {
-		const dialog = await this.getViewSettingsDialog('rf.calculator.view.fragment.GroupDialog');
-		dialog.open();
+		MaterialChoiceTable.onGroupPressed.call(this);
 	}
 
 	onGroupConfirm(event: Event): void {
-		const table = this.byId('materialChoiceTable') as Table,
-			params = event.getParameters() as any,
-			binding = table.getBinding('items'),
-			groups = [];
-		let path, descending, group;
-
-		if (params.groupItem) {
-			path = params.groupItem.getKey();
-			descending = params.groupDescending;
-			group = this.groupFunctions[path];
-			groups.push(new Sorter(path, descending, group));
-			(binding as any)?.sort(groups);
-		} else if (this.groupReset) {
-			(binding as any)?.sort();
-			this.groupReset = false;
-		}
+		MaterialChoiceTable.onGroupConfirm.call(this, event);
 	}
 
 	onGroupReset(): void {
-		this.groupReset = true;
+		MaterialChoiceTable.onGroupReset.call(this);
 	}
 
-	async getViewSettingsDialog(dialogFragmentName: string) {
-		this.viewSettingsDialogs[dialogFragmentName] ??= (await Fragment.load({
-			name: dialogFragmentName,
-			controller: this,
-			id: this.getView()?.getId() as string,
-		})) as Dialog;
-
-		if (Device.system.desktop) this.viewSettingsDialogs[dialogFragmentName].addStyleClass('sapUiSizeCompact');
-
-		return this.viewSettingsDialogs[dialogFragmentName];
+	onConfirmPressed(): void {
+		MaterialChoiceTable.onConfirmPressed.call(this);
 	}
 
-	onConfirmPressed(event: Event): void {
-		const table = this.byId('materialChoiceTable') as Table,
-			selectedItems = table.getSelectedItems();
-
-		const items = selectedItems.slice(0, 15);
-
-		this.viewModel.setData({
-			selectedItems: items.map((item) => item.getBindingContext('data')?.getObject()),
-		});
-
-		this.dialog.close();
+	onCancelPressed(): void {
+		MaterialChoiceTable.onCancelPressed.call(this);
 	}
 
-	onCancelPressed(event: Event): void {
-		this.dialog.close();
+	onWeaponSelected(event: Event): void {
+		const selectedItem = (event as any).getParameter('listItem');
+		const item = selectedItem.getBindingContext('data')?.getObject();
+
+		this.viewModel.setProperty('/selectedWeapon', item);
+		this.viewModel.setProperty('/nextButtonEnabled', true);
+	}
+
+	onNextPressed(): void {
+		WizardButtons.onNextPressed.call(this);
+	}
+
+	onNavigationChange(event: Event): void {
+		WizardButtons.onNavigationChange.call(this, event);
+	}
+
+	onPreviousPressed(): void {}
+
+	handleStepChange(): void {}
+
+	checkButtonState(): void {
+		WizardButtons.checkButtonState.call(this);
 	}
 }
