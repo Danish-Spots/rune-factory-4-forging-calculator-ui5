@@ -13,21 +13,29 @@
       <Table
         id="materialChoiceTable"
         mode="MultiSelect"
-        growing="false"
+        growing="true"
+        growingThreshold="50"
         sticky="ColumnHeaders,InfoToolbar"
         includeItemInSelection="true"
+        growingScrollToLoad="true"
         selectionChange=".onSelectionChange"
         items="{
           path: 'data>/Materials'
          }">
-        <infoToolbar >
-          <OverflowToolbar visible="false">
-            <Label text="Selecting more materials will not apply, only the first 15 will count"/>
+        <headerToolbar>
+          <OverflowToolbar >
+            <ToolbarSpacer />
+            <Button
+              icon="sap-icon://sort"
+              press=".onSortPressed"/>
+            <Button
+              icon="sap-icon://group-2"
+              press=".onGroupPressed"/>
           </OverflowToolbar>
-        </infoToolbar>
+        </headerToolbar>
 
         <columns>
-          <Column>
+          <Column width="20%">
             <Text text="Material" />
           </Column>
           <Column>
@@ -51,9 +59,26 @@
         </items>
       </Table>
     </content>
-    <buttons>
-      <Button text="OK" press="onDialogOK"/>
-      <Button text="Cancel" press="onDialogCancel"/>
-    </buttons>
+    <footer>
+      <Toolbar>
+        <content>
+          <MessageStrip
+            id="materialMessageStrip"
+            showIcon="true"
+            visible="false"
+            type="Warning"
+            text="You have selected more than 15 materials. Only the first 15 materials will be selected"></MessageStrip>
+          <ToolbarSpacer/>
+          <Button
+            type="Accept"
+            text="Ok"
+            press=".onConfirmPressed"/>
+          <Button
+            type="Reject"
+            text="Cancel"
+            press=".onCancelPressed"/>
+        </content>
+      </Toolbar>
+    </footer>
   </Dialog>
 </core:FragmentDefinition>

@@ -1,0 +1,12 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<ViewSettingsDialog
+		confirm=".onGroupConfirm"
+		reset=".onGroupReset">
+		<groupItems>
+			<ViewSettingsItem text="Rarity" key="Rarity" />
+			<ViewSettingsItem text="Category" key="Category" />
+		</groupItems>
+	</ViewSettingsDialog>
+</core:FragmentDefinition>

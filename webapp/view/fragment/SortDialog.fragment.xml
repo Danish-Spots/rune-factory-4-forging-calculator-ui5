@@ -1,0 +1,49 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<ViewSettingsDialog
+    sortDescending="true"
+		confirm="onSortOkPressed">
+		<sortItems>
+      <ViewSettingsItem key="Name" text="Name"/>
+      <ViewSettingsItem key="Rarity" text="Rarity"/>
+      <ViewSettingsItem key="atk" text="Attack"/>
+      <ViewSettingsItem key="matk" text="Magic attack"/>
+      <ViewSettingsItem key="def" text="Defence"/>
+      <ViewSettingsItem key="mdef" text="Magic defence"/>
+      <ViewSettingsItem key="str" text="Strength"/>
+      <ViewSettingsItem key="vit" text="Vitality"/>
+      <ViewSettingsItem key="drainAtk" text="Drain attack"/>
+      <ViewSettingsItem key="int" text="Intelligence"/>
+      <ViewSettingsItem key="parAtk" text="Paralysis attack"/>
+      <ViewSettingsItem key="crit" text="Critical chance"/>
+      <ViewSettingsItem key="drainRes" text="Drain resistance"/>
+      <ViewSettingsItem key="psnAtk" text="Poison attack"/>
+      <ViewSettingsItem key="sickAtk" text="Sickness attack"/>
+      <ViewSettingsItem key="slpAtk" text="Sleep attack"/>
+      <ViewSettingsItem key="sealAtk" text="Seak attack"/>
+      <ViewSettingsItem key="psnRes" text="Poison resistance"/>
+      <ViewSettingsItem key="sealRes" text="Seal resistance"/>
+      <ViewSettingsItem key="parRes" text="Paralysis resistance"/>
+      <ViewSettingsItem key="slpRes" text="Sleep resistance"/>
+      <ViewSettingsItem key="ftgRes" text="Fatigue resistance"/>
+      <ViewSettingsItem key="sickRes" text="Sickness resistance"/>
+      <ViewSettingsItem key="diz" text="Dizzyness attack"/>
+      <ViewSettingsItem key="knockAtk" text="Knockback attack"/>
+      <ViewSettingsItem key="faintRes" text="Faint resistance"/>
+      <ViewSettingsItem key="dizRes" text="Dizzyness resistance"/>
+      <ViewSettingsItem key="critRes" text="Critical chance resistance"/>
+      <ViewSettingsItem key="knockRes" text="Knockback resistance"/>
+      <ViewSettingsItem key="knock" text="Knockback"/>
+      <ViewSettingsItem key="stun" text="Stun"/>
+      <ViewSettingsItem key="ftgAtk" text="Fatigue attack"/>
+      <ViewSettingsItem key="faintAtk" text="Faint attack"/>
+      <ViewSettingsItem key="upgradeEffct" text="Upgrade effect"/>
+      <ViewSettingsItem key="effect" text="Effect"/>
+      <ViewSettingsItem key="fireRes" text="Fire resistance"/>
+      <ViewSettingsItem key="waterRes" text="Water resistance"/>
+      <ViewSettingsItem key="windRes" text="Wind resistance"/>
+      <ViewSettingsItem key="earthRes" text="Earth resistance"/>
+		</sortItems>
+	</ViewSettingsDialog>
+</core:FragmentDefinition>
