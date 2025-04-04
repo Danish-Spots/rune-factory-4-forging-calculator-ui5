@@ -1,0 +1,34 @@
+ID,Type,Name,Level,Element,atk,diz,matk,def,crit,int,vit,paratk,psnatk,knock,stun,drain,Material_1,Material_2,Material_3,Material_4,Material_5
+6000,Short sword,Broadsword,1,,5,6,,,,,,,,,,,C:Minerals,,,,
+6001,Short sword,Steel sword,3,,29,6,,,,,,,,,,,C:Minerals,C:Claws and Fangs,,,
+6002,Short sword,Steel sword +,4,,48,6,,,,,,,,,,,W:Steel sword,C:Minerals,,,
+6003,Short sword,Cutlass,7,,58,6,,,,,,,,,,,1004,C:Claws and Fangs,,,
+6004,Short sword,Aqua sword,15,Water,128,6,3,,,,,,,,,,1005,1011,,,
+6005,Short sword,Invisiblade,16,,150,6,5,,,,,,,,,,1158,C:Claws and Fangs,C:Crystals,,
+6006,Short sword,Defender,19,,188,6,,15,,,,,,,,,1014,C:Claws and Fangs,,,
+6007,Short sword,Burning sword,20,Fire,224,6,5,,,,,,,,,,1006,1023,,,
+6008,Short sword,Back scratcher,20,,69,20,20,,0.05,,,,,,,,1041,C:Sticks and Stems,,,
+6009,Short sword,Gorgeous sword,23,,232,6,,,,-5,,,,,,,1006,1006,1006,1006,
+6010,Short sword,Spoon,25,,92,6,16,,,,,,,,,,1005,1005,,,
+6011,Short sword,Gaia sword,27,Earth,307,6,20,,,,,,,,,,1006,1024,1038,,
+6012,Short sword,Snakesword,30,,367,6,,,,,,,,,,,1015,C:Claws and Fangs,,,
+6013,Short sword,Veggieblade,32,Earth,80,6,32,,,,20,,,,,,1189,,,,
+6014,Short sword,Luck blade,35,,388,20,,,0.1,,,,,,,,1015,1134,C:Claws and Fangs,,
+6015,Short sword,Platinum sword,38,,428,6,,,,,,,,,,,1007,1005,C:Claws and Fangs,C:Sticks and Stems,
+6016,Short sword,Wind sword,40,Wind,497,6,30,,,,,,,,,,1007,1005,1026,,
+6017,Short sword,Chaos blade,42,Dark,549,6,35,,,,,0.2,,,,,1007,1006,1109,1104,
+6018,Short sword,Sakura,44,Dark,590,6,5,,,,,,0.15,,,,1007,1043,1103,1213,
+6019,Short sword,Sunspot,46,Fire,692,6,30,,,,,,,,,,1007,1006,1167,1023,1013
+6020,Short sword,Durendal,50,,800,6,,30,,,,,,,,,1007,1007,1140,1040,1064
+6021,Short sword,Aerial blade,54,Wind,1000,6,100,,,,,,,,,,1008,1091,1026,1012,C:Claws and Fangs
+6022,Short sword,Grantale,59,Earth,1352,6,250,,,,,,,,,,1008,1046,1024,1010,1166
+6023,Short sword,Smash blade,64,,1880,12,,,,,,,,0.15,0.15,,1008,1085,1219,1130,C:Claws and Fangs
+6024,Short sword,Icifier,68,Water,2270,6,700,,,,,,,,,,1008,1163,1027,1011,C:Claws and Fangs
+6025,Short sword,Soul eater,70,,3720,6,1500,,,,,,,,,0.05,1008,1142,1025,1154,1108
+6026,Short sword,Raventine,74,Fire,4300,6,1800,,,,,,,,,,1008,1008,1060,1023,1110
+6027,Short sword,Star saber,77,Wind,5150,6,1800,,,,,,,,,,1008,1060,1026,1012,1032
+6028,Short sword,Platinum sword +,79,,6050,6,,,,,,,,,,,W:Platinum sword,1009,,,
+6029,Short sword,Dragon slayer,82,,7000,7,,,,,,,,,,,1009,1009,1150,1147,1148
+6030,Short sword,Rune blade,85,Light,8700,6,5000,,,,,,,,,,1009,1153,1031,C:Claws and Fangs,C:Sticks and Stems
+6031,Short sword,Gladius,90,,9800,6,1000,,"0,1",,,,,,,,1009,1152,1029,1169,C:Claws and Fangs
+6032,Short sword,Rune legend,99,,9999,6,9999,,,,,,,,,,1160,1009,1031,1016,1143
