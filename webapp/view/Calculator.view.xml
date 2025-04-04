@@ -32,55 +32,8 @@
               </items>
             </List>
             <Button text="Choose materials" press=".openChooseMaterialDialog"/>
-            <!-- Chosen materials below -->
-            <!-- <HBox
-                alignItems="Center"
-                justifyContent="Center"
-                width="100%">
-              <SegmentedButton
-                width="320px"
-                selectionChange="setProductTypeFromSegmented">
-                <items>
-                  <SegmentedButtonItem icon="sap-icon://iphone" text="Mobile"/>
-                  <SegmentedButtonItem icon="sap-icon://sys-monitor" text="Desktop"/>
-                  <SegmentedButtonItem icon="sap-icon://database" text="Other"/>
-                </items>
-              </SegmentedButton>
-            </HBox> -->
           </WizardStep>
-          <WizardStep id="ProductInfoStep"
-                validated="false"
-                title="Product Information"
-                activate="additionalInfoValidation">
-            <MessageStrip class="sapUiSmallMarginBottom"
-                text="Validation in the wizard is controlled by calling the validateStep(Step) and invalidateStep(Step) methods "
-                showIcon="true"/>
-            <Text text="Cras tellus leo, volutpat vitae ullamcorper eu, posuere malesuada nisl. Integer pellentesque leo sit amet dui vehicula, quis ullamcorper est pulvinar. Nam in libero sem. Suspendisse arcu metus, molestie a turpis a, molestie aliquet dui. Donec pulvinar, sapien et viverra imperdiet, orci erat porttitor nulla, eget commodo metus nibh nec ipsum. Aliquam lacinia euismod metus, sollicitudin pellentesque purus volutpat eget. Pellentesque egestas erat quis eros convallis mattis. Mauris hendrerit sapien a malesu corper eu, posuere malesuada nisl. Integer pellentesque leo sit amet dui vehicula, quis ullamcorper est pulvinar. Nam in libero sem. Suspendisse arcu metus, molestie a turpis a, molestie aliquet dui. Donec pulvinar, sapien	corper eu, posuere malesuada nisl. Integer pellentesque leo sit amet dui vehicula, quis ullamcorper est pulvinar. Nam in libero sem. Suspendisse arcu metus, molestie a turpis a, molestie aliquet dui. Donec pulvinar, sapien	"/>
-            <form:SimpleForm
-                editable="true"
-                layout="ResponsiveGridLayout">
-              <Label text="Name" required="true"/>
-              <Input valueStateText="Enter 6 symbols or more"
-                  valueState="{/productNameState}" id="ProductName" liveChange="additionalInfoValidation"
-                  placeholder="Enter name with length greater than 6" value="{/productName}"/>
-              <Label text="Weight" required="true"/>
-              <Input valueStateText="Enter digits"
-                  valueState="{/productWeightState}" id="ProductWeight"
-                  liveChange="additionalInfoValidation" type="Number" placeholder="Enter digits"
-                  value="{/productWeight}"/>
-              <Label text="Manufacturer"/>
-              <Select selectedKey="{/productManufacturer}">
-                <core:Item key="Apple" text="Apple"/>
-                <core:Item key="Microsoft" text="Microsoft"/>
-                <core:Item key="Google" text="Google"/>
-                <core:Item key="Sony" text="Sony"/>
-                <core:Item key="Samsung" text="Samsung"/>
-                <core:Item key="Logitech" text="Logitech"/>
-              </Select>
-              <Label text="Description"/>
-              <TextArea value="{/productDescription}" rows="8"/>
-            </form:SimpleForm>
-          </WizardStep>
+          <core:Fragment fragmentName="rf.calculator.view.fragment.ForgingUpgrading" type="XML"/>
           <WizardStep id="OptionalInfoStep"
                 validated="true"
                 activate="optionalStepActivation"

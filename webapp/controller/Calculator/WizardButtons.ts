@@ -34,6 +34,9 @@ export class WizardButtons {
 				this.viewModel.setProperty('/nextButtonVisible', true);
 				this.viewModel.setProperty('/previousButtonVisible', false);
 				break;
+			case 1:
+				this.viewModel.setProperty('/nextButtonVisible', true);
+				this.viewModel.setProperty('/previousButtonVisible', true);
 			default:
 				break;
 		}

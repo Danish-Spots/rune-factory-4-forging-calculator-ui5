@@ -3,7 +3,6 @@
   xmlns:f="sap.f"
   xmlns:core="sap.ui.core">
   <WizardStep
-    validated="true"
     nextStep="MaterialChoiceStep"
     id="WeaponChoiceStep"
     title="Choose weapon recipe">
