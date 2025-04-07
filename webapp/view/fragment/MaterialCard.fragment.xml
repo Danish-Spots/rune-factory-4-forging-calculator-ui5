@@ -1,6 +1,7 @@
 <core:FragmentDefinition
   xmlns="sap.m"
   xmlns:f="sap.f"
+  xmlns:rf="rf.calculator.control"
   xmlns:core="sap.ui.core"
   xmlns:cards="sap.f.cards">
   <FlexBox wrap="Wrap" id="WeaponMaterialCards" items="{/selectedWeapon/Materials}">
@@ -10,6 +11,15 @@
       </f:header>
       <f:content>
         <VBox >
+          <rf:MaterialSelect
+            fieldName="{Field_Name}"
+            query="{Query}"
+            materials="/selectedItems"
+            selectionChange=".onMaterialSelected">
+          </rf:MaterialSelect>
+          <!-- <Select
+            visible="{= !${Is_Locked}}"
+            items="{= ${Is_Category_Weapon} ? ${ { path: 'data>/Materials' } } : ${/selectedMaterials} }"></Select> -->
           <Slider value="1" width="100%"
             min="1" max="15"
             showAdvancedTooltip="true"

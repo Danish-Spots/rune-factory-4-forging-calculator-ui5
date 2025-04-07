@@ -20,7 +20,8 @@
         growingScrollToLoad="true"
         selectionChange=".onSelectionChange"
         items="{
-          path: 'data>/Materials'
+          path: 'data>/Materials',
+          templateShareable: false
          }">
         <headerToolbar>
           <OverflowToolbar >
@@ -50,7 +51,11 @@
                 text="Rarity: {data>Rarity}">
               </ObjectIdentifier>
 
-              <HBox items="{data>Stats}" columnGap="8px" >
+              <HBox items="{
+                  path: 'data>Stats',
+                  templateShareable: false
+                }"
+                columnGap="8px" >
                 <Text
                   text="{data>Stat_Key}: {data>Stat_Value}"/>
               </HBox>

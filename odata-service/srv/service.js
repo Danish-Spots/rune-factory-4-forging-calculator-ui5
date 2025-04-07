@@ -77,10 +77,25 @@ class DataService extends cds.ApplicationService {
 				for (let i = 1; i <= 6; i++) {
 					const raw = weapon[`Material_${i}`];
 					if (!raw) {
-						weapon["Materials"].push({ Is_Lockd: false, Is_Category_Weapon: false });
-					} else if (raw.startsWith("C:") || raw.startsWith("W:")) {
+						// For using local selected materials
+						weapon["Materials"].push({ Is_Locked: false, Field_Name: `Material_${i}` });
+					} else if (raw.startsWith("C:")) {
 						const name = raw.substring(2);
-						weapon["Materials"].push({ Material_Name: name, Is_Category_Weapon: true, Is_Locked: false });
+						weapon["Materials"].push({
+							Material_Name: name,
+							Is_Category: true,
+							Is_Locked: false,
+							Query: `${name}`,
+							Field_Name: `Material_${i}`,
+						});
+					} else if (raw.startsWith("W:")) {
+						const name = raw.substring(2);
+						weapon["Materials"].push({
+							Material_Name: name,
+							Is_Weapon: true,
+							Is_Locked: false,
+							Field_Name: `Material_${i}`,
+						});
 					} else {
 						const name = materialLookup[raw];
 						weapon["Materials"].push({
@@ -88,6 +103,7 @@ class DataService extends cds.ApplicationService {
 							Is_Category_Weapon: false,
 							Material_ID: raw,
 							Is_Locked: true,
+							Field_Name: `Material_${i}`,
 						});
 					}
 				}

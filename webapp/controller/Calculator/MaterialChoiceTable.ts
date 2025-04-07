@@ -24,9 +24,7 @@ export class MaterialChoiceTable {
 		const messageStrip = this.byId('materialMessageStrip') as MessageStrip;
 		const selectedItems = table.getSelectedItems();
 
-		this.viewModel.setData({
-			selectionCount: selectedItems.length,
-		});
+		this.viewModel.setProperty('/selectionCount', selectedItems.length);
 		if (selectedItems.length > 15) messageStrip.setVisible(true);
 		else messageStrip.setVisible(false);
 	}
@@ -100,11 +98,8 @@ export class MaterialChoiceTable {
 			selectedItems = table.getSelectedItems();
 
 		const items = selectedItems.slice(0, 15);
-
-		this.viewModel.setData({
-			selectedItems: items.map((item) => item.getBindingContext('data')?.getObject()),
-		});
-
+		const objects = items.map((item) => item.getBindingContext('data')?.getObject());
+		this.viewModel.setProperty('/selectedItems', objects);
 		this.dialog.close();
 	}
 

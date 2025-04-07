@@ -17,6 +17,7 @@ import { WizardButtons } from './Calculator/WizardButtons';
 import { MaterialChoiceTable } from './Calculator/MaterialChoiceTable';
 import Control from 'sap/ui/core/Control';
 import FlexBox from 'sap/m/FlexBox';
+import { MaterialSelect$SelectionChangeEvent } from '../control/MaterialSelect';
 /**
  * @name rf.calculator.controller
  */
@@ -113,5 +114,9 @@ export default class Calculator extends Controller {
 
 	checkButtonState(): void {
 		WizardButtons.checkButtonState.call(this);
+	}
+
+	onMaterialSelected(event: MaterialSelect$SelectionChangeEvent): void {
+		console.log(event.getParameters());
 	}
 }
