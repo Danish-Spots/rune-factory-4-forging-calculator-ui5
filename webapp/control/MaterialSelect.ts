@@ -60,7 +60,6 @@ export default class MaterialSelect extends Control {
 	}
 
 	_onSelectionChange(event: Select$ChangeEvent): void {
-		console.log(event);
 		const selectedItem = event.getParameter('selectedItem');
 		if (!selectedItem) return;
 		const data = selectedItem.getBindingContext('data')?.getObject();

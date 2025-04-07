@@ -13,6 +13,11 @@
     <Title text="Forging" class="sapUiSmallMarginBottom"/>
     <core:Fragment fragmentName="rf.calculator.view.fragment.MaterialCard" type="XML"/>
     <Title text="Preview" />
-    
+    <VBox items="{/forgePreview/Inheritances}" >
+      <HBox items="{results}">
+        <Text text="{key}: {value}" class="sapUiSmallMargin"></Text>
+
+      </HBox>
+    </VBox>
   </WizardStep>
 </core:FragmentDefinition>

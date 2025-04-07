@@ -136,6 +136,15 @@ export default class Calculator extends Controller {
 		this.viewModel.setProperty(`/forgePreview/Materials/${fieldName}`, data);
 		const obj = this.viewModel.getObject('/forgePreview/Materials');
 		const materials: any[] = Object.values(obj).filter((item: any) => item.ID !== undefined);
-		console.log(calculateInheritanceOutcomes(materials));
+		const outcomes = calculateInheritanceOutcomes(materials);
+		outcomes.forEach((outcome: any) => {
+			outcome.results = [];
+			Object.entries(outcome).forEach(([key, value]) => {
+				if (key === 'results') return;
+				outcome.results.push({ key, value });
+			});
+		});
+		console.table(outcomes);
+		this.viewModel.setProperty('/forgePreview/Inheritances', outcomes);
 	}
 }
