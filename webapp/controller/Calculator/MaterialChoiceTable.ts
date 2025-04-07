@@ -100,6 +100,7 @@ export class MaterialChoiceTable {
 		const items = selectedItems.slice(0, 15);
 		const objects = items.map((item) => item.getBindingContext('data')?.getObject());
 		this.viewModel.setProperty('/selectedItems', objects);
+		console.log(JSON.parse(this.viewModel.getJSON()));
 		this.dialog.close();
 	}
 

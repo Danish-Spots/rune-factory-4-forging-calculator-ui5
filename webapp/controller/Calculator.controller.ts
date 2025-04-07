@@ -18,6 +18,8 @@ import { MaterialChoiceTable } from './Calculator/MaterialChoiceTable';
 import Control from 'sap/ui/core/Control';
 import FlexBox from 'sap/m/FlexBox';
 import { MaterialSelect$SelectionChangeEvent } from '../control/MaterialSelect';
+import { calculateInheritanceOutcomes } from '../model/calculator';
+import { MaterialItem } from '../model/types';
 /**
  * @name rf.calculator.controller
  */
@@ -26,6 +28,18 @@ export default class Calculator extends Controller {
 	viewSettingsDialogs: Record<string, Dialog> = {};
 	viewModel = new JSONModel({
 		selectionCount: 0,
+		forgePreview: {
+			gear: 'Weapon',
+			Materials: {
+				Material_1: {},
+				Material_2: {},
+				Material_3: {},
+				Material_4: {},
+				Material_5: {},
+				Material_6: {},
+			},
+			Inheritances: [],
+		},
 	});
 	groupFunctions: Record<string, Function> = {
 		Rarity: (context: any) => {
@@ -117,6 +131,11 @@ export default class Calculator extends Controller {
 	}
 
 	onMaterialSelected(event: MaterialSelect$SelectionChangeEvent): void {
-		console.log(event.getParameters());
+		const data = event.getParameter('data'),
+			fieldName = event.getParameter('fieldName');
+		this.viewModel.setProperty(`/forgePreview/Materials/${fieldName}`, data);
+		const obj = this.viewModel.getObject('/forgePreview/Materials');
+		const materials: any[] = Object.values(obj).filter((item: any) => item.ID !== undefined);
+		console.log(calculateInheritanceOutcomes(materials));
 	}
 }

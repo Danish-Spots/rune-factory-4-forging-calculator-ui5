@@ -12,6 +12,7 @@
       showIcon="true"/>
     <Title text="Forging" class="sapUiSmallMarginBottom"/>
     <core:Fragment fragmentName="rf.calculator.view.fragment.MaterialCard" type="XML"/>
-
+    <Title text="Preview" />
+    
   </WizardStep>
 </core:FragmentDefinition>

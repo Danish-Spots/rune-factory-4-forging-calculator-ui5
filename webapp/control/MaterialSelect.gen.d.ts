@@ -1,4 +1,5 @@
 import Event from "sap/ui/base/Event";
+import array from "array";
 import { PropertyBindingInfo } from "sap/ui/base/ManagedObject";
 import { $ControlSettings } from "sap/ui/core/Control";
 
@@ -14,7 +15,8 @@ declare module "./MaterialSelect" {
          * The destination for changes of the control, attached with selectionChange event.
          */
         fieldName?: string | PropertyBindingInfo;
-        materials?: any | PropertyBindingInfo | `{${string}}`;
+        materials?: array | PropertyBindingInfo | `{${string}}`;
+        materialId?: string | PropertyBindingInfo;
         selectionChange?: (event: MaterialSelect$SelectionChangeEvent) => void;
     }
 
@@ -37,8 +39,12 @@ declare module "./MaterialSelect" {
         setFieldName(fieldName: string): this;
 
         // property: materials
-        getMaterials(): any;
-        setMaterials(materials: any): this;
+        getMaterials(): array;
+        setMaterials(materials: array): this;
+
+        // property: materialId
+        getMaterialId(): string;
+        setMaterialId(materialId: string): this;
 
         // event: selectionChange
         attachSelectionChange(fn: (event: MaterialSelect$SelectionChangeEvent) => void, listener?: object): this;
@@ -52,7 +58,7 @@ declare module "./MaterialSelect" {
      */
     export interface MaterialSelect$SelectionChangeEventParameters {
         data?: object;
-        index?: number;
+        fieldName?: string;
     }
 
     /**

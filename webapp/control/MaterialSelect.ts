@@ -23,7 +23,8 @@ export default class MaterialSelect extends Control {
 			 * The destination for changes of the control, attached with selectionChange event.
 			 */
 			fieldName: { type: 'string', defaultValue: '' },
-			materials: { type: 'any', defaultValue: '' },
+			materials: { type: 'array', defaultValue: '' },
+			materialId: { type: 'string', defaultValue: '' },
 		},
 		aggregations: {
 			_select: { type: 'sap.m.Select', multiple: false, visibility: 'hidden' },
@@ -32,7 +33,7 @@ export default class MaterialSelect extends Control {
 			selectionChange: {
 				parameters: {
 					data: { type: 'object' },
-					index: { type: 'int' },
+					fieldName: { type: 'string' },
 				},
 			},
 		},
@@ -53,6 +54,7 @@ export default class MaterialSelect extends Control {
 			'_select',
 			new Select({
 				change: this._onSelectionChange.bind(this),
+				forceSelection: false,
 			})
 		);
 	}
@@ -63,31 +65,54 @@ export default class MaterialSelect extends Control {
 		if (!selectedItem) return;
 		const data = selectedItem.getBindingContext('data')?.getObject();
 		if (!data) return;
-		const index = this.getProperty('fieldName');
-		if (index === -1) throw new Error('fieldName is not set');
-		this.fireSelectionChange({ data, index });
+		const fieldName = this.getProperty('fieldName');
+		if (fieldName === '') throw new Error('fieldName is not set');
+		this.fireSelectionChange({ data, fieldName });
 	}
 
 	setQuery(query: string | undefined): this {
 		this.setProperty('query', query, true);
 		if (query) {
-			(this.getAggregation('_select') as Select)?.bindItems(this._buildSelect(query));
+			const select = this.getAggregation('_select') as Select;
+			select?.bindItems(this._buildSelect(query));
+			select.setSelectedKey('');
 		}
 		return this;
 	}
 
-	setMaterials(materials: string | undefined): this {
-		console.log(materials);
+	setMaterialId(id: string | undefined): this {
+		if (!id) return this;
+		this.setProperty('materialId', id, true);
+		(this.getAggregation('_select') as Select)
+			.setForceSelection(true)
+			.bindItems({
+				path: `/Materials`,
+				model: 'data',
+				templateShareable: true,
+				filters: [new Filter({ path: 'ID', operator: FilterOperator.EQ, value1: id })],
+				template: this._itemTemplate(),
+				events: {
+					dataReceived: () => {
+						(this.getAggregation('_select') as Select)?.fireChange({
+							selectedItem: (this.getAggregation('_select') as Select)?.getItems()[0],
+						});
+					},
+				},
+			})
+			.setEditable(false);
+		return this;
+	}
+
+	setMaterials(materials: Array<any> | undefined): this {
 		this.setProperty('materials', materials, true);
 		if (!materials) return this;
 		const select = this.getAggregation('_select') as Select;
 		select.bindItems({
-			path: materials,
+			model: 'data',
+			path: '/Materials',
+			filters: materials.map((item) => new Filter({ path: 'ID', operator: FilterOperator.EQ, value1: item.ID })),
 			templateShareable: true,
-			template: new Item({
-				key: '{ID}',
-				text: '{Name} - Rarity: {Rarity}',
-			}),
+			template: this._itemTemplate(),
 		});
 		return this;
 	}

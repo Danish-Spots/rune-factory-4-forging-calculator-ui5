@@ -14,12 +14,13 @@
           <rf:MaterialSelect
             fieldName="{Field_Name}"
             query="{Query}"
-            materials="/selectedItems"
+            materials="{/selectedItems}"
+            materialId="{Material_ID}"
             selectionChange=".onMaterialSelected">
           </rf:MaterialSelect>
-          <!-- <Select
-            visible="{= !${Is_Locked}}"
-            items="{= ${Is_Category_Weapon} ? ${ { path: 'data>/Materials' } } : ${/selectedMaterials} }"></Select> -->
+          <Label
+            text="Material Level"
+            ></Label>
           <Slider value="1" width="100%"
             min="1" max="15"
             showAdvancedTooltip="true"

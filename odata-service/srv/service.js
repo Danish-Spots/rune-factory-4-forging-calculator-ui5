@@ -78,7 +78,11 @@ class DataService extends cds.ApplicationService {
 					const raw = weapon[`Material_${i}`];
 					if (!raw) {
 						// For using local selected materials
-						weapon["Materials"].push({ Is_Locked: false, Field_Name: `Material_${i}` });
+						weapon["Materials"].push({
+							Is_Locked: false,
+							Field_Name: `Material_${i}`,
+							Material_Name: "Free select",
+						});
 					} else if (raw.startsWith("C:")) {
 						const name = raw.substring(2);
 						weapon["Materials"].push({

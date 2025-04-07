@@ -57,7 +57,7 @@ const calculateStats = (materials: MaterialItem[]) => {
 	return results;
 };
 
-const calculateInheritanceOutcomes = (materials: MaterialItem[]): any[] => {
+export const calculateInheritanceOutcomes = (materials: MaterialItem[]): any[] => {
 	// 6 different materials
 	// each combination uses 3 materials
 	const maxMaterialsSize = Math.min(materials.length, 6);

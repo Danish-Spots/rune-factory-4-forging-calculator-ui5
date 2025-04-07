@@ -38,7 +38,7 @@
             <ObjectIdentifier
               title="{data>Name}">
             </ObjectIdentifier>
-            <HBox items="{data>Stats}" columnGap="8px">
+            <HBox items="{ path: 'data>Stats', templateShareable: false}" columnGap="8px">
               <Text
                 text="{data>Stat_Key}: {data>Stat_Value}"/>
             </HBox>
