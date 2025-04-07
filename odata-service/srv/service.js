@@ -73,11 +73,23 @@ class DataService extends cds.ApplicationService {
 			);
 			const materialLookup = Object.fromEntries(materialNames.map((m) => [m.ID, m.Name]));
 			for (const weapon of results) {
-				for (let i = 1; i <= 5; i++) {
+				weapon["Materials"] = [];
+				for (let i = 1; i <= 6; i++) {
 					const raw = weapon[`Material_${i}`];
-					if (!raw) continue;
-					if (raw.startsWith("C:") || raw.startsWith("W:")) weapon[`Material_${i}`] = raw.substring(2);
-					else weapon[`Material_${i}`] = materialLookup[raw];
+					if (!raw) {
+						weapon["Materials"].push({ Is_Lockd: false, Is_Category_Weapon: false });
+					} else if (raw.startsWith("C:") || raw.startsWith("W:")) {
+						const name = raw.substring(2);
+						weapon["Materials"].push({ Material_Name: name, Is_Category_Weapon: true, Is_Locked: false });
+					} else {
+						const name = materialLookup[raw];
+						weapon["Materials"].push({
+							Material_Name: name,
+							Is_Category_Weapon: false,
+							Material_ID: raw,
+							Is_Locked: true,
+						});
+					}
 				}
 			}
 		});

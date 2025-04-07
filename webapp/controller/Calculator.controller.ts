@@ -15,6 +15,8 @@ import ResourceModel from 'sap/ui/model/resource/ResourceModel';
 import Sorter from 'sap/ui/model/Sorter';
 import { WizardButtons } from './Calculator/WizardButtons';
 import { MaterialChoiceTable } from './Calculator/MaterialChoiceTable';
+import Control from 'sap/ui/core/Control';
+import FlexBox from 'sap/m/FlexBox';
 /**
  * @name rf.calculator.controller
  */
@@ -111,18 +113,5 @@ export default class Calculator extends Controller {
 
 	checkButtonState(): void {
 		WizardButtons.checkButtonState.call(this);
-	}
-
-	loadWeaponMaterialCards(): void {
-		//   ['Material_1', 'Material_2', 'Material_3'].forEach((key) => {
-		// 	const oContext = this.getView().getModel().createBindingContext(`/selectedWeapon/${key}`);
-		// 	Fragment.load({
-		// 		name: 'rf.calculator.view.fragment.MaterialCard',
-		// 		type: 'XML',
-		// 		bindingContext: oContext,
-		// 	}).then((oFragment) => {
-		// 		this.byId('cardsContainer').addItem(oFragment);
-		// 	});
-		// });
 	}
 }

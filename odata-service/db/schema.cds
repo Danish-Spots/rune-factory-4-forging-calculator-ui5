@@ -129,4 +129,5 @@ entity Weapon {
   Material_3  : String;
   Material_4  : String;
   Material_5  : String;
+  virtual Materials   : array of { Material_Name  : String; Material_ID : Integer; Is_Category_Weapon : Boolean; Is_Locked : Boolean; };
 }
