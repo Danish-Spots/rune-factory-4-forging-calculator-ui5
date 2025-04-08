@@ -1,7 +1,8 @@
 <core:FragmentDefinition
   xmlns="sap.m"
   xmlns:f="sap.f"
-  xmlns:core="sap.ui.core">
+  xmlns:core="sap.ui.core"
+  xmlns:rf="rf.calculator.control">
   <WizardStep
     nextStep="MaterialChoiceStep"
     id="WeaponChoiceStep"
@@ -38,10 +39,11 @@
             <ObjectIdentifier
               title="{data>Name}">
             </ObjectIdentifier>
-            <HBox items="{ path: 'data>Stats', templateShareable: false}" columnGap="8px">
-              <Text
-                text="{data>Stat_Key}: {data>Stat_Value}"/>
-            </HBox>
+            <rf:StatRender
+              stats="{
+                matPath: 'data>Stats',
+                htmlPath: 'data>Stat_HTML'
+              }" />
             <Text text="{data>Material_1}"/>
             <Text text="{data>Material_2}"/>
             <Text text="{data>Material_3}"/>

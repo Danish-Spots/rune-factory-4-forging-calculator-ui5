@@ -4,7 +4,7 @@
   xmlns:rf="rf.calculator.control"
   xmlns:core="sap.ui.core"
   xmlns:cards="sap.f.cards">
-  <FlexBox wrap="Wrap" id="WeaponMaterialCards" items="{/selectedWeapon/Materials}">
+  <FlexBox wrap="Wrap" id="WeaponMaterialCards" items="{/selectedWeapon/Materials}" gap="1rem">
     <f:Card>
       <f:header>
         <cards:Header title="{Material_Name}" ></cards:Header>
@@ -21,11 +21,15 @@
           <Label
             text="Material Level"
             ></Label>
-          <Slider value="1" width="100%"
-            min="1" max="15"
-            showAdvancedTooltip="true"
-            showHandleTooltip="false"
-            inputsAsTooltips="true"
+          <rf:LevelSlider
+            fieldName="{Field_Name}"
+            change=".onLevelChange"/>
+          <rf:StatRender
+            fieldName="{Field_Name}"
+            stats="{
+              matPath: '/forgePreview/Materials/Key/Stats',
+              htmlPath: 'Stat_HTML'
+            }"
             class="sapUiMediumMarginBottom" />
         </VBox>
       </f:content>

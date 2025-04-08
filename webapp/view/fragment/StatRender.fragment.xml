@@ -1,0 +1,9 @@
+<core:FragmentDefinition
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core">
+  <HBox items="{ path: 'data>Stats', templateShareable: true}" columnGap="8px">
+    <items>
+      <FormattedText htmlText="{data>Stat_HTML}"></FormattedText>
+    </items>
+  </HBox>
+</core:FragmentDefinition>

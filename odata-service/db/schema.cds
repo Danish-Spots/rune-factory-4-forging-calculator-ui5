@@ -4,21 +4,18 @@ namespace RF_Entity;
 
 
 
-
-// entity Stat {
-//   key ID  : Integer;
-//   Material  : Association to one Material;
-//   Stat_Key  : String;
-//   Stat_Value  : String;
-// }
-
+type Stat {
+  Stat_Key   : String;
+  Stat_Value : String;
+  Stat_HTML  : String;
+}
 entity Material {
   key ID        : Integer;
   Name         : String;
   Rarity       : Integer;
   Category     : String;
   Difficulty   : Integer;
-  virtual Stats   : array of  { Stat_Key : String; Stat_Value : String };
+  virtual Stats   : array of  Stat;
   Drops       : Association to many Drop on Drops.Material = $self;
 
   matk      : Integer;
@@ -123,7 +120,7 @@ entity Weapon {
   knock       : Integer;
   stun        : Integer;
   drain       : Integer;
-  virtual Stats   : array of  { Stat_Key : String; Stat_Value : String };
+  virtual Stats   : array of  Stat;
   Material_1  : String;
   Material_2  : String;
   Material_3  : String;

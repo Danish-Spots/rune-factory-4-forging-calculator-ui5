@@ -18,8 +18,10 @@ import { MaterialChoiceTable } from './Calculator/MaterialChoiceTable';
 import Control from 'sap/ui/core/Control';
 import FlexBox from 'sap/m/FlexBox';
 import { MaterialSelect$SelectionChangeEvent } from '../control/MaterialSelect';
-import { calculateInheritanceOutcomes } from '../model/calculator';
+import { calculateInheritanceOutcomes, calculateUpgrades } from '../model/calculator';
 import { MaterialItem } from '../model/types';
+import { LevelSlider$ChangeEvent } from '../control/LevelSlider';
+import { Gear, StatKey } from '../model/enums';
 /**
  * @name rf.calculator.controller
  */
@@ -38,7 +40,7 @@ export default class Calculator extends Controller {
 				Material_5: {},
 				Material_6: {},
 			},
-			Inheritances: [],
+			Preview: [],
 		},
 	});
 	groupFunctions: Record<string, Function> = {
@@ -132,19 +134,47 @@ export default class Calculator extends Controller {
 
 	onMaterialSelected(event: MaterialSelect$SelectionChangeEvent): void {
 		const data = event.getParameter('data'),
-			fieldName = event.getParameter('fieldName');
+			fieldName = event.getParameter('fieldName'),
+			currentMaterial = this.viewModel.getObject(`/forgePreview/Materials/${fieldName}`);
+		if (currentMaterial.Level) (data as any).Level = currentMaterial.Level;
 		this.viewModel.setProperty(`/forgePreview/Materials/${fieldName}`, data);
+
+		this._rebuildOutcomes();
+	}
+
+	onLevelChange(event: LevelSlider$ChangeEvent): void {
+		const value = event.getParameter('value'),
+			fieldName = event.getParameter('fieldName');
+
+		this.viewModel.setProperty(`/forgePreview/Materials/${fieldName}/Level`, value);
+
+		this._rebuildOutcomes();
+	}
+
+	_rebuildOutcomes(): void {
 		const obj = this.viewModel.getObject('/forgePreview/Materials');
-		const materials: any[] = Object.values(obj).filter((item: any) => item.ID !== undefined);
+		const materials: MaterialItem[] = Object.values(obj).filter(
+			(item: any) => item.ID !== undefined
+		) as MaterialItem[];
+
 		const outcomes = calculateInheritanceOutcomes(materials);
-		outcomes.forEach((outcome: any) => {
+		const bonuses = calculateUpgrades(materials, Gear.Weapon);
+
+		outcomes.forEach((outcome) => {
+			for (const bonus in bonuses) {
+				if (outcome[bonus]) outcome[bonus] += bonuses[bonus as StatKey] || 0;
+				else outcome[bonus] = bonuses[bonus as StatKey] || 0;
+			}
+			// @ts-ignore
 			outcome.results = [];
+
 			Object.entries(outcome).forEach(([key, value]) => {
 				if (key === 'results') return;
+				// @ts-ignore
 				outcome.results.push({ key, value });
 			});
 		});
-		console.table(outcomes);
-		this.viewModel.setProperty('/forgePreview/Inheritances', outcomes);
+
+		this.viewModel.setProperty('/forgePreview/Preview', outcomes);
 	}
 }

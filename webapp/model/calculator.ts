@@ -9,7 +9,7 @@ const applyStat = (currentStat: number, addedStat: number, divisionNumbber: numb
 };
 
 const calculateLevelBonuses = (totalItemLevel: number, gear: Gear): StatBonus => {
-	const key = (Math.floor(totalItemLevel / 30) * 30) as LevelKey;
+	const key = totalItemLevel < 30 ? 1 : ((Math.floor(totalItemLevel / 30) * 30) as LevelKey);
 
 	if (gear === Gear.Weapon) return weaponLevelBonuses[key];
 	else if (gear === Gear.Armour) return armorLevelBonuses[key];
@@ -57,13 +57,13 @@ const calculateStats = (materials: MaterialItem[]) => {
 	return results;
 };
 
-export const calculateInheritanceOutcomes = (materials: MaterialItem[]): any[] => {
+export const calculateInheritanceOutcomes = (materials: MaterialItem[]): { [key: string]: number }[] => {
 	// 6 different materials
 	// each combination uses 3 materials
 	const maxMaterialsSize = Math.min(materials.length, 6);
 
 	if (materials.length === 0) return [] as StatBonus[];
-	let results: any[] = [];
+	let results: { [key: string]: number }[] = [];
 	if (materials.length <= 3) {
 		results.push(calculateStats(materials));
 		return results;
@@ -84,10 +84,10 @@ export const calculateInheritanceOutcomes = (materials: MaterialItem[]): any[] =
 	return results;
 };
 
-const calculateUpgrades = (materials: MaterialItem[], gear: Gear): StatBonus => {
+export const calculateUpgrades = (materials: MaterialItem[], gear: Gear): StatBonus => {
 	const bonusValues = materials.reduce(
 		(acc, item) => {
-			const itemLevel = item.Level;
+			const itemLevel = item.Level ?? 1;
 			const itemRarity = item.Rarity;
 			acc.Rarity += itemRarity;
 			acc.Level += itemLevel;

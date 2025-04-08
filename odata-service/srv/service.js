@@ -38,6 +38,17 @@ const statInfoKeys = [
 	"windRes",
 	"earthRes",
 ];
+
+const createStatHtml = (key, value) => {
+	return `<p style="height: 100%; width: 100%; display: flex; flex-direction: column; margin: 0; gap: 4px;">
+      <span style="font-weight: bold;"> ${key} </span>
+      <span> ${value} </span>
+     </p>`;
+	// return `<div >
+	//   <div >${key}</div>
+	//   <div>${value}</div>
+	// </div>`;
+};
 class DataService extends cds.ApplicationService {
 	init() {
 		const { Monsters, Locations, Materials, MonsterToLocations, Weapons } = this.entities;
@@ -46,7 +57,8 @@ class DataService extends cds.ApplicationService {
 			results.forEach((m) => {
 				Object.assign(m, { Stats: [] });
 				statInfoKeys.forEach((key) => {
-					if (m[key] !== undefined && m[key] !== null) m.Stats.push({ Stat_Key: key, Stat_Value: m[key] });
+					if (m[key] !== undefined && m[key] !== null)
+						m.Stats.push({ Stat_Key: key, Stat_Value: m[key], Stat_HTML: createStatHtml(key, m[key]) });
 				});
 			});
 		});
@@ -57,7 +69,12 @@ class DataService extends cds.ApplicationService {
 			results.forEach(async (m) => {
 				Object.assign(m, { Stats: [] });
 				statInfoKeys.forEach((key) => {
-					if (m[key] !== undefined && m[key] !== null) m.Stats.push({ Stat_Key: key, Stat_Value: m[key] });
+					if (m[key] !== undefined && m[key] !== null)
+						m.Stats.push({
+							Stat_Key: key,
+							Stat_Value: m[key],
+							Stat_HTML: createStatHtml(key, m[key]),
+						});
 				});
 				for (let i = 1; i <= 5; i++) {
 					const raw = m[`Material_${i}`];
@@ -85,6 +102,7 @@ class DataService extends cds.ApplicationService {
 						});
 					} else if (raw.startsWith("C:")) {
 						const name = raw.substring(2);
+						weapon[`Material_${i}`] = name;
 						weapon["Materials"].push({
 							Material_Name: name,
 							Is_Category: true,
@@ -94,6 +112,7 @@ class DataService extends cds.ApplicationService {
 						});
 					} else if (raw.startsWith("W:")) {
 						const name = raw.substring(2);
+						weapon[`Material_${i}`] = name;
 						weapon["Materials"].push({
 							Material_Name: name,
 							Is_Weapon: true,
@@ -102,6 +121,7 @@ class DataService extends cds.ApplicationService {
 						});
 					} else {
 						const name = materialLookup[raw];
+						weapon[`Material_${i}`] = name;
 						weapon["Materials"].push({
 							Material_Name: name,
 							Is_Category_Weapon: false,
