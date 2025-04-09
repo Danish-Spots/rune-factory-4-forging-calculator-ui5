@@ -10,4 +10,10 @@ service DataService {
     entity Drops as projection on RF_Entity.Drop;
     entity Weapons as projection on RF_Entity.Weapon;
     entity MonsterToLocations as projection on RF_Entity.Monster_Location;
+
+    action CalculateOutcomes(
+      outcomes: array of RF_Entity.MaterialStat,
+      bonuses: RF_Entity.MaterialStat,
+      weaponStats: array of RF_Entity.WeaponStat,
+    ) returns array of RF_Entity.StatArray;
 }

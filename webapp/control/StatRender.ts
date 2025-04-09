@@ -47,6 +47,7 @@ export default class StatRender extends Control {
 		const hbox = this.getAggregation('_hbox') as HBox;
 		hbox.removeAllItems();
 
+		if (!stats || !stats.mPath || !stats.sHtml) return this;
 		hbox?.bindAggregation('items', {
 			path: stats.mPath,
 			template: new FormattedText({

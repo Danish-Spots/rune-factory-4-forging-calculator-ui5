@@ -9,6 +9,16 @@ type Stat {
   Stat_Value : String;
   Stat_HTML  : String;
 }
+type WeaponStat {
+  Stat_Key   : String;
+  Stat_Value : Integer;
+  Stat_HTML  : String;
+}
+
+type StatArray {
+  primaryStats: array of Stat;
+  secondaryStats: array of Stat;
+}
 type MaterialType {
   ID         : Integer;
   Name       : String;
@@ -16,6 +26,45 @@ type MaterialType {
   Category   : String;
   Level      : Integer;
   Stats      : array of Stat;
+}
+type MaterialStat {
+  matk      : Integer;
+  def       : Integer;
+  mdef      : Integer;
+  str       : Integer;
+  vit       : Integer;
+  atk       : Integer;
+  drainAtk      : Integer;
+  int       : Integer;
+  parAtk      : Integer;
+  crit      : Integer;
+  drainRes      : Integer;
+  psnAtk      : Integer;
+  sickAtk       : Integer;
+  slpAtk      : Integer;
+  sealAtk       : Integer;
+  psnRes      : Integer;
+  sealRes       : Integer;
+  parRes      : Integer;
+  slpRes      : Integer;
+  ftgRes      : Integer;
+  sickRes       : Integer;
+  diz       : Integer;
+  knockAtk      : Integer;
+  faintRes      : Integer;
+  dizRes      : Integer;
+  critRes       : Integer;
+  knockRes      : Integer;
+  knock       : Integer;
+  stun      : Integer;
+  ftgAtk      : Integer;
+  faintAtk      : Integer;
+  upgradeEffct      : Integer;
+  effect      : String;
+  fireRes       : Integer;
+  waterRes      : Integer;
+  windRes       : Integer;
+  earthRes      : Integer;
 }
 entity Material {
   key ID        : Integer;

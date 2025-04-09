@@ -22,6 +22,7 @@ import { calculateInheritanceOutcomes, calculateUpgrades } from '../model/calcul
 import { MaterialItem } from '../model/types';
 import { LevelSlider$ChangeEvent } from '../control/LevelSlider';
 import { Gear, StatKey } from '../model/enums';
+import ODataModel from 'sap/ui/model/odata/v4/ODataModel';
 /**
  * @name rf.calculator.controller
  */
@@ -146,26 +147,27 @@ export default class Calculator extends Controller {
 		const outcomes = calculateInheritanceOutcomes(materials);
 		const bonuses = calculateUpgrades(materials, Gear.Weapon);
 
-		outcomes.forEach((outcome) => {
-			for (const bonus in bonuses) {
-				if (outcome[bonus]) outcome[bonus] += bonuses[bonus as StatKey] || 0;
-				else outcome[bonus] = bonuses[bonus as StatKey] || 0;
-			}
-			for (const stat of weaponStats) {
-				if (outcome[stat.Stat_Key]) {
-					outcome[stat.Stat_Key] += stat.Stat_Value;
-				} else outcome[stat.Stat_Key] = stat.Stat_Value;
-			}
-			// @ts-ignore
-			outcome.results = [];
-
-			Object.entries(outcome).forEach(([key, value]) => {
-				if (key === 'results') return;
-				// @ts-ignore
-				outcome.results.push({ key, value });
+		const model = this.getView()?.getModel('data') as ODataModel;
+		const action = model?.bindContext('/CalculateOutcomes(...)');
+		action
+			?.setParameter('outcomes', outcomes)
+			.setParameter('bonuses', bonuses)
+			.setParameter('weaponStats', weaponStats);
+		action
+			?.invoke()
+			.then(() => {
+				const context = action.getBoundContext();
+				this.viewModel.setProperty('/forge/Preview', context.getObject().value);
+			})
+			.catch((error: any) => {
+				console.error(error);
 			});
-		});
+	}
 
-		this.viewModel.setProperty('/forge/Preview', outcomes);
+	_createStatHtml(key: string, value: any) {
+		return `<p style="height: 100%; width: 100%; display: flex; flex-direction: column; margin: 0; gap: 4px;">
+      <span style="font-weight: bold;"> ${key} </span>
+      <span> ${value} </span>
+     </p>`;
 	}
 }

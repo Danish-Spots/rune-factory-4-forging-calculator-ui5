@@ -1,4 +1,6 @@
 const cds = require("@sap/cds");
+const { calculateOutcomes } = require("./calculateOutcomes");
+const { createStatHtml } = require("./helpers/createHtml");
 const statInfoKeys = [
 	"matk",
 	"def",
@@ -39,20 +41,9 @@ const statInfoKeys = [
 	"earthRes",
 ];
 
-const createStatHtml = (key, value) => {
-	return `<p style="height: 100%; width: 100%; display: flex; flex-direction: column; margin: 0; gap: 4px;">
-      <span style="font-weight: bold;"> ${key} </span>
-      <span> ${value} </span>
-     </p>`;
-	// return `<div >
-	//   <div >${key}</div>
-	//   <div>${value}</div>
-	// </div>`;
-};
 class DataService extends cds.ApplicationService {
 	init() {
 		const { Monsters, Locations, Materials, MonsterToLocations, Weapons } = this.entities;
-		console.log(Weapons);
 		this.after("READ", Materials, (results, req) => {
 			results.forEach((m) => {
 				Object.assign(m, { Stats: [] });
@@ -62,6 +53,7 @@ class DataService extends cds.ApplicationService {
 				});
 			});
 		});
+		this.on("CalculateOutcomes", calculateOutcomes);
 		this.after("READ", Weapons, async (results, req) => {
 			const tx = cds.transaction(req);
 			const materialIds = new Set();
