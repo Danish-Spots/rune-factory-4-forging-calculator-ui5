@@ -4,18 +4,17 @@
   xmlns:rf="rf.calculator.control"
   xmlns:core="sap.ui.core"
   xmlns:cards="sap.f.cards">
-  <FlexBox wrap="Wrap" id="WeaponMaterialCards" items="{/selectedWeapon/Materials}" gap="1rem">
+  <FlexBox wrap="Wrap" id="WeaponMaterialCards" items="{/forge/Materials}" gap="1rem">
     <f:Card>
       <f:header>
-        <cards:Header title="{Material_Name}" ></cards:Header>
+        <cards:Header title="{Header_Name}" ></cards:Header>
       </f:header>
       <f:content>
         <VBox >
           <rf:MaterialSelect
             fieldName="{Field_Name}"
-            query="{Query}"
-            materials="{/selectedItems}"
-            materialId="{Material_ID}"
+            selectedItem="{Material}"
+            items="{= ${Select_Query} ? ${Select_Query} : ${/selectedItems} }"
             selectionChange=".onMaterialSelected">
           </rf:MaterialSelect>
           <Label
@@ -23,6 +22,7 @@
             ></Label>
           <rf:LevelSlider
             fieldName="{Field_Name}"
+            value="{Material/Level}"
             change=".onLevelChange"/>
           <rf:StatRender
             fieldName="{Field_Name}"
@@ -33,6 +33,7 @@
             class="sapUiMediumMarginBottom" />
         </VBox>
       </f:content>
+
     </f:Card>
   </FlexBox>
   </core:FragmentDefinition>

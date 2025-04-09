@@ -13,6 +13,7 @@ export default class LevelSlider extends Control {
 	static readonly metadata: MetadataOptions = {
 		properties: {
 			fieldName: { type: 'string', defaultValue: '' },
+			value: { type: 'int', defaultValue: 1 },
 		},
 		aggregations: {
 			_slider: { type: 'sap.m.Slider', multiple: false, visibility: 'hidden' },
@@ -51,11 +52,13 @@ export default class LevelSlider extends Control {
 				change: (oEvent) => {
 					const value = oEvent.getParameter('value');
 					const fieldName = this.getFieldName();
-					if (!!value && !!fieldName)
+					if (!!value && !!fieldName) {
+						this.setProperty('value', value, true);
 						this.fireChange({
 							value,
 							fieldName,
 						});
+					}
 				},
 			})
 		);

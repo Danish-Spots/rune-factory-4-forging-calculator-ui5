@@ -90,47 +90,41 @@ class DataService extends cds.ApplicationService {
 			);
 			const materialLookup = Object.fromEntries(materialNames.map((m) => [m.ID, m.Name]));
 			for (const weapon of results) {
-				weapon["Materials"] = [];
+				const materials = [];
 				for (let i = 1; i <= 6; i++) {
 					const raw = weapon[`Material_${i}`];
+					const material = {
+						Header_Name: "",
+						Field_Name: `Material_${i}`,
+						Select_Query: null,
+						Material: {
+							ID: null,
+							Name: null,
+							Rarity: null,
+							Category: null,
+							Level: 1,
+							Stats: [],
+						},
+					};
 					if (!raw) {
-						// For using local selected materials
-						weapon["Materials"].push({
-							Is_Locked: false,
-							Field_Name: `Material_${i}`,
-							Material_Name: "Free select",
-						});
+						material.Header_Name = "Choose material";
 					} else if (raw.startsWith("C:")) {
 						const name = raw.substring(2);
 						weapon[`Material_${i}`] = name;
-						weapon["Materials"].push({
-							Material_Name: name,
-							Is_Category: true,
-							Is_Locked: false,
-							Query: `${name}`,
-							Field_Name: `Material_${i}`,
-						});
+						material.Header_Name = name;
+						material.Select_Query = `${name}`;
 					} else if (raw.startsWith("W:")) {
 						const name = raw.substring(2);
-						weapon[`Material_${i}`] = name;
-						weapon["Materials"].push({
-							Material_Name: name,
-							Is_Weapon: true,
-							Is_Locked: false,
-							Field_Name: `Material_${i}`,
-						});
+						material.Header_Name = name;
 					} else {
 						const name = materialLookup[raw];
 						weapon[`Material_${i}`] = name;
-						weapon["Materials"].push({
-							Material_Name: name,
-							Is_Category_Weapon: false,
-							Material_ID: raw,
-							Is_Locked: true,
-							Field_Name: `Material_${i}`,
-						});
+						material.Select_Query = `${raw}`;
+						material.Header_Name = name;
 					}
+					materials.push(material);
 				}
+				weapon["Materials"] = materials;
 			}
 		});
 		return super.init();

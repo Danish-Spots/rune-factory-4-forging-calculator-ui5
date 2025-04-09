@@ -9,6 +9,14 @@ type Stat {
   Stat_Value : String;
   Stat_HTML  : String;
 }
+type MaterialType {
+  ID         : Integer;
+  Name       : String;
+  Rarity     : Integer;
+  Category   : String;
+  Level      : Integer;
+  Stats      : array of Stat;
+}
 entity Material {
   key ID        : Integer;
   Name         : String;
@@ -127,13 +135,9 @@ entity Weapon {
   Material_4  : String;
   Material_5  : String;
   virtual Materials   : array of {
-    Material_Name  : String;
-    Query : String;
-    Material_ID : Integer;
+    Header_Name : String;
+    Select_Query : String; // Either a materialId or category
     Field_Name : String;
-
-    Is_Category : Boolean;
-    Is_Weapon : Boolean;
-    Is_Locked : Boolean;
+    Material : MaterialType;
   };
 }

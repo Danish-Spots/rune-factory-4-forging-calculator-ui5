@@ -9,6 +9,7 @@ declare module "./LevelSlider" {
      */
     interface $LevelSliderSettings extends $ControlSettings {
         fieldName?: string | PropertyBindingInfo;
+        value?: number | PropertyBindingInfo | `{${string}}`;
         change?: (event: LevelSlider$ChangeEvent) => void;
     }
 
@@ -17,6 +18,10 @@ declare module "./LevelSlider" {
         // property: fieldName
         getFieldName(): string;
         setFieldName(fieldName: string): this;
+
+        // property: value
+        getValue(): number;
+        setValue(value: number): this;
 
         // event: change
         attachChange(fn: (event: LevelSlider$ChangeEvent) => void, listener?: object): this;

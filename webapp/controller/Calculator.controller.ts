@@ -30,16 +30,9 @@ export default class Calculator extends Controller {
 	viewSettingsDialogs: Record<string, Dialog> = {};
 	viewModel = new JSONModel({
 		selectionCount: 0,
-		forgePreview: {
+		forge: {
 			gear: 'Weapon',
-			Materials: {
-				Material_1: {},
-				Material_2: {},
-				Material_3: {},
-				Material_4: {},
-				Material_5: {},
-				Material_6: {},
-			},
+			Materials: [],
 			Preview: [],
 		},
 	});
@@ -114,6 +107,7 @@ export default class Calculator extends Controller {
 
 		this.viewModel.setProperty('/selectedWeapon', item);
 		this.viewModel.setProperty('/nextButtonEnabled', true);
+		this.viewModel.setProperty('/forge/Materials', item.Materials);
 	}
 
 	onNextPressed(): void {
@@ -132,31 +126,23 @@ export default class Calculator extends Controller {
 		WizardButtons.checkButtonState.call(this);
 	}
 
-	onMaterialSelected(event: MaterialSelect$SelectionChangeEvent): void {
-		const data = event.getParameter('data'),
-			fieldName = event.getParameter('fieldName'),
-			currentMaterial = this.viewModel.getObject(`/forgePreview/Materials/${fieldName}`);
-		if (currentMaterial.Level) (data as any).Level = currentMaterial.Level;
-		this.viewModel.setProperty(`/forgePreview/Materials/${fieldName}`, data);
-
+	onMaterialSelected(): void {
 		this._rebuildOutcomes();
 	}
 
-	onLevelChange(event: LevelSlider$ChangeEvent): void {
-		const value = event.getParameter('value'),
-			fieldName = event.getParameter('fieldName');
-
-		this.viewModel.setProperty(`/forgePreview/Materials/${fieldName}/Level`, value);
-
+	onLevelChange(): void {
 		this._rebuildOutcomes();
 	}
 
 	_rebuildOutcomes(): void {
-		const obj = this.viewModel.getObject('/forgePreview/Materials');
-		const materials: MaterialItem[] = Object.values(obj).filter(
-			(item: any) => item.ID !== undefined
-		) as MaterialItem[];
-
+		const weaponStats = this.viewModel.getObject('/selectedWeapon/Stats');
+		const materials = [0, 1, 2, 3, 4, 5]
+			.map((i) => {
+				const material = this.viewModel.getObject(`/forge/Materials/${i}/Material`);
+				return material;
+			})
+			.filter((material: MaterialItem) => material.ID !== null);
+		console.log(materials, weaponStats);
 		const outcomes = calculateInheritanceOutcomes(materials);
 		const bonuses = calculateUpgrades(materials, Gear.Weapon);
 
@@ -164,6 +150,11 @@ export default class Calculator extends Controller {
 			for (const bonus in bonuses) {
 				if (outcome[bonus]) outcome[bonus] += bonuses[bonus as StatKey] || 0;
 				else outcome[bonus] = bonuses[bonus as StatKey] || 0;
+			}
+			for (const stat of weaponStats) {
+				if (outcome[stat.Stat_Key]) {
+					outcome[stat.Stat_Key] += stat.Stat_Value;
+				} else outcome[stat.Stat_Key] = stat.Stat_Value;
 			}
 			// @ts-ignore
 			outcome.results = [];
@@ -175,6 +166,6 @@ export default class Calculator extends Controller {
 			});
 		});
 
-		this.viewModel.setProperty('/forgePreview/Preview', outcomes);
+		this.viewModel.setProperty('/forge/Preview', outcomes);
 	}
 }

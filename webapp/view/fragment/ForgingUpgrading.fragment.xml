@@ -5,15 +5,15 @@
   xmlns:core="sap.ui.core">
   <WizardStep id="ForgingUpgradingStep"
     validated="false"
-    title="Product Information"
+    title="Forging"
     activate="additionalInfoValidation">
     <MessageStrip class="sapUiSmallMarginBottom"
-      text="Here you can set the material to be used in each of the squares."
+      text="Here you can set the materials and their levels to be used in the forging process. Finally choosing a desired inheritance outcome."
       showIcon="true"/>
     <Title text="Forging" class="sapUiSmallMarginBottom"/>
     <core:Fragment fragmentName="rf.calculator.view.fragment.MaterialCard" type="XML"/>
-    <Title text="Preview" />
-    <VBox items="{/forgePreview/Preview}" >
+    <Title text="Preview" class="sapUiSmallMarginBottom sapUiSmallMarginTop"/>
+    <VBox items="{/forge/Preview}" >
       <HBox items="{results}" renderType="Div">
         <items>
           <HBox >

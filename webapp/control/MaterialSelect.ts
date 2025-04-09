@@ -18,13 +18,12 @@ import FilterOperator from 'sap/ui/model/FilterOperator';
 export default class MaterialSelect extends Control {
 	static readonly metadata: MetadataOptions = {
 		properties: {
-			query: { type: 'any', defaultValue: '' },
+			items: { type: 'any', defaultValue: '' },
 			/**
 			 * The destination for changes of the control, attached with selectionChange event.
 			 */
 			fieldName: { type: 'string', defaultValue: '' },
-			materials: { type: 'array', defaultValue: '' },
-			materialId: { type: 'string', defaultValue: '' },
+			selectedItem: { type: 'any', defaultValue: null },
 		},
 		aggregations: {
 			_select: { type: 'sap.m.Select', multiple: false, visibility: 'hidden' },
@@ -53,43 +52,46 @@ export default class MaterialSelect extends Control {
 		this.setAggregation(
 			'_select',
 			new Select({
-				change: this._onSelectionChange.bind(this),
 				forceSelection: false,
+				change: this._onSelectionChange.bind(this),
 			})
 		);
 	}
 
 	_onSelectionChange(event: Select$ChangeEvent): void {
-		const selectedItem = event.getParameter('selectedItem');
-		if (!selectedItem) return;
-		const data = selectedItem.getBindingContext('data')?.getObject();
-		if (!data) return;
-		const fieldName = this.getProperty('fieldName');
-		if (fieldName === '') throw new Error('fieldName is not set');
-		this.fireSelectionChange({ data, fieldName });
+		const selectedItem = event.getParameter('selectedItem'),
+			data = selectedItem?.getBindingContext('data')?.getObject();
+		if (!selectedItem || !data) return;
+		this.setProperty('selectedItem', data, true);
 	}
 
-	setQuery(query: string | undefined): this {
-		this.setProperty('query', query, true);
-		if (query) {
-			const select = this.getAggregation('_select') as Select;
-			select?.bindItems(this._buildSelect(query));
-			select.setSelectedKey('');
-		}
+	setFieldName(fieldName: string): this {
+		this.setProperty('fieldName', fieldName, true);
 		return this;
 	}
 
-	setMaterialId(id: string | undefined): this {
-		if (!id) return this;
-		this.setProperty('materialId', id, true);
-		(this.getAggregation('_select') as Select)
-			.setForceSelection(true)
-			.bindItems({
-				path: `/Materials`,
-				model: 'data',
-				templateShareable: true,
-				filters: [new Filter({ path: 'ID', operator: FilterOperator.EQ, value1: id })],
-				template: this._itemTemplate(),
+	setItems(items: string | Array<any> | undefined): this {
+		this.setProperty('items', items, true);
+		// Set to empty when no items and fire change event
+		if (!items) return this;
+		let binding;
+		if (Array.isArray(items)) {
+			binding = {
+				filters: items.map((item) => new Filter({ path: 'ID', operator: FilterOperator.EQ, value1: item.ID })),
+			};
+		} else if (isNaN(parseInt(items)))
+			binding = {
+				filters: [
+					new Filter({
+						path: 'Category',
+						operator: FilterOperator.Contains,
+						value1: items,
+					}),
+				],
+			};
+		else
+			binding = {
+				filters: [new Filter({ path: 'ID', operator: FilterOperator.EQ, value1: items })],
 				events: {
 					dataReceived: () => {
 						(this.getAggregation('_select') as Select)?.fireChange({
@@ -97,44 +99,34 @@ export default class MaterialSelect extends Control {
 						});
 					},
 				},
-			})
-			.setEditable(false);
-		return this;
-	}
-
-	setMaterials(materials: Array<any> | undefined): this {
-		this.setProperty('materials', materials, true);
-		if (!materials) return this;
-		const select = this.getAggregation('_select') as Select;
-		select.bindItems({
-			model: 'data',
-			path: '/Materials',
-			filters: materials.map((item) => new Filter({ path: 'ID', operator: FilterOperator.EQ, value1: item.ID })),
-			templateShareable: true,
-			template: this._itemTemplate(),
-		});
+			};
+		this._buildSelect(binding, 'events' in binding, !('events' in binding));
 		return this;
 	}
 
 	reset(): void {
-		this.setQuery('');
-		this.setMaterials('');
+		this.setItems('');
 		(this.getAggregation('_select') as Select)?.removeAllItems();
 	}
 
-	_buildSelect(query: string) {
-		return {
-			path: 'data>/Materials',
-			templateShareable: true,
-			filters: [
-				new Filter({
-					path: 'Category',
-					operator: FilterOperator.Contains,
-					value1: query,
-				}),
-			],
-			template: this._itemTemplate(),
-		};
+	_buildSelect(binding: Omit<AggregationBindingInfo, 'path'>, forceSelection: boolean, editable: boolean) {
+		const select = this.getAggregation('_select') as Select;
+		select.setSelectedKey('');
+		select.removeAllItems();
+		select
+			.setForceSelection(forceSelection)
+			.bindItems(
+				Object.assign(
+					{
+						model: 'data',
+						path: '/Materials',
+						templateShareable: true,
+						template: this._itemTemplate(),
+					},
+					binding
+				)
+			)
+			.setEditable(editable);
 	}
 
 	_itemTemplate() {
