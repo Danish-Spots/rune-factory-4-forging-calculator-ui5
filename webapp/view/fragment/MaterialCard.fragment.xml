@@ -11,12 +11,12 @@
       </f:header>
       <f:content>
         <VBox >
-          <rf:MaterialSelect
+          <rf:MaterialComboBox
             fieldName="{Field_Name}"
             selectedItem="{Material}"
             items="{= ${Select_Query} ? ${Select_Query} : ${/selectedItems} }"
             selectionChange=".onMaterialSelected">
-          </rf:MaterialSelect>
+          </rf:MaterialComboBox>
           <Label
             text="Material Level"
             ></Label>
@@ -27,8 +27,8 @@
           <rf:StatRender
             fieldName="{Field_Name}"
             stats="{
-              matPath: '/forgePreview/Materials/Key/Stats',
-              htmlPath: 'Stat_HTML'
+              mPath: 'Material/Stats',
+              sHtml: 'Stat_HTML'
             }"
             class="sapUiMediumMarginBottom" />
         </VBox>

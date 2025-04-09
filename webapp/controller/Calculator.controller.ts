@@ -17,7 +17,7 @@ import { WizardButtons } from './Calculator/WizardButtons';
 import { MaterialChoiceTable } from './Calculator/MaterialChoiceTable';
 import Control from 'sap/ui/core/Control';
 import FlexBox from 'sap/m/FlexBox';
-import { MaterialSelect$SelectionChangeEvent } from '../control/MaterialSelect';
+import { MaterialComboBox$SelectionChangeEvent } from '../control/MaterialComboBox';
 import { calculateInheritanceOutcomes, calculateUpgrades } from '../model/calculator';
 import { MaterialItem } from '../model/types';
 import { LevelSlider$ChangeEvent } from '../control/LevelSlider';

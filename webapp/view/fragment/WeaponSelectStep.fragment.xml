@@ -41,8 +41,8 @@
             </ObjectIdentifier>
             <rf:StatRender
               stats="{
-                matPath: 'data>Stats',
-                htmlPath: 'data>Stat_HTML'
+                mPath: 'data>Stats',
+                sHtml: 'data>Stat_HTML'
               }" />
             <Text text="{data>Material_1}"/>
             <Text text="{data>Material_2}"/>

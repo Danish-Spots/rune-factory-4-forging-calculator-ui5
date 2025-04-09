@@ -8,7 +8,6 @@ declare module "./StatRender" {
      */
     interface $StatRenderSettings extends $ControlSettings {
         stats?: any | PropertyBindingInfo | `{${string}}`;
-        fieldName?: string | PropertyBindingInfo;
     }
 
     export default interface StatRender {
@@ -16,9 +15,5 @@ declare module "./StatRender" {
         // property: stats
         getStats(): any;
         setStats(stats: any): this;
-
-        // property: fieldName
-        getFieldName(): string;
-        setFieldName(fieldName: string): this;
     }
 }

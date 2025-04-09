@@ -2,12 +2,12 @@ import Event from "sap/ui/base/Event";
 import { PropertyBindingInfo } from "sap/ui/base/ManagedObject";
 import { $ControlSettings } from "sap/ui/core/Control";
 
-declare module "./MaterialSelect" {
+declare module "./MaterialComboBox" {
 
     /**
      * Interface defining the settings object used in constructor calls
      */
-    interface $MaterialSelectSettings extends $ControlSettings {
+    interface $MaterialComboBoxSettings extends $ControlSettings {
         items?: any | PropertyBindingInfo | `{${string}}`;
 
         /**
@@ -15,10 +15,10 @@ declare module "./MaterialSelect" {
          */
         fieldName?: string | PropertyBindingInfo;
         selectedItem?: any | PropertyBindingInfo | `{${string}}`;
-        selectionChange?: (event: MaterialSelect$SelectionChangeEvent) => void;
+        selectionChange?: (event: MaterialComboBox$SelectionChangeEvent) => void;
     }
 
-    export default interface MaterialSelect {
+    export default interface MaterialComboBox {
 
         // property: items
         getItems(): any;
@@ -41,22 +41,22 @@ declare module "./MaterialSelect" {
         setSelectedItem(selectedItem: any): this;
 
         // event: selectionChange
-        attachSelectionChange(fn: (event: MaterialSelect$SelectionChangeEvent) => void, listener?: object): this;
-        attachSelectionChange<CustomDataType extends object>(data: CustomDataType, fn: (event: MaterialSelect$SelectionChangeEvent, data: CustomDataType) => void, listener?: object): this;
-        detachSelectionChange(fn: (event: MaterialSelect$SelectionChangeEvent) => void, listener?: object): this;
-        fireSelectionChange(parameters?: MaterialSelect$SelectionChangeEventParameters): this;
+        attachSelectionChange(fn: (event: MaterialComboBox$SelectionChangeEvent) => void, listener?: object): this;
+        attachSelectionChange<CustomDataType extends object>(data: CustomDataType, fn: (event: MaterialComboBox$SelectionChangeEvent, data: CustomDataType) => void, listener?: object): this;
+        detachSelectionChange(fn: (event: MaterialComboBox$SelectionChangeEvent) => void, listener?: object): this;
+        fireSelectionChange(parameters?: MaterialComboBox$SelectionChangeEventParameters): this;
     }
 
     /**
-     * Interface describing the parameters of MaterialSelect's 'selectionChange' event.
+     * Interface describing the parameters of MaterialComboBox's 'selectionChange' event.
      */
-    export interface MaterialSelect$SelectionChangeEventParameters {
+    export interface MaterialComboBox$SelectionChangeEventParameters {
         data?: object;
         fieldName?: string;
     }
 
     /**
-     * Type describing the MaterialSelect's 'selectionChange' event.
+     * Type describing the MaterialComboBox's 'selectionChange' event.
      */
-    export type MaterialSelect$SelectionChangeEvent = Event<MaterialSelect$SelectionChangeEventParameters>;
+    export type MaterialComboBox$SelectionChangeEvent = Event<MaterialComboBox$SelectionChangeEventParameters>;
 }
