@@ -23,6 +23,7 @@ import { MaterialItem } from '../model/types';
 import { LevelSlider$ChangeEvent } from '../control/LevelSlider';
 import { Gear, StatKey } from '../model/enums';
 import ODataModel from 'sap/ui/model/odata/v4/ODataModel';
+import Material from './Material.controller';
 /**
  * @name rf.calculator.controller
  */
@@ -30,7 +31,10 @@ export default class Calculator extends Controller {
 	dialog: Dialog;
 	viewSettingsDialogs: Record<string, Dialog> = {};
 	viewModel = new JSONModel({
-		selectionCount: 0,
+		wizard: {
+			ForgeStep: false,
+			WeaponStep: true,
+		},
 		forge: {
 			gear: 'Weapon',
 			Materials: [],
@@ -107,10 +111,23 @@ export default class Calculator extends Controller {
 		const selectedItem = (event as any).getParameter('listItem');
 		const item = selectedItem.getBindingContext('data')?.getObject();
 
-		this.viewModel.setProperty('/selectedWeapon', item);
-		this.viewModel.setProperty('/nextButtonEnabled', true);
-		this.viewModel.setProperty('/forge/Materials', item.Materials);
-		this.viewModel.setProperty('/forge/Preview', []);
+		this.viewModel.setData({
+			wizard: {
+				ForgeStep: false,
+				WeaponStep: true,
+			},
+			selectedWeapon: item,
+			nextButtonEnabled: true,
+			forge: {
+				Materials: item.Materials,
+			},
+		});
+
+		// this.viewModel.setProperty('/selectedWeapon', item);
+		// this.viewModel.setProperty('/nextButtonEnabled', true);
+		// this.viewModel.setProperty('/forge/Materials', item.Materials);
+		// this.viewModel.setProperty('/forge/Preview', []);
+		// this.viewModel.setProperty('/forge/SelectedOutcome', null);
 	}
 
 	onNextPressed(): void {

@@ -71,6 +71,7 @@ export default class ForgePreview extends Control {
 
 		table.removeAllItems();
 		table.removeAllColumns();
+		if (!outcomes) return this;
 		const addColumn = (header: string) => {
 			table.addColumn(
 				new Column({
@@ -88,13 +89,14 @@ export default class ForgePreview extends Control {
 			outcome.stats.forEach((stat: any) => acc.push(stat.key));
 			return acc;
 		}, []);
-		const uniqueKeys = Array.from(new Set(statKeys));
+		const uniqueKeys = Array.from(new Set(statKeys)).filter(
+			(key: string) => key !== 'atk' && key !== 'matk' && key !== 'def' && key !== 'mdef'
+		);
 		uniqueKeys.forEach((key: string) => {
-			if (key === 'atk' || key === 'matk' || key === 'def' || key === 'mdef') return;
 			addColumn(key);
 		});
 		outcomes.forEach((outcome: any) => {
-			const cells = ['', '', '', ''];
+			let cells = outcome.stats.map(() => '');
 			outcome.stats.forEach((stat: any) => {
 				const index = ['atk', 'matk', 'def', 'mdef'].indexOf(stat.key);
 				if (index !== -1) {
@@ -106,7 +108,11 @@ export default class ForgePreview extends Control {
 					}
 				}
 			});
-
+			cells = Array.from(cells, (_, i) => {
+				if (!(i in cells)) return null;
+				else return cells[i];
+			});
+			console.log(cells);
 			table.addItem(
 				new ColumnListItem({
 					cells: [...cells.map((cell: string) => new Text({ text: cell }))],

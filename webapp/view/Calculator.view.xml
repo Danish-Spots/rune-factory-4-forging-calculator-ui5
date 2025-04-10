@@ -110,13 +110,15 @@
             press=".onPreviousPressed"/>
             <!-- Weapon selection -->
            <Button
-            enabled="{/nextButtonEnabled}"
+            enabled="{= ${/selectedWeapon} ? true : false }"
+            visible="{/wizard/WeaponStep}"
             type="Emphasized"
             text="Next"
             press=".onNextPressed"/>
             <!-- Forging -->
            <Button
-            enabled="{/nextButtonEnabled}"
+            enabled="{= ${/forge/SelectedOutcome} ? true : false }"
+            visible="{/wizard/ForgeStep}"
             type="Emphasized"
             text="Next"
             press=".onNextPressed"/>

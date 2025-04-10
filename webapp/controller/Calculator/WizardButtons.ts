@@ -35,18 +35,16 @@ export class WizardButtons {
 		this.checkButtonState();
 	}
 
-	static handleStepChange(): void {
-		console.log('handleStepChange');
-	}
-
 	static checkButtonState(this: Calculator): void {
 		switch (this.stepIndex) {
 			case 0:
-				this.viewModel.setProperty('/nextButtonVisible', true);
+				this.viewModel.setProperty('/wizard/WeaponStep', true);
+				this.viewModel.setProperty('/wizard/ForgeStep', false);
 				this.viewModel.setProperty('/previousButtonVisible', false);
 				break;
 			case 1:
-				this.viewModel.setProperty('/nextButtonVisible', true);
+				this.viewModel.setProperty('/wizard/WeaponStep', false);
+				this.viewModel.setProperty('/wizard/ForgeStep', true);
 				this.viewModel.setProperty('/previousButtonVisible', true);
 			default:
 				break;
