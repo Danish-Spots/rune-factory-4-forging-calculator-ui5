@@ -17,16 +17,27 @@ export class WizardButtons {
 	}
 
 	static onNavigationChange(this: Calculator, event: Event): void {
-		console.log(event);
 		this.step = (event as any).getParameter('step') as WizardStep;
 		this.stepIndex = (this.byId('ForgingWizard') as Wizard).getSteps().indexOf(this.step);
 
 		this.checkButtonState();
 	}
 
-	static onPreviousPressed(): void {}
+	static onPreviousPressed(this: Calculator): void {
+		const wizard = this.byId('ForgingWizard') as Wizard;
+		this.stepIndex = wizard.getSteps().indexOf(this.step);
+		const previousStep = wizard.getSteps()[this.stepIndex - 1];
+		if (this.step && !(this.step as any).bLast) wizard.goToStep(previousStep, true);
+		else wizard.previousStep();
 
-	static handleStepChange(): void {}
+		this.stepIndex--;
+		this.step = previousStep;
+		this.checkButtonState();
+	}
+
+	static handleStepChange(): void {
+		console.log('handleStepChange');
+	}
 
 	static checkButtonState(this: Calculator): void {
 		switch (this.stepIndex) {

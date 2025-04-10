@@ -15,47 +15,13 @@
     <core:Fragment fragmentName="rf.calculator.view.fragment.MaterialCard" type="XML"/>
     <Title text="Preview" class="sapUiSmallMarginBottom sapUiSmallMarginTop"/>
 
-    <Table
-      mode="SingleSelectLeft"
-      includeItemInSelection="true"
-      items="{/forge/Preview}">
-      <columns>
-        <Column>
-          <Text text="Primary stats"></Text>
-        </Column>
-        <Column >
-          <Text text="Secondary stats"/>
-        </Column>
-      </columns>
-      <items>
-        <ColumnListItem >
-          <cells>
-            <rf:StatRender
-              stats="{mPath: 'primaryStats', sHtml: 'html'}">
-            </rf:StatRender>
-            <rf:StatRender
-              stats="{mPath: 'secondaryStats', sHtml: 'html'}"/>
-          </cells>
-        </ColumnListItem>
-      </items>
-    </Table>
-    <rf:ForgePreview outcomes="{/forge/Preview}"/>
 
-    <!-- <List
-      items="{/forge/Preview}"
-      mode="SingleSelectLeft"
-      includeItemInSelection="true">
-      <CustomListItem>
-        <HBox class="sapUiSmallMarginBottom sapUiSmallMarginTop">
-          <rf:StatRender
-            stats="{mPath: 'primaryStats', sHtml: 'html'}"
-            />
-          <rf:StatRender
-            stats="{mPath: 'secondaryStats', sHtml: 'html'}"
-            class="sapUiLargeMarginBegin"/>
-        </HBox>
-      </CustomListItem>
-    </List> -->
+    <rf:ForgePreview
+      outcomes="{/forge/Preview}"
+      selectedOutcome="{/forge/SelectedOutcome}"
+    />
+
+
 
   </WizardStep>
 </core:FragmentDefinition>

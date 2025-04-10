@@ -51,6 +51,7 @@ class DataService extends cds.ApplicationService {
 					if (m[key] !== undefined && m[key] !== null)
 						m.Stats.push({ Stat_Key: key, Stat_Value: m[key], Stat_HTML: createStatHtml(key, m[key]) });
 				});
+				Object.assign(m, { StatJoin: m.Stats.map((s) => `${s.Stat_Key} - ${s.Stat_Value}`).join(", ") });
 			});
 		});
 		this.on("CalculateOutcomes", calculateOutcomes);

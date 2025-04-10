@@ -1,43 +1,3 @@
-const statInfoKeys = [
-	"matk",
-	"def",
-	"mdef",
-	"str",
-	"vit",
-	"atk",
-	"drainAtk",
-	"int",
-	"parAtk",
-	"crit",
-	"drainRes",
-	"psnAtk",
-	"sickAtk",
-	"slpAtk",
-	"sealAtk",
-	"psnRes",
-	"sealRes",
-	"parRes",
-	"slpRes",
-	"ftgRes",
-	"sickRes",
-	"diz",
-	"knockAtk",
-	"faintRes",
-	"dizRes",
-	"critRes",
-	"knockRes",
-	"knock",
-	"stun",
-	"ftgAtk",
-	"faintAtk",
-	"upgradeEffct",
-	"effect",
-	"fireRes",
-	"waterRes",
-	"windRes",
-	"earthRes",
-];
-
 const statKeyMap = new Map([
 	["matk", "Magic Attack"],
 	["def", "Defense"],
@@ -80,7 +40,7 @@ const statKeyMap = new Map([
 
 export const createStatHtml = (key, value) => {
 	return `<p style="height: 100%; width: 100%; display: flex; flex-direction: column; margin: 0; gap: 4px;">
-      <span style="font-weight: bold;"> ${statKeyMap.get(key)} </span>
+      <span style="font-weight: bold;"> ${key} </span>
       <span> ${value} </span>
      </p>`;
 };

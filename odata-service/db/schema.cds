@@ -16,8 +16,7 @@ type WeaponStat {
 }
 
 type StatArray {
-  primaryStats: array of Stat;
-  secondaryStats: array of Stat;
+  stats: array of Stat;
 }
 type MaterialType {
   ID         : Integer;
@@ -73,6 +72,7 @@ entity Material {
   Category     : String;
   Difficulty   : Integer;
   virtual Stats   : array of  Stat;
+  virtual StatJoin : String;
   Drops       : Association to many Drop on Drops.Material = $self;
 
   matk      : Integer;

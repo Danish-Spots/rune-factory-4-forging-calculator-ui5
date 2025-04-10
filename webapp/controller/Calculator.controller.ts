@@ -60,7 +60,8 @@ export default class Calculator extends Controller {
 
 	onInit(): void | undefined {
 		this.getView()?.setModel(this.viewModel);
-		this.step = this.byId('ForgingWizardStep') as WizardStep;
+		this.step = this.byId('WeaponChoiceStep') as WizardStep;
+		this.stepIndex = 0;
 		this.viewModel.setProperty('/nextButtonEnabled', false);
 
 		this.checkButtonState();
@@ -109,6 +110,7 @@ export default class Calculator extends Controller {
 		this.viewModel.setProperty('/selectedWeapon', item);
 		this.viewModel.setProperty('/nextButtonEnabled', true);
 		this.viewModel.setProperty('/forge/Materials', item.Materials);
+		this.viewModel.setProperty('/forge/Preview', []);
 	}
 
 	onNextPressed(): void {
@@ -119,9 +121,9 @@ export default class Calculator extends Controller {
 		WizardButtons.onNavigationChange.call(this, event);
 	}
 
-	onPreviousPressed(): void {}
-
-	handleStepChange(): void {}
+	onPreviousPressed(): void {
+		WizardButtons.onPreviousPressed.call(this);
+	}
 
 	checkButtonState(): void {
 		WizardButtons.checkButtonState.call(this);

@@ -9,6 +9,7 @@ import Item from 'sap/ui/core/Item';
 import RenderManager from 'sap/ui/core/RenderManager';
 import Filter from 'sap/ui/model/Filter';
 import FilterOperator from 'sap/ui/model/FilterOperator';
+import Sorter from 'sap/ui/model/Sorter';
 
 /**
  * @extends sap.ui.core.Control
@@ -108,10 +109,17 @@ export default class MaterialComboBox extends Control {
 	}
 
 	_buildEmptyComboBox() {
-		const comboBox = this.getAggregation('_comboBox') as ComboBox;
-		comboBox.setSelectedKey('');
-		comboBox.removeAllItems();
-		comboBox.setEditable(true);
+		// const comboBox = this.getAggregation('_comboBox') as ComboBox;
+		// comboBox.setSelectedKey('');
+		// comboBox.removeAllItems();
+		// comboBox.setEditable(true);
+		this._buildComboBox(
+			{
+				sorter: [new Sorter({ path: 'Rarity', descending: true })],
+				length: 250,
+			},
+			true
+		);
 	}
 
 	_buildComboBox(binding: Omit<AggregationBindingInfo, 'path'>, editable: boolean) {
@@ -136,7 +144,7 @@ export default class MaterialComboBox extends Control {
 	_itemTemplate() {
 		return new Item({
 			key: '{data>ID}',
-			text: '{data>Name} - Rarity: {data>Rarity}',
+			text: '{data>Name} - Rarity: {data>Rarity} | {data>StatJoin}',
 		});
 	}
 }

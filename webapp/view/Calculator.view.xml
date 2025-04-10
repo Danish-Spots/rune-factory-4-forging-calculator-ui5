@@ -19,7 +19,7 @@
           renderMode="Page"
           navigationChange=".onNavigationChange">
             <core:Fragment fragmentName="rf.calculator.view.fragment.WeaponSelectStep" type="XML"/>
-          <WizardStep id="MaterialChoiceStep"
+          <!-- <WizardStep id="MaterialChoiceStep"
                 title="Choose materials"
                 validated="true">
             <MessageStrip class="sapUiSmallMarginBottom"
@@ -32,7 +32,7 @@
               </items>
             </List>
             <Button text="Choose materials" press=".openChooseMaterialDialog"/>
-          </WizardStep>
+          </WizardStep> -->
           <core:Fragment fragmentName="rf.calculator.view.fragment.ForgingUpgrading" type="XML"/>
           <WizardStep id="OptionalInfoStep"
                 validated="true"
@@ -106,7 +106,15 @@
           <ToolbarSpacer />
            <Button
             visible="{/previousButtonVisible}"
-            text="Previous"/>
+            text="Previous"
+            press=".onPreviousPressed"/>
+            <!-- Weapon selection -->
+           <Button
+            enabled="{/nextButtonEnabled}"
+            type="Emphasized"
+            text="Next"
+            press=".onNextPressed"/>
+            <!-- Forging -->
            <Button
             enabled="{/nextButtonEnabled}"
             type="Emphasized"

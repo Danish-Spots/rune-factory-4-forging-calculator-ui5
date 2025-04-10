@@ -49,7 +49,7 @@ const calculateStats = (materials: MaterialItem[]) => {
 	for (const material of materials) {
 		for (const stat of material.Stats) {
 			const statKey = stat.Stat_Key;
-			const statValue = parseInt(stat.Stat_Value);
+			const statValue = parseFloat(stat.Stat_Value);
 			if (!results[statKey]) results[statKey] = statValue;
 			else results[statKey] += statValue;
 		}
@@ -79,6 +79,17 @@ export const calculateInheritanceOutcomes = (materials: MaterialItem[]): { [key:
 		}
 	};
 	helper(0, []);
+
+	// console.log(results);
+
+	results = results.map((r) => {
+		const keys = Object.keys(r).sort();
+		const sortedObj: { [key: string]: number } = {};
+		keys.forEach((key) => {
+			sortedObj[key] = r[key];
+		});
+		return sortedObj;
+	});
 
 	results = Array.from(new Set(results.map((r) => JSON.stringify(r)))).map((r) => JSON.parse(r));
 	return results;

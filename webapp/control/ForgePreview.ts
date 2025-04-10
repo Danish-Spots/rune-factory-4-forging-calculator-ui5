@@ -9,6 +9,15 @@ import RenderManager from 'sap/ui/core/RenderManager';
 import StatRender from './StatRender';
 import HBox from 'sap/m/HBox';
 import FormattedText from 'sap/m/FormattedText';
+import Fragment from 'sap/ui/core/Fragment';
+import Menu from 'sap/m/table/columnmenu/Menu';
+import QuickSort, { QuickSort$ChangeEvent } from 'sap/m/table/columnmenu/QuickSort';
+import QuickSortItem from 'sap/m/table/columnmenu/QuickSortItem';
+import Sorter from 'sap/ui/model/Sorter';
+import ResourceModel from 'sap/ui/model/resource/ResourceModel';
+import ResourceBundle from 'sap/base/i18n/ResourceBundle';
+import { ListBase$SelectionChangeEvent } from 'sap/m/ListBase';
+import CustomData from 'sap/ui/core/CustomData';
 /**
  * @extends sap.ui.core.Control
  *
@@ -19,9 +28,13 @@ export default class ForgePreview extends Control {
 	static readonly metadata: MetadataOptions = {
 		properties: {
 			outcomes: { type: 'any', defaultValue: {} },
+			selectedOutcome: { type: 'any', defaultValue: {} },
 		},
 		aggregations: {
 			_table: { type: 'sap.m.Table', multiple: false, visibility: 'hidden' },
+		},
+		events: {
+			change: {},
 		},
 	};
 
@@ -34,30 +47,6 @@ export default class ForgePreview extends Control {
 			rm.close('div');
 		},
 	};
-	// <Table
-	//     mode="SingleSelectLeft"
-	//     includeItemInSelection="true"
-	//     items="{/forge/Preview}">
-	//     <columns>
-	//       <Column>
-	//         <Text text="Primary stats"></Text>
-	//       </Column>
-	//       <Column >
-	//         <Text text="Secondary stats"/>
-	//       </Column>
-	//     </columns>
-	//     <items>
-	//       <ColumnListItem >
-	//         <cells>
-	//           <rf:StatRender
-	//             stats="{mPath: 'primaryStats', sHtml: 'html'}">
-	//           </rf:StatRender>
-	//           <rf:StatRender
-	//             stats="{mPath: 'secondaryStats', sHtml: 'html'}"/>
-	//         </cells>
-	//       </ColumnListItem>
-	//     </items>
-	//   </Table>
 
 	init() {
 		this.setAggregation(
@@ -65,6 +54,12 @@ export default class ForgePreview extends Control {
 			new Table({
 				mode: 'SingleSelectLeft',
 				includeItemInSelection: true,
+				selectionChange: (event: ListBase$SelectionChangeEvent) => {
+					const selectedItem = event.getParameter('listItem');
+					const selectedOutcome = selectedItem?.getCustomData()[0]?.getValue();
+					this.setProperty('selectedOutcome', selectedOutcome, true);
+					this.fireChange();
+				},
 			})
 		);
 	}
@@ -72,59 +67,57 @@ export default class ForgePreview extends Control {
 	setOutcomes(outcomes: any): this {
 		this.setProperty('outcomes', outcomes, true);
 		const table = this.getAggregation('_table') as Table;
+		const resourceBundle = (this.getModel('i18n') as ResourceModel)?.getResourceBundle() as ResourceBundle;
+
 		table.removeAllItems();
 		table.removeAllColumns();
 		const addColumn = (header: string) => {
 			table.addColumn(
 				new Column({
-					header: new Text({ text: header }),
+					header: new Text({ text: resourceBundle?.getText(header) ?? '-' }),
 				})
 			);
 		};
-		addColumn('Attack');
-		addColumn('Magic Attack');
-		addColumn('Defence');
-		addColumn('Magic Defence');
+		addColumn('atk');
+		addColumn('matk');
+		addColumn('def');
+		addColumn('mdef');
 
 		// flatten stat keys
-		const statKeys: string[] = outcomes.reduce((acc: string[], outcome: { secondaryStats: any[] }) => {
-			outcome.secondaryStats.forEach((stat: any) => acc.push(stat.key));
+		const statKeys: string[] = outcomes.reduce((acc: string[], outcome: { stats: any[] }) => {
+			outcome.stats.forEach((stat: any) => acc.push(stat.key));
 			return acc;
 		}, []);
 		const uniqueKeys = Array.from(new Set(statKeys));
 		uniqueKeys.forEach((key: string) => {
+			if (key === 'atk' || key === 'matk' || key === 'def' || key === 'mdef') return;
 			addColumn(key);
 		});
 		outcomes.forEach((outcome: any) => {
 			const cells = ['', '', '', ''];
-			outcome.primaryStats.forEach((stat: any) => {
+			outcome.stats.forEach((stat: any) => {
 				const index = ['atk', 'matk', 'def', 'mdef'].indexOf(stat.key);
 				if (index !== -1) {
 					cells[index] = stat.value;
-				}
-			});
-			outcome.secondaryStats.forEach((stat: any) => {
-				const index = uniqueKeys.indexOf(stat.key);
-				if (index !== -1) {
-					cells[index + 4] = stat.value;
+				} else {
+					const index = uniqueKeys.indexOf(stat.key);
+					if (index !== -1) {
+						cells[index + 4] = stat.value;
+					}
 				}
 			});
 
-			// const hbox = new HBox({
-			// 	items: outcome.secondaryStats.map((stat: any) => new FormattedText({ htmlText: stat.html })),
-			// });
 			table.addItem(
 				new ColumnListItem({
 					cells: [...cells.map((cell: string) => new Text({ text: cell }))],
+					customData: new CustomData({
+						key: 'outcome',
+						value: outcome,
+					}),
 				})
 			);
 		});
 
-		// table.addItem(
-		// 	new ColumnListItem({
-		// 		cells: [new Text({ text: '{primaryStats}' }), new Text({ text: '{secondaryStats}' })],
-		// 	})
-		// );
 		return this;
 	}
 }
