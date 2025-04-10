@@ -33,72 +33,8 @@
             </List>
             <Button text="Choose materials" press=".openChooseMaterialDialog"/>
           </WizardStep> -->
-          <core:Fragment fragmentName="rf.calculator.view.fragment.ForgingUpgrading" type="XML"/>
-          <WizardStep id="OptionalInfoStep"
-                validated="true"
-                activate="optionalStepActivation"
-                title="Optional Information">
-            <MessageStrip class="sapUiSmallMarginBottom"
-                text="You can validate steps by default with the validated='true' property of the step. The next button is always enabled."
-                showIcon="true"/>
-            <Text text="Integer pellentesque leo sit amet dui vehicula, quis ullamcorper est pulvinar. Nam in libero sem. Suspendisse arcu metus, molestie a turpis a, molestie aliquet dui. Donec ppellentesque leo sit amet dui vehicula, quis ullamcorper est pulvinar. Nam in libero sem. Suspendisse arcu metus, molestie a turpis a, molestie aliquet dui. Donec pulvinar, sapien	corper eu, posuere malesuada nisl. Integer pellentesque leo sit amet dui vehicula, quis ullamcorper est pulvinar. Nam in libero sem. Suspendisse arcu metus, molestie a turpis a, molestie aliquet dui. Donec pulvinar, sapien	"/>
-            <form:SimpleForm
-                editable="true"
-                layout="ResponsiveGridLayout">
-              <Label text="Cover photo"/>
-              <u:FileUploader
-                  width="100%"
-                  tooltip="Upload product cover photo to the local server"
-                  style="Emphasized"
-                  placeholder="Choose a file for Upload..."/>
-              <Label text="Manufacturing date"/>
-              <DatePicker
-                  id="DP3"
-                  displayFormat="short"
-                  value="{/manufacturingDate}"/>
-              <Label text="Availability"/>
-              <SegmentedButton selectedKey="{/availabilityType}">
-                <items>
-                  <SegmentedButtonItem key="In store" text="In store"/>
-                  <SegmentedButtonItem key="In depot" text="In depot"/>
-                  <SegmentedButtonItem key="In repository" text="In repository"/>
-                  <SegmentedButtonItem key="Out of stock" text="Out of stock"/>
-                </items>
-              </SegmentedButton>
-              <Label text="Size"/>
-              <Input value="{/size}"/>
-              <ComboBox maxWidth="100px" selectedKey="{/measurement}">
-                <core:Item key="X" text="X"/>
-                <core:Item key="Y" text="Y"/>
-                <core:Item key="Z" text="Z"/>
-              </ComboBox>
-
-            </form:SimpleForm>
-          </WizardStep>
-          <WizardStep id="PricingStep"
-                activate="pricingActivate"
-                complete="pricingComplete"
-                validated="true"
-                title="Pricing">
-            <MessageStrip class="sapUiSmallMarginBottom"
-                text="You can use the wizard previousStep() and nextStep() methods to navigate from step to step without validation. Also you can use the GoToStep(step) method to scroll programmatically to previously visited steps."
-                showIcon="true"/>
-            <form:SimpleForm
-                editable="true"
-                layout="ResponsiveGridLayout">
-              <Label text="Price"/>
-              <Input value="{/productPrice}"/>
-              <Label text="Discount group"/>
-              <ComboBox selectedKey="{/discountGroup}">
-                <core:Item key="Kids" text="Kids"/>
-                <core:Item key="Teens" text="Teens"/>
-                <core:Item key="Adults" text="Adults"/>
-                <core:Item key="Elderly" text="Elderly"/>
-              </ComboBox>
-              <Label text=" VAT is included"/>
-              <CheckBox selected="{/productVAT}"/>
-            </form:SimpleForm>
-          </WizardStep>
+          <core:Fragment fragmentName="rf.calculator.view.fragment.Forging" type="XML"/>
+          <core:Fragment fragmentName="rf.calculator.view.fragment.Upgrading" type="XML"/>
         </Wizard>
       </f:content>
       <f:footer>

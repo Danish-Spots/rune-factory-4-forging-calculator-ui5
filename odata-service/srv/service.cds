@@ -16,4 +16,6 @@ service DataService {
       bonuses: RF_Entity.MaterialStat,
       weaponStats: array of RF_Entity.WeaponStat,
     ) returns array of RF_Entity.StatArray;
+
+    function UpgradeMaterials() returns  RF_Entity.UpgradeMaterial
 }

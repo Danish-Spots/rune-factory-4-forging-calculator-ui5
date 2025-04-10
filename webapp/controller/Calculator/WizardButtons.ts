@@ -2,6 +2,10 @@ import Wizard from 'sap/m/Wizard';
 import Calculator from '../Calculator.controller';
 import WizardStep from 'sap/m/WizardStep';
 import Event from 'sap/ui/base/Event';
+import FlexBox from 'sap/m/FlexBox';
+import Control from 'sap/ui/core/Control';
+import Context from 'sap/ui/model/Context';
+import Fragment from 'sap/ui/core/Fragment';
 
 export class WizardButtons {
 	static onNextPressed(this: Calculator): void {
@@ -46,6 +50,26 @@ export class WizardButtons {
 				this.viewModel.setProperty('/wizard/WeaponStep', false);
 				this.viewModel.setProperty('/wizard/ForgeStep', true);
 				this.viewModel.setProperty('/previousButtonVisible', true);
+				const flexBox = this.byId('UpgradeFlexBox') as FlexBox;
+				if (flexBox.getItems().length > 0) break;
+				const promises = [];
+				for (let i = 0; i < 10; i++) {
+					const fragment = this.loadFragment({
+						name: 'rf.calculator.view.fragment.MaterialCardNew',
+					});
+					promises.push(fragment);
+					fragment.then((frag) => {
+						(frag as Control).setBindingContext(
+							this.viewModel.createBindingContext('/upgrade/Materials/' + i) as Context
+						);
+						flexBox.addItem(frag as Control);
+					});
+					Promise.all(promises).then(() => {
+						flexBox.invalidate();
+					});
+				}
+				break;
+			case 2:
 			default:
 				break;
 		}

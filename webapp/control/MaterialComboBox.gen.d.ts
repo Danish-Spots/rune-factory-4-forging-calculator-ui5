@@ -9,11 +9,6 @@ declare module "./MaterialComboBox" {
      */
     interface $MaterialComboBoxSettings extends $ControlSettings {
         items?: any | PropertyBindingInfo | `{${string}}`;
-
-        /**
-         * The destination for changes of the control, attached with selectionChange event.
-         */
-        fieldName?: string | PropertyBindingInfo;
         selectedItem?: any | PropertyBindingInfo | `{${string}}`;
         selectionChange?: (event: MaterialComboBox$SelectionChangeEvent) => void;
     }
@@ -23,18 +18,6 @@ declare module "./MaterialComboBox" {
         // property: items
         getItems(): any;
         setItems(items: any): this;
-
-        // property: fieldName
-
-        /**
-         * The destination for changes of the control, attached with selectionChange event.
-         */
-        getFieldName(): string;
-
-        /**
-         * The destination for changes of the control, attached with selectionChange event.
-         */
-        setFieldName(fieldName: string): this;
 
         // property: selectedItem
         getSelectedItem(): any;
@@ -52,7 +35,6 @@ declare module "./MaterialComboBox" {
      */
     export interface MaterialComboBox$SelectionChangeEventParameters {
         data?: object;
-        fieldName?: string;
     }
 
     /**

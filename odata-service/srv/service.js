@@ -1,6 +1,7 @@
 const cds = require("@sap/cds");
 const { calculateOutcomes } = require("./calculateOutcomes");
 const { createStatHtml } = require("./helpers/createHtml");
+const { upgradeMaterials } = require("./upgradeMaterials");
 const statInfoKeys = [
 	"matk",
 	"def",
@@ -55,6 +56,7 @@ class DataService extends cds.ApplicationService {
 			});
 		});
 		this.on("CalculateOutcomes", calculateOutcomes);
+		this.on("UpgradeMaterials", upgradeMaterials);
 		this.after("READ", Weapons, async (results, req) => {
 			const tx = cds.transaction(req);
 			const materialIds = new Set();

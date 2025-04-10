@@ -30,6 +30,19 @@ import Material from './Material.controller';
 export default class Calculator extends Controller {
 	dialog: Dialog;
 	viewSettingsDialogs: Record<string, Dialog> = {};
+	material = {
+		ID: 1,
+		Header_Name: 'Choose material',
+		Select_Query: null,
+		Material: {
+			ID: null,
+			Name: null,
+			Rarity: null,
+			Category: null,
+			Level: 1,
+			Stats: [],
+		},
+	};
 	viewModel = new JSONModel({
 		wizard: {
 			ForgeStep: false,
@@ -39,6 +52,9 @@ export default class Calculator extends Controller {
 			gear: 'Weapon',
 			Materials: [],
 			Preview: [],
+		},
+		upgrade: {
+			Materials: new Array(10).fill(this.material).map((_, i) => ({ ...this.material, ID: i })),
 		},
 	});
 	groupFunctions: Record<string, Function> = {
@@ -110,25 +126,15 @@ export default class Calculator extends Controller {
 	onWeaponSelected(event: Event): void {
 		const selectedItem = (event as any).getParameter('listItem');
 		const item = selectedItem.getBindingContext('data')?.getObject();
-
-		this.viewModel.setData({
-			wizard: {
-				ForgeStep: false,
-				WeaponStep: true,
-			},
-			selectedWeapon: item,
-			nextButtonEnabled: true,
-			forge: {
-				Materials: item.Materials,
-			},
-		});
-
-		// this.viewModel.setProperty('/selectedWeapon', item);
-		// this.viewModel.setProperty('/nextButtonEnabled', true);
-		// this.viewModel.setProperty('/forge/Materials', item.Materials);
-		// this.viewModel.setProperty('/forge/Preview', []);
-		// this.viewModel.setProperty('/forge/SelectedOutcome', null);
+		console.log(item.Materials);
+		this.viewModel.setProperty('/selectedWeapon', item);
+		this.viewModel.setProperty('/nextButtonEnabled', true);
+		this.viewModel.setProperty('/forge/Materials', item.Materials);
+		this.viewModel.setProperty('/forge/Preview', []);
+		this.viewModel.setProperty('/forge/SelectedOutcome', null);
 	}
+
+	onOutcomeSelected(event: Event): void {}
 
 	onNextPressed(): void {
 		WizardButtons.onNextPressed.call(this);
@@ -147,10 +153,12 @@ export default class Calculator extends Controller {
 	}
 
 	onMaterialSelected(): void {
+		console.log('Material selected', this.viewModel.getObject('/upgrade/Materials'));
 		this._rebuildOutcomes();
 	}
 
 	onLevelChange(): void {
+		console.log('Level changed');
 		this._rebuildOutcomes();
 	}
 
@@ -162,7 +170,6 @@ export default class Calculator extends Controller {
 				return material;
 			})
 			.filter((material: MaterialItem) => material.ID !== null);
-		console.log(materials, weaponStats);
 		const outcomes = calculateInheritanceOutcomes(materials);
 		const bonuses = calculateUpgrades(materials, Gear.Weapon);
 

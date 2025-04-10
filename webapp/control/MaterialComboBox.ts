@@ -21,10 +21,7 @@ export default class MaterialComboBox extends Control {
 	static readonly metadata: MetadataOptions = {
 		properties: {
 			items: { type: 'any', defaultValue: '' },
-			/**
-			 * The destination for changes of the control, attached with selectionChange event.
-			 */
-			fieldName: { type: 'string', defaultValue: '' },
+
 			selectedItem: { type: 'any', defaultValue: null },
 		},
 		aggregations: {
@@ -35,7 +32,6 @@ export default class MaterialComboBox extends Control {
 			selectionChange: {
 				parameters: {
 					data: { type: 'object' },
-					fieldName: { type: 'string' },
 				},
 			},
 		},
@@ -60,7 +56,7 @@ export default class MaterialComboBox extends Control {
 						data = selectedItem?.getBindingContext('data')?.getObject();
 					if (!selectedItem || !data) return;
 					this.setProperty('selectedItem', data, true);
-					this.fireSelectionChange({ data, fieldName: this.getFieldName() });
+					this.fireSelectionChange({ data });
 				},
 			})
 		);

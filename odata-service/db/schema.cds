@@ -190,3 +190,10 @@ entity Weapon {
     Material : MaterialType;
   };
 }
+
+
+type UpgradeMaterial {
+ Materials: { Header_Name : String;
+  Select_Query : String;
+  Material : MaterialType; }
+}

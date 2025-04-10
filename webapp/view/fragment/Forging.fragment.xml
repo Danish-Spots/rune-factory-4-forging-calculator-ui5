@@ -4,7 +4,7 @@
   xmlns:cards="sap.f.cards"
   xmlns:core="sap.ui.core"
   xmlns:rf="rf.calculator.control">
-  <WizardStep id="ForgingUpgradingStep"
+  <WizardStep id="ForgingStep"
     validated="false"
     title="Forging"
     activate="additionalInfoValidation">
@@ -12,12 +12,13 @@
       text="Here you can set the materials and their levels to be used in the forging process. Finally choosing a desired inheritance outcome."
       showIcon="true"/>
     <Title text="Forging" class="sapUiSmallMarginBottom"/>
-    <core:Fragment fragmentName="rf.calculator.view.fragment.MaterialCard" type="XML"/>
+    <core:Fragment fragmentName="rf.calculator.view.fragment.MaterialCard" type="XML" binding="{/forge}"/>
     <Title text="Preview" class="sapUiSmallMarginBottom sapUiSmallMarginTop"/>
 
 
     <rf:ForgePreview
       outcomes="{/forge/Preview}"
+      change=".onOutcomeSelected"
       selectedOutcome="{/forge/SelectedOutcome}"
     />
 

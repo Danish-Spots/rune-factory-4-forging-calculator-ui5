@@ -112,7 +112,6 @@ export default class ForgePreview extends Control {
 				if (!(i in cells)) return null;
 				else return cells[i];
 			});
-			console.log(cells);
 			table.addItem(
 				new ColumnListItem({
 					cells: [...cells.map((cell: string) => new Text({ text: cell }))],

@@ -12,19 +12,13 @@ import RenderManager from 'sap/ui/core/RenderManager';
 export default class LevelSlider extends Control {
 	static readonly metadata: MetadataOptions = {
 		properties: {
-			fieldName: { type: 'string', defaultValue: '' },
 			value: { type: 'int', defaultValue: 1 },
 		},
 		aggregations: {
 			_slider: { type: 'sap.m.Slider', multiple: false, visibility: 'hidden' },
 		},
 		events: {
-			change: {
-				parameters: {
-					value: { type: 'int' },
-					fieldName: { type: 'string' },
-				},
-			},
+			change: {},
 		},
 	};
 
@@ -51,14 +45,8 @@ export default class LevelSlider extends Control {
 				inputsAsTooltips: true,
 				change: (oEvent) => {
 					const value = oEvent.getParameter('value');
-					const fieldName = this.getFieldName();
-					if (!!value && !!fieldName) {
-						this.setProperty('value', value, true);
-						this.fireChange({
-							value,
-							fieldName,
-						});
-					}
+					this.setProperty('value', value, true);
+					this.fireChange();
 				},
 			})
 		);

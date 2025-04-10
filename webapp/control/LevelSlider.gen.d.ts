@@ -8,16 +8,11 @@ declare module "./LevelSlider" {
      * Interface defining the settings object used in constructor calls
      */
     interface $LevelSliderSettings extends $ControlSettings {
-        fieldName?: string | PropertyBindingInfo;
         value?: number | PropertyBindingInfo | `{${string}}`;
         change?: (event: LevelSlider$ChangeEvent) => void;
     }
 
     export default interface LevelSlider {
-
-        // property: fieldName
-        getFieldName(): string;
-        setFieldName(fieldName: string): this;
 
         // property: value
         getValue(): number;
@@ -33,9 +28,8 @@ declare module "./LevelSlider" {
     /**
      * Interface describing the parameters of LevelSlider's 'change' event.
      */
+    // eslint-disable-next-line
     export interface LevelSlider$ChangeEventParameters {
-        value?: number;
-        fieldName?: string;
     }
 
     /**

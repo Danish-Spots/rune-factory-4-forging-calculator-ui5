@@ -80,8 +80,6 @@ export const calculateInheritanceOutcomes = (materials: MaterialItem[]): { [key:
 	};
 	helper(0, []);
 
-	// console.log(results);
-
 	results = results.map((r) => {
 		const keys = Object.keys(r).sort();
 		const sortedObj: { [key: string]: number } = {};
