@@ -1,12 +1,8 @@
 const { createStatHtml } = require("./helpers/createHtml");
 const calculateOutcomes = async (req) => {
-	const { outcomes, bonuses, weaponStats } = req.data;
+	const { outcomes, weaponStats } = req.data;
 	const results = [];
 	outcomes.forEach((outcome) => {
-		for (const bonus in bonuses) {
-			if (outcome[bonus]) outcome[bonus] += bonuses[bonus] || 0;
-			else outcome[bonus] = bonuses[bonus] || 0;
-		}
 		for (const stat of weaponStats) {
 			if (outcome[stat.Stat_Key]) {
 				outcome[stat.Stat_Key] += parseInt(stat.Stat_Value);

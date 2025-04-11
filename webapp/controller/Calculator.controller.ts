@@ -18,7 +18,7 @@ import { MaterialChoiceTable } from './Calculator/MaterialChoiceTable';
 import Control from 'sap/ui/core/Control';
 import FlexBox from 'sap/m/FlexBox';
 import { MaterialComboBox$SelectionChangeEvent } from '../control/MaterialComboBox';
-import { calculateInheritanceOutcomes, calculateStatIncreases, calculateUpgrades } from '../model/calculator';
+import { calculateBonuses, calculateInheritanceOutcomes, calculateStatIncreases } from '../model/calculator';
 import { MaterialItem } from '../model/types';
 import { LevelSlider$ChangeEvent } from '../control/LevelSlider';
 import { Gear, StatKey } from '../model/enums';
@@ -169,14 +169,21 @@ export default class Calculator extends Controller {
 			})
 			.filter((material: MaterialItem) => material.ID !== null);
 		const outcomes = calculateInheritanceOutcomes(materials);
-		const bonuses = calculateUpgrades(materials, Gear.Weapon);
+		const totalLevel = materials.reduce((acc, item) => {
+			const itemLevel = item.Level ?? 1;
+			return acc + itemLevel;
+		}, 0);
+		const totalRarity = materials.reduce((acc, item) => {
+			const itemRarity = item.Rarity;
+			return acc + itemRarity;
+		}, 0);
+		this.viewModel.setProperty('/totalLevel', totalLevel);
+		this.viewModel.setProperty('/totalRarity', totalRarity);
+		// const bonuses = calculateUpgrades(materials, Gear.Weapon);
 
 		const model = this.getView()?.getModel('data') as ODataModel;
 		const action = model?.bindContext('/CalculateOutcomes(...)');
-		action
-			?.setParameter('outcomes', outcomes)
-			.setParameter('bonuses', bonuses)
-			.setParameter('weaponStats', weaponStats);
+		action?.setParameter('outcomes', outcomes).setParameter('weaponStats', weaponStats);
 		action
 			?.invoke()
 			.then(() => {
@@ -190,6 +197,8 @@ export default class Calculator extends Controller {
 
 	_buildFinalResult(): void {
 		const outcome = this.viewModel.getProperty('/forge/SelectedOutcome');
+		let totalRarity = this.viewModel.getObject('/totalRarity'),
+			totalLevel = this.viewModel.getObject('/totalLevel');
 
 		// Reason to reverse the array is because 10 fold steel and double steel will then apply to the next item in the array
 		// rather than previous
@@ -198,14 +207,26 @@ export default class Calculator extends Controller {
 			.filter((material: MaterialItem) => material.ID !== null);
 
 		const results = calculateStatIncreases(materials);
-		const bonuses = calculateUpgrades(materials, Gear.Weapon);
+		const bonuses = materials.reduce(
+			(acc, item) => {
+				const itemLevel = item.Level ?? 1;
+				const itemRarity = item.Rarity;
+				acc.Rarity += itemRarity;
+				acc.Level += itemLevel;
+				return acc;
+			},
+			{ Rarity: 0, Level: 0 }
+		);
+		totalRarity += bonuses.Rarity;
+		totalLevel += bonuses.Level;
+		const totalBonuses = calculateBonuses(totalRarity, totalLevel, Gear.Weapon);
 
-		for (const key in bonuses) {
-			if (key in results) {
-				results[key] += bonuses[key as StatKey] || 0;
-			} else results[key] = bonuses[key as StatKey] || 0;
-		}
+		// for (const key in bonuses) {
+		// 	if (key in results) {
+		// 		results[key] += bonuses[key as StatKey] || 0;
+		// 	} else results[key] = bonuses[key as StatKey] || 0;
+		// }
 
-		console.log(results);
+		console.log(totalRarity, totalLevel, totalBonuses, results);
 	}
 }

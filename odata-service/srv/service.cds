@@ -13,7 +13,6 @@ service DataService {
 
     action CalculateOutcomes(
       outcomes: array of RF_Entity.MaterialStat,
-      bonuses: RF_Entity.MaterialStat,
       weaponStats: array of RF_Entity.WeaponStat,
     ) returns array of RF_Entity.StatArray;
 

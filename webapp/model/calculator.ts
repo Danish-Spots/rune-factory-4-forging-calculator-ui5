@@ -18,17 +18,20 @@ const calculateLevelBonuses = (totalItemLevel: number, gear: Gear): StatBonus =>
 };
 
 const calculateRarityBonuses = (totalRarity: number, gear: Gear): StatBonus => {
-	const key = totalRarity >= 70 || totalRarity <= 99 ? 70 : ((Math.floor(totalRarity / 25) * 25) as RarityKey);
-
+	let key: RarityKey =
+		totalRarity >= 70 && totalRarity <= 99 ? 70 : ((Math.floor(totalRarity / 25) * 25) as RarityKey);
+	if (totalRarity > 200) key = 200;
 	if (gear === Gear.Weapon) return weaponRarityBonuses[key];
 	else if (gear === Gear.Armour) return armourRarityBonuses[key];
 
 	return { atk: 0, matk: 0 };
 };
 
-const calculateBonuses = (totalRarity: number, totalLevel: number, gear: Gear) => {
+export const calculateBonuses = (totalRarity: number, totalLevel: number, gear: Gear) => {
 	const rarityBonuses = calculateRarityBonuses(totalRarity, gear);
 	const levelBonuses = calculateLevelBonuses(totalLevel, gear);
+	console.log('rarityBonuses', rarityBonuses);
+	console.log('levelBonuses', levelBonuses);
 	const result: StatBonus = {};
 	for (const key in rarityBonuses) {
 		const newKey: StatKey = key as StatKey;
@@ -92,23 +95,6 @@ export const calculateInheritanceOutcomes = (materials: MaterialItem[]): { [key:
 
 	results = Array.from(new Set(results.map((r) => JSON.stringify(r)))).map((r) => JSON.parse(r));
 	return results;
-};
-
-export const calculateUpgrades = (materials: MaterialItem[], gear: Gear): StatBonus => {
-	const bonusValues = materials.reduce(
-		(acc, item) => {
-			const itemLevel = item.Level ?? 1;
-			const itemRarity = item.Rarity;
-			acc.Rarity += itemRarity;
-			acc.Level += itemLevel;
-			return acc;
-		},
-		{ Rarity: 0, Level: 0 }
-	);
-
-	const bonuses = calculateBonuses(bonusValues.Rarity, bonusValues.Level, gear);
-	// Caclulate stat upgrades
-	return bonuses;
 };
 
 export const calculateStatIncreases = (materials: MaterialItem[]) => {
