@@ -30,8 +30,6 @@ const calculateRarityBonuses = (totalRarity: number, gear: Gear): StatBonus => {
 export const calculateBonuses = (totalRarity: number, totalLevel: number, gear: Gear) => {
 	const rarityBonuses = calculateRarityBonuses(totalRarity, gear);
 	const levelBonuses = calculateLevelBonuses(totalLevel, gear);
-	console.log('rarityBonuses', rarityBonuses);
-	console.log('levelBonuses', levelBonuses);
 	const result: StatBonus = {};
 	for (const key in rarityBonuses) {
 		const newKey: StatKey = key as StatKey;
@@ -141,4 +139,27 @@ export const calculateStatIncreases = (materials: MaterialItem[]) => {
 		}
 		return acc;
 	}, {} as { [key: string]: number });
+};
+
+/**
+ * For a given array of materials, calculate total level and rarity bonuses
+ * @param materials
+ * @param gear
+ * @returns
+ */
+export const calculateUpgrades = (materials: MaterialItem[], gear: Gear): StatBonus => {
+	const bonusValues = materials.reduce(
+		(acc, item) => {
+			const itemLevel = item.Level ?? 1;
+			const itemRarity = item.Rarity;
+			acc.Rarity += itemRarity;
+			acc.Level += itemLevel;
+			return acc;
+		},
+		{ Rarity: 0, Level: 0 }
+	);
+
+	const bonuses = calculateBonuses(bonusValues.Rarity, bonusValues.Level, gear);
+	// Caclulate stat upgrades
+	return bonuses;
 };
