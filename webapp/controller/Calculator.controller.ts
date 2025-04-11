@@ -18,31 +18,20 @@ import { MaterialChoiceTable } from './Calculator/MaterialChoiceTable';
 import Control from 'sap/ui/core/Control';
 import FlexBox from 'sap/m/FlexBox';
 import { MaterialComboBox$SelectionChangeEvent } from '../control/MaterialComboBox';
-import { calculateInheritanceOutcomes, calculateUpgrades } from '../model/calculator';
+import { calculateInheritanceOutcomes, calculateStatIncreases, calculateUpgrades } from '../model/calculator';
 import { MaterialItem } from '../model/types';
 import { LevelSlider$ChangeEvent } from '../control/LevelSlider';
 import { Gear, StatKey } from '../model/enums';
 import ODataModel from 'sap/ui/model/odata/v4/ODataModel';
 import Material from './Material.controller';
+import { Model$PropertyChangeEvent } from 'sap/ui/model/Model';
+import EventBus from 'sap/ui/core/EventBus';
 /**
  * @name rf.calculator.controller
  */
 export default class Calculator extends Controller {
 	dialog: Dialog;
 	viewSettingsDialogs: Record<string, Dialog> = {};
-	material = {
-		ID: 1,
-		Header_Name: 'Choose material',
-		Select_Query: null,
-		Material: {
-			ID: null,
-			Name: null,
-			Rarity: null,
-			Category: null,
-			Level: 1,
-			Stats: [],
-		},
-	};
 	viewModel = new JSONModel({
 		wizard: {
 			ForgeStep: false,
@@ -53,9 +42,7 @@ export default class Calculator extends Controller {
 			Materials: [],
 			Preview: [],
 		},
-		upgrade: {
-			Materials: new Array(10).fill(this.material).map((_, i) => ({ ...this.material, ID: i })),
-		},
+		Materials: [],
 	});
 	groupFunctions: Record<string, Function> = {
 		Rarity: (context: any) => {
@@ -85,6 +72,28 @@ export default class Calculator extends Controller {
 		this.viewModel.setProperty('/nextButtonEnabled', false);
 
 		this.checkButtonState();
+
+		const model = this.getOwnerComponent()?.getModel('data') as ODataModel;
+
+		const action = model?.bindContext('/UpgradeMaterials(...)');
+		action.invoke().then(() => {
+			const context = action.getBoundContext();
+			const materials = context.getObject().Materials;
+			this.viewModel.setProperty('/upgrade', {
+				Materials: materials,
+			});
+		});
+
+		EventBus.getInstance().subscribe(
+			'calculator',
+			'updateResults',
+			(_, __, data) => {
+				const path: string = (data as any).path;
+				if (path?.startsWith('/forge')) this._rebuildOutcomes();
+				else if (path?.startsWith('/upgrade')) this._buildFinalResult();
+			},
+			this
+		);
 	}
 
 	async openChooseMaterialDialog(): Promise<void> {
@@ -126,7 +135,6 @@ export default class Calculator extends Controller {
 	onWeaponSelected(event: Event): void {
 		const selectedItem = (event as any).getParameter('listItem');
 		const item = selectedItem.getBindingContext('data')?.getObject();
-		console.log(item.Materials);
 		this.viewModel.setProperty('/selectedWeapon', item);
 		this.viewModel.setProperty('/nextButtonEnabled', true);
 		this.viewModel.setProperty('/forge/Materials', item.Materials);
@@ -150,16 +158,6 @@ export default class Calculator extends Controller {
 
 	checkButtonState(): void {
 		WizardButtons.checkButtonState.call(this);
-	}
-
-	onMaterialSelected(): void {
-		console.log('Material selected', this.viewModel.getObject('/upgrade/Materials'));
-		this._rebuildOutcomes();
-	}
-
-	onLevelChange(): void {
-		console.log('Level changed');
-		this._rebuildOutcomes();
 	}
 
 	_rebuildOutcomes(): void {
@@ -190,10 +188,24 @@ export default class Calculator extends Controller {
 			});
 	}
 
-	_createStatHtml(key: string, value: any) {
-		return `<p style="height: 100%; width: 100%; display: flex; flex-direction: column; margin: 0; gap: 4px;">
-      <span style="font-weight: bold;"> ${key} </span>
-      <span> ${value} </span>
-     </p>`;
+	_buildFinalResult(): void {
+		const outcome = this.viewModel.getProperty('/forge/SelectedOutcome');
+
+		// Reason to reverse the array is because 10 fold steel and double steel will then apply to the next item in the array
+		// rather than previous
+		const materials = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+			.map((i) => this.viewModel.getObject(`/upgrade/Materials/${i}/Material`))
+			.filter((material: MaterialItem) => material.ID !== null);
+
+		const results = calculateStatIncreases(materials);
+		const bonuses = calculateUpgrades(materials, Gear.Weapon);
+
+		for (const key in bonuses) {
+			if (key in results) {
+				results[key] += bonuses[key as StatKey] || 0;
+			} else results[key] = bonuses[key as StatKey] || 0;
+		}
+
+		console.log(results);
 	}
 }

@@ -50,24 +50,6 @@ export class WizardButtons {
 				this.viewModel.setProperty('/wizard/WeaponStep', false);
 				this.viewModel.setProperty('/wizard/ForgeStep', true);
 				this.viewModel.setProperty('/previousButtonVisible', true);
-				const flexBox = this.byId('UpgradeFlexBox') as FlexBox;
-				if (flexBox.getItems().length > 0) break;
-				const promises = [];
-				for (let i = 0; i < 10; i++) {
-					const fragment = this.loadFragment({
-						name: 'rf.calculator.view.fragment.MaterialCardNew',
-					});
-					promises.push(fragment);
-					fragment.then((frag) => {
-						(frag as Control).setBindingContext(
-							this.viewModel.createBindingContext('/upgrade/Materials/' + i) as Context
-						);
-						flexBox.addItem(frag as Control);
-					});
-					Promise.all(promises).then(() => {
-						flexBox.invalidate();
-					});
-				}
 				break;
 			case 2:
 			default:

@@ -1,14 +1,11 @@
 import ComboBox, { ComboBox$SelectionChangeEvent } from 'sap/m/ComboBox';
-import Select, { Select$ChangeEvent } from 'sap/m/Select';
-import Event from 'sap/ui/base/Event';
 import { AggregationBindingInfo } from 'sap/ui/base/ManagedObject';
 import Control from 'sap/ui/core/Control';
 import { MetadataOptions } from 'sap/ui/core/Element';
-import ElementMetadata from 'sap/ui/core/ElementMetadata';
+import EventBus from 'sap/ui/core/EventBus';
 import Item from 'sap/ui/core/Item';
 import RenderManager from 'sap/ui/core/RenderManager';
 import Filter from 'sap/ui/model/Filter';
-import FilterOperator from 'sap/ui/model/FilterOperator';
 import Sorter from 'sap/ui/model/Sorter';
 
 /**
@@ -47,22 +44,19 @@ export default class MaterialComboBox extends Control {
 		},
 	};
 
-	constructor(mSettings?: any) {
-		super(mSettings);
-		this.setProperty('items', mSettings?.items || '', true);
-		this.setProperty('selectedItem', mSettings?.selectedItem || null, true);
-	}
-
 	init(): void | undefined {
 		this.setAggregation(
 			'_comboBox',
 			new ComboBox({
 				selectionChange: (event: ComboBox$SelectionChangeEvent) => {
 					const selectedItem = event.getParameter('selectedItem'),
-						data = selectedItem?.getBindingContext('data')?.getObject();
+						data = selectedItem?.getBindingContext('local')?.getObject();
 					if (!selectedItem || !data) return;
 					this.setProperty('selectedItem', data, true);
-					this.fireSelectionChange({ data });
+					EventBus.getInstance().publish('calculator', 'updateResults', {
+						path: this.getBindingContext()?.getPath(),
+					});
+					// this.fireSelectionChange({ data });
 				},
 			})
 		);
@@ -70,7 +64,7 @@ export default class MaterialComboBox extends Control {
 		this._buildComboBox();
 	}
 
-	setItems(items: string | undefined): this {
+	setItems(items: any): this {
 		this.setProperty('items', items, true);
 		this._buildComboBox();
 		return this;
@@ -84,58 +78,36 @@ export default class MaterialComboBox extends Control {
 	_buildComboBox() {
 		const items = this.getProperty('items');
 		const comboBox = this.getAggregation('_comboBox') as ComboBox;
-		comboBox.setSelectedKey('');
-		comboBox.removeAllItems();
-		let binding: Omit<AggregationBindingInfo, 'path'>,
-			editable: boolean = true;
-		if (!items) {
-			binding = {
-				sorter: [new Sorter({ path: 'Rarity', descending: true })],
-				length: 250,
-			};
-		} else if (isNaN(parseInt(items)))
-			binding = {
-				filters: [
-					new Filter({
-						path: 'Category',
-						operator: FilterOperator.Contains,
-						value1: items,
-					}),
-				],
-			};
-		else {
-			binding = {
-				filters: [new Filter({ path: 'ID', operator: FilterOperator.EQ, value1: items })],
-				events: {
-					dataReceived: () => {
-						const comboBox = this.getAggregation('_comboBox') as ComboBox;
-						if (!comboBox) return;
-						const selectedItem = comboBox.getItems()[0];
-						comboBox.setSelectedItem(selectedItem);
-						comboBox.fireSelectionChange({
-							selectedItem,
-						});
-					},
+		if (!items) return;
+
+		const sorter = new Sorter({ path: items.sorter.path, descending: items.sorter.descending });
+		const filter = items.filters[0];
+		const filters = [];
+		if (filter) {
+			filters.push(new Filter({ path: filter.path, operator: filter.operator, value1: filter.value1 }));
+		}
+		const binding: AggregationBindingInfo = {
+			model: 'local',
+			path: '/Materials',
+			filters: filters,
+			sorter: sorter,
+			templateShareable: true,
+			template: new Item({
+				key: '{local>ID}',
+				text: '{local>Name} - Rarity: {local>Rarity} | {local>StatJoin}',
+			}),
+		};
+		if (items.filters[0]?.path === 'ID')
+			binding.events = {
+				change: async () => {
+					const selectedItem = comboBox.getItems()[0];
+					comboBox.setSelectedItem(selectedItem);
+					comboBox.fireSelectionChange({
+						selectedItem,
+					});
 				},
 			};
-			editable = false;
-		}
-
-		comboBox
-			.bindItems(
-				Object.assign(
-					{
-						model: 'data',
-						path: '/Materials',
-						templateShareable: true,
-						template: new Item({
-							key: '{data>ID}',
-							text: '{data>Name} - Rarity: {data>Rarity} | {data>StatJoin}',
-						}),
-					},
-					binding
-				)
-			)
-			.setEditable(editable);
+		if (items.length) binding.length = items.length;
+		comboBox.bindAggregation('items', binding).setEditable(items.editable);
 	}
 }

@@ -33,11 +33,6 @@ export default class StatRender extends Control {
 		},
 	};
 
-	constructor(mSettings?: any) {
-		super(mSettings);
-		this.setProperty('stats', mSettings?.stats || {}, true);
-	}
-
 	init() {
 		this.setAggregation(
 			'_hbox',
@@ -57,7 +52,6 @@ export default class StatRender extends Control {
 	_renderStats(stats: any): void {
 		const hbox = this.getAggregation('_hbox') as HBox;
 		hbox.removeAllItems();
-
 		if (!stats || !stats.mPath || !stats.sHtml) return;
 		hbox?.bindAggregation('items', {
 			path: stats.mPath,

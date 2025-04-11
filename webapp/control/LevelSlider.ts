@@ -1,6 +1,7 @@
 import Slider from 'sap/m/Slider';
 import Control from 'sap/ui/core/Control';
 import UI5Element, { MetadataOptions } from 'sap/ui/core/Element';
+import EventBus from 'sap/ui/core/EventBus';
 import RenderManager from 'sap/ui/core/RenderManager';
 
 /**
@@ -37,7 +38,7 @@ export default class LevelSlider extends Control {
 			'_slider',
 			new Slider({
 				min: 1,
-				max: 15,
+				max: 10,
 				value: 1,
 				width: '100%',
 				showAdvancedTooltip: true,
@@ -46,7 +47,9 @@ export default class LevelSlider extends Control {
 				change: (oEvent) => {
 					const value = oEvent.getParameter('value');
 					this.setProperty('value', value, true);
-					this.fireChange();
+					EventBus.getInstance().publish('calculator', 'updateResults', {
+						path: this.getBindingContext()?.getPath(),
+					});
 				},
 			})
 		);

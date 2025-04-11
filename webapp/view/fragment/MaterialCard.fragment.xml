@@ -13,26 +13,13 @@
         <VBox >
           <rf:MaterialComboBox
             selectedItem="{Material}"
-            items="{= ${Select_Query} ? ${Select_Query} : ${/selectedItems} }"
-            selectionChange=".onMaterialSelected">
+            items="{Select_Query}">
           </rf:MaterialComboBox>
           <Label
             text="Material Level"
             ></Label>
-          <Slider
-            value="{Material/Level}"
-            min="1"
-            max="10"
-            step="1"
-            width="100%"
-            showAdvancedTooltip="true"
-				    showHandleTooltip="false"
-				    inputsAsTooltips="true"
-            change=".onLevelChange"
-            ></Slider>
-          <!-- <rf:LevelSlider
-            value="{Material/Level}"
-            change=".onLevelChange"/> -->
+          <rf:LevelSlider
+            value="{Material/Level}"/>
           <rf:StatRender
             stats="{
               mPath: 'Material/Stats',

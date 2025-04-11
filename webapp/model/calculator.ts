@@ -4,8 +4,8 @@ import { MaterialItem, StatBonus } from './types';
 
 const materials = [];
 
-const applyStat = (currentStat: number, addedStat: number, divisionNumbber: number) => {
-	return currentStat + addedStat / divisionNumbber;
+const applyStat = (addedStat: number, divisionNumbber: number) => {
+	return addedStat / divisionNumbber;
 };
 
 const calculateLevelBonuses = (totalItemLevel: number, gear: Gear): StatBonus => {
@@ -47,6 +47,7 @@ const calculateStats = (materials: MaterialItem[]) => {
 	const results: { [key: string]: number } = {};
 
 	for (const material of materials) {
+		if (!material.Stats) continue;
 		for (const stat of material.Stats) {
 			const statKey = stat.Stat_Key;
 			const statValue = parseFloat(stat.Stat_Value);
@@ -108,4 +109,50 @@ export const calculateUpgrades = (materials: MaterialItem[], gear: Gear): StatBo
 	const bonuses = calculateBonuses(bonusValues.Rarity, bonusValues.Level, gear);
 	// Caclulate stat upgrades
 	return bonuses;
+};
+
+export const calculateStatIncreases = (materials: MaterialItem[]) => {
+	const occurrenceMap = new Map<number, number>();
+	let result = materials
+		.map((material, index: number) => {
+			const stats: { [key: string]: number } = {};
+			const materialId = material.ID;
+			occurrenceMap.set(materialId, (occurrenceMap.get(materialId) || 0) + 1);
+
+			if (materialId === 1155 || materialId === 1156) {
+				if (occurrenceMap.get(materialId) === 1 && index !== 0) {
+					const upgradeEffect = parseFloat(material.Stats[0].Stat_Value);
+					return { upgradeEffect };
+				}
+			} else {
+				for (const stat of material.Stats) {
+					const statKey = stat.Stat_Key;
+					const statValue = applyStat(parseFloat(stat.Stat_Value), occurrenceMap.get(materialId) as number);
+					if (!stats[statKey]) stats[statKey] = statValue;
+					else stats[statKey] += statValue;
+				}
+				return stats;
+			}
+		})
+		.filter((stat) => stat !== undefined);
+
+	result.forEach((stats, index) => {
+		if ('upgradeEffect' in stats) {
+			const upgradeEffect = stats.upgradeEffect;
+			let prevStat = result[index - 1];
+			if ('upgradeEffect' in prevStat && index - 2 >= 0) prevStat = result[index - 2];
+
+			for (const stat in prevStat) {
+				prevStat[stat] = prevStat[stat] * upgradeEffect;
+			}
+		}
+	});
+	result = result.filter((stat) => !('upgradeEffect' in stat));
+	return result.reduce((acc, curr) => {
+		for (const key in curr) {
+			if (!acc[key]) acc[key] = 0;
+			acc[key] += curr[key];
+		}
+		return acc;
+	}, {} as { [key: string]: number });
 };

@@ -12,19 +12,8 @@
       text="Here you can upgrade the chosen outcome with materials. There are special materials such as 10 fold steel and double steel that have an effect on previous materials, so keep that in mind."
       showIcon="true"/>
     <Title text="Upgrading" class="sapUiSmallMarginBottom"/>
-    <FlexBox wrap="Wrap" gap="1rem" id="UpgradeFlexBox">
-      <items >
-        <!-- <core:Fragment fragmentName="rf.calculator.view.fragment.MaterialCardNew" binding="{/upgrade/Materials/0}" type="XML"/>
-        <core:Fragment fragmentName="rf.calculator.view.fragment.MaterialCardNew" binding="{/upgrade/Materials/1}" type="XML"/>
-        <core:Fragment fragmentName="rf.calculator.view.fragment.MaterialCardNew" binding="{/upgrade/Materials/2}" type="XML"/>
-        <core:Fragment fragmentName="rf.calculator.view.fragment.MaterialCardNew" binding="{/upgrade/Materials/3}" type="XML"/>
-        <core:Fragment fragmentName="rf.calculator.view.fragment.MaterialCardNew" binding="{/upgrade/Materials/4}" type="XML"/>
-        <core:Fragment fragmentName="rf.calculator.view.fragment.MaterialCardNew" binding="{/upgrade/Materials/5}" type="XML"/>
-        <core:Fragment fragmentName="rf.calculator.view.fragment.MaterialCardNew" binding="{/upgrade/Materials/6}" type="XML"/>
-        <core:Fragment fragmentName="rf.calculator.view.fragment.MaterialCardNew" binding="{/upgrade/Materials/7}" type="XML"/>
-        <core:Fragment fragmentName="rf.calculator.view.fragment.MaterialCardNew" binding="{/upgrade/Materials/8}" type="XML"/>
-        <core:Fragment fragmentName="rf.calculator.view.fragment.MaterialCardNew" binding="{/upgrade/Materials/9}" type="XML"/> -->
-      </items>
-    </FlexBox>
+    <core:Fragment fragmentName="rf.calculator.view.fragment.MaterialCard" binding="{/upgrade}" type="XML"/>
+
+    <Title text="Final outcome" class="sapUiSmallMarginBottom sapUiSmallMarginTop"/>
   </WizardStep>
 </core:FragmentDefinition>

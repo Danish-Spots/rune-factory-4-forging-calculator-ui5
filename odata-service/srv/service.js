@@ -2,6 +2,8 @@ const cds = require("@sap/cds");
 const { calculateOutcomes } = require("./calculateOutcomes");
 const { createStatHtml } = require("./helpers/createHtml");
 const { upgradeMaterials } = require("./upgradeMaterials");
+const { weaponsCall } = require("./weapons");
+
 const statInfoKeys = [
 	"matk",
 	"def",
@@ -41,7 +43,6 @@ const statInfoKeys = [
 	"windRes",
 	"earthRes",
 ];
-
 class DataService extends cds.ApplicationService {
 	init() {
 		const { Monsters, Locations, Materials, MonsterToLocations, Weapons } = this.entities;
@@ -56,7 +57,7 @@ class DataService extends cds.ApplicationService {
 			});
 		});
 		this.on("CalculateOutcomes", calculateOutcomes);
-		this.on("UpgradeMaterials", upgradeMaterials);
+		this.on("UpgradeMaterials", (req, next) => upgradeMaterials(req, next, Materials));
 		this.after("READ", Weapons, async (results, req) => {
 			const tx = cds.transaction(req);
 			const materialIds = new Set();
@@ -78,12 +79,16 @@ class DataService extends cds.ApplicationService {
 					}
 				}
 			});
-			const materialNames = await tx.run(
-				SELECT.from(Materials)
-					.columns("ID", "Name")
-					.where({ ID: { in: Array.from(materialIds) } })
-			);
-			const materialLookup = Object.fromEntries(materialNames.map((m) => [m.ID, m.Name]));
+			const materialNames = await tx.run(SELECT.from(Materials).where({ ID: { in: Array.from(materialIds) } }));
+			const materialQuery = {
+				path: "data>/Materials",
+				sorter: {
+					path: "Rarity",
+					descending: true,
+				},
+				filters: [],
+			};
+			const materialLookup = Object.fromEntries(materialNames.map((m) => [m.ID, m]));
 			for (const weapon of results) {
 				const materials = [];
 				for (let i = 1; i <= 6; i++) {
@@ -103,19 +108,56 @@ class DataService extends cds.ApplicationService {
 					};
 					if (!raw) {
 						material.Header_Name = "Choose material";
+						material.Select_Query = {
+							path: "data>/Materials",
+							sorter: {
+								path: "Rarity",
+								descending: true,
+							},
+							length: 240,
+							filters: [],
+							editable: true,
+						};
 					} else if (raw.startsWith("C:")) {
 						const name = raw.substring(2);
 						weapon[`Material_${i}`] = name;
 						material.Header_Name = name;
-						material.Select_Query = `${name}`;
+						material.Select_Query = {
+							path: "data>/Materials",
+							sorter: {
+								path: "Rarity",
+								descending: true,
+							},
+							filters: [],
+							editable: true,
+						};
+						material.Select_Query.filters.push({
+							path: "Category",
+							operator: "Contains",
+							value1: name,
+						});
 					} else if (raw.startsWith("W:")) {
 						const name = raw.substring(2);
 						material.Header_Name = name;
 					} else {
-						const name = materialLookup[raw];
-						weapon[`Material_${i}`] = name;
-						material.Select_Query = `${raw}`;
-						material.Header_Name = name;
+						const m = materialLookup[raw];
+						weapon[`Material_${i}`] = m.Name;
+						material.Material = m;
+						material.Select_Query = {
+							path: "data>/Materials",
+							sorter: {
+								path: "Rarity",
+								descending: true,
+							},
+							filters: [],
+							editable: false,
+						};
+						material.Select_Query.filters.push({
+							path: "ID",
+							operator: "EQ",
+							value1: raw,
+						});
+						material.Header_Name = m.Name;
 					}
 					materials.push(material);
 				}
