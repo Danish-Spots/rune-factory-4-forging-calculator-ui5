@@ -12,7 +12,17 @@
       text="Here you can set the materials and their levels to be used in the forging process. Finally choosing a desired inheritance outcome."
       showIcon="true"/>
     <Title text="Forging" class="sapUiSmallMarginBottom"/>
-    <core:Fragment fragmentName="rf.calculator.view.fragment.MaterialCard" type="XML" binding="{/forge}"/>
+    <!-- <core:Fragment fragmentName="rf.calculator.view.fragment.MaterialCard" type="XML" binding="{/forge}"/> -->
+    <FlexBox wrap="Wrap" columnGap="8px">
+      <items>
+        <rf:MaterialCard materialPath="/forge/Materials/0"/>
+        <rf:MaterialCard materialPath="/forge/Materials/1"/>
+        <rf:MaterialCard materialPath="/forge/Materials/2"/>
+        <rf:MaterialCard materialPath="/forge/Materials/3"/>
+        <rf:MaterialCard materialPath="/forge/Materials/4"/>
+        <rf:MaterialCard materialPath="/forge/Materials/5"/>
+      </items>
+    </FlexBox>
     <Title text="Preview" class="sapUiSmallMarginBottom sapUiSmallMarginTop"/>
 
 

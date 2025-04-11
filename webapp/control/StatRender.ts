@@ -33,6 +33,11 @@ export default class StatRender extends Control {
 		},
 	};
 
+	constructor(mSettings?: any) {
+		super(mSettings);
+		this.setProperty('stats', mSettings?.stats || {}, true);
+	}
+
 	init() {
 		this.setAggregation(
 			'_hbox',
@@ -40,14 +45,20 @@ export default class StatRender extends Control {
 				columnGap: '8px',
 			})
 		);
+		this._renderStats(this.getProperty('stats'));
 	}
 
 	setStats(stats: any): this {
 		this.setProperty('stats', stats, true);
+		this._renderStats(stats);
+		return this;
+	}
+
+	_renderStats(stats: any): void {
 		const hbox = this.getAggregation('_hbox') as HBox;
 		hbox.removeAllItems();
 
-		if (!stats || !stats.mPath || !stats.sHtml) return this;
+		if (!stats || !stats.mPath || !stats.sHtml) return;
 		hbox?.bindAggregation('items', {
 			path: stats.mPath,
 			template: new FormattedText({
@@ -55,6 +66,5 @@ export default class StatRender extends Control {
 			}),
 			templateShareable: false,
 		});
-		return this;
 	}
 }

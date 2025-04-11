@@ -19,9 +19,20 @@
           <Label
             text="Material Level"
             ></Label>
-          <rf:LevelSlider
+          <Slider
             value="{Material/Level}"
-            change=".onLevelChange"/>
+            min="1"
+            max="10"
+            step="1"
+            width="100%"
+            showAdvancedTooltip="true"
+				    showHandleTooltip="false"
+				    inputsAsTooltips="true"
+            change=".onLevelChange"
+            ></Slider>
+          <!-- <rf:LevelSlider
+            value="{Material/Level}"
+            change=".onLevelChange"/> -->
           <rf:StatRender
             stats="{
               mPath: 'Material/Stats',

@@ -47,6 +47,12 @@ export default class MaterialComboBox extends Control {
 		},
 	};
 
+	constructor(mSettings?: any) {
+		super(mSettings);
+		this.setProperty('items', mSettings?.items || '', true);
+		this.setProperty('selectedItem', mSettings?.selectedItem || null, true);
+	}
+
 	init(): void | undefined {
 		this.setAggregation(
 			'_comboBox',
@@ -60,42 +66,13 @@ export default class MaterialComboBox extends Control {
 				},
 			})
 		);
+
+		this._buildComboBox();
 	}
 
-	setItems(items: string | Array<any> | undefined): this {
+	setItems(items: string | undefined): this {
 		this.setProperty('items', items, true);
-		// Set to empty when no items and fire change event
-		if (!items) {
-			this._buildEmptyComboBox();
-			return this;
-		}
-		let filters, events;
-		if (Array.isArray(items)) {
-			filters = items.map((item) => new Filter({ path: 'ID', operator: FilterOperator.EQ, value1: item.ID }));
-		} else if (isNaN(parseInt(items)))
-			filters = [
-				new Filter({
-					path: 'Category',
-					operator: FilterOperator.Contains,
-					value1: items,
-				}),
-			];
-		else {
-			filters = [new Filter({ path: 'ID', operator: FilterOperator.EQ, value1: items })];
-			events = {
-				dataReceived: () => {
-					const comboBox = this.getAggregation('_comboBox') as ComboBox;
-					if (!comboBox) return;
-					const selectedItem = comboBox.getItems()[0];
-					comboBox.setSelectedItem(selectedItem);
-					comboBox.fireSelectionChange({
-						selectedItem,
-					});
-				},
-			};
-		}
-
-		this._buildComboBox({ filters, events: events ?? {} }, !events);
+		this._buildComboBox();
 		return this;
 	}
 
@@ -104,24 +81,46 @@ export default class MaterialComboBox extends Control {
 		(this.getAggregation('_comboBox') as ComboBox)?.removeAllItems();
 	}
 
-	_buildEmptyComboBox() {
-		// const comboBox = this.getAggregation('_comboBox') as ComboBox;
-		// comboBox.setSelectedKey('');
-		// comboBox.removeAllItems();
-		// comboBox.setEditable(true);
-		this._buildComboBox(
-			{
-				sorter: [new Sorter({ path: 'Rarity', descending: true })],
-				length: 250,
-			},
-			true
-		);
-	}
-
-	_buildComboBox(binding: Omit<AggregationBindingInfo, 'path'>, editable: boolean) {
+	_buildComboBox() {
+		const items = this.getProperty('items');
 		const comboBox = this.getAggregation('_comboBox') as ComboBox;
 		comboBox.setSelectedKey('');
 		comboBox.removeAllItems();
+		let binding: Omit<AggregationBindingInfo, 'path'>,
+			editable: boolean = true;
+		if (!items) {
+			binding = {
+				sorter: [new Sorter({ path: 'Rarity', descending: true })],
+				length: 250,
+			};
+		} else if (isNaN(parseInt(items)))
+			binding = {
+				filters: [
+					new Filter({
+						path: 'Category',
+						operator: FilterOperator.Contains,
+						value1: items,
+					}),
+				],
+			};
+		else {
+			binding = {
+				filters: [new Filter({ path: 'ID', operator: FilterOperator.EQ, value1: items })],
+				events: {
+					dataReceived: () => {
+						const comboBox = this.getAggregation('_comboBox') as ComboBox;
+						if (!comboBox) return;
+						const selectedItem = comboBox.getItems()[0];
+						comboBox.setSelectedItem(selectedItem);
+						comboBox.fireSelectionChange({
+							selectedItem,
+						});
+					},
+				},
+			};
+			editable = false;
+		}
+
 		comboBox
 			.bindItems(
 				Object.assign(
@@ -129,18 +128,14 @@ export default class MaterialComboBox extends Control {
 						model: 'data',
 						path: '/Materials',
 						templateShareable: true,
-						template: this._itemTemplate(),
+						template: new Item({
+							key: '{data>ID}',
+							text: '{data>Name} - Rarity: {data>Rarity} | {data>StatJoin}',
+						}),
 					},
 					binding
 				)
 			)
 			.setEditable(editable);
-	}
-
-	_itemTemplate() {
-		return new Item({
-			key: '{data>ID}',
-			text: '{data>Name} - Rarity: {data>Rarity} | {data>StatJoin}',
-		});
 	}
 }

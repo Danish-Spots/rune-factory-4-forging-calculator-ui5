@@ -8,17 +8,27 @@ import LevelSlider from 'rf/calculator/control/LevelSlider';
 import StatRender from 'rf/calculator/control/StatRender';
 import RenderManager from 'sap/ui/core/RenderManager';
 import { PropertyBindingInfo } from 'sap/ui/base/ManagedObject';
+import Slider from 'sap/m/Slider';
+import Event from 'sap/ui/base/Event';
+import { MetadataOptions } from 'sap/ui/core/Element';
 
-// TODO: Fix the material card tomorrow to replace the fragment
-export default class MaterialCardNew extends Control {
-	static metadata = {
+/**
+ * @extends sap.ui.core.Control
+ *
+ *
+ * @name rf.calculator.control.MaterialCard
+ */
+export default class MaterialCard extends Control {
+	static readonly metadata: MetadataOptions = {
 		properties: {
 			materialPath: {
 				type: 'string',
 				defaultValue: '',
 			},
 		},
-		aggregations: {},
+		aggregations: {
+			_card: { type: 'sap.f.Card', multiple: false, visibility: 'hidden' },
+		},
 		events: {
 			materialSelected: {},
 			levelChanged: {},
@@ -29,31 +39,55 @@ export default class MaterialCardNew extends Control {
 		super(mSettings);
 	}
 
-	/** Main render method */
-	renderer(oRM: RenderManager, oControl: MaterialCardNew) {
-		const path = oControl.getMaterialPath();
+	renderer = {
+		apiVersion: 4,
+		render: (oRM: RenderManager, oControl: MaterialCard) => {
+			oRM.openStart('div', oControl);
+			oRM.openEnd();
+			oRM.renderControl(oControl.getAggregation('_card') as Card);
+			oRM.close('div');
+		},
+	};
 
-		oRM.openStart('div', oControl);
-		oRM.class('materialCardNewWrapper'); // Optional: for custom CSS
-		oRM.openEnd();
+	init(): void | undefined {
+		this.setAggregation('_card', new Card());
+	}
 
-		const card = new Card({
-			header: new CardHeader({
+	setMaterialPath(path: string) {
+		this.setProperty('materialPath', path, true);
+		this._buildCard();
+		return this;
+	}
+
+	_buildCard() {
+		const card = this.getAggregation('_card') as Card;
+		const path = this.getMaterialPath();
+		card.setHeader(
+			new CardHeader({
 				title: `{${path}/Header_Name}`,
-			}),
-			content: new VBox({
+			})
+		);
+		card.setContent(
+			new VBox({
 				items: [
 					new MaterialComboBox({
 						selectedItem: `{${path}/Material}`,
 						items: `{= \${${path}/Select_Query} ? \${${path}/Select_Query} : \${/selectedItems} }`,
-						selectionChange: oControl._onMaterialSelected.bind(oControl),
+						selectionChange: this._onMaterialSelected.bind(this),
 					}),
 					new Label({
 						text: 'Material Level',
 					}),
-					new LevelSlider({
+					new Slider({
 						value: `{${path}/Material/Level}`,
-						change: oControl._onLevelChange.bind(oControl),
+						change: this._onLevelChange.bind(this),
+						min: 1,
+						max: 10,
+						width: '100%',
+						showAdvancedTooltip: true,
+						showHandleTooltip: false,
+						inputsAsTooltips: true,
+						step: 1,
 					}),
 					new StatRender({
 						stats: {
@@ -63,11 +97,8 @@ export default class MaterialCardNew extends Control {
 						class: 'sapUiMediumMarginBottom',
 					}),
 				],
-			}),
-		});
-
-		oRM.renderControl(card);
-		oRM.close('div');
+			})
+		);
 	}
 
 	/** Getter for materialPath property */
@@ -76,12 +107,12 @@ export default class MaterialCardNew extends Control {
 	}
 
 	/** Internal handler for material selection */
-	_onMaterialSelected(oEvent: sap.ui.base.Event) {
+	_onMaterialSelected(oEvent: Event) {
 		this.fireEvent('materialSelected', { event: oEvent });
 	}
 
 	/** Internal handler for level change */
-	_onLevelChange(oEvent: sap.ui.base.Event) {
+	_onLevelChange(oEvent: Event) {
 		this.fireEvent('levelChanged', { event: oEvent });
 	}
 }
