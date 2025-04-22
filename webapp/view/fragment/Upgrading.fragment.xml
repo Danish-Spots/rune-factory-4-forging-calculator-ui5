@@ -17,6 +17,8 @@
     <Title text="Final outcome" class="sapUiSmallMarginBottom sapUiSmallMarginTop"/>
 
     <rf:Result
+      weapon="{/selectedWeapon}"
+      bonuses="{/bonuses}"
       result="{/result}"
     />
 

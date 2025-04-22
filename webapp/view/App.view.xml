@@ -1,28 +1,64 @@
 <mvc:View
     controllerName="rf.calculator.controller.App"
-    xmlns:tnt="sap.tnt"
     xmlns="sap.m"
     xmlns:f="sap.f"
+    xmlns:tnt="sap.tnt"
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true">
     <Shell>
         <App>
-            <Page >
+          <tnt:ToolPage >
+            <tnt:header>
+              <tnt:ToolHeader>
+                <Title level="H1" text="Rune Factory 4 Tools" />
+                <ToolbarSpacer />
+                <Button
+                  press=".onChangeThemeRequest"
+                  visible="{appModel>/showLightMode}"
+                  icon="sap-icon://light-mode">
+                </Button>
+                <Button
+                  press=".onChangeThemeRequest"
+                  visible="{appModel>/showDarkMode}"
+                  icon="sap-icon://dark-mode">
+                </Button>
+              </tnt:ToolHeader>
+            </tnt:header>
+            <tnt:subHeader>
+              <tnt:ToolHeader >
+                <IconTabHeader
+                  mode="Inline"
+                  selectedKey="{appModel>/selectedKey}"
+                  select="selectNavDestination">
+                  <items>
+                    <IconTabFilter  text="Materials" key="materials"/>
+                    <IconTabFilter text="Calculator" key="calculator"/>
+                  </items>
+                </IconTabHeader>
+              </tnt:ToolHeader>
+            </tnt:subHeader>
+            <tnt:mainContents>
+              <NavContainer id="app"></NavContainer>
+            </tnt:mainContents>
+          </tnt:ToolPage>
+            <!-- <Page >
                 <customHeader>
-                    <f:ShellBar 
+                    <f:ShellBar
+                        id="shellbar"
+                        showMenuButton="true"
                         title="Rune factory 4 forging calculator"
-                        class="sapFShellBarFCLFPHeader">  
-                        <f:menu>
-                            <Menu itemSelected=".onMenuAction">
-                                <MenuItem text="Materials"  />
-                                <MenuItem text="Calculator"  />
-                            </Menu>
-                        </f:menu>
-                        
+                        menuButtonPressed="onMenuButtonPressed"
+                        class="sapFShellBarFCLFPHeader">
+
                     </f:ShellBar>
                 </customHeader>
                 <NavContainer id="app"></NavContainer>
-            </Page>
+
+            </Page> -->
         </App>
     </Shell>
+                            <Menu id="navMenu" itemSelected=".onMenuAction">
+                                <MenuItem text="Materials"  />
+                                <MenuItem text="Calculator"  />
+                            </Menu>
 </mvc:View>

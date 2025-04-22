@@ -18,6 +18,7 @@ import ResourceModel from 'sap/ui/model/resource/ResourceModel';
 import ResourceBundle from 'sap/base/i18n/ResourceBundle';
 import { ListBase$SelectionChangeEvent } from 'sap/m/ListBase';
 import CustomData from 'sap/ui/core/CustomData';
+import EventBus from 'sap/ui/core/EventBus';
 /**
  * @extends sap.ui.core.Control
  *
@@ -58,7 +59,9 @@ export default class ForgePreview extends Control {
 					const selectedItem = event.getParameter('listItem');
 					const selectedOutcome = selectedItem?.getCustomData()[0]?.getValue();
 					this.setProperty('selectedOutcome', selectedOutcome, true);
-					this.fireChange();
+					EventBus.getInstance().publish('calculator', 'updateResults', {
+						path: this.getBindingContext()?.getPath(),
+					});
 				},
 			})
 		);

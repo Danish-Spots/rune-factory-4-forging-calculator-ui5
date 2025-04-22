@@ -8,6 +8,8 @@ declare module "./Result" {
      */
     interface $ResultSettings extends $ControlSettings {
         result?: any | PropertyBindingInfo | `{${string}}`;
+        weapon?: any | PropertyBindingInfo | `{${string}}`;
+        bonuses?: any | PropertyBindingInfo | `{${string}}`;
     }
 
     export default interface Result {
@@ -15,5 +17,13 @@ declare module "./Result" {
         // property: result
         getResult(): any;
         setResult(result: any): this;
+
+        // property: weapon
+        getWeapon(): any;
+        setWeapon(weapon: any): this;
+
+        // property: bonuses
+        getBonuses(): any;
+        setBonuses(bonuses: any): this;
     }
 }

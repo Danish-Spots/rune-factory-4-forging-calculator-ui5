@@ -117,7 +117,7 @@ export default class Calculator extends Controller {
 				else if (path?.startsWith('/upgrade')) this._upgrades = this._buildUpgrades(upgradeMaterials);
 
 				const bonuses = this._rebuildBonuses(forgeMaterials, upgradeMaterials) as { [key: string]: number };
-
+				this.viewModel.setProperty('/bonuses', { ...bonuses });
 				for (const kvp of selectedOutcome.stats) {
 					if (bonuses[kvp.key] !== undefined) bonuses[kvp.key] += kvp.value;
 					else bonuses[kvp.key] = kvp.value;
