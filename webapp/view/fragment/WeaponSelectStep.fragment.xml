@@ -2,17 +2,20 @@
   xmlns="sap.m"
   xmlns:f="sap.f"
   xmlns:core="sap.ui.core"
+  xmlns:table="sap.ui.table"
   xmlns:rf="rf.calculator.control">
   <WizardStep
+
     nextStep="MaterialChoiceStep"
     id="WeaponChoiceStep"
     title="Choose weapon recipe">
     <MessageStrip class="sapUiSmallMarginBottom"
       showIcon="true"
       text="Choose a weapon to have a starting point for forging. If no recipe is chosen, outcome is based purely on chosen materials."></MessageStrip>
-    <Table
+    <!-- <Table
       id="weaponTable"
       mode="SingleSelectMaster"
+      fixedLayout="false"
       sticky="HeaderToolbar"
       selectionChange=".onWeaponSelected"
       items="{data>/Weapons}">
@@ -52,6 +55,170 @@
           </cells>
         </ColumnListItem>
       </items>
-    </Table>
+    </Table> -->
+    <VBox height="100%">
+      <table:Table
+        id="weaponTable"
+        rows="{data>/Weapons}"
+        rowSelectionChange=".onWeaponSelected"
+        rowMode="Fixed"
+        selectionMode="Single"
+        selectionBehavior="Row">
+        <table:columns>
+          <table:Column width="130px">
+            <table:label>
+              <Label text="Name"></Label>
+            </table:label>
+            <table:template>
+              <Text text="{data>Name}"/>
+            </table:template>
+          </table:Column>
+          <table:Column width="150px">
+            <table:label>
+              <Label text="Material 1"></Label>
+            </table:label>
+            <table:template>
+              <Text text="{data>Material_1}"/>
+            </table:template>
+          </table:Column>
+          <table:Column width="150px">
+            <table:label>
+              <Label text="Material 2"></Label>
+            </table:label>
+            <table:template>
+              <Text text="{data>Material_2}"/>
+            </table:template>
+          </table:Column>
+          <table:Column width="150px">
+            <table:label>
+              <Label text="Material 3"></Label>
+            </table:label>
+            <table:template>
+              <Text text="{data>Material_3}"/>
+            </table:template>
+          </table:Column>
+          <table:Column width="150px">
+            <table:label>
+              <Label text="Material 4"></Label>
+            </table:label>
+            <table:template>
+              <Text text="{data>Material_4}"/>
+            </table:template>
+          </table:Column>
+          <table:Column width="150px">
+            <table:label>
+              <Label text="Material 5"></Label>
+            </table:label>
+            <table:template>
+              <Text text="{data>Material_5}"/>
+            </table:template>
+          </table:Column>
+          <table:Column width="75px">
+            <table:label>
+              <Label text="Element"></Label>
+            </table:label>
+            <table:template>
+              <Text text="{data>Element}"/>
+            </table:template>
+          </table:Column>
+          <table:Column width="60px">
+            <table:label>
+              <Label text="Attack"></Label>
+            </table:label>
+            <table:template>
+              <Text text="{data>atk}"/>
+            </table:template>
+          </table:Column>
+          <table:Column width="100px">
+            <table:label>
+              <Label text="Magic Attack"></Label>
+            </table:label>
+            <table:template>
+              <Text text="{data>matk}"/>
+            </table:template>
+          </table:Column>
+          <table:Column width="70px">
+            <table:label>
+              <Label text="Defence"></Label>
+            </table:label>
+            <table:template>
+              <Text text="{data>def}"/>
+            </table:template>
+          </table:Column>
+          <table:Column width="60px">
+            <table:label>
+              <Label text="Dizzy"></Label>
+            </table:label>
+            <table:template>
+              <Text text="{data>diz}"/>
+            </table:template>
+          </table:Column>
+          <table:Column width="115px">
+            <table:label>
+              <Label text="Critical Chance"></Label>
+            </table:label>
+            <table:template>
+              <rf:Percentage value="{data>crit}"/>
+            </table:template>
+          </table:Column>
+          <table:Column width="90px">
+            <table:label>
+              <Label text="Intelligence"></Label>
+            </table:label>
+            <table:template>
+              <rf:Percentage value="{data>int}"/>
+            </table:template>
+          </table:Column>
+          <table:Column width="60px">
+            <table:label >
+              <Label text="Vitality"></Label>
+            </table:label>
+            <table:template>
+              <rf:Percentage value="{data>vit}"/>
+            </table:template>
+          </table:Column>
+          <table:Column width="80px">
+            <table:label>
+              <Label text="Paralysis"></Label>
+            </table:label>
+            <table:template>
+              <rf:Percentage value="{data>parAtk}"/>
+            </table:template>
+          </table:Column>
+          <table:Column width="60px">
+            <table:label>
+              <Label text="Poison"></Label>
+            </table:label>
+            <table:template>
+              <rf:Percentage value="{data>psnAtk}"/>
+            </table:template>
+          </table:Column>
+          <table:Column width="90px">
+            <table:label>
+              <Label text="Knockback"></Label>
+            </table:label>
+            <table:template>
+              <rf:Percentage value="{data>knock}"/>
+            </table:template>
+          </table:Column>
+          <table:Column width="50px">
+            <table:label>
+              <Label text="Drain"></Label>
+            </table:label>
+            <table:template>
+              <rf:Percentage value="{data>drain}"/>
+            </table:template>
+          </table:Column>
+          <table:Column width="50px">
+            <table:label>
+              <Label text="Stun"></Label>
+            </table:label>
+            <table:template>
+              <rf:Percentage value="{data>stun}"/>
+            </table:template>
+          </table:Column>
+        </table:columns>
+      </table:Table>
+    </VBox>
   </WizardStep>
 </core:FragmentDefinition>

@@ -10,6 +10,8 @@ import { MaterialItem, StatBonus } from '../model/types';
 import { Gear } from '../model/enums';
 import ODataModel from 'sap/ui/model/odata/v4/ODataModel';
 import EventBus from 'sap/ui/core/EventBus';
+import Table from 'sap/ui/table/Table';
+import Auto from 'sap/ui/table/rowmodes/Auto';
 /**
  * @name rf.calculator.controller
  */
@@ -111,6 +113,15 @@ export default class Calculator extends Controller {
 				this.viewModel.setProperty('/result', { stats: this._upgrades ?? bonuses, name: weaponName });
 			},
 			this
+		);
+	}
+
+	onAfterRendering(): void | undefined {
+		const table = this.byId('weaponTable') as Table;
+		table.setRowMode(
+			new Auto({
+				minRowCount: 33,
+			})
 		);
 	}
 
