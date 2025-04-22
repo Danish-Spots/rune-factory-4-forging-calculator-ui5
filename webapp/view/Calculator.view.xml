@@ -19,20 +19,6 @@
           renderMode="Page"
           navigationChange=".onNavigationChange">
             <core:Fragment fragmentName="rf.calculator.view.fragment.WeaponSelectStep" type="XML"/>
-          <!-- <WizardStep id="MaterialChoiceStep"
-                title="Choose materials"
-                validated="true">
-            <MessageStrip class="sapUiSmallMarginBottom"
-                text="Select up to 15 materials used to forge and upgrade with, duplicate materials can be selected when forging or upgrading."
-                showIcon="true"/>
-            <List items="{/selectedItems}">
-              <items>
-                <ObjectListItem title="{Name}">
-                </ObjectListItem>
-              </items>
-            </List>
-            <Button text="Choose materials" press=".openChooseMaterialDialog"/>
-          </WizardStep> -->
           <core:Fragment fragmentName="rf.calculator.view.fragment.Forging" type="XML"/>
           <core:Fragment fragmentName="rf.calculator.view.fragment.Upgrading" type="XML"/>
         </Wizard>

@@ -5,8 +5,8 @@ const calculateOutcomes = async (req) => {
 	outcomes.forEach((outcome) => {
 		for (const stat of weaponStats) {
 			if (outcome[stat.Stat_Key]) {
-				outcome[stat.Stat_Key] += parseInt(stat.Stat_Value);
-			} else outcome[stat.Stat_Key] = parseInt(stat.Stat_Value);
+				outcome[stat.Stat_Key] += parseFloat(stat.Stat_Value);
+			} else outcome[stat.Stat_Key] = parseFloat(stat.Stat_Value);
 		}
 		const result = {
 			stats: [],

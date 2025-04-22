@@ -41,24 +41,6 @@
               <NavContainer id="app"></NavContainer>
             </tnt:mainContents>
           </tnt:ToolPage>
-            <!-- <Page >
-                <customHeader>
-                    <f:ShellBar
-                        id="shellbar"
-                        showMenuButton="true"
-                        title="Rune factory 4 forging calculator"
-                        menuButtonPressed="onMenuButtonPressed"
-                        class="sapFShellBarFCLFPHeader">
-
-                    </f:ShellBar>
-                </customHeader>
-                <NavContainer id="app"></NavContainer>
-
-            </Page> -->
         </App>
     </Shell>
-                            <Menu id="navMenu" itemSelected=".onMenuAction">
-                                <MenuItem text="Materials"  />
-                                <MenuItem text="Calculator"  />
-                            </Menu>
 </mvc:View>

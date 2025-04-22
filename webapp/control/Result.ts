@@ -7,6 +7,7 @@ import VBox from 'sap/m/VBox';
 import Control from 'sap/ui/core/Control';
 import UI5Element, { MetadataOptions } from 'sap/ui/core/Element';
 import RenderManager from 'sap/ui/core/RenderManager';
+import { convertPercentage } from '../utils/convertPercentage';
 
 /**
  * @extends sap.ui.core.Control
@@ -124,13 +125,6 @@ export default class Result extends Control {
 		return this;
 	}
 
-	convertPercentage(stat: float): string {
-		if (stat.toString().includes('.')) {
-			return `${stat * 100} %`;
-		}
-		return stat.toString();
-	}
-
 	private createVbox(statKey: string, value: float): VBox {
 		return new VBox({
 			gap: '2px',
@@ -140,7 +134,7 @@ export default class Result extends Control {
 					text: `{i18n>${statKey}}`,
 				}),
 				new Text({
-					text: this.convertPercentage(value),
+					text: convertPercentage(value),
 				}),
 			],
 		});

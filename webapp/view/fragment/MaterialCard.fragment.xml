@@ -5,17 +5,19 @@
   xmlns:core="sap.ui.core"
   xmlns:cards="sap.f.cards">
   <FlexBox wrap="Wrap" items="{Materials}" gap="1rem">
-    <f:Card>
+    <f:Card >
       <f:header>
         <cards:Header title="{Header_Name}" ></cards:Header>
       </f:header>
       <f:content>
-        <VBox >
+        <VBox class="sapUiTinyMargin">
           <rf:MaterialComboBox
             selectedItem="{Material}"
             items="{Select_Query}">
           </rf:MaterialComboBox>
           <Label
+            class="sapUiTinyMarginTop"
+            design="Bold"
             text="Material Level"
             ></Label>
           <rf:LevelSlider
@@ -28,7 +30,6 @@
             class="sapUiMediumMarginBottom" />
         </VBox>
       </f:content>
-
     </f:Card>
   </FlexBox>
   </core:FragmentDefinition>

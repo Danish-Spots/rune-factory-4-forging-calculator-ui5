@@ -11,6 +11,7 @@ import ResourceBundle from 'sap/base/i18n/ResourceBundle';
 import { ListBase$SelectionChangeEvent } from 'sap/m/ListBase';
 import CustomData from 'sap/ui/core/CustomData';
 import EventBus from 'sap/ui/core/EventBus';
+import { convertPercentage } from '../utils/convertPercentage';
 /**
  * @extends sap.ui.core.Control
  *
@@ -109,7 +110,7 @@ export default class ForgePreview extends Control {
 			});
 			table.addItem(
 				new ColumnListItem({
-					cells: [...cells.map((cell: string) => new Text({ text: cell }))],
+					cells: [...cells.map((cell: float) => new Text({ text: convertPercentage(cell) }))],
 					customData: new CustomData({
 						key: 'outcome',
 						value: outcome,
