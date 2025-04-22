@@ -88,7 +88,6 @@ MaterialTableDelegate.getFilters = (table: Table) => {
 	let filters = TableDelegate.getFilters(table);
 	filters = _recursiveFilterBuild(filters, 'Location');
 	filters = _recursiveFilterBuild(filters, 'Monster');
-	console.table(filters);
 	if (search && keys) {
 		filters = filters.concat(_createSearchFilters(search, keys));
 	}

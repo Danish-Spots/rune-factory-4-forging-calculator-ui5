@@ -109,7 +109,6 @@ export default class Calculator extends Controller {
 				}
 				const weaponName = this.viewModel.getProperty('/selectedWeapon/Name');
 				this.viewModel.setProperty('/result', { stats: this._upgrades ?? bonuses, name: weaponName });
-				console.log(this._upgrades);
 			},
 			this
 		);

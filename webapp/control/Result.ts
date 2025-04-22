@@ -81,7 +81,6 @@ export default class Result extends Control {
 		this.setProperty('bonuses', bonuses, true);
 		const box = this.getAggregation('_hbox') as HBox;
 		const card = box.getItems()[1] as Card;
-		console.log(bonuses);
 		card.setHeader(
 			new Header({
 				title: 'Bonuses',
