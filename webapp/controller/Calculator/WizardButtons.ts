@@ -2,10 +2,6 @@ import Wizard from 'sap/m/Wizard';
 import Calculator from '../Calculator.controller';
 import WizardStep from 'sap/m/WizardStep';
 import Event from 'sap/ui/base/Event';
-import FlexBox from 'sap/m/FlexBox';
-import Control from 'sap/ui/core/Control';
-import Context from 'sap/ui/model/Context';
-import Fragment from 'sap/ui/core/Fragment';
 
 export class WizardButtons {
 	static onNextPressed(this: Calculator): void {

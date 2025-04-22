@@ -1,9 +1,6 @@
-import Control from 'sap/ui/core/Control';
 import UIComponent from 'sap/ui/core/UIComponent';
-import XMLView from 'sap/ui/core/mvc/XMLView';
 import JSONModel from 'sap/ui/model/json/JSONModel';
 import ODataModel from 'sap/ui/model/odata/v4/ODataModel';
-import ResourceModel from 'sap/ui/model/resource/ResourceModel';
 
 /**
  * @namespace rf.calculator

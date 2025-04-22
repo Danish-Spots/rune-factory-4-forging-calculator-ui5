@@ -2,8 +2,6 @@ import { weaponLevelBonuses, armorLevelBonuses, weaponRarityBonuses, armourRarit
 import { Gear, LevelKey, RarityKey, StatKey } from './enums';
 import { MaterialItem, StatBonus } from './types';
 
-const materials = [];
-
 const applyStat = (addedStat: number, divisionNumbber: number) => {
 	return addedStat / divisionNumbber;
 };

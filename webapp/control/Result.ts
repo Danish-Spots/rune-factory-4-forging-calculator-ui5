@@ -3,12 +3,10 @@ import Header from 'sap/f/cards/Header';
 import HBox from 'sap/m/HBox';
 import Label from 'sap/m/Label';
 import Text from 'sap/m/Text';
-import Title from 'sap/m/Title';
 import VBox from 'sap/m/VBox';
 import Control from 'sap/ui/core/Control';
 import UI5Element, { MetadataOptions } from 'sap/ui/core/Element';
 import RenderManager from 'sap/ui/core/RenderManager';
-import Float from 'sap/ui/model/type/Float';
 
 /**
  * @extends sap.ui.core.Control

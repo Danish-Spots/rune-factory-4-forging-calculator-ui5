@@ -1,10 +1,8 @@
 import FormattedText from 'sap/m/FormattedText';
 import HBox from 'sap/m/HBox';
-import { ObjectBindingInfo } from 'sap/ui/base/ManagedObject';
 import Control from 'sap/ui/core/Control';
 import UI5Element from 'sap/ui/core/Element';
 import { MetadataOptions } from 'sap/ui/core/Element';
-import { ControlRenderer } from 'sap/ui/core/ElementMetadata';
 import RenderManager from 'sap/ui/core/RenderManager';
 
 /**

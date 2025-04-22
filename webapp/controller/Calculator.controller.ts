@@ -1,35 +1,14 @@
-import ResourceBundle from 'sap/base/i18n/ResourceBundle';
 import Dialog from 'sap/m/Dialog';
-import MenuItem from 'sap/m/MenuItem';
-import MessageStrip from 'sap/m/MessageStrip';
-import MessageToast from 'sap/m/MessageToast';
-import Table from 'sap/m/Table';
-import Wizard from 'sap/m/Wizard';
 import WizardStep from 'sap/m/WizardStep';
 import Event from 'sap/ui/base/Event';
-import Fragment from 'sap/ui/core/Fragment';
 import Controller from 'sap/ui/core/mvc/Controller';
-import Device from 'sap/ui/Device';
 import JSONModel from 'sap/ui/model/json/JSONModel';
-import ResourceModel from 'sap/ui/model/resource/ResourceModel';
-import Sorter from 'sap/ui/model/Sorter';
 import { WizardButtons } from './Calculator/WizardButtons';
 import { MaterialChoiceTable } from './Calculator/MaterialChoiceTable';
-import Control from 'sap/ui/core/Control';
-import FlexBox from 'sap/m/FlexBox';
-import { MaterialComboBox$SelectionChangeEvent } from '../control/MaterialComboBox';
-import {
-	calculateBonuses,
-	calculateInheritanceOutcomes,
-	calculateStatIncreases,
-	calculateUpgrades,
-} from '../model/calculator';
+import { calculateInheritanceOutcomes, calculateStatIncreases, calculateUpgrades } from '../model/calculator';
 import { MaterialItem, StatBonus } from '../model/types';
-import { LevelSlider$ChangeEvent } from '../control/LevelSlider';
-import { Gear, StatKey } from '../model/enums';
+import { Gear } from '../model/enums';
 import ODataModel from 'sap/ui/model/odata/v4/ODataModel';
-import Material from './Material.controller';
-import { Model$PropertyChangeEvent } from 'sap/ui/model/Model';
 import EventBus from 'sap/ui/core/EventBus';
 /**
  * @name rf.calculator.controller
