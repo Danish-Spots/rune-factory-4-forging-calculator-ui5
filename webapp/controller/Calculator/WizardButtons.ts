@@ -52,6 +52,8 @@ export class WizardButtons {
 				this.viewModel.setProperty('/previousButtonVisible', true);
 				break;
 			case 2:
+				this.viewModel.setProperty('/wizard/WeaponStep', false);
+				this.viewModel.setProperty('/wizard/ForgeStep', false);
 			default:
 				break;
 		}

@@ -107,10 +107,30 @@ export default class Calculator extends Controller {
 					.map((i) => this.viewModel.getObject(`/upgrade/Materials/${i}/Material`))
 					.filter((material: MaterialItem) => material.ID !== null);
 
+				let selectedOutcome = this.viewModel.getProperty('/forge/SelectedOutcome');
+				if (!selectedOutcome?.stats) {
+					selectedOutcome = {
+						stats: [],
+					};
+				}
 				if (path?.startsWith('/forge')) this._rebuildOutcomes(forgeMaterials);
 				else if (path?.startsWith('/upgrade')) this._upgrades = this._buildUpgrades(upgradeMaterials);
 
-				const bonuses = this._rebuildBonuses(forgeMaterials, upgradeMaterials);
+				const bonuses = this._rebuildBonuses(forgeMaterials, upgradeMaterials) as { [key: string]: number };
+
+				for (const kvp of selectedOutcome.stats) {
+					if (bonuses[kvp.key] !== undefined) bonuses[kvp.key] += kvp.value;
+					else bonuses[kvp.key] = kvp.value;
+				}
+				if (this._upgrades) {
+					for (const key in bonuses) {
+						if (this._upgrades[key]) this._upgrades[key] += bonuses[key];
+						else this._upgrades[key] = bonuses[key];
+					}
+				}
+				const weaponName = this.viewModel.getProperty('/selectedWeapon/Name');
+				this.viewModel.setProperty('/result', { stats: this._upgrades ?? bonuses, name: weaponName });
+				console.log(this._upgrades);
 			},
 			this
 		);

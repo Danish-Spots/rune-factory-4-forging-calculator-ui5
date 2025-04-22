@@ -15,5 +15,10 @@
     <core:Fragment fragmentName="rf.calculator.view.fragment.MaterialCard" binding="{/upgrade}" type="XML"/>
 
     <Title text="Final outcome" class="sapUiSmallMarginBottom sapUiSmallMarginTop"/>
+
+    <rf:Result
+      result="{/result}"
+    />
+
   </WizardStep>
 </core:FragmentDefinition>
