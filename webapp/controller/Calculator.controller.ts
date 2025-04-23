@@ -10,7 +10,7 @@ import { MaterialItem, StatBonus } from '../model/types';
 import { Gear } from '../model/enums';
 import ODataModel from 'sap/ui/model/odata/v4/ODataModel';
 import EventBus from 'sap/ui/core/EventBus';
-import Table from 'sap/ui/table/Table';
+import Table, { Table$RowSelectionChangeEvent } from 'sap/ui/table/Table';
 import Auto from 'sap/ui/table/rowmodes/Auto';
 /**
  * @name rf.calculator.controller
@@ -161,9 +161,9 @@ export default class Calculator extends Controller {
 		MaterialChoiceTable.onCancelPressed.call(this);
 	}
 
-	onWeaponSelected(event: Event): void {
-		const selectedItem = (event as any).getParameter('listItem');
-		const item = selectedItem.getBindingContext('data')?.getObject();
+	onWeaponSelected(event: Table$RowSelectionChangeEvent): void {
+		const selectedItem = event.getParameter('rowContext');
+		const item = selectedItem?.getObject() as any;
 		this.viewModel.setProperty('/selectedWeapon', item);
 		this.viewModel.setProperty('/nextButtonEnabled', true);
 		this.viewModel.setProperty('/forge/Materials', item.Materials);

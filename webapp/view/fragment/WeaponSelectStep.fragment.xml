@@ -12,50 +12,6 @@
     <MessageStrip class="sapUiSmallMarginBottom"
       showIcon="true"
       text="Choose a weapon to have a starting point for forging. If no recipe is chosen, outcome is based purely on chosen materials."></MessageStrip>
-    <!-- <Table
-      id="weaponTable"
-      mode="SingleSelectMaster"
-      fixedLayout="false"
-      sticky="HeaderToolbar"
-      selectionChange=".onWeaponSelected"
-      items="{data>/Weapons}">
-      <columns>
-        <Column width="15%">
-        </Column>
-        <Column>
-        </Column>
-
-        <Column>
-        </Column>
-        <Column>
-        </Column>
-        <Column>
-        </Column>
-        <Column>
-        </Column>
-        <Column>
-        </Column>
-      </columns>
-      <items>
-        <ColumnListItem>
-          <cells>
-            <ObjectIdentifier
-              title="{data>Name}">
-            </ObjectIdentifier>
-            <rf:StatRender
-              stats="{
-                mPath: 'data>Stats',
-                sHtml: 'data>Stat_HTML'
-              }" />
-            <Text text="{data>Material_1}"/>
-            <Text text="{data>Material_2}"/>
-            <Text text="{data>Material_3}"/>
-            <Text text="{data>Material_4}"/>
-            <Text text="{data>Material_5}"/>
-          </cells>
-        </ColumnListItem>
-      </items>
-    </Table> -->
     <VBox height="100%">
       <table:Table
         id="weaponTable"
@@ -64,6 +20,14 @@
         rowMode="Fixed"
         selectionMode="Single"
         selectionBehavior="Row">
+        <table:extension>
+          <HBox gap="8px">
+            <items>
+              <Button text="Show materials"></Button>
+              <Button text="Show stats"></Button>
+            </items>
+          </HBox>
+        </table:extension>
         <table:columns>
           <table:Column width="130px">
             <table:label>
