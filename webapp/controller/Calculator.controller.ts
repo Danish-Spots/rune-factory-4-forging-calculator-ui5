@@ -29,6 +29,10 @@ export default class Calculator extends Controller {
 			Preview: [],
 		},
 		Materials: [],
+		table: {
+			statToggle: 'Hide stats',
+			materialToggle: 'Hide materials',
+		},
 	});
 	groupFunctions: Record<string, Function> = {
 		Rarity: (context: any) => {
@@ -216,5 +220,26 @@ export default class Calculator extends Controller {
 	_rebuildBonuses(forgeMaterials: MaterialItem[], upgradeMaterials: MaterialItem[]): StatBonus {
 		const bonuses = calculateUpgrades(forgeMaterials.concat(upgradeMaterials), Gear.Weapon);
 		return bonuses;
+	}
+
+	toggleMaterialColumns(): void {
+		const table = this.byId('weaponTable') as Table;
+		table.getColumns().forEach((column, index) => {
+			if (index > 0 && index < 6) column.setVisible(!column.getVisible());
+		});
+		this.viewModel.setProperty(
+			'/table/materialToggle',
+			table.getColumns()[1].getVisible() ? 'Hide materials' : 'Show materials'
+		);
+	}
+	toggleStatColumns(): void {
+		const table = this.byId('weaponTable') as Table;
+		table.getColumns().forEach((column, index) => {
+			if (index > 5) column.setVisible(!column.getVisible());
+		});
+		this.viewModel.setProperty(
+			'/table/statToggle',
+			table.getColumns()[6].getVisible() ? 'Hide stats' : 'Show stats'
+		);
 	}
 }

@@ -23,8 +23,8 @@
         <table:extension>
           <HBox gap="8px">
             <items>
-              <Button text="Show materials"></Button>
-              <Button text="Show stats"></Button>
+              <Button text="{/table/materialToggle}" press="toggleMaterialColumns"></Button>
+              <Button text="{/table/statToggle}" press="toggleStatColumns"></Button>
             </items>
           </HBox>
         </table:extension>
