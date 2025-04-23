@@ -7,7 +7,7 @@ import { WizardButtons } from './Calculator/WizardButtons';
 import { MaterialChoiceTable } from './Calculator/MaterialChoiceTable';
 import { calculateInheritanceOutcomes, calculateStatIncreases, calculateUpgrades } from '../model/calculator';
 import { MaterialItem, StatBonus } from '../model/types';
-import { Gear } from '../model/enums';
+import { CalcChangeEvent, Gear } from '../model/enums';
 import ODataModel from 'sap/ui/model/odata/v4/ODataModel';
 import EventBus from 'sap/ui/core/EventBus';
 import Table, { Table$RowSelectionChangeEvent } from 'sap/ui/table/Table';
@@ -81,14 +81,14 @@ export default class Calculator extends Controller {
 			'calculator',
 			'updateResults',
 			(_, __, data) => {
-				const path: string = (data as any).path;
+				const eventSource: string = (data as any).eventSource;
 				const forgeMaterials = [0, 1, 2, 3, 4, 5]
 					.map((i) => {
 						const material = this.viewModel.getObject(`/forge/Materials/${i}/Material`);
 						return material;
 					})
 					.filter((material: MaterialItem) => material.ID !== null);
-				const upgradeMaterials = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+				const upgradeMaterials = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 					.map((i) => this.viewModel.getObject(`/upgrade/Materials/${i}/Material`))
 					.filter((material: MaterialItem) => material.ID !== null);
 
@@ -98,8 +98,8 @@ export default class Calculator extends Controller {
 						stats: [],
 					};
 				}
-				if (path?.startsWith('/forge')) this._rebuildOutcomes(forgeMaterials);
-				else if (path?.startsWith('/upgrade')) this._upgrades = this._buildUpgrades(upgradeMaterials);
+				if (eventSource === CalcChangeEvent.ForgeMaterial) this._rebuildOutcomes(forgeMaterials);
+				this._upgrades = this._buildUpgrades(upgradeMaterials);
 
 				const bonuses = this._rebuildBonuses(forgeMaterials, upgradeMaterials) as { [key: string]: number };
 				this.viewModel.setProperty('/bonuses', { ...bonuses });

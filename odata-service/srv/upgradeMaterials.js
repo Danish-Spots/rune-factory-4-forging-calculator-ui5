@@ -22,7 +22,7 @@ const upgradeMaterials = async (req) => {
 		},
 	};
 	return {
-		Materials: new Array(10).fill(material).map((_, i) => ({ ...material, ID: i })),
+		Materials: new Array(9).fill(material).map((_, i) => ({ ...material, ID: i })),
 	};
 };
 

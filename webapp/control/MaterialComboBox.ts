@@ -7,6 +7,7 @@ import Item from 'sap/ui/core/Item';
 import RenderManager from 'sap/ui/core/RenderManager';
 import Filter from 'sap/ui/model/Filter';
 import Sorter from 'sap/ui/model/Sorter';
+import { CalcChangeEvent } from '../model/enums';
 
 /**
  * @extends sap.ui.core.Control
@@ -55,8 +56,10 @@ export default class MaterialComboBox extends Control {
 					this.setProperty('selectedItem', data, true);
 					EventBus.getInstance().publish('calculator', 'updateResults', {
 						path: this.getBindingContext()?.getPath(),
+						eventSource: this.getBindingContext()?.getPath().includes('/forge')
+							? CalcChangeEvent.ForgeMaterial
+							: CalcChangeEvent.UpgradeMaterial,
 					});
-					// this.fireSelectionChange({ data });
 				},
 			})
 		);

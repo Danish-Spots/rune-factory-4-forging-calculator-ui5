@@ -26,3 +26,18 @@ export enum Gear {
 	Weapon = 'Weapon',
 	Armour = 'Armour',
 }
+
+export enum CalcChangeEvent {
+	/**
+	 * This should be used to recalculate levels
+	 */
+	Level = 'level',
+	/**
+	 * Indicate that a forge material has been changed
+	 */
+	ForgeMaterial = 'forgeMaterial',
+	/**
+	 * Indicate that a upgrade material has been changed
+	 */
+	UpgradeMaterial = 'upgradeMaterial',
+}

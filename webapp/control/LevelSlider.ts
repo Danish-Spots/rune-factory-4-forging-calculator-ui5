@@ -3,6 +3,7 @@ import Control from 'sap/ui/core/Control';
 import UI5Element, { MetadataOptions } from 'sap/ui/core/Element';
 import EventBus from 'sap/ui/core/EventBus';
 import RenderManager from 'sap/ui/core/RenderManager';
+import { CalcChangeEvent } from '../model/enums';
 
 /**
  * @extends sap.ui.core.Control
@@ -48,7 +49,7 @@ export default class LevelSlider extends Control {
 					const value = oEvent.getParameter('value');
 					this.setProperty('value', value, true);
 					EventBus.getInstance().publish('calculator', 'updateResults', {
-						path: this.getBindingContext()?.getPath(),
+						eventSource: CalcChangeEvent.Level,
 					});
 				},
 			})
